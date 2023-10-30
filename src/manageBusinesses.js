@@ -73,6 +73,7 @@ export default function ManageBusinesses() {
           border: "none",
           borderRight: "1px lightgray solid",
           padding: 20,
+
         }}
       >
         <div
@@ -83,7 +84,8 @@ export default function ManageBusinesses() {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            padding:80
+            padding:110,
+            marginTop:20,
           }}
         >
 
