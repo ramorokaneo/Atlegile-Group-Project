@@ -1,12 +1,11 @@
 import "./App.css";
-
-import SignIn from "./signIn";
-//import ManageBusinesses from "./manageBusinesses";
+//import SignIn from "./signIn";
+import ManageBusinesses from "./manageBusinesses";
 
 function App() {
   return (
     <>
-      <SignIn/>
+      <ManageBusinesses/>
     </>
   );
 }

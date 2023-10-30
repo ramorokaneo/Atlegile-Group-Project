@@ -18,6 +18,7 @@ export default function SignIn() {
   const handleSignIn = () => {
     console.log("Email: ", email);
     console.log("Password: ", password);
+    alert("Logged in successfully!")
   };
 
   return (
@@ -181,7 +182,7 @@ export default function SignIn() {
             <FaGoogle color="#d32f2f" size={20} />
             <a
               className="button google"
-              href="/login/federated/google"
+              href="http://localhost:3000/"
               style={{
                 color: "#d32f2f",
                 marginLeft: 5,
