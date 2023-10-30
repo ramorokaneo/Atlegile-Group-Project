@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 // import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 // import ManageUserSceen from './ManageUserScreen';
@@ -100,17 +99,6 @@ function App() {
         </div>
       </div>
     </div>
-=======
-import "./App.css";
-//import SignIn from "./signIn";
-import ManageBusinesses from "./manageBusinesses";
-
-function App() {
-  return (
-    <>
-      <ManageBusinesses/>
-    </>
->>>>>>> af0c2d45f9fc15c0f1aa60ee4ef764fa80757144
   );
 }
 
