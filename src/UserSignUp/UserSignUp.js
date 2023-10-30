@@ -9,12 +9,22 @@ function UserSignUp() {
       <div className="form-container">
        <div className="form-item form-items">
         <img src="./logo.png" alt="Logo" className="logo" />
-        <h1 className="signUp">Sign Up</h1>
+        <h2 className="signUp">Sign Up</h2>
         <form>
-          
-            <input type="email" placeholder="email" className="form-group" />
 
-            <input type="password" placeholder="password" className="form-group" />
+            <label>Email</label>
+            <input 
+              type="email" 
+              placeholder="" 
+              className="form-group" 
+            />
+
+            <label>Password</label>
+            <input 
+              type="password" 
+              placeholder="" 
+              className="form-group" 
+            />
           
 
           <div className="forgot-password">

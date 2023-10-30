@@ -1,11 +1,13 @@
 // import logo from './logo.svg';
-import UserSignUp from './Components/UserSignUp/UserSignUp';
+// import UserSignUp from './UserSignUp/UserSignUp'
+import AltContact from './AltContact/AltContact';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <UserSignUp />
+      {/* <UserSignUp /> */}
+      <AltContact />
     </div>
   );
 }
