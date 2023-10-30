@@ -5,12 +5,19 @@ const logo = require("./cropped-AMS-Shadow-Queen-Logo_BNY-1320x772 1.png");
 
 export default function SignIn() {
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [isEmailValid, setIsEmailValid] = useState(true);
-  var validRegex ="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]{2,}$";
+  // eslint-disable-next-line
+  let validRegex = new RegExp("[a-z0-9]+@[a-z]+.[a-z]{2,3}");
   const handleEmailChange = (e) => {
     const inputEmail = e.target.value;
     setEmail(inputEmail);
     setIsEmailValid(validRegex.test(inputEmail));
+  };
+
+  const handleSignIn = () => {
+    console.log("Email: ", email);
+    console.log("Password: ", password);
   };
 
   return (
@@ -26,14 +33,13 @@ export default function SignIn() {
         style={{
           alignSelf: "center",
           width: "700px",
-
           height: "100%",
           padding: 20,
         }}
       >
         <div
           style={{
-            height: "50%",
+            height: "40%",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -103,6 +109,8 @@ export default function SignIn() {
                 paddingBottom: 10,
                 width: "100%",
               }}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
 
@@ -148,6 +156,7 @@ export default function SignIn() {
                 paddingBottom: 15,
                 fontSize: 15,
               }}
+              onClick={handleSignIn}
             >
               SIGN IN
             </button>
