@@ -9,7 +9,7 @@
 }
 
 
-.landing-header {}
+/* .landing-header {} */
 
 .header-content {
     text-align: center;
@@ -25,32 +25,36 @@
 }
 
 .phone-number {
-    margin: 0 10px;
-}
-
-.mail {}
-
-/* .landing-header {
-}
-
-.header-content {
-    text-align: center;
-}
-
-.mail {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-}
-
-.mail-icon {
-    margin-right: 5px;
+    margin: 0 20px;
 }
 
 .email {
-    margin-right: 5px;
+    margin-left: 6px;
 }
 
 .follow {
-} */
+    font-size: medium;
+    margin-left: 40px;
+}
+
+
+.us {
+    margin-left: 20px;
+}
+
+.insta{
+    margin-left: 5px;
+    margin-top: -1px;
+}
+
+.youtube {
+    margin-left: 5px;
+}
+
+.facebook{
+    margin-left: 6px;
+}
+
+.twiit{
+    margin-left: 6px;
+}
