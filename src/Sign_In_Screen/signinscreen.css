@@ -16,7 +16,7 @@
 }
 
 .flexbox-item {
-    width: 300px;
+    width: 500px;
     margin: 10px;
     background-color: #ffffff;
 }
@@ -30,7 +30,7 @@
 
 
 .logo {
-    margin-left: 140px;
+    margin-left: 160px;
     margin-top: 90px;
 }
 
@@ -49,7 +49,7 @@
     outline: none;
     border-bottom: 1px solid #000;
     margin-top: 40px;
-    margin-left: 90px;
+    margin-left: 120px;
 }
 
 
@@ -57,7 +57,7 @@
     text-decoration: none;
     color: rgb(8, 8, 44);
     margin-top: 30px;
-    margin-left: 210px;
+    margin-left: 240px;
     font-size: small;
 }
 
@@ -67,7 +67,7 @@
     color: white;
     border: none;
     cursor: pointer;
-    margin-left: 100px;
+    margin-left: 130px;
     margin-top: 35px;
     border-radius: 200px;
 }

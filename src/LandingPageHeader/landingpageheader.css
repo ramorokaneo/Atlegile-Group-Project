@@ -1,0 +1,56 @@
+.landing-header {
+    background-image: url("../assets//072840.png");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 90px;
+}
+
+
+.landing-header {}
+
+.header-content {
+    text-align: center;
+
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+
+}
+
+.phone-number {
+    margin: 0 10px;
+}
+
+.mail {}
+
+/* .landing-header {
+}
+
+.header-content {
+    text-align: center;
+}
+
+.mail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.mail-icon {
+    margin-right: 5px;
+}
+
+.email {
+    margin-right: 5px;
+}
+
+.follow {
+} */
