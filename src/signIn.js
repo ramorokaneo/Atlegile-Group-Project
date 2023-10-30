@@ -27,15 +27,17 @@ export default function SignIn() {
         alignItems: "center",
         flexDirection: "column",
         height: "100%",
+        width: "100%",
+
       }}
     >
       <div
         style={{
-          alignSelf: "center",
-          width: "700px",
           height: "100%",
           padding: 20,
         }}
+        className="maximumWidth"
+        id="signInContainer"
       >
         <div
           style={{
@@ -67,7 +69,7 @@ export default function SignIn() {
           </div>
 
           <div style={{ paddingTop: 20 }}>
-            <label for="email" style={{ fontSize: 12, color: "gray" }}>
+            <label htmlFor="email" style={{ fontSize: 12, color: "gray" }}>
               Email
             </label>
             <br />
@@ -94,7 +96,7 @@ export default function SignIn() {
               </div>
             )}
             <br />
-            <label for="password" style={{ fontSize: 12, color: "gray" }}>
+            <label htmlFor="password" style={{ fontSize: 12, color: "gray" }}>
               Password
             </label>
             <br />
@@ -178,7 +180,7 @@ export default function SignIn() {
           >
             <FaGoogle color="#d32f2f" size={20} />
             <a
-              class="button google"
+              className="button google"
               href="/login/federated/google"
               style={{
                 color: "#d32f2f",

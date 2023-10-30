@@ -1,11 +1,13 @@
 import "./App.css";
+
 import SignIn from "./signIn";
+//import ManageBusinesses from "./manageBusinesses";
 
 function App() {
   return (
-    <div className="App" style={{height:"100%",width:"100%"}}>
-      <SignIn />
-    </div>
+    <>
+      <SignIn/>
+    </>
   );
 }
 
