@@ -382,12 +382,18 @@ html, body, #root{
   display: flex;
   align-items: center;
   padding-left: 10px;
+  transition: transform 0.3s;
+}
+
+.heading2:hover {
+  transform: scale(1.2);
 }
 
 .heading2 p {
   color: #4596ff;
   font-size: 0.7rem;
 }
+
 
 
 #root {

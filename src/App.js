@@ -2,7 +2,6 @@ import React from "react";
 import picture from "./GroupAtlegileUsers.png";
 import "./App.css";
 function App() {
-
   function calculateBackgroundProperties() {
     const screenWidth = window.innerWidth;
     const screenHeight = window.innerHeight;
@@ -51,7 +50,8 @@ function App() {
     return { backgroundPositionX, backgroundPositionY, backgroundSize };
   }
 
-  const { backgroundPositionX, backgroundPositionY, backgroundSize } = calculateBackgroundProperties();
+  const { backgroundPositionX, backgroundPositionY, backgroundSize } =
+    calculateBackgroundProperties();
 
   const data = [
     {
@@ -96,6 +96,11 @@ function App() {
     },
     // Add more data objects as needed
   ];
+
+  const handlePress = () => {
+    console.log(`Pressed`)
+  };
+  
   return (
     <div className="App">
       <div className="sidenav">
@@ -127,7 +132,7 @@ function App() {
         <div className="routes">
           <div className="routesContainer">
             <div className="sidbarDitails">
-              <p> Deshbord</p>
+              <p> Dashbord</p>
             </div>
             <div className="sidbarDitails">
               <p> Admin</p>
@@ -146,16 +151,16 @@ function App() {
           <div className="managerheaderText">
             <h1>Manage Users</h1>
           </div>
-          <div style={{
+          <div
+            style={{
               backgroundImage: `url(${picture})`,
               width: "60%",
               backgroundRepeat: "no-repeat",
               backgroundPosition: `${backgroundPositionX}px ${backgroundPositionY}px`,
               backgroundSize: backgroundSize,
-              height: "100%",              
-            }}>
-          
-          </div>
+              height: "100%",
+            }}
+          ></div>
         </div>
         <div className="managerContent">
           <div className="contentContaner">
@@ -189,7 +194,6 @@ function App() {
                   </div>
                 </div>
               </div>
-           
 
               <div className="NewUser">
                 <div className="usersheader">
@@ -240,12 +244,15 @@ function App() {
                 <p>{item.location}</p>
               </div>
               <div className="heading1">
-                <div className="heading2">
+                <div
+                  className="heading2"
+                  onClick={() => handlePress(item.actions[0])}
+                >
                   <p>{item.actions[0]}</p>
                 </div>
-                <div className="heading2">
-                  <p>{item.actions[1]}</p>
-                </div>
+                <div className="heading2" onClick={() => handlePress(item.actions[1])}>
+  <p>{item.actions[1]}</p>
+</div>
               </div>
             </div>
           ))}
