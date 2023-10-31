@@ -27,15 +27,15 @@
 }
 
 .logo {
-    margin-left: 130px;
-    margin-top: 200px;
-    display: flex;
+  margin-left: 130px;
+  margin-top: 200px;
+  display: flex;
 }
 
 .signUp {
-    justify-content: center;
-    display: flex;
-    margin-top: 100px;
+  justify-content: center;
+  display: flex;
+  margin-top: 100px;
 }
 
 form {
@@ -66,39 +66,52 @@ input {
 }
 
 .forgot-password {
-    text-decoration: none;
-    color: #072840;
-    margin-top: 20px;
-    margin-left: 210px;
-    font-size: small;
-    margin-bottom: 15px;
+  text-decoration: none;
+  color: #072840;
+  margin-top: 20px;
+  margin-left: 210px;
+  font-size: small;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
 }
 
 .google-signin {
-    text-decoration: none;
-    color: red;
-    margin-top: 20px;
-    font-size: small;
-    margin-top: 30px;
-    margin-left: 40px;
+  text-decoration: none;
+  color: red;
+  margin-top: 20px;
+  font-size: small;
+  margin-top: 30px;
+  margin-left: 40px;
+  cursor: pointer;
+}
+
+.google-signin:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+.submit-button,
+.signup-business {
+  padding: 10px 80px;
+  cursor: pointer;
+  border-radius: 200px;
 }
 
 .submit-button {
-    padding: 10px 80px;
-    background-color: rgb(8, 8, 44);
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-left: 50px;
-    border-radius: 200px;
+  background-color: rgb(8, 8, 44);
+  color: white;
+  border: none;
+  margin-left: 40px;
+  width: 340px;
 }
 
 .signup-business {
-    padding: 10px 80px;
-    background-color: white;
-    color: black;
-    cursor: pointer;
-    margin-left: 40px;
-    border-radius: 200px;
+  background-color: white;
+  color: black;
+  margin-left: 30px;
+  width: 340px;
 }
-
