@@ -59,7 +59,7 @@ function UserSignUp() {
             </div>
 
           </form>
-          <button className="signup-business">SIGN UP AS A BUSINESS <FcNext /></button>
+          <button className="signup-business" onClick={() => console.log("Sign up as a business clicked!")}>SIGN UP AS A BUSINESS <FcNext /></button>
         </div>
       </div>
     </div>
