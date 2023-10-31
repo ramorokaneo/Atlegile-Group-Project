@@ -5,12 +5,10 @@ import { AiOutlineSearch } from "react-icons/ai";
 import clipArt from "./clipArtBusinesses.png";
 
 export default function ManageBusinesses() {
-  
   function calculateBackgroundProperties() {
-
-  const screenWidth = window.innerWidth;
-  const screenHeight = window.innerHeight;
-  let backgroundPositionX, backgroundPositionY, backgroundSize;
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
+    let backgroundPositionX, backgroundPositionY, backgroundSize;
 
     // Define the standard screen sizes and their corresponding values
     const screenSizes = [
@@ -55,8 +53,8 @@ export default function ManageBusinesses() {
     return { backgroundPositionX, backgroundPositionY, backgroundSize };
   }
 
-
-  const { backgroundPositionX, backgroundPositionY, backgroundSize } = calculateBackgroundProperties();
+  const { backgroundPositionX, backgroundPositionY, backgroundSize } =
+    calculateBackgroundProperties();
 
   const fakeBusinessesList = [
     {
@@ -250,7 +248,7 @@ export default function ManageBusinesses() {
               width: "80%",
               backgroundRepeat: "no-repeat",
               backgroundPosition: `${backgroundPositionX}px ${backgroundPositionY}px`,
-      backgroundSize: backgroundSize,
+              backgroundSize: backgroundSize,
               height: "100%",
             }}
           ></div>
