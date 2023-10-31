@@ -20,7 +20,7 @@
 
 .form-items {
   padding: 13px;
-  min-height: 850px;
+  min-height: 880px;
   margin-top: 30px;
   min-width: 400px;
   margin-left: 1470px;
@@ -81,18 +81,17 @@ input {
 
 .google-signin {
   text-decoration: none;
-  color: red;
-  margin-top: 20px;
+  text-decoration-color: red;
+  margin-top: 30px; 
   font-size: small;
-  margin-top: 30px;
   margin-left: 40px;
   cursor: pointer;
 }
 
-.google-signin:hover {
+/* .google-signin:hover {
   text-decoration: underline;
   color: red;
-}
+} */
 
 .submit-button,
 .signup-business {
