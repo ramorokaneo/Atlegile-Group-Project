@@ -145,7 +145,7 @@ export default function ManageBusinesses() {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              borderRadius: 1000,
+              borderRadius: "100%",
             }}
           >
             S
