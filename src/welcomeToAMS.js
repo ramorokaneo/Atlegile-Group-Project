@@ -1,353 +1,367 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
-import clipArt from "./clipArtBusinesses.png";
-import WelcomeToAMS from "./welcomeToAMS";
+import clip from './cilp.png'
 
 const fakeUsersList = [
   {
-    id: "00",
+    id: "01",
     name: "Jane",
     surname: "Doe",
     phone: "0123456789",
-    email: "example@gmail.com",
+    email: "example@mail....",
     location: "1235 Vilakazi",
   },
   {
-    id: "00",
+    id: "02",
     name: "Jane",
     surname: "Doe",
     phone: "0123456789",
-    email: "example@gmail.com",
+    email: "example@mail....",
     location: "1235 Vilakazi",
   },
   {
-    id: "00",
+    id: "03",
     name: "Jane",
     surname: "Doe",
     phone: "0123456789",
-    email: "example@gmail.com",
+    email: "example@mail....",
     location: "1235 Vilakazi",
   },
   {
-    id: "00",
+    id: "04",
     name: "Jane",
     surname: "Doe",
     phone: "0123456789",
-    email: "example@gmail.com",
+    email: "example@mail....",
     location: "1235 Vilakazi",
   },
   {
-    id: "00",
+    id: "05",
     name: "Jane",
     surname: "Doe",
     phone: "0123456789",
-    email: "example@gmail.com",
+    email: "example@mail....",
     location: "1235 Vilakazi",
   },
-  // Add more user objects here
+  {
+    id: "06",
+    name: "Jane",
+    surname: "Doe",
+    phone: "0123456789",
+    email: "example@mail....",
+    location: "1235 Vilakazi",
+  },
+
 ];
 
 const fakeBusinessesList = [
   {
-    id: "00",
+    id: "01",
     name: "Tech Logistics",
     regNum: "N/A",
     bizType: "Township",
     Industry: "Technology",
-    actions: "View Details",
+    
   },
   {
-    id: "00",
+    id: "02",
     name: "Tech Logistics",
     regNum: "N/A",
     bizType: "Township",
     Industry: "Technology",
-    actions: "View Details",
+    
   },
   {
-    id: "00",
+    id: "03",
     name: "Tech Logistics",
     regNum: "N/A",
     bizType: "Township",
     Industry: "Technology",
-    actions: "View Details",
+  
   },
   {
-    id: "00",
+    id: "04",
     name: "Tech Logistics",
     regNum: "N/A",
     bizType: "Township",
     Industry: "Technology",
-    actions: "View Details",
+   
   },
   {
-    id: "00",
+    id: "05",
     name: "Tech Logistics",
     regNum: "N/A",
     bizType: "Township",
     Industry: "Technology",
-    actions: "View Details",
+ 
   },
-  // Add more business objects here
+  
 ];
-
-export default function welcomeToAMS() {
-  return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "flex-start",
-        flexDirection: "row",
-        height: "100%",
-      }}
-    >
+export default function WelcomeToAMS() {
+    return (
       <div
         style={{
-          width: "15%",
-          height:"250%",
-          border: "none",
-          borderRight: "1px lightgray solid",
-          padding: 20,
+          display: "flex",
+          alignItems: "flex-start",
+          flexDirection: "row",
+          height: "100%",
         }}
       >
         <div
           style={{
-            backgroundColor: "lightgray",
-            borderRadius: "100%",
-            color: "white",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            width: 180,
-            height: 180,
-            marginTop: 30,
-            padding: 50, 
+            width: "20%",
+            height: "100%",
+            border: "none",
+            borderRight: "1px lightgray solid",
+            padding: 20,
           }}
         >
-          S
-        </div>
-
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            flexDirection: "column",
-          }}
-        >
-          <span style={{ fontSize: 40, fontWeight: 700 }}>Sarah</span>
-          <span style={{ fontWeight: 600 }}>0123456789</span>
-          <span style={{ fontWeight: 600 }}>example@gmail.com</span>
-        </div>
-
-        <div style={{ paddingTop: 10 }}>
           <div
             style={{
-              border: "none",
-              borderBottom: "1px lightgray solid",
-              display: "flex",
-              flexDirection: "row",
-              paddingTop: 10,
-              paddingBottom: 10,
-              alignItems: "center",
-            }}
-          >
-            <FaStar color="gray" style={{ marginRight: 25 }} />
-            <span>Dashboard</span>
-          </div>
-          <div
-            style={{
-              border: "none",
-              borderBottom: "1px lightgray solid",
-              display: "flex",
-              flexDirection: "row",
-              paddingTop: 10,
-              paddingBottom: 10,
-              alignItems: "center",
-            }}
-          >
-            <FaStar color="gray" style={{ marginRight: 25 }} />
-            <span>Users</span>
-          </div>
-          <div
-            style={{
-              border: "none",
-              borderBottom: "1px lightgray solid",
-              display: "flex",
-              flexDirection: "row",
-              paddingTop: 10,
-              paddingBottom: 10,
-              alignItems: "center",
-            }}
-          >
-            <FaStar color="gray" style={{ marginRight: 25 }} />
-            <span>Businesses</span>
-          </div>
-        </div>
-      </div>
-
-      <div style={{ height: "120%", width: "90%" }}>
-        <div
-          style={{
-            // height: "30%",
-            backgroundColor: "#072840",
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-          }}
-        >
-          <span
-            style={{
+              backgroundColor: "lightgray",
+              borderRadius: "100%",
               color: "white",
-              fontSize: 20,
-              fontWeight: 600,
-              paddingLeft: 20,
-              width: "80%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              width: "150px",
+              height: "150px",
+              marginTop: 20,
+              marginBottom: 10,
+              padding: 50,
+              marginLeft: "25px",
             }}
           >
-            Welcome to AMS
-          </span>
-          <div
-            style={{
-              backgroundImage: `url(${clipArt})`,
-              width: "20%",
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              height: "120%",
-            }}
-          ></div>
-        </div>
-
-        <div style={{ padding: 40 }}>
-          <div
-            style={{
-              paddingBottom: 10,
-              border: "none",
-              borderBottom: "1px lightgray solid",
-            }}
-          >
-            <span style={{ fontWeight: 700 }}>DASHBOARD</span>
+            S
           </div>
-
           <div
             style={{
               display: "flex",
-              flexDirection: "row",
-              paddingTop: 50,
-              paddingBottom: 50,
+              alignItems: "center",
+              flexDirection: "column",
+              marginRight: "20px",
             }}
           >
+            <span style={{ fontSize: 40, fontWeight: 700 }}>Sarah</span>
+            <span style={{ fontWeight: 600 }}>0123456789</span>
+            <span style={{ fontWeight: 600 }}>example@gmail.com</span>
+          </div>
+          <div style={{ marginTop: 30 }}>
             <div
-              style={{ width: "20%", display: "flex", flexDirection: "column" }}
+              style={{
+                border: "none",
+                borderBottom: "1px lightgray solid",
+                display: "flex",
+                flexDirection: "row",
+                paddingTop: 10,
+                paddingBottom: 10,
+                alignItems: "center",
+                width: "80%",
+                marginLeft: "50px",
+              }}
             >
-              <span style={{ color: "gray" }}>Sales</span>
-              <span style={{ fontWeight: 400 }}>300</span>
+              <FaStar color="gray" style={{ marginRight: 25 }} />
+              <span>Dashboard</span>
             </div>
-
             <div
-              style={{ width: "20%", display: "flex", flexDirection: "column" }}
+              style={{
+                border: "none",
+                borderBottom: "1px lightgray solid",
+                display: "flex",
+                flexDirection: "row",
+                paddingTop: 10,
+                paddingBottom: 10,
+                alignItems: "center",
+                width: "80%",
+                marginLeft: "50px",
+              }}
             >
-              <span style={{ color: "gray" }}>New Businesses</span>
-              <span style={{ fontWeight: 400 }}>300</span>
+              <FaStar color="gray" style={{ marginRight: 25 }} />
+              <span>Users</span>
             </div>
-
             <div
-              style={{ width: "20%", display: "flex", flexDirection: "column" }}
+              style={{
+                border: "none",
+                borderBottom: "1px lightgray solid",
+                display: "flex",
+                flexDirection: "row",
+                paddingTop: 10,
+                paddingBottom: 10,
+                alignItems: "center",
+                width: "80%",
+                marginLeft: "50px",
+              }}
             >
-              <span style={{ color: "gray" }}>New Users</span>
-              <span style={{ fontWeight: 400 }}>300</span>
+              <FaStar color="gray" style={{ marginRight: 25 }} />
+              <span>Businesses</span>
             </div>
           </div>
+        </div>
+  
+        <div style={{ height: "100%", width: "80%", overflowY: "auto" }}>
           <div
             style={{
-              paddingBottom: 10,
-              border: "none",
-              borderBottom: "1px lightgray solid",
+              backgroundColor: "#072840",
+              height: "110px",
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
             }}
           >
-            <span style={{ fontWeight: 700 }}>NEW USERS</span>
+            <span
+              style={{
+                color: "white",
+                fontSize: 20,
+                fontWeight: 600,
+                paddingLeft: 20,
+                width: "80%",
+              }}
+            >
+              Welcome to AMS
+            </span>
+            <div
+              style={{
+                backgroundImage: `url(${clip})`,
+                width: "30%",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+                height: "200%",
+              }}
+            ></div>
           </div>
-
-          {/* First Table */}
-          <div>
-            {/* Table Header */}
+  
+          <div style={{ padding: 20 }}>
+            <div
+              style={{
+                paddingBottom: 10,
+                border: "none",
+                borderBottom: "1px lightgray solid",
+                marginLeft: 10,
+              }}
+            >
+              <span style={{ fontWeight: 700 }}>DASHBOARD</span>
+            </div>
+  
             <div
               style={{
                 display: "flex",
                 flexDirection: "row",
-                justifyContent: "space-between",
-                padding: "10px 10px 0",
-                borderBottom: "1px lightgray solid",
+                paddingTop: 50,
+                paddingBottom: 50,
+                marginTop: 10,
               }}
             >
-              <span style={{ fontWeight: 700, width: "20%" }}>Name</span>
-              <span style={{ fontWeight: 600, width: "20%" }}>Surname</span>
-              <span style={{ fontWeight: 600, width: "20%" }}>Phone</span>
-              <span style={{ fontWeight: 600, width: "20%" }}>Email</span>
-              <span style={{ fontWeight: 600, width: "20%" }}>Location</span>
-            </div>
-            {fakeUsersList.map((user) => (
               <div
-                key={user.id}
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "space-between",
-                  padding: "10px",
-                  borderBottom: "1px lightgray solid",
-                }}
+                style={{ width: "20%", display: "flex", flexDirection: "column" }}
               >
-                {/* Table Rows */}
-                <span style={{ width: "20%" }}>{user.name}</span>
-                <span style={{ width: "20%" }}>{user.surname}</span>
-                <span style={{ width: "20%" }}>{user.phone}</span>
-                <span style={{ width: "20%" }}>{user.email}</span>
-                <span style={{ width: "20%" }}>{user.location}</span>
-               
+                <span style={{ color: "gray" }}>Sales</span>
+                <span style={{ fontWeight: 400 }}>300</span>
               </div>
-            ))}
-          </div>
-
-          {/* Second Table */}
-          <div>
-            {/* Table Header */}
+              <div
+                style={{ width: "20%", display: "flex", flexDirection: "column" }}
+              >
+                <span style={{ color: "gray" }}>New Businesses</span>
+                <span style={{ fontWeight: 400 }}>300</span>
+              </div>
+              <div
+                style={{ width: "33%", display: "flex", flexDirection: "column" }}
+              >
+                <span style={{ color: "gray" }}>New Users</span>
+                <span style={{ fontWeight: 400 }}>300</span>
+              </div>
+            </div>
             <div
               style={{
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "space-between",
-                padding: "10px 10px 0",
+                paddingBottom: 10,
+                border: "none",
                 borderBottom: "1px lightgray solid",
               }}
             >
-              <span style={{ fontWeight: 700, width: "20%" }}>Business Name</span>
-              <span style={{ fontWeight: 600, width: "20%" }}>Reg Number</span>
-              <span style={{ fontWeight: 600, width: "20%" }}>Type of Business</span>
-              <span style={{ fontWeight: 600, width: "20%" }}>Industry</span>
-            
+              <span style={{ fontWeight: 700 }}>NEW USERS</span>
             </div>
-            {fakeBusinessesList.map((business) => (
-              <div
-                key={business.id}
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "space-between",
-                  padding: "10px",
-                  borderBottom: "1px lightgray solid",
-                }}
-              >
-                {/* Table Rows */}
-                <span style={{ width: "20%" }}>{business.name}</span>
-                <span style={{ width: "20%" }}>{business.regNum}</span>
-                <span style={{ width: "20%" }}>{business.bizType}</span>
-                <span style={{ width: "20%" }}>{business.Industry}</span>
-
+  
+            {/* Tables Container (Side by Side) */}
+            <div style={{ display: "flex", flexDirection: "row" }}>
+              {/* First Table */}
+              <div style={{ flex: 1 }}>
+                {/* Table Header */}
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                    padding: "10px 10px 0",
+                    borderBottom: "1px lightgray solid",
+                  }}
+                >
+                  <span style={{ fontWeight: 700, width: "60%" }}>Name</span>
+                  <span style={{ fontWeight: 600, width: "60%" }}>Surname</span>
+                  <span style={{ fontWeight: 600, width: "60%" }}>Phone</span>
+                  <span style={{ fontWeight: 600, width: "60%" }}>Email</span>
+                  <span style={{ fontWeight: 600, width: "60%" }}>Location</span>
+                </div>
+                {fakeUsersList.map((user) => (
+                  <div
+                    key={user.id}
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                      padding: "10px",
+                      borderBottom: "1px lightgray solid",
+                      marginRight: 10,
+                    }}
+                  >
+                    <span style={{ width: "60%" }}>{user.name}</span>
+                    <span style={{ width: "60%" }}>{user.surname}</span>
+                    <span style={{ width: "60%" }}>{user.phone}</span>
+                    <span style={{ width: "60%" }}>{user.email}</span>
+                    <span style={{ width: "60%" }}>{user.location}</span>
+                  </div>
+                  
+                ))}
+                
               </div>
-            ))}
+              
+              {/* Second Table */}
+              <div style={{ flex: 1 }}>
+                {/* Table Header */}
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                    padding: "10px 10px 0",
+                    borderBottom: "1px lightgray solid",
+                  }}
+                >
+                  <span style={{ fontWeight: 700, width: "50%" }}>Business Name</span>
+                  <span style={{ fontWeight: 600, width: "50%" }}>Reg Number</span>
+                  <span style={{ fontWeight: 600, width: "50%" }}>Type of Business</span>
+                  <span style={{ fontWeight: 600, width: "50%" }}>Industry</span>
+                </div>
+                {fakeBusinessesList.map((business) => (
+                  <div
+                    key={business.id}
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                      padding: "10px",
+                      borderBottom: "1px lightgray solid",
+                    }}
+                  >
+                    <span style={{ width: "50%" }}>{business.name}</span>
+                    <span style={{ width: "50%" }}>{business.regNum}</span>
+                    <span style={{ width: "50%" }}>{business.bizType}</span>
+                    <span style={{ width: "50%" }}>{business.Industry}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  );
-}
+    );
+  }
