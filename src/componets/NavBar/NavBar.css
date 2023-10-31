@@ -1,0 +1,77 @@
+/* Navbar styles */
+.navbar {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  background-color: #252b42;
+  flex-direction: row;
+  color: #fff;
+  justify-content: center; /* Center align all elements horizontally */
+}
+
+.navbar-item {
+  margin: 0 10px;
+  padding: 10px;
+}
+
+.navbar-item a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Contact Info styles */
+.contact-info {
+  margin: 0 10px; /* Add margin for spacing */
+  padding: 10px;
+  /* background-color: #555; */
+  color: #fff;
+  display: flex;
+  text-align: center;
+}
+
+/* Follow Us styles */
+.follow-us {
+  margin: 0 10px; /* Add margin for spacing */
+  /* padding: 10px; */
+  display: flex;
+  /* background-color: #555; */
+  color: #fff;
+  width: 20vw;
+  text-align: center;
+}
+
+/* Social Icons styles */
+.social-icons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Center align icons horizontally */
+}
+
+.social-icons .navbar-item {
+  margin: 5px 10px; /* Add margin for spacing */
+  padding: 5px;
+}
+.follow-us1 {
+  font-weight: bold;
+}
+.fa-phone {
+  color: white;
+}
+.social-icons .navbar-item a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Additional styling for the "Follow us and get a chance to win 80% off" text */
+.follow-us p:first-of-type {
+  font-weight: bold;
+}
+
+/* Additional styling for the "Follow us:" label */
+.follow-us p:last-of-type {
+  margin-top: 10px;
+  font-weight: bold;
+}
