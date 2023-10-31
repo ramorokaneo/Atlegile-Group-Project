@@ -1,41 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
 import "./AltContact.css";
-// import { FcGoogle } from 'react-icons/fc';
-// import { FcNext } from "react-icons/fc";
 
 function UserSignUp() {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Check if name and phone are not empty
+    if (name.trim() === "" || phone.trim() === "") {
+      alert("Please fill in all fields before continuing.");
+      return;
+    }
+
+    // Handle form submission logic here
+    console.log("Form submitted:", { name, phone });
+  };
+
   return (
     <div className="background-container">
       <div className="form-container">
         <div className="form-item form-items">
           <img src="./logo.png" alt="Logo" className="logo" />
           <h2 className="alt-contact">ALTERNATIVE CONTACT</h2>
-          <form>
+          <form onSubmit={handleSubmit}>
             <label>Name</label>
-            <input 
-              type="text" 
-              placeholder="Jane" 
-              className="form-group" 
+            <input
+              type="text"
+              placeholder="Jane"
+              className="form-group"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
             />
 
             <label>Phone</label>
             <input
-              type="number"
+              type="text"
               placeholder="0123456789"
               className="form-group"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              required
             />
-
-            {/* <div className="forgot-password">
-            <a href="/">FORGOT PASSWORD?</a>
-          </div> */}
 
             <button className="submit-button" type="submit">
               CONTINUE
             </button>
-
-            {/* <div className="google-signin">
-            <a href="/"><FcGoogle/> SIGN IN WITH GOOGLE</a>
-          </div> */}
           </form>
           <button className="not-now">NOT NOW</button>
         </div>
