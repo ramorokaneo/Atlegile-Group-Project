@@ -1,5 +1,8 @@
 import React from "react";
 import picture from "./GroupAtlegileUsers.png";
+import { FaStar } from "react-icons/fa";
+import { PiCaretUpDownFill } from "react-icons/pi";
+import { AiOutlineSearch } from "react-icons/ai";
 import "./App.css";
 function App() {
   function calculateBackgroundProperties() {
@@ -59,7 +62,7 @@ function App() {
       surname: "Doe",
       phone: "0123456789",
       email: "example@gmail.com",
-      location: "1235 Vilakazi street...",
+      location: "1235 Vilakazi street,Orlando...",
       actions: ["Block User", "View Details"],
     },
     {
@@ -67,7 +70,7 @@ function App() {
       surname: "Doe",
       phone: "0123456789",
       email: "example@gmail.com",
-      location: "1235 Vilakazi street...",
+      location: "1235 Vilakazi street,Orlando...",
       actions: ["Block User", "View Details"],
     },
     {
@@ -75,7 +78,7 @@ function App() {
       surname: "Doe",
       phone: "0123456789",
       email: "example@gmail.com",
-      location: "1235 Vilakazi street...",
+      location: "1235 Vilakazi street,Orlando...",
       actions: ["Block User", "View Details"],
     },
     {
@@ -83,7 +86,7 @@ function App() {
       surname: "Doe",
       phone: "0123456789",
       email: "example@gmail.com",
-      location: "1235 Vilakazi street...",
+      location: "1235 Vilakazi street,Orlando...",
       actions: ["Block User", "View Details"],
     },
     {
@@ -91,16 +94,31 @@ function App() {
       surname: "Doe",
       phone: "0123456789",
       email: "example@gmail.com",
-      location: "1235 Vilakazi street...",
+      location: "1235 Vilakazi street,Orlando...",
       actions: ["Block User", "View Details"],
     },
     // Add more data objects as needed
   ];
 
   const handlePress = () => {
-    console.log(`Pressed`)
+    console.log(`Pressed`);
   };
-  
+  const handleNavigateToAdmin = () => {
+    console.log(`Admin`);
+  };
+
+  const handleNavigateToDashboard = () => {
+    console.log(`Dashboard`);
+  };
+
+  const handleNavigateToBusinesses = () => {
+    console.log(`Businesses`);
+  };
+
+  const handleNavigateToUsers = () => {
+    console.log(`Users`);
+  };
+
   return (
     <div className="App">
       <div className="sidenav">
@@ -131,17 +149,87 @@ function App() {
         <div className="gap"></div>
         <div className="routes">
           <div className="routesContainer">
-            <div className="sidbarDitails">
-              <p> Dashbord</p>
+            <div
+              className="sidbarDitails"
+              onClick={() => handleNavigateToDashboard()}
+              style={{ transition: "transform 0.3s" }}
+            >
+              <div
+                style={{
+                  border: "none",
+                  borderBottom: "1px lightgray solid",
+                  display: "flex",
+                  flexDirection: "row",
+                  paddingTop: 10,
+                  paddingBottom: 10,
+                  alignItems: "center",
+                }}
+              >
+                <FaStar color="gray" style={{ marginRight: 25 }} />
+                <span>Dashboard</span>
+              </div>
             </div>
-            <div className="sidbarDitails">
-              <p> Admin</p>
+
+            <div
+              className="sidbarDitails"
+              onClick={() => handleNavigateToAdmin()}
+              style={{ transition: "transform 0.3s" }}
+            >
+              <div
+                style={{
+                  border: "none",
+                  borderBottom: "1px lightgray solid",
+                  display: "flex",
+                  flexDirection: "row",
+                  paddingTop: 10,
+                  paddingBottom: 10,
+                  alignItems: "center",
+                }}
+              >
+                <FaStar color="gray" style={{ marginRight: 25 }} />
+                <span>Admin</span>
+              </div>
             </div>
-            <div className="sidbarDitails">
-              <p> Users</p>
+
+            <div
+              className="sidbarDitails"
+              onClick={() => handleNavigateToUsers()}
+              style={{ transition: "transform 0.3s" }}
+            >
+              <div
+                style={{
+                  border: "none",
+                  borderBottom: "1px lightgray solid",
+                  display: "flex",
+                  flexDirection: "row",
+                  paddingTop: 10,
+                  paddingBottom: 10,
+                  alignItems: "center",
+                }}
+              >
+                <FaStar color="gray" style={{ marginRight: 25 }} />
+                <span>Users</span>
+              </div>
             </div>
-            <div className="sidbarDitails">
-              <p> Businesses</p>
+            <div
+              className="sidbarDitails"
+              onClick={() => handleNavigateToBusinesses()}
+              style={{ transition: "transform 0.3s" }}
+            >
+              <div
+                style={{
+                  border: "none",
+                  borderBottom: "1px lightgray solid",
+                  display: "flex",
+                  flexDirection: "row",
+                  paddingTop: 10,
+                  paddingBottom: 10,
+                  alignItems: "center",
+                }}
+              >
+                <FaStar color="gray" style={{ marginRight: 25 }} />
+                <span>Businesses</span>
+              </div>
             </div>
           </div>
         </div>
@@ -207,6 +295,16 @@ function App() {
           <div className="headings">
             <div className="heading">
               <p>Name</p>
+              <span
+                style={{
+                  border: "none",
+
+                  paddingRight: 10,
+                }}
+              >
+                <PiCaretUpDownFill color="gray" />
+                <AiOutlineSearch color="gray" />
+              </span>
             </div>
             <div className="heading">
               <p>Surname</p>
@@ -243,16 +341,19 @@ function App() {
               <div className="heading1">
                 <p>{item.location}</p>
               </div>
-              <div className="heading1">
+              <div className="heading3">
                 <div
                   className="heading2"
                   onClick={() => handlePress(item.actions[0])}
                 >
                   <p>{item.actions[0]}</p>
                 </div>
-                <div className="heading2" onClick={() => handlePress(item.actions[1])}>
-  <p>{item.actions[1]}</p>
-</div>
+                <div
+                  className="heading2"
+                  onClick={() => handlePress(item.actions[1])}
+                >
+                  <p>{item.actions[1]}</p>
+                </div>
               </div>
             </div>
           ))}

@@ -335,17 +335,20 @@ html, body, #root{
   align-items: center;
   border-bottom: 1px solid #cfcfcf;
   position: relative;
+  
 }
 
 .heading {
   flex: 1;
   height: 30px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   position: relative;
   border-left: 1px solid #cfcfcf;
+  padding-left: 10px;
 }
+
 
 .heading p {
   color: #000000;
@@ -358,12 +361,29 @@ html, body, #root{
   width: calc(100vw - 200px);
   background-color: #ffffff;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   border-bottom: 1px solid #cfcfcf;
+  position: relative;
 }
 
 .heading1 {
+  flex: 1;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding-left: 10px;
+}
+
+.heading1 p {
+  color: #000000;
+  font-size: 1rem;
+  /* font-weight: bold; */
+}
+
+.heading3 {
   flex: 1;
   height: 30px;
   display: flex;
@@ -372,11 +392,6 @@ html, body, #root{
   position: relative;
 }
 
-.heading1 p {
-  color: #000000;
-  font-size: 1rem;
-  /* font-weight: bold; */
-}
 
 .heading2 {
   display: flex;
@@ -386,6 +401,11 @@ html, body, #root{
 }
 
 .heading2:hover {
+  transform: scale(1.2);
+  
+}
+.sidbarDitails:hover {
+  /* background-color: lightgray; */
   transform: scale(1.2);
 }
 
