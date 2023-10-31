@@ -1,6 +1,9 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
-import clip from './cilp.png'
+import { FaSort, FaSearch } from "react-icons/fa";
+import { RiArrowUpDownFill } from "react-icons/ri";
+import { AiFillCaretUp, AiFillCaretDown, AiOutlineSearch } from "react-icons/ai"; //
+import clip from "./cilp.png";
 
 const fakeUsersList = [
   {
@@ -107,6 +110,7 @@ export default function WelcomeToAMS() {
           height: "100%",
         }}
       >
+        {/* Left Sidebar */}
         <div
           style={{
             width: "20%",
@@ -116,6 +120,7 @@ export default function WelcomeToAMS() {
             padding: 20,
           }}
         >
+          {/* Profile Info */}
           <div
             style={{
               backgroundColor: "lightgray",
@@ -146,6 +151,7 @@ export default function WelcomeToAMS() {
             <span style={{ fontWeight: 600 }}>0123456789</span>
             <span style={{ fontWeight: 600 }}>example@gmail.com</span>
           </div>
+          {/* Sidebar Navigation */}
           <div style={{ marginTop: 30 }}>
             <div
               style={{
@@ -198,7 +204,9 @@ export default function WelcomeToAMS() {
           </div>
         </div>
   
+        {/* Main Content */}
         <div style={{ height: "100%", width: "80%", overflowY: "auto" }}>
+          {/* Header */}
           <div
             style={{
               backgroundColor: "#072840",
@@ -231,7 +239,9 @@ export default function WelcomeToAMS() {
             ></div>
           </div>
   
+          {/* Dashboard Section */}
           <div style={{ padding: 20 }}>
+            {/* Dashboard Title */}
             <div
               style={{
                 paddingBottom: 10,
@@ -243,6 +253,7 @@ export default function WelcomeToAMS() {
               <span style={{ fontWeight: 700 }}>DASHBOARD</span>
             </div>
   
+            {/* Dashboard Stats */}
             <div
               style={{
                 display: "flex",
@@ -271,6 +282,8 @@ export default function WelcomeToAMS() {
                 <span style={{ fontWeight: 400 }}>300</span>
               </div>
             </div>
+  
+            
             <div
               style={{
                 paddingBottom: 10,
@@ -283,7 +296,7 @@ export default function WelcomeToAMS() {
   
             {/* Tables Container (Side by Side) */}
             <div style={{ display: "flex", flexDirection: "row" }}>
-              {/* First Table */}
+              {/* First Table (User Table) */}
               <div style={{ flex: 1 }}>
                 {/* Table Header */}
                 <div
@@ -293,6 +306,7 @@ export default function WelcomeToAMS() {
                     justifyContent: "space-between",
                     padding: "10px 10px 0",
                     borderBottom: "1px lightgray solid",
+                    backgroundColor: "#fafafa",
                   }}
                 >
                   <span style={{ fontWeight: 700, width: "60%" }}>Name</span>
@@ -319,12 +333,10 @@ export default function WelcomeToAMS() {
                     <span style={{ width: "60%" }}>{user.email}</span>
                     <span style={{ width: "60%" }}>{user.location}</span>
                   </div>
-                  
                 ))}
-                
               </div>
-              
-              {/* Second Table */}
+  
+              {/* Second Table (Business Table) */}
               <div style={{ flex: 1 }}>
                 {/* Table Header */}
                 <div
@@ -334,12 +346,50 @@ export default function WelcomeToAMS() {
                     justifyContent: "space-between",
                     padding: "10px 10px 0",
                     borderBottom: "1px lightgray solid",
+                    backgroundColor: "#fafafa",
                   }}
                 >
-                  <span style={{ fontWeight: 700, width: "50%" }}>Business Name</span>
-                  <span style={{ fontWeight: 600, width: "50%" }}>Reg Number</span>
-                  <span style={{ fontWeight: 600, width: "50%" }}>Type of Business</span>
-                  <span style={{ fontWeight: 600, width: "50%" }}>Industry</span>
+                  <span style={{ fontWeight: 600, width: "50%" }}>Business Name</span>
+                  <span
+                    style={{
+                      border: "none",
+                      borderRight: "1px lightgray solid",
+                      paddingRight: 10,
+                    }}
+                  >
+                    <span style={{ fontWeight: 600, width: "50%" }}>Reg Number</span>
+                    <span
+                      style={{
+                        border: "none",
+                        borderRight: "1px lightgray solid",
+                        paddingRight: 10,
+                      }}
+                    >
+                      <AiFillCaretUp color="gray" />
+                      <AiFillCaretDown color="gray" /> 
+                      <AiOutlineSearch color="gray" />
+                    </span>
+                    <span style={{ fontWeight: 600, width: "50%" }}>Type of Business</span>
+                    <span
+                      style={{
+                        border: "none",
+                        borderRight: "1px lightgray solid",
+                        paddingRight: 10,
+                      }}
+                    >
+                      <AiFillCaretUp color="gray" /> 
+                    </span>
+                    <span style={{ fontWeight: 600, width: "50%" }}>Industry</span>
+                    <span
+                      style={{
+                        border: "none",
+                        borderRight: "1px lightgray solid",
+                        paddingRight: 10,
+                      }}
+                    >
+                      <AiFillCaretUp color="gray" /> 
+                    </span>
+                  </span>
                 </div>
                 {fakeBusinessesList.map((business) => (
                   <div
@@ -350,6 +400,7 @@ export default function WelcomeToAMS() {
                       justifyContent: "space-between",
                       padding: "10px",
                       borderBottom: "1px lightgray solid",
+                      marginRight: 10,
                     }}
                   >
                     <span style={{ width: "50%" }}>{business.name}</span>
@@ -364,4 +415,4 @@ export default function WelcomeToAMS() {
         </div>
       </div>
     );
-  }
+}
