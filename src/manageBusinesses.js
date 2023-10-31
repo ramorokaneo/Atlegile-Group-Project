@@ -5,7 +5,59 @@ import { AiOutlineSearch } from "react-icons/ai";
 import clipArt from "./clipArtBusinesses.png";
 
 export default function ManageBusinesses() {
-  // eslint-disable-next-line
+  
+  function calculateBackgroundProperties() {
+
+  const screenWidth = window.innerWidth;
+  const screenHeight = window.innerHeight;
+  let backgroundPositionX, backgroundPositionY, backgroundSize;
+
+    // Define the standard screen sizes and their corresponding values
+    const screenSizes = [
+      {
+        width: 1515,
+        height: 1441,
+        positionX: 340,
+        positionY: -150,
+        size: "700px 450px",
+      },
+      {
+        width: 1738,
+        height: 871,
+        positionX: 530,
+        positionY: -115,
+        size: "600px 350px",
+      },
+      // Add more screen sizes and values as needed
+    ];
+
+    // Calculate the ratio of the screen size to the standard sizes
+    const matchingSize = screenSizes.find(
+      (size) => size.width === screenWidth && size.height === screenHeight
+    );
+
+    if (matchingSize) {
+      backgroundPositionX = matchingSize.positionX;
+      backgroundPositionY = matchingSize.positionY;
+      backgroundSize = matchingSize.size;
+    } else {
+      // Calculate ratios for custom screen sizes
+      const ratioX = screenWidth / screenSizes[0].width;
+      const ratioY = screenHeight / screenSizes[0].height;
+
+      backgroundPositionX = Math.round(screenSizes[0].positionX * ratioX);
+      backgroundPositionY = Math.round(screenSizes[0].positionY * ratioY);
+      backgroundSize = `${Math.round(700 * ratioX)}px ${Math.round(
+        450 * ratioY
+      )}px`;
+    }
+
+    return { backgroundPositionX, backgroundPositionY, backgroundSize };
+  }
+
+
+  const { backgroundPositionX, backgroundPositionY, backgroundSize } = calculateBackgroundProperties();
+
   const fakeBusinessesList = [
     {
       id: "00",
@@ -73,23 +125,31 @@ export default function ManageBusinesses() {
           border: "none",
           borderRight: "1px lightgray solid",
           padding: 20,
-
         }}
       >
         <div
           style={{
-            backgroundColor: "lightgray",
-            borderRadius: "100%",
             color: "white",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            padding:110,
-            marginTop:20,
+            padding: 10,
+            marginTop: 20,
           }}
         >
-
-          S
+          <div
+            style={{
+              backgroundColor: "lightgray",
+              width: "200px",
+              height: "200px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              borderRadius: 1000,
+            }}
+          >
+            S
+          </div>
         </div>
 
         <div
@@ -104,7 +164,7 @@ export default function ManageBusinesses() {
           <span style={{ fontWeight: 600 }}>example@gmail.com</span>
         </div>
 
-        <div style={{ paddingTop: 10 }}>
+        <div style={{ marginTop: 30 }}>
           <div
             style={{
               border: "none",
@@ -179,7 +239,7 @@ export default function ManageBusinesses() {
               fontSize: 20,
               fontWeight: 600,
               paddingLeft: 20,
-              width: "80%",
+              width: "20%",
             }}
           >
             Manage Businesses
@@ -187,21 +247,22 @@ export default function ManageBusinesses() {
           <div
             style={{
               backgroundImage: `url(${clipArt})`,
-              width: "20%",
+              width: "80%",
               backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-              backgroundSize: "cover",
+              backgroundPosition: `${backgroundPositionX}px ${backgroundPositionY}px`,
+      backgroundSize: backgroundSize,
               height: "100%",
             }}
           ></div>
         </div>
 
-        <div style={{ padding: 40 }}>
+        <div style={{ padding: 20 }}>
           <div
             style={{
               paddingBottom: 10,
               border: "none",
               borderBottom: "1px lightgray solid",
+              marginLeft: 10,
             }}
           >
             <span style={{ fontWeight: 700 }}>USERS</span>
@@ -213,6 +274,7 @@ export default function ManageBusinesses() {
               flexDirection: "row",
               paddingTop: 50,
               paddingBottom: 50,
+              marginLeft: 10,
             }}
           >
             <div
@@ -241,6 +303,7 @@ export default function ManageBusinesses() {
               paddingBottom: 10,
               border: "none",
               borderBottom: "1px lightgray solid",
+              marginLeft: 10,
             }}
           >
             <span style={{ fontWeight: 700 }}>NEW BUSINESSES</span>
@@ -268,7 +331,13 @@ export default function ManageBusinesses() {
               }}
             >
               <span style={{ fontWeight: 600 }}>Business Name</span>
-              <span>
+              <span
+                style={{
+                  border: "none",
+                  borderRight: "1px lightgray solid",
+                  paddingRight: 10,
+                }}
+              >
                 <PiCaretUpDownFill color="gray" />
                 <AiOutlineSearch color="gray" />
               </span>
@@ -287,7 +356,13 @@ export default function ManageBusinesses() {
               }}
             >
               <span style={{ fontWeight: 600 }}>Reg Number</span>
-              <span>
+              <span
+                style={{
+                  border: "none",
+                  borderRight: "1px lightgray solid",
+                  paddingRight: 10,
+                }}
+              >
                 <PiCaretUpDownFill color="gray" />
               </span>
             </div>
@@ -305,7 +380,13 @@ export default function ManageBusinesses() {
               }}
             >
               <span style={{ fontWeight: 600 }}>Type of Business</span>
-              <span>
+              <span
+                style={{
+                  border: "none",
+                  borderRight: "1px lightgray solid",
+                  paddingRight: 10,
+                }}
+              >
                 <PiCaretUpDownFill color="gray" />
               </span>
             </div>
@@ -323,7 +404,13 @@ export default function ManageBusinesses() {
               }}
             >
               <span style={{ fontWeight: 600 }}>Industry</span>
-              <span>
+              <span
+                style={{
+                  border: "none",
+                  borderRight: "1px lightgray solid",
+                  paddingRight: 10,
+                }}
+              >
                 <PiCaretUpDownFill color="gray" />
               </span>
             </div>
@@ -349,66 +436,71 @@ export default function ManageBusinesses() {
                 key={business.id}
                 style={{ display: "flex", flexDirection: "row" }}
               >
-              <div
-                style={{
-                  width: "20%",
-                  paddingTop: 10,
-                  paddingBottom: 10,
-                  paddingLeft: 10,
-                  paddingRight: 10,
-                }}
-              >
-                <span style={{  }}>{business.name}</span>
+                <div
+                  style={{
+                    width: "20%",
+                    paddingTop: 10,
+                    paddingBottom: 10,
+                    paddingLeft: 10,
+                    paddingRight: 10,
+                  }}
+                >
+                  <span style={{}}>{business.name}</span>
+                </div>
+
+                <div
+                  style={{
+                    width: "20%",
+                    paddingTop: 10,
+                    paddingBottom: 10,
+                    paddingLeft: 10,
+                    paddingRight: 10,
+                  }}
+                >
+                  <span style={{}}>{business.regNum}</span>
+                </div>
+
+                <div
+                  style={{
+                    width: "20%",
+                    paddingTop: 10,
+                    paddingBottom: 10,
+                    paddingLeft: 10,
+                    paddingRight: 10,
+                  }}
+                >
+                  <span style={{}}>{business.bizType}</span>
+                </div>
+
+                <div
+                  style={{
+                    width: "20%",
+                    paddingTop: 10,
+                    paddingBottom: 10,
+                    paddingLeft: 10,
+                    paddingRight: 10,
+                  }}
+                >
+                  <span style={{}}>{business.Industry}</span>
+                </div>
+
+                <div
+                  style={{
+                    width: "20%",
+                    paddingTop: 10,
+                    paddingBottom: 10,
+                    paddingLeft: 10,
+                    paddingRight: 10,
+                  }}
+                >
+                  <a
+                    href="http://localhost:3000/"
+                    style={{ textDecoration: "none", color: "#1890ff" }}
+                  >
+                    {business.actions}
+                  </a>
+                </div>
               </div>
-
-              <div
-                  style={{
-                    width: "20%",
-                    paddingTop: 10,
-                    paddingBottom: 10,
-                    paddingLeft: 10,
-                    paddingRight: 10,
-                  }}
-                >
-                  <span style={{  }}>{business.regNum}</span>
-                </div>
-
-                <div
-                  style={{
-                    width: "20%",
-                    paddingTop: 10,
-                    paddingBottom: 10,
-                    paddingLeft: 10,
-                    paddingRight: 10,
-                  }}
-                >
-                  <span style={{  }}>{business.bizType}</span>
-                </div>
-
-                <div
-                  style={{
-                    width: "20%",
-                    paddingTop: 10,
-                    paddingBottom: 10,
-                    paddingLeft: 10,
-                    paddingRight: 10,
-                  }}
-                >
-                  <span style={{  }}>{business.Industry}</span>
-                </div>
-
-                <div
-                  style={{
-                    width: "20%",
-                    paddingTop: 10,
-                    paddingBottom: 10,
-                    paddingLeft: 10,
-                    paddingRight: 10,
-                  }}
-                >
-                  <span style={{ color:"#1890ff" }}>{business.actions}</span>
-                </div>
-            </div>
             ))}
           </div>
         </div>
