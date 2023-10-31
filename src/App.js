@@ -152,7 +152,7 @@ function App() {
               backgroundRepeat: "no-repeat",
               backgroundPosition: `${backgroundPositionX}px ${backgroundPositionY}px`,
               backgroundSize: backgroundSize,
-              height: "100%",
+              height: "100%",              
             }}>
           
           </div>
@@ -189,7 +189,7 @@ function App() {
                   </div>
                 </div>
               </div>
-              {/* <div className="space"></div> */}
+           
 
               <div className="NewUser">
                 <div className="usersheader">
