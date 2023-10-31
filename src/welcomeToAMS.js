@@ -2,7 +2,7 @@ import React from "react";
 import { FaStar } from "react-icons/fa";
 import { FaSort, FaSearch } from "react-icons/fa";
 import { RiArrowUpDownFill } from "react-icons/ri";
-import { AiFillCaretUp, AiFillCaretDown, AiOutlineSearch } from "react-icons/ai"; //
+import { AiFillCaretUp, AiFillCaretDown, AiOutlineSearch } from "react-icons/ai"; 
 import clip from "./cilp.png";
 
 const fakeUsersList = [
