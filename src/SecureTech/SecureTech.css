@@ -1,0 +1,9 @@
+.container {
+    display: flex;
+    padding: 250px;
+    background-color:aquamarine ;
+}
+
+.heading {
+    margin-right: 160vh;
+}

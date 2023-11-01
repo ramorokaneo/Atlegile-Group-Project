@@ -1,7 +1,7 @@
-// import logo from './logo.svg';
 // import UserSignUp from './UserSignUp/UserSignUp'
 // import AltContact from './AltContact/AltContact';
-import MainAcc from './MainAcc/MainAcc';
+// import MainAcc from './MainAcc/MainAcc';
+import SecureTech from './SecureTech/SecureTech';
 import './App.css';
 
 function App() {
@@ -9,7 +9,8 @@ function App() {
     <div className="App">
       {/* <UserSignUp /> */}
       {/* <AltContact /> */}
-      <MainAcc />
+      {/* <MainAcc /> */}
+      <SecureTech />
     </div>
   );
 }
