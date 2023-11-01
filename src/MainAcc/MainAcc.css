@@ -40,34 +40,58 @@
   .yourself {
     margin-left: 50px;
     display: flex;
-    /* margin-top: 100px; */
+    margin-bottom: 10px;
 }
   
   form {
-    width: 355px;
+    width: 380px;
     height: 400px;
     gap: 20px;
+    /* background-color: beige; */
+  }
+
+  .fullname {
+    /* background-color: bisque; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: 30px;
+    width: 350px;
   }
   
   .form-group {
     margin-bottom: 10px;
-    width: 290px;
-    /* padding: 10px; */
+    width: 300px;
     border: none;
     outline: none;
     border-bottom: 1px solid #000;
-    margin-left: 50px;
+    margin-left: 20px;
+    font-size: medium ;
+  }
+
+  .form-group-1 {
+    margin-top: 20px;
+    width: 140px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #000;
+    margin-left: -230px;
     font-size: medium ;
   }
   
   label {
-    margin-right: 200px;
+    margin-right: 240px;
+    font-size: small;
+  }
+
+  .label-1 {
+    margin-right: 160px;
     font-size: small;
   }
   
   input {
     width: 100%;
-    padding: 6px;
+    padding: 4px;
     margin-bottom: 10px;
   }
   
