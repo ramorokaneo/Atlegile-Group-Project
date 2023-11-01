@@ -141,7 +141,7 @@
     width: 150px;
     height: auto;
     position: absolute;
-    right: 580px;
+    margin-right: -70px;
     top: 55px;
     transform: translateY(-50%);
 }
