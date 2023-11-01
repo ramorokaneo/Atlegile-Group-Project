@@ -9,7 +9,10 @@ import { SiFacebook } from 'react-icons/si';
 import Logo from "../assets/Logo.png";
 import lion from "../assets/Lion.png";
 import shadow from "../assets/Shadow_Logo.png";
-import log from "../assets/Logo.png"
+import log from "../assets/Logo.png";
+import plane from "../assets/plane.png";
+
+
 const LandingPageHeader = () => {
     return (
         <div>
@@ -67,6 +70,9 @@ const LandingPageHeader = () => {
                         that is coupled with creativity, while<br />
                         transferring 8 years of professional quality<br /> service.</p>
                     <p>#AGILE IS WHAT ATLEGILE IS ABOUT</p></div>
+            </div>
+            <div>
+                <img src={plane} alt=""/>
             </div>
         </div>
     );
