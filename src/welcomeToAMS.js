@@ -1,16 +1,8 @@
-import React, {useState} from "react";
-import { FaStar } from "react-icons/fa";
-import { FaSort, FaSearch } from "react-icons/fa";
-import { RiArrowUpDownFill } from "react-icons/ri";
+import React, { useState } from "react";
+import { FaStar, FaCaretUp, FaCaretDown } from "react-icons/fa";
+import { AiOutlineSearch } from "react-icons/ai";
 import { PiCaretUpDownFill } from "react-icons/pi";
-
-import {
-  AiFillCaretUp,
-  AiFillCaretDown,
-  AiOutlineSearch,
-} from "react-icons/ai";
 import clip from "./cilp.png";
-import { IoIconName } from "react-icons/io";
 
 const fakeUsersList = [
   {
@@ -100,33 +92,33 @@ const fakeBusinessesList = [
     Industry: "Technology",
   },
 ];
-
 export default function WelcomeToAMS() {
-  const [piCaretColor, setPiCaretColor] = useState('gray');
-  const [searchColor, setSearchColor] = useState('gray');
+  const [piCaretColor, setPiCaretColor] = useState("gray");
+  const [searchColor, setSearchColor] = useState("gray");
 
   const handlePiCaretClick = () => {
-    setPiCaretColor(piCaretColor === 'gray' ? 'blue' : 'gray');
+    setPiCaretColor(piCaretColor === "gray" ? "blue" : "gray");
   };
 
   const handleSearchClick = () => {
-    setSearchColor(searchColor === 'gray' ? 'green' : 'gray');
+    setSearchColor(searchColor === "gray" ? "green" : "gray");
   };
-const handlePress = () => {
-  console.log("Pressed");
-};
 
-const handleNavigateToDashboard = () => {
-  console.log("Dashboard");
-};
+  const handlePress = () => {
+    console.log("Pressed");
+  };
 
-const handleNavigateToBusinesses = () => {
-  console.log("Businesses");
-};
+  const handleNavigateToDashboard = () => {
+    console.log("Dashboard");
+  };
 
-const handleNavigateToUsers = () => {
-  console.log("Users");
-};
+  const handleNavigateToBusinesses = () => {
+    console.log("Businesses");
+  };
+
+  const handleNavigateToUsers = () => {
+    console.log("Users");
+  };
   return (
     <div
       style={{
@@ -198,7 +190,7 @@ const handleNavigateToUsers = () => {
           </div>
           <div
             id="users-link"
-            onClick={handleNavigateToUsers} 
+            onClick={handleNavigateToUsers}
             style={{
               border: "none",
               borderBottom: "1px lightgray solid",
@@ -217,7 +209,7 @@ const handleNavigateToUsers = () => {
           </div>
           <div
             id="businesses-link"
-            onClick={handleNavigateToBusinesses} 
+            onClick={handleNavigateToBusinesses}
             style={{
               border: "none",
               borderBottom: "1px lightgray solid",
@@ -320,10 +312,10 @@ const handleNavigateToUsers = () => {
             style={{
               paddingBottom: 10,
               border: "none",
-              borderBottom: "1px lightgray solid",
+              borderBottom: "1px, lightgray solid",
             }}
           >
-            <span style={{ fontWeight: 700 }}>NEW USERS</span>
+            <span style={{ fontWeight: 700, }}>NEW USERS</span>
           </div>
 
           {/* Tables Container (Side by Side) */}
@@ -341,13 +333,13 @@ const handleNavigateToUsers = () => {
                   backgroundColor: "#fafafa",
                 }}
               >
-                 <span style={{ fontWeight: 700, width: "50%" }}>Name</span>
+                <span style={{ fontWeight: 600, width: "50%", fontSize:"small" }}>Name</span>
                 <span
-                    style={{
-                      border: "none",
-                      borderRight: "1px lightgray solid",
-                      alignItems: "center",
-                    }}
+                  style={{
+                    border: "none",
+                    // borderRight: "1px lightgray solid",
+                    alignItems: "center",
+                  }}
                 >
                   <PiCaretUpDownFill
                     color={piCaretColor}
@@ -364,10 +356,10 @@ const handleNavigateToUsers = () => {
                     boarderRight: "1px lightgray solid",
                   }}
                 />
-                <span style={{ fontWeight: 600, width: "60%" }}>Surname</span>
-                <span style={{ fontWeight: 600, width: "60%" }}>Phone</span>
-                <span style={{ fontWeight: 600, width: "60%" }}>Email</span>
-                <span style={{ fontWeight: 600, width: "60%" }}>Location</span>
+                <span style={{ fontWeight: 600, width: "60%", fontSize:"small"  }}>Surname</span>
+                <span style={{ fontWeight: 600, width: "60%", fontSize:"small" }}>Phone</span>
+                <span style={{ fontWeight: 600, width: "60%", fontSize:"small"  }}>Email</span>
+                <span style={{ fontWeight: 600, width: "60%", fontSize:"small"  }}>Location</span>
               </div>
               {fakeUsersList.map((user) => (
                 <div
@@ -382,15 +374,23 @@ const handleNavigateToUsers = () => {
                     marginRight: 10,
                   }}
                 >
-                  <span style={{ width: "60%" }}>{user.name}</span>
-                  <span style={{ width: "60%" }}>{user.surname}</span>
-                  <span style={{ width: "60%" }}>{user.phone}</span>
-                  <span style={{ width: "60%" }}>{user.email}</span>
-                  <span style={{ width: "60%" }}>{user.location}</span>
+                  <span style={{ width: "60%", fontSize:"small"  }}>{user.name}</span>
+                  <span style={{ width: "60%", fontSize:"small"  }}>{user.surname}</span>
+                  <span style={{ width: "60%", fontSize:"small"  }}>{user.phone}</span>
+                  <span style={{ width: "60%", fontSize:"small" }}>{user.email}</span>
+                  <span style={{ width: "60%", fontSize:"small" }}>{user.location}</span>
                 </div>
               ))}
             </div>
-
+            <div
+    style={{
+      backgroundColor: "gray",
+      colour: "gray",
+      width: "10px",
+      height: "100%",
+      boarderRight: "1px lightgray solid",
+    }}
+  ></div>
             {/* Second Table (Business Table) */}
             <div style={{ flex: 1 }}>
               {/* Table Header */}
@@ -403,32 +403,28 @@ const handleNavigateToUsers = () => {
                   borderBottom: "1px lightgray solid",
                   backgroundColor: "#fafafa",
                 }}
+                
               >
-                <span style={{ fontWeight: 600 }}>Business Name</span>
+                <span style={{ fontWeight: 600, fontSize:"small" }}>Business Name</span>
                 <span
                   style={{
                     border: "none",
-
                     paddingRight: 10,
                   }}
                 >
-                  <PiCaretUpDownFill  color={piCaretColor}
-                    onClick={handlePiCaretClick}/>
-                  <AiOutlineSearch color={searchColor}
-                    onClick={handleSearchClick}/>
+                  <PiCaretUpDownFill color={piCaretColor} onClick={handlePiCaretClick} />
+                  <AiOutlineSearch color={searchColor} onClick={handleSearchClick} />
                 </span>
                 <span
                   style={{
                     border: "none",
                     borderLeft: "1px lightgray solid",
-                    marginRight: "105px",
-                    // paddingLeft: 3,
+                    marginRight: "100px",
                   }}
                 >
-                  <span style={{ fontWeight: 600, width: "80%" }}>
+                  <span style={{ fontWeight: 600, fontSize:"small"}}>
                     Reg Number
-                    <PiCaretUpDownFill  color={piCaretColor}
-                    onClick={handlePiCaretClick} />
+                    <PiCaretUpDownFill color={piCaretColor} onClick={handlePiCaretClick} />
                   </span>
                   <span
                     style={{
@@ -438,7 +434,7 @@ const handleNavigateToUsers = () => {
                       marginRight: "1px",
                     }}
                   ></span>
-                  <span style={{ fontWeight: 600, width: "50%" }}>
+                  <span style={{ fontWeight: 600, fontSize:"small" }}>
                     Type of Business
                   </span>
                   <span
@@ -449,10 +445,9 @@ const handleNavigateToUsers = () => {
                       marginLeft: "1px",
                     }}
                   >
-                   <PiCaretUpDownFill  color={piCaretColor}
-                    onClick={handlePiCaretClick} />
+                    <PiCaretUpDownFill color={piCaretColor} onClick={handlePiCaretClick} />
                   </span>
-                  <span style={{ fontWeight: 600, width: "50%" }}>
+                  <span style={{ fontWeight: 600, fontSize:"small" }}>
                     Industry
                   </span>
                   <span
@@ -460,11 +455,9 @@ const handleNavigateToUsers = () => {
                       border: "none",
                       borderRight: "1px lightgray solid",
                       paddingLeft: 10,
-                      
                     }}
                   >
-                   <PiCaretUpDownFill  color={piCaretColor}
-                    onClick={handlePiCaretClick} />
+                    <PiCaretUpDownFill color={piCaretColor} onClick={handlePiCaretClick} />
                   </span>
                 </span>
               </div>
@@ -480,10 +473,10 @@ const handleNavigateToUsers = () => {
                     marginRight: 10,
                   }}
                 >
-                  <span style={{ width: "55%" }}>{business.name}</span>
-                  <span style={{ width: "45%" }}>{business.regNum}</span>
-                  <span style={{ width: "65%" }}>{business.bizType}</span>
-                  <span style={{ width: "55%" }}>{business.Industry}</span>
+                  <span style={{ width: "75%", fontSize:"small"  }}>{business.name}</span>
+                  <span style={{ width: "50%", fontSize:"small"  }}>{business.regNum}</span>
+                  <span style={{ width: "65%", fontSize:"small" }}>{business.bizType}</span>
+                  <span style={{ width: "55%", fontSize:"small"  }}>{business.Industry}</span>
                 </div>
               ))}
             </div>
@@ -491,5 +484,5 @@ const handleNavigateToUsers = () => {
         </div>
       </div>
     </div>
-  );
-}
+  )
+};
