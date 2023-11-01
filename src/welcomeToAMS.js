@@ -129,12 +129,12 @@ export default function WelcomeToAMS() {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              width: "150px",
-              height: "150px",
-              marginTop: 20,
+              width: "120px",
+              height: "120px",
+              marginTop: 5,
               marginBottom: 10,
               padding: 50,
-              marginLeft: "25px",
+              marginLeft: "35px",
             }}
           >
             S
@@ -162,8 +162,8 @@ export default function WelcomeToAMS() {
                 paddingTop: 10,
                 paddingBottom: 10,
                 alignItems: "center",
-                width: "80%",
-                marginLeft: "50px",
+                width: "90%",
+                marginLeft: "20px",
               }}
             >
               <FaStar color="gray" style={{ marginRight: 25 }} />
@@ -178,8 +178,8 @@ export default function WelcomeToAMS() {
                 paddingTop: 10,
                 paddingBottom: 10,
                 alignItems: "center",
-                width: "80%",
-                marginLeft: "50px",
+                width: "90%",
+                marginLeft: "20px",
               }}
             >
               <FaStar color="gray" style={{ marginRight: 25 }} />
@@ -194,8 +194,8 @@ export default function WelcomeToAMS() {
                 paddingTop: 10,
                 paddingBottom: 10,
                 alignItems: "center",
-                width: "80%",
-                marginLeft: "50px",
+                width: "90%",
+                marginLeft: "20px",
               }}
             >
               <FaStar color="gray" style={{ marginRight: 25 }} />
@@ -264,19 +264,19 @@ export default function WelcomeToAMS() {
               }}
             >
               <div
-                style={{ width: "20%", display: "flex", flexDirection: "column" }}
+                style={{ width: "10%", display: "flex", flexDirection: "column" }}
               >
                 <span style={{ color: "gray" }}>Sales</span>
                 <span style={{ fontWeight: 400 }}>300</span>
               </div>
               <div
-                style={{ width: "20%", display: "flex", flexDirection: "column" }}
+                style={{ width: "15%", display: "flex", flexDirection: "column" }}
               >
                 <span style={{ color: "gray" }}>New Businesses</span>
                 <span style={{ fontWeight: 400 }}>300</span>
               </div>
               <div
-                style={{ width: "33%", display: "flex", flexDirection: "column" }}
+                style={{ width: "10%", display: "flex", flexDirection: "column" }}
               >
                 <span style={{ color: "gray" }}>New Users</span>
                 <span style={{ fontWeight: 400 }}>300</span>
@@ -310,6 +310,9 @@ export default function WelcomeToAMS() {
                   }}
                 >
                   <span style={{ fontWeight: 700, width: "60%" }}>Name</span>
+                  <AiFillCaretUp color="gray" />
+                  <AiFillCaretDown color="gray" /> 
+                  <AiOutlineSearch color="gray" />
                   <span style={{ fontWeight: 600, width: "60%" }}>Surname</span>
                   <span style={{ fontWeight: 600, width: "60%" }}>Phone</span>
                   <span style={{ fontWeight: 600, width: "60%" }}>Email</span>
@@ -350,6 +353,10 @@ export default function WelcomeToAMS() {
                   }}
                 >
                   <span style={{ fontWeight: 600, width: "50%" }}>Business Name</span>
+                  <AiFillCaretUp color="gray" />
+                  <AiFillCaretDown color="gray" /> 
+                  <AiOutlineSearch color="gray" />
+
                   <span
                     style={{
                       border: "none",
@@ -365,9 +372,8 @@ export default function WelcomeToAMS() {
                         paddingRight: 10,
                       }}
                     >
-                      <AiFillCaretUp color="gray" />
-                      <AiFillCaretDown color="gray" /> 
-                      <AiOutlineSearch color="gray" />
+                    
+                    
                     </span>
                     <span style={{ fontWeight: 600, width: "50%" }}>Type of Business</span>
                     <span
