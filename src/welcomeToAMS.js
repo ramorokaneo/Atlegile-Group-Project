@@ -405,11 +405,11 @@ export default function WelcomeToAMS() {
                 }}
                 
               >
-                <span style={{ fontWeight: 600, fontSize:"small" }}>Business Name</span>
+                <span style={{ fontWeight: 600, fontSize:"small", marginRight:"-10px" }}>Business Name</span>
                 <span
                   style={{
                     border: "none",
-                    paddingRight: 10,
+                    paddingRight: 20,
                   }}
                 >
                   <PiCaretUpDownFill color={piCaretColor} onClick={handlePiCaretClick} />
@@ -419,10 +419,11 @@ export default function WelcomeToAMS() {
                   style={{
                     border: "none",
                     borderLeft: "1px lightgray solid",
-                    marginRight: "100px",
+
+                    marginRight: "110px",
                   }}
                 >
-                  <span style={{ fontWeight: 600, fontSize:"small"}}>
+                  <span style={{ fontWeight: 600, fontSize:"small", marginLeft:"20px"}}>
                     Reg Number
                     <PiCaretUpDownFill color={piCaretColor} onClick={handlePiCaretClick} />
                   </span>
@@ -431,7 +432,7 @@ export default function WelcomeToAMS() {
                       border: "none",
                       borderRight: "1px lightgray solid",
                       paddingRight: 10,
-                      marginRight: "1px",
+                      marginRight: "2px",
                     }}
                   ></span>
                   <span style={{ fontWeight: 600, fontSize:"small" }}>
@@ -454,7 +455,7 @@ export default function WelcomeToAMS() {
                     style={{
                       border: "none",
                       borderRight: "1px lightgray solid",
-                      paddingLeft: 10,
+                      paddingLeft: 5,
                     }}
                   >
                     <PiCaretUpDownFill color={piCaretColor} onClick={handlePiCaretClick} />
@@ -470,11 +471,11 @@ export default function WelcomeToAMS() {
                     justifyContent: "space-between",
                     padding: "10px",
                     borderBottom: "1px lightgray solid",
-                    marginRight: 10,
+                    marginRight: 15,
                   }}
                 >
                   <span style={{ width: "75%", fontSize:"small"  }}>{business.name}</span>
-                  <span style={{ width: "50%", fontSize:"small"  }}>{business.regNum}</span>
+                  <span style={{ width: "50%", fontSize:"small", marginLeft: "15px" }}>{business.regNum}</span>
                   <span style={{ width: "65%", fontSize:"small" }}>{business.bizType}</span>
                   <span style={{ width: "55%", fontSize:"small"  }}>{business.Industry}</span>
                 </div>
