@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaStar, FaCaretUp, FaCaretDown } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
 import { AiOutlineSearch } from "react-icons/ai";
 import { PiCaretUpDownFill } from "react-icons/pi";
 import clip from "./cilp.png";
@@ -102,10 +102,6 @@ export default function WelcomeToAMS() {
 
   const handleSearchClick = () => {
     setSearchColor(searchColor === "gray" ? "green" : "gray");
-  };
-
-  const handlePress = () => {
-    console.log("Pressed");
   };
 
   const handleNavigateToDashboard = () => {
