@@ -1,9 +1,16 @@
-import React from "react";
+import React, {useState} from "react";
 import { FaStar } from "react-icons/fa";
 import { FaSort, FaSearch } from "react-icons/fa";
 import { RiArrowUpDownFill } from "react-icons/ri";
-import { AiFillCaretUp, AiFillCaretDown, AiOutlineSearch } from "react-icons/ai"; 
+import { PiCaretUpDownFill } from "react-icons/pi";
+
+import {
+  AiFillCaretUp,
+  AiFillCaretDown,
+  AiOutlineSearch,
+} from "react-icons/ai";
 import clip from "./cilp.png";
+import { IoIconName } from "react-icons/io";
 
 const fakeUsersList = [
   {
@@ -54,7 +61,6 @@ const fakeUsersList = [
     email: "example@mail....",
     location: "1235 Vilakazi",
   },
-
 ];
 
 const fakeBusinessesList = [
@@ -64,7 +70,6 @@ const fakeBusinessesList = [
     regNum: "N/A",
     bizType: "Township",
     Industry: "Technology",
-    
   },
   {
     id: "02",
@@ -72,7 +77,6 @@ const fakeBusinessesList = [
     regNum: "N/A",
     bizType: "Township",
     Industry: "Technology",
-    
   },
   {
     id: "03",
@@ -80,7 +84,6 @@ const fakeBusinessesList = [
     regNum: "N/A",
     bizType: "Township",
     Industry: "Technology",
-  
   },
   {
     id: "04",
@@ -88,7 +91,6 @@ const fakeBusinessesList = [
     regNum: "N/A",
     bizType: "Township",
     Industry: "Technology",
-   
   },
   {
     id: "05",
@@ -96,329 +98,398 @@ const fakeBusinessesList = [
     regNum: "N/A",
     bizType: "Township",
     Industry: "Technology",
- 
   },
-  
 ];
+
 export default function WelcomeToAMS() {
-    return (
+  const [piCaretColor, setPiCaretColor] = useState('gray');
+  const [searchColor, setSearchColor] = useState('gray');
+
+  const handlePiCaretClick = () => {
+    setPiCaretColor(piCaretColor === 'gray' ? 'blue' : 'gray');
+  };
+
+  const handleSearchClick = () => {
+    setSearchColor(searchColor === 'gray' ? 'green' : 'gray');
+  };
+const handlePress = () => {
+  console.log("Pressed");
+};
+
+const handleNavigateToDashboard = () => {
+  console.log("Dashboard");
+};
+
+const handleNavigateToBusinesses = () => {
+  console.log("Businesses");
+};
+
+const handleNavigateToUsers = () => {
+  console.log("Users");
+};
+  return (
+    <div
+      style={{
+        display: "flex",
+        alignItems: "flex-start",
+        flexDirection: "row",
+        height: "100%",
+      }}
+    >
+      {/* Left Sidebar */}
       <div
         style={{
-          display: "flex",
-          alignItems: "flex-start",
-          flexDirection: "row",
+          width: "20%",
           height: "100%",
+          border: "none",
+          borderRight: "1px lightgray solid",
+          padding: 20,
         }}
       >
-        {/* Left Sidebar */}
+        {/* Profile Info */}
         <div
           style={{
-            width: "20%",
-            height: "100%",
-            border: "none",
-            borderRight: "1px lightgray solid",
-            padding: 20,
+            backgroundColor: "lightgray",
+            borderRadius: "100%",
+            color: "white",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            width: "120px",
+            height: "120px",
+            marginTop: 5,
+            marginBottom: 10,
+            padding: 50,
+            marginLeft: "35px",
           }}
         >
-          {/* Profile Info */}
-          <div
-            style={{
-              backgroundColor: "lightgray",
-              borderRadius: "100%",
-              color: "white",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              width: "120px",
-              height: "120px",
-              marginTop: 5,
-              marginBottom: 10,
-              padding: 50,
-              marginLeft: "35px",
-            }}
-          >
-            S
-          </div>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              flexDirection: "column",
-              marginRight: "20px",
-            }}
-          >
-            <span style={{ fontSize: 40, fontWeight: 700 }}>Sarah</span>
-            <span style={{ fontWeight: 600 }}>0123456789</span>
-            <span style={{ fontWeight: 600 }}>example@gmail.com</span>
-          </div>
-          {/* Sidebar Navigation */}
-          <div style={{ marginTop: 30 }}>
-            <div
-              style={{
-                border: "none",
-                borderBottom: "1px lightgray solid",
-                display: "flex",
-                flexDirection: "row",
-                paddingTop: 10,
-                paddingBottom: 10,
-                alignItems: "center",
-                width: "90%",
-                marginLeft: "20px",
-              }}
-            >
-              <FaStar color="gray" style={{ marginRight: 25 }} />
-              <span>Dashboard</span>
-            </div>
-            <div
-              style={{
-                border: "none",
-                borderBottom: "1px lightgray solid",
-                display: "flex",
-                flexDirection: "row",
-                paddingTop: 10,
-                paddingBottom: 10,
-                alignItems: "center",
-                width: "90%",
-                marginLeft: "20px",
-              }}
-            >
-              <FaStar color="gray" style={{ marginRight: 25 }} />
-              <span>Users</span>
-            </div>
-            <div
-              style={{
-                border: "none",
-                borderBottom: "1px lightgray solid",
-                display: "flex",
-                flexDirection: "row",
-                paddingTop: 10,
-                paddingBottom: 10,
-                alignItems: "center",
-                width: "90%",
-                marginLeft: "20px",
-              }}
-            >
-              <FaStar color="gray" style={{ marginRight: 25 }} />
-              <span>Businesses</span>
-            </div>
-          </div>
+          S
         </div>
-  
-        {/* Main Content */}
-        <div style={{ height: "100%", width: "80%", overflowY: "auto" }}>
-          {/* Header */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            flexDirection: "column",
+            marginRight: "20px",
+          }}
+        >
+          <span style={{ fontSize: 40, fontWeight: 700 }}>Sarah</span>
+          <span style={{ fontWeight: 600 }}>0123456789</span>
+          <span style={{ fontWeight: 600 }}>example@gmail.com</span>
+        </div>
+        {/* Sidebar Navigation */}
+        <div style={{ marginTop: 30 }}>
           <div
+            onClick={handleNavigateToDashboard}
             style={{
-              backgroundColor: "#072840",
-              height: "110px",
+              border: "none",
+              borderBottom: "1px lightgray solid",
               display: "flex",
               flexDirection: "row",
+              paddingTop: 10,
+              paddingBottom: 10,
               alignItems: "center",
+              width: "90%",
+              marginLeft: "20px",
             }}
           >
-            <span
-              style={{
-                color: "white",
-                fontSize: 20,
-                fontWeight: 600,
-                paddingLeft: 20,
-                width: "80%",
-              }}
-            >
-              Welcome to AMS
-            </span>
-            <div
-              style={{
-                backgroundImage: `url(${clip})`,
-                width: "30%",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-                height: "200%",
-              }}
-            ></div>
+            <FaStar color="gray" style={{ marginRight: 25 }} />
+            <span>Dashboard</span>
           </div>
-  
-          {/* Dashboard Section */}
-          <div style={{ padding: 20 }}>
-            {/* Dashboard Title */}
-            <div
-              style={{
-                paddingBottom: 10,
-                border: "none",
-                borderBottom: "1px lightgray solid",
-                marginLeft: 10,
-              }}
-            >
-              <span style={{ fontWeight: 700 }}>DASHBOARD</span>
-            </div>
-  
-            {/* Dashboard Stats */}
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                paddingTop: 50,
-                paddingBottom: 50,
-                marginTop: 10,
-              }}
-            >
-              <div
-                style={{ width: "10%", display: "flex", flexDirection: "column" }}
-              >
-                <span style={{ color: "gray" }}>Sales</span>
-                <span style={{ fontWeight: 400 }}>300</span>
-              </div>
-              <div
-                style={{ width: "15%", display: "flex", flexDirection: "column" }}
-              >
-                <span style={{ color: "gray" }}>New Businesses</span>
-                <span style={{ fontWeight: 400 }}>300</span>
-              </div>
-              <div
-                style={{ width: "10%", display: "flex", flexDirection: "column" }}
-              >
-                <span style={{ color: "gray" }}>New Users</span>
-                <span style={{ fontWeight: 400 }}>300</span>
-              </div>
-            </div>
-  
-            
-            <div
-              style={{
-                paddingBottom: 10,
-                border: "none",
-                borderBottom: "1px lightgray solid",
-              }}
-            >
-              <span style={{ fontWeight: 700 }}>NEW USERS</span>
-            </div>
-  
-            {/* Tables Container (Side by Side) */}
-            <div style={{ display: "flex", flexDirection: "row" }}>
-              {/* First Table (User Table) */}
-              <div style={{ flex: 1 }}>
-                {/* Table Header */}
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "space-between",
-                    padding: "10px 10px 0",
-                    borderBottom: "1px lightgray solid",
-                    backgroundColor: "#fafafa",
-                  }}
-                >
-                  <span style={{ fontWeight: 700, width: "60%" }}>Name</span>
-                  <AiFillCaretUp color="gray" />
-                  <AiFillCaretDown color="gray" /> 
-                  <AiOutlineSearch color="gray" />
-                  <span style={{ fontWeight: 600, width: "60%" }}>Surname</span>
-                  <span style={{ fontWeight: 600, width: "60%" }}>Phone</span>
-                  <span style={{ fontWeight: 600, width: "60%" }}>Email</span>
-                  <span style={{ fontWeight: 600, width: "60%" }}>Location</span>
-                </div>
-                {fakeUsersList.map((user) => (
-                  <div
-                    key={user.id}
-                    style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "space-between",
-                      padding: "10px",
-                      borderBottom: "1px lightgray solid",
-                      marginRight: 10,
-                    }}
-                  >
-                    <span style={{ width: "60%" }}>{user.name}</span>
-                    <span style={{ width: "60%" }}>{user.surname}</span>
-                    <span style={{ width: "60%" }}>{user.phone}</span>
-                    <span style={{ width: "60%" }}>{user.email}</span>
-                    <span style={{ width: "60%" }}>{user.location}</span>
-                  </div>
-                ))}
-              </div>
-  
-              {/* Second Table (Business Table) */}
-              <div style={{ flex: 1 }}>
-                {/* Table Header */}
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "space-between",
-                    padding: "10px 10px 0",
-                    borderBottom: "1px lightgray solid",
-                    backgroundColor: "#fafafa",
-                  }}
-                >
-                  <span style={{ fontWeight: 600, width: "50%" }}>Business Name</span>
-                  <AiFillCaretUp color="gray" />
-                  <AiFillCaretDown color="gray" /> 
-                  <AiOutlineSearch color="gray" />
+          <div
+            id="users-link"
+            onClick={handleNavigateToUsers} 
+            style={{
+              border: "none",
+              borderBottom: "1px lightgray solid",
+              display: "flex",
+              flexDirection: "row",
+              paddingTop: 10,
+              paddingBottom: 10,
+              alignItems: "center",
+              width: "90%",
+              marginLeft: "20px",
+              transition: "background-color 0.3s",
+            }}
+          >
+            <FaStar color="gray" style={{ marginRight: 25 }} />
+            <span>Users</span>
+          </div>
+          <div
+            id="businesses-link"
+            onClick={handleNavigateToBusinesses} 
+            style={{
+              border: "none",
+              borderBottom: "1px lightgray solid",
+              display: "flex",
+              flexDirection: "row",
+              paddingTop: 10,
+              paddingBottom: 10,
+              alignItems: "center",
+              width: "90%",
+              marginLeft: "20px",
+              transition: "background-color 0.3s",
+            }}
+          >
+            <FaStar color="gray" style={{ marginRight: 25 }} />
+            <span>Businesses</span>
+          </div>
+        </div>
+      </div>
 
+      {/* Main Content */}
+      <div style={{ height: "100%", width: "80%", overflowY: "auto" }}>
+        {/* Header */}
+        <div
+          style={{
+            backgroundColor: "#072840",
+            height: "110px",
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+          }}
+        >
+          <span
+            style={{
+              color: "white",
+              fontSize: 20,
+              fontWeight: 600,
+              paddingLeft: 20,
+              width: "80%",
+            }}
+          >
+            Welcome to AMS
+          </span>
+          <div
+            style={{
+              backgroundImage: `url(${clip})`,
+              width: "30%",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              height: "200%",
+            }}
+          ></div>
+        </div>
+
+        {/* Dashboard Section */}
+        <div style={{ padding: 20 }}>
+          {/* Dashboard Title */}
+          <div
+            style={{
+              paddingBottom: 10,
+              border: "none",
+              borderBottom: "1px lightgray solid",
+              marginLeft: 10,
+            }}
+          >
+            <span style={{ fontWeight: 700 }}>DASHBOARD</span>
+          </div>
+
+          {/* Dashboard Stats */}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              paddingTop: 50,
+              paddingBottom: 50,
+              marginTop: 10,
+            }}
+          >
+            <div
+              style={{ width: "10%", display: "flex", flexDirection: "column" }}
+            >
+              <span style={{ color: "gray" }}>Sales</span>
+              <span style={{ fontWeight: 400 }}>300</span>
+            </div>
+            <div
+              style={{ width: "15%", display: "flex", flexDirection: "column" }}
+            >
+              <span style={{ color: "gray" }}>New Businesses</span>
+              <span style={{ fontWeight: 400 }}>300</span>
+            </div>
+            <div
+              style={{ width: "10%", display: "flex", flexDirection: "column" }}
+            >
+              <span style={{ color: "gray" }}>New Users</span>
+              <span style={{ fontWeight: 400 }}>300</span>
+            </div>
+          </div>
+
+          <div
+            style={{
+              paddingBottom: 10,
+              border: "none",
+              borderBottom: "1px lightgray solid",
+            }}
+          >
+            <span style={{ fontWeight: 700 }}>NEW USERS</span>
+          </div>
+
+          {/* Tables Container (Side by Side) */}
+          <div style={{ display: "flex", flexDirection: "row" }}>
+            {/* First Table (User Table) */}
+            <div style={{ flex: 1 }}>
+              {/* Table Header */}
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                  padding: "10px 10px 0",
+                  borderBottom: "1px lightgray solid",
+                  backgroundColor: "#fafafa",
+                }}
+              >
+                 <span style={{ fontWeight: 700, width: "50%" }}>Name</span>
+                <span
+                    style={{
+                      border: "none",
+                      borderRight: "1px lightgray solid",
+                      alignItems: "center",
+                    }}
+                >
+                  <PiCaretUpDownFill
+                    color={piCaretColor}
+                    onClick={handlePiCaretClick}
+                  />
+                  <AiOutlineSearch
+                    color={searchColor}
+                    onClick={handleSearchClick}
+                  />
+                </span>
+                <span
+                  style={{
+                    border: "none",
+                    boarderRight: "1px lightgray solid",
+                  }}
+                />
+                <span style={{ fontWeight: 600, width: "60%" }}>Surname</span>
+                <span style={{ fontWeight: 600, width: "60%" }}>Phone</span>
+                <span style={{ fontWeight: 600, width: "60%" }}>Email</span>
+                <span style={{ fontWeight: 600, width: "60%" }}>Location</span>
+              </div>
+              {fakeUsersList.map((user) => (
+                <div
+                  key={user.id}
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                    padding: "10px",
+                    marginLeft: "10px",
+                    borderBottom: "1px lightgray solid",
+                    marginRight: 10,
+                  }}
+                >
+                  <span style={{ width: "60%" }}>{user.name}</span>
+                  <span style={{ width: "60%" }}>{user.surname}</span>
+                  <span style={{ width: "60%" }}>{user.phone}</span>
+                  <span style={{ width: "60%" }}>{user.email}</span>
+                  <span style={{ width: "60%" }}>{user.location}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* Second Table (Business Table) */}
+            <div style={{ flex: 1 }}>
+              {/* Table Header */}
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                  padding: "10px 10px 0",
+                  borderBottom: "1px lightgray solid",
+                  backgroundColor: "#fafafa",
+                }}
+              >
+                <span style={{ fontWeight: 600 }}>Business Name</span>
+                <span
+                  style={{
+                    border: "none",
+
+                    paddingRight: 10,
+                  }}
+                >
+                  <PiCaretUpDownFill  color={piCaretColor}
+                    onClick={handlePiCaretClick}/>
+                  <AiOutlineSearch color={searchColor}
+                    onClick={handleSearchClick}/>
+                </span>
+                <span
+                  style={{
+                    border: "none",
+                    borderLeft: "1px lightgray solid",
+                    marginRight: "105px",
+                    // paddingLeft: 3,
+                  }}
+                >
+                  <span style={{ fontWeight: 600, width: "80%" }}>
+                    Reg Number
+                    <PiCaretUpDownFill  color={piCaretColor}
+                    onClick={handlePiCaretClick} />
+                  </span>
                   <span
                     style={{
                       border: "none",
                       borderRight: "1px lightgray solid",
                       paddingRight: 10,
+                      marginRight: "1px",
                     }}
-                  >
-                    <span style={{ fontWeight: 600, width: "50%" }}>Reg Number</span>
-                    <span
-                      style={{
-                        border: "none",
-                        borderRight: "1px lightgray solid",
-                        paddingRight: 10,
-                      }}
-                    >
-                    
-                    
-                    </span>
-                    <span style={{ fontWeight: 600, width: "50%" }}>Type of Business</span>
-                    <span
-                      style={{
-                        border: "none",
-                        borderRight: "1px lightgray solid",
-                        paddingRight: 10,
-                      }}
-                    >
-                      <AiFillCaretUp color="gray" /> 
-                    </span>
-                    <span style={{ fontWeight: 600, width: "50%" }}>Industry</span>
-                    <span
-                      style={{
-                        border: "none",
-                        borderRight: "1px lightgray solid",
-                        paddingRight: 10,
-                      }}
-                    >
-                      <AiFillCaretUp color="gray" /> 
-                    </span>
+                  ></span>
+                  <span style={{ fontWeight: 600, width: "50%" }}>
+                    Type of Business
                   </span>
-                </div>
-                {fakeBusinessesList.map((business) => (
-                  <div
-                    key={business.id}
+                  <span
                     style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      justifyContent: "space-between",
-                      padding: "10px",
-                      borderBottom: "1px lightgray solid",
-                      marginRight: 10,
+                      border: "none",
+                      borderRight: "1px lightgray solid",
+                      paddingRight: 10,
+                      marginLeft: "1px",
                     }}
                   >
-                    <span style={{ width: "50%" }}>{business.name}</span>
-                    <span style={{ width: "50%" }}>{business.regNum}</span>
-                    <span style={{ width: "50%" }}>{business.bizType}</span>
-                    <span style={{ width: "50%" }}>{business.Industry}</span>
-                  </div>
-                ))}
+                   <PiCaretUpDownFill  color={piCaretColor}
+                    onClick={handlePiCaretClick} />
+                  </span>
+                  <span style={{ fontWeight: 600, width: "50%" }}>
+                    Industry
+                  </span>
+                  <span
+                    style={{
+                      border: "none",
+                      borderRight: "1px lightgray solid",
+                      paddingLeft: 10,
+                      
+                    }}
+                  >
+                   <PiCaretUpDownFill  color={piCaretColor}
+                    onClick={handlePiCaretClick} />
+                  </span>
+                </span>
               </div>
+              {fakeBusinessesList.map((business) => (
+                <div
+                  key={business.id}
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                    padding: "10px",
+                    borderBottom: "1px lightgray solid",
+                    marginRight: 10,
+                  }}
+                >
+                  <span style={{ width: "55%" }}>{business.name}</span>
+                  <span style={{ width: "45%" }}>{business.regNum}</span>
+                  <span style={{ width: "65%" }}>{business.bizType}</span>
+                  <span style={{ width: "55%" }}>{business.Industry}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
-    );
+    </div>
+  );
 }
