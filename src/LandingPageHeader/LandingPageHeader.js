@@ -10,9 +10,6 @@ import Logo from "../assets/Logo.png";
 import lion from "../assets/Lion.png";
 import shadow from "../assets/Shadow_Logo.png";
 import log from "../assets/Logo.png"
-
-
-
 const LandingPageHeader = () => {
     return (
         <div>
@@ -28,19 +25,16 @@ const LandingPageHeader = () => {
                     </div>
                 </div>
             </header>
-
             {/* next header */}
             <img className="mid-header" src={Logo} alt="" />
             <button className="shop-button">SHOP</button>
             <button className="about-us">ABOUT US</button>
             <button className="sign-in">SIGN IN</button>
             <button className="sign-up">SIGN UP</button>
-
             <div className="lower-header">
                 <img className="lion" src={lion} alt="" />
                 <img className="logo-2" src={shadow} alt="" />
             </div>
-
             <div className="p-tag">
                 <img src={log} alt="" />
                 <p className="market">ATLEGILE MARKETING SOLUTIONS</p>
@@ -52,15 +46,29 @@ const LandingPageHeader = () => {
                     them with a global customer base. They aim to drive sales, increase revenue, and create a lasting impact.
                 </p>
             </div>
-
             <div className="flexbox-container-1">
-                <div className="flexbox-item flexbox-item-1"/>
-                <div className="flexbox-item flexbox-item-2"/>
-                <div className="flexbox-item flexbox-item-3"/>
+                <div className="flexbox-item flexbox-item-1 centered-text">What We Offer
+                    <p className="JUMP">Ams creates strong influential brands, by<br />
+                        applying tailored market approaches + <br />
+                        using compelling content, to effectively<br />
+                        communicate, build and manage good<br />
+                        relationships with online communities. We<br />
+                        support ESD + marketing departments and<br />
+                        agencies.</p></div>
+                <div className="flexbox-item flexbox-item-2 centered-text">About AMS
+                    <p className="JUMP">Atlegile Marketing Solutions (Pty) Ltd is a<br />
+                        360 creative brand marketing company<br />
+                        that assists African businesses to reach<br />
+                        their intended audience from online to<br />
+                        offline. We are located in Pimville, Soweto,<br />
+                        and service our partners online.</p></div>
+                <div className="flexbox-item flexbox-item-3 centered-text">OUR USP
+                    <p className="JUMP">We use a unique strategic brand approach<br />
+                        that is coupled with creativity, while<br />
+                        transferring 8 years of professional quality<br /> service.</p>
+                    <p>#AGILE IS WHAT ATLEGILE IS ABOUT</p></div>
             </div>
-
         </div>
     );
 };
-
 export default LandingPageHeader;
