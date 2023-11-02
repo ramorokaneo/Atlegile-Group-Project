@@ -12,6 +12,7 @@ import SecureTech from "../componets/SecureTech/SecureTech";
 import LearnZa from "../componets/LearnZa/LearnZa";
 import TechWise from "../componets/TechWise/TechWise";
 import MindMatters from "../componets/MindMatters/MindMatters";
+import AboutUs from "../componets/AboutUs/AboutUs";
 function Landing() {
   return (
     <>
@@ -26,6 +27,7 @@ function Landing() {
       <SaveBigHeader />
       <MindMatters />
       <AfricaBusines />
+      <AboutUs />
       <Footer />
     </>
   );
