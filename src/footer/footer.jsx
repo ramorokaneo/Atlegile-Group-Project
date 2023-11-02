@@ -6,6 +6,7 @@ function Footer() {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-hero">
+          
           <div className="footer-body">
             <div className="logo">
               <img
@@ -24,6 +25,7 @@ function Footer() {
             <br/>
             <p className="email-text">atlegilemarketing.co.za</p>
           </div>
+
           <div className="footer-links">
             <h4 style={{marginBottom:30}}>ORDER HISTORY</h4>
             <h4 style={{marginBottom:30}}>TERMS & CONDITIONS</h4>
