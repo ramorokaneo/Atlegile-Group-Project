@@ -13,16 +13,12 @@ export default function AfricaBusines() {
                 High Impact Enter prise + Skills Development Solutions
               </p>
               <div className="africa-buttons">
-                <div className="btn btn-shop">
-                  <a href="/shop" className="btn-link">
-                    SHOP
-                  </a>
-                </div>
-                <div className="btn ">
-                  <a href="/about-us" className="btn-link">
-                    ABOUT US
-                  </a>
-                </div>
+                <a href="/shop" className="btn-link">
+                  <div className="btn btn-shop">SHOP</div>
+                </a>
+                <a href="/about-us" className="btn-link">
+                  <div className="btn ">ABOUT US</div>
+                </a>
               </div>
             </div>
             <div className="africa-cards">
