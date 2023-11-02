@@ -9,6 +9,7 @@ import Navbar from "../componets/NavBar/NavBar";
 import SearchBar from "../componets/SearchBar/SearchBar";
 import Explore from "../componets/Explore/Explore";
 import SecureTech from "../componets/SecureTech/SecureTech";
+import LearnZa from "../componets/LearnZa/LearnZa";
 function Landing() {
   return (
     <>
@@ -18,6 +19,7 @@ function Landing() {
       <Explore />
       <SecureTech />
       <SaveBigHeader />
+      <LearnZa />
       <AfricaBusines />
       <Footer />
     </>

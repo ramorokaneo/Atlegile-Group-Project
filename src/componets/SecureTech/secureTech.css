@@ -1,5 +1,14 @@
 .secureTech-container {
-  width: 70vw;
+  /* width: 70vw; */
   margin: auto;
-  height: 80vh;
+  height: 90vh;
+  margin-left: 20vw;
+  /* background-color: aqua; */
+  /* padding-bottom: 50px; */
+  overflow: scroll;
+  scroll-behavior: smooth;
+}
+.cards-container {
+  display: flex;
+  margin-top: 50px;
 }
