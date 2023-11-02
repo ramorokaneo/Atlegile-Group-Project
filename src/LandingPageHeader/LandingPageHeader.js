@@ -11,6 +11,9 @@ import lion from "../assets/Lion.png";
 import shadow from "../assets/Shadow_Logo.png";
 import log from "../assets/Logo.png";
 import plane from "../assets/plane.png";
+import shop from "../assets/Group.png";
+import back from "../assets/BACKGROUND.png";
+import front from "../assets/Roar.png";
 
 
 const LandingPageHeader = () => {
@@ -38,67 +41,95 @@ const LandingPageHeader = () => {
                 <img className="lion" src={lion} alt="" />
                 <img className="logo-2" src={shadow} alt="" />
             </div>
-            <div className="p-tag">
-                <img src={log} alt="" />
-                <p className="market">ATLEGILE MARKETING SOLUTIONS</p>
-                <p>Welcome to Atlegile Marketing Solutions (Pty) Ltd, where passion, purpose, and expertise collide to create exceptional Marketing strategies. Our Youth<br />
-                    Woman-owned and led Business, based in South Africa, was founded in 2015, and we’ve been on an exciting journey with our Partners ever since.<br />
-                    From ground level to the Digital space, we’re committed to building strong Brands, effectively Communicating products + service offerings, and transferring our<br />
-                    Skills to help you engage with the Online Market Successfully.</p>
-                <p>AMS is dedicated to helping African businesses succeed by developing strong brands, marketing their products and services effectively, and connecting<br />
-                    them with a global customer base. They aim to drive sales, increase revenue, and create a lasting impact.
-                </p>
-            </div>
-            <div className="flexbox-container-1">
-                <div className="flexbox-item flexbox-item-1 centered-text">What We Offer
-                    <p className="JUMP">Ams creates strong influential brands, by<br />
-                        applying tailored market approaches + <br />
-                        using compelling content, to effectively<br />
-                        communicate, build and manage good<br />
-                        relationships with online communities. We<br />
-                        support ESD + marketing departments and<br />
-                        agencies.</p></div>
-                <div className="flexbox-item flexbox-item-2 centered-text">About AMS
-                    <p className="JUMP">Atlegile Marketing Solutions (Pty) Ltd is a<br />
-                        360 creative brand marketing company<br />
-                        that assists African businesses to reach<br />
-                        their intended audience from online to<br />
-                        offline. We are located in Pimville, Soweto,<br />
-                        and service our partners online.</p></div>
-                <div className="flexbox-item flexbox-item-3 centered-text">OUR USP
-                    <p className="JUMP">We use a unique strategic brand approach<br />
-                        that is coupled with creativity, while<br />
-                        transferring 8 years of professional quality<br /> service.</p>
-                    <p>#AGILE IS WHAT ATLEGILE IS ABOUT</p></div>
-            </div>
-            <div class="image-container">
-                <img src={plane} alt="" />
-            </div>
-            <div>
-                <p class="centered-and-bold">Bussiness Research and Youth Development Project</p>
-                <p className="mini-heading">AMS IS GUIDED BY SEVERAL CORE VALUES</p>
+
+
+
+
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <div className="main">
+                    <div className="p-tag">
+                        <img src={log} alt="" />
+                        <p className="market">ATLEGILE MARKETING SOLUTIONS</p>
+                        <p>Welcome to Atlegile Marketing Solutions (Pty) Ltd, where passion, purpose, and expertise collide to create exceptional Marketing strategies. Our Youth
+                            Woman-owned and led Business, based in South Africa, was founded in 2015, and we’ve been on an exciting journey with our Partners ever since.
+                            From ground level to the Digital space, we’re committed to building strong Brands, effectively Communicating products + service offerings, and transferring our
+                            Skills to help you engage with the Online Market Successfully.</p>
+                        <p>AMS is dedicated to helping African businesses succeed by developing strong brands, marketing their products and services effectively, and connecting
+                            them with a global customer base. They aim to drive sales, increase revenue, and create a lasting impact.
+                        </p>
+                    </div>
+                    <div className="flexbox-container-1">
+                        <div className="flexbox-item flexbox-item-1 centered-text">
+                            <h4>What We Offer</h4>
+                            <p className="JUMP">Ams creates strong influential brands, by
+                                applying tailored market approaches +
+                                using compelling content, to effectively
+                                communicate, build and manage good
+                                relationships with online communities. We
+                                support ESD + marketing departments and
+                                agencies.</p></div>
+                        <div className="flexbox-item flexbox-item-2 centered-text">
+                            <h4>About AMS</h4>
+                            <p className="JUMP">Atlegile Marketing Solutions (Pty) Ltd is a
+                                360 creative brand marketing company
+                                that assists African businesses to reach
+                                their intended audience from online to
+                                offline. We are located in Pimville, Soweto,
+                                and service our partners online.</p></div>
+                        <div className="flexbox-item flexbox-item-3 centered-text">
+                            <h4>OUR USP</h4>
+                            <p className="JUMP">We use a unique strategic brand approach
+                                that is coupled with creativity, while
+                                transferring 8 years of professional quality service.</p>
+                            <p>#AGILE IS WHAT ATLEGILE IS ABOUT</p></div>
+
+                    </div>
+                    <div class="image-container">
+                        <img src={plane} alt="" />
+                        <p style={{ fontWeight: "bold" }}>Bussiness Research and Youth Development Project</p>
+                    </div>
+
+                    <div style={{ display: "flex", flexDirection: "column", padding: "12px" }}>
+
+                        <p className="mini-heading">AMS IS GUIDED BY SEVERAL CORE VALUES</p>
+
+
+                        <div className="" style={{ display: 'flex', flexWrap: "wrap", alignItems: "center", justifyContent: "center" }}>
+                            <h5 classNataineme="ams">PASSION</h5>
+                            <h5 className="ams">GLOBAL CONNECTION</h5>
+                            <h5 className="ams">INNOVATION</h5>
+                            <h5 className="ams">SOCIAL IMPACT</h5>
+                            <h5 className="ams">SKILL DEVELOPMENT</h5>
+                            <h5 className="ams">CREATIVITY</h5>
+                        </div>
+
+
+
+                    </div>
+                    {/* big text */}
+                    <h2 className="big">AMS AIMS TO NOT ONLY HELP BUSSINESS GROW
+                        BUT ALSO MAKE A POSITIVE IMAPCT ON SOCIETY
+                        BY NURTURING LOCAL TALENT AND FOSTERING
+                        SUSTAINABLE BUSSINESS GROWTH</h2>
+
+
+                </div>
             </div>
 
-            <div className="tainer">
-                <span>PASSION</span>
-                <span>INNOVATION</span>
-                <span>GLOBAL CONNECTION</span>
-                <span>SOCIAL IMPACT</span>
+
+            {/* background below */}
+            <div className="pic-2" style={{ display: 'flex', alignItems: "center", justifyContent: "center" }}>
+
+
+
+
+                {/* lion below */}
+                <div className="pic-1" >
+                    <img style={{ width: "100%" }} src={front} alt="LION ON ROCK" />
+                </div>
             </div>
-
-            {/* second 1 */}
-            <div className="taine">
-                <span>SKILL DEVELOPMENT</span>
-                <span>CREATIVITY</span>
-            </div>
-
-            {/* big text */}
-            <h2 className="big">AMS AIMS TO NOT ONLY HELP BUSSINESS GROW <br/>
-            BUT ALSO MAKE A POSITIVE IMAPCT ON SOCIETY <br/>
-            BY NURTURING LOCAL TALENT AND FOSTERING <br/>
-            SUSTAINABLE BUSSINESS GROWTH</h2>
-
         </div>
     );
 };
 export default LandingPageHeader;
+
