@@ -10,6 +10,8 @@ import SearchBar from "../componets/SearchBar/SearchBar";
 import Explore from "../componets/Explore/Explore";
 import SecureTech from "../componets/SecureTech/SecureTech";
 import LearnZa from "../componets/LearnZa/LearnZa";
+import TechWise from "../componets/TechWise/TechWise";
+import MindMatters from "../componets/MindMatters/MindMatters";
 function Landing() {
   return (
     <>
@@ -20,6 +22,9 @@ function Landing() {
       <SecureTech />
       <SaveBigHeader />
       <LearnZa />
+      <TechWise />
+      <SaveBigHeader />
+      <MindMatters />
       <AfricaBusines />
       <Footer />
     </>
