@@ -242,7 +242,7 @@ function App() {
           <div
             style={{
               backgroundImage: `url(${picture})`,
-              width: "60%",
+              width: "68%",
               backgroundRepeat: "no-repeat",
               backgroundPosition: `${backgroundPositionX}px ${backgroundPositionY}px`,
               backgroundSize: backgroundSize,
