@@ -15,7 +15,7 @@ import plane from "../assets/plane.png";
 
 const LandingPageHeader = () => {
     return (
-        <div>
+        <div id="above">
             <header className="landing-header">
                 <div className="header-content">
                     <div className="phone">
@@ -71,9 +71,33 @@ const LandingPageHeader = () => {
                         transferring 8 years of professional quality<br /> service.</p>
                     <p>#AGILE IS WHAT ATLEGILE IS ABOUT</p></div>
             </div>
-            <div>
-                <img src={plane} alt=""/>
+            <div class="image-container">
+                <img src={plane} alt="" />
             </div>
+            <div>
+                <p class="centered-and-bold">Bussiness Research and Youth Development Project</p>
+                <p className="mini-heading">AMS IS GUIDED BY SEVERAL CORE VALUES</p>
+            </div>
+
+            <div className="tainer">
+                <span>PASSION</span>
+                <span>INNOVATION</span>
+                <span>GLOBAL CONNECTION</span>
+                <span>SOCIAL IMPACT</span>
+            </div>
+
+            {/* second 1 */}
+            <div className="taine">
+                <span>SKILL DEVELOPMENT</span>
+                <span>CREATIVITY</span>
+            </div>
+
+            {/* big text */}
+            <h2 className="big">AMS AIMS TO NOT ONLY HELP BUSSINESS GROW <br/>
+            BUT ALSO MAKE A POSITIVE IMAPCT ON SOCIETY <br/>
+            BY NURTURING LOCAL TALENT AND FOSTERING <br/>
+            SUSTAINABLE BUSSINESS GROWTH</h2>
+
         </div>
     );
 };

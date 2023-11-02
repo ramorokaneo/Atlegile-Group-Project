@@ -7,9 +7,11 @@
     padding: 20px 0;
     margin-bottom: 90px;
 }
+
 .header-content {
     text-align: center;
 }
+
 .phone {
     display: flex;
     align-items: center;
@@ -17,32 +19,41 @@
     margin-bottom: -25px;
     margin-top: -29px;
 }
+
 .phone-number {
     margin: 0 20px;
 }
+
 .email {
     margin-left: 6px;
 }
+
 .follow {
     font-size: medium;
     margin-left: 40px;
 }
+
 .us {
     margin-left: 20px;
 }
+
 .insta {
     margin-left: 10px;
     margin-top: -1px;
 }
+
 .youtube {
     margin-left: 13px;
 }
+
 .facebook {
     margin-left: 13px;
 }
+
 .twiit {
     margin-left: 13px;
 }
+
 .mid-header {
     position: relative;
     top: -75px;
@@ -50,6 +61,7 @@
     height: auto;
     margin-left: 150px;
 }
+
 .shop-button {
     background-color: rgb(8, 8, 44);
     color: white;
@@ -61,6 +73,7 @@
     top: 60px;
     right: 400px
 }
+
 .about-us {
     color: rgb(8, 8, 44);
     background-color: white;
@@ -73,6 +86,7 @@
     font-weight: medium;
     right: 290px
 }
+
 .sign-in {
     background-color: rgb(8, 8, 44);
     color: white;
@@ -84,6 +98,7 @@
     top: 60px;
     right: 200px
 }
+
 .sign-up {
     color: rgb(8, 8, 44);
     background-color: white;
@@ -97,6 +112,7 @@
     right: 100px;
     border: 1px solid rgb(8, 8, 44);
 }
+
 .lower-header {
     background-color: black;
     color: white;
@@ -108,6 +124,7 @@
     text-align: center;
     z-index: 1;
 }
+
 .lion {
     width: 120px;
     height: auto;
@@ -115,6 +132,7 @@
     right: 0;
     top: 0;
 }
+
 .logo-2 {
     width: 150px;
     height: auto;
@@ -123,56 +141,136 @@
     top: 55px;
     transform: translateY(-50%);
 }
+
 .p-tag {
     text-align: center;
     margin-top: 60px;
     margin-right: -70px;
 }
+
 .market {
     font-size: x-large;
     font-weight: bold;
     margin-top: 10px;
 }
+
 .flexbox-container {
     display: flex;
     justify-content: center;
 }
+
 .flexbox-item {
     width: 400px;
     margin: 10px;
     border: 1px solid #333;
 }
+
 .flexbox-item-1 {
     min-height: 170px;
     margin-left: 330px;
     margin-top: 70px;
+    width: 400px;
 }
+
 .flexbox-item-2 {
     min-height: 200px;
-    margin-left: 770px;
-    margin-top: -210px;
+    margin-left: 740px;
+    margin-top: -212px;
 }
+
 .flexbox-item-3 {
     min-height: 200px;
-    margin-left: 1200px;
-    margin-top: -210px;
+    margin-left: 1149px;
+    margin-top: -212px;
+    width: 330px;
 }
+
 .centered-text {
     text-align: center;
     font-weight: bold;
 }
-.JUMP{
+
+.JUMP {
     font-weight: normal;
 }
 
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    margin-bottom: 300px;
+}
+
+.centered-and-bold {
+    text-align: center;
+    font-weight: bold;
+    margin-top: -346px;
+    margin-right: 720px;
+}
+
+.mini-heading {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 70px;
+}
 
 
+.first {
+    border: 2px solid #000;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+/* @media screen and (min-width: 480px) {
+    #above {
+        background-color: lightgreen;
+    }
+} */
+
+.tainer{
+    text-align: center; 
+    margin: 4 auto; 
+    justify-content: space-between; 
+}
 
 
+span {
+    padding: 10px; 
+    /* border: 1px solid #000;  */
+    top: 6px;
+    border-radius: 1px; 
+    margin: 4px; 
+    background-color: rgba(32, 62, 83, 1);
+    color: white
+}
 
 
+.taine {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center; 
+    margin-top: 15px;
+   
+}
 
+.taine span {
+    padding: 10px; 
+}
 
-
-
-
+.big{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    color: rgba(32, 62, 83, 1);
+    font-family: Lovelo;
+    margin-top: 60px;
+}
