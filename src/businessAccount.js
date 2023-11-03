@@ -303,9 +303,11 @@ export default function BusinessAccount() {
                   fontWeight: 700,
                   fontSize: 15,
                   textAlign: "center",
+                  paddingTop:10,
+                  paddingBottom:10
                 }}
               >
-                Unock More Opportunities with Business Plus Subscription
+                Unlock More Opportunities with Business Plus Subscription
               </p>
               <p
                 style={{
@@ -326,7 +328,7 @@ export default function BusinessAccount() {
                   R150
                 </span>
                 <span
-                  style={{ color: "#b8d9f7", fontWeight: 700, fontSize: 15 }}
+                  style={{ color: "#b8d9f7", fontWeight: 700, fontSize: 15, }}
                 >
                   Per Month
                 </span>
