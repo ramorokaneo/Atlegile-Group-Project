@@ -163,7 +163,7 @@ export default function WelcomeToAMS() {
           <span style={{ fontWeight: 600 }}>0123456789</span>
           <span style={{ fontWeight: 600 }}>example@gmail.com</span>
         </div>
-        
+
         <div style={{ marginTop: 30 }}>
           <div
             onClick={handleNavigateToDashboard}
@@ -223,9 +223,7 @@ export default function WelcomeToAMS() {
         </div>
       </div>
 
-    
       <div style={{ height: "100%", width: "80%", overflowY: "auto" }}>
-       
         <div
           style={{
             backgroundColor: "#072840",
@@ -258,9 +256,7 @@ export default function WelcomeToAMS() {
           ></div>
         </div>
 
-       
         <div style={{ padding: 20 }}>
-         
           <div
             style={{
               paddingBottom: 10,
@@ -272,7 +268,6 @@ export default function WelcomeToAMS() {
             <span style={{ fontWeight: 700 }}>DASHBOARD</span>
           </div>
 
-         
           <div
             style={{
               display: "flex",
@@ -309,157 +304,233 @@ export default function WelcomeToAMS() {
               borderBottom: "1px, lightgray solid",
             }}
           >
-            <span style={{ fontWeight: 700, }}>NEW USERS</span>
+            <span style={{ fontWeight: 700 }}>NEW USERS</span>
           </div>
 
-        
           <div style={{ display: "flex", flexDirection: "row" }}>
-          
-<div style={{ flex: 1, width: "50%" }}>
+            <div style={{ flex: 1, width: "50%" }}>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                  padding: "10px 10px 0",
+                  borderBottom: "1px lightgray solid",
+                  backgroundColor: "#fafafa",
+                }}
+              >
+                <span
+                  style={{ fontWeight: 600, width: "25%", fontSize: "small" }}
+                >
+                  Name
+                </span>
+                <span
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                  }}
+                >
+                  <PiCaretUpDownFill
+                    color={piCaretColor}
+                    onClick={handlePiCaretClick}
+                  />
+                  <AiOutlineSearch
+                    color={searchColor}
+                    onClick={handleSearchClick}
+                  />
+                </span>
+                <span
+                  style={{ fontWeight: 600, width: "25%", fontSize: "small" }}
+                >
+                  Surname
+                </span>
+                <span
+                  style={{ fontWeight: 600, width: "25%", fontSize: "small" }}
+                >
+                  Phone
+                </span>
+                <span
+                  style={{ fontWeight: 600, width: "25%", fontSize: "small" }}
+                >
+                  Email
+                </span>
+                <span
+                  style={{ fontWeight: 600, width: "25%", fontSize: "small" }}
+                >
+                  Location
+                </span>
+              </div>
+              {fakeUsersList.map((user) => (
+                <div
+                  key={user.id}
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                    padding: "10px",
+                    marginLeft: "10px",
+                    borderBottom: "1px lightgray solid",
+                    marginRight: 10,
+                  }}
+                >
+                  <span style={{ width: "25%", fontSize: "small" }}>
+                    {user.name}
+                  </span>
+                  <span style={{ width: "25%", fontSize: "small" }}>
+                    {user.surname}
+                  </span>
+                  <span style={{ width: "25%", fontSize: "small" }}>
+                    {user.phone}
+                  </span>
+                  <span style={{ width: "25%", fontSize: "small" }}>
+                    {user.email}
+                  </span>
+                  <span style={{ width: "25%", fontSize: "small" }}>
+                    {user.location}
+                  </span>
+                </div>
+              ))}
+            </div>
 
-  <div
-    style={{
-      display: "flex",
-      flexDirection: "row",
-      justifyContent: "space-between",
-      padding: "10px 10px 0",
-      borderBottom: "1px lightgray solid",
-      backgroundColor: "#fafafa",
-    }}
-  >
-    <span style={{ fontWeight: 600, width: "25%", fontSize: "small" }}>Name</span>
-    <span
-      style={{
-        display: "flex",
-        flexDirection: "row",
-        alignItems: "center",
-      }}
-    >
-      <PiCaretUpDownFill color={piCaretColor} onClick={handlePiCaretClick} />
-      <AiOutlineSearch color={searchColor} onClick={handleSearchClick} />
-    </span>
-    <span style={{ fontWeight: 600, width: "25%", fontSize: "small" }}>Surname</span>
-    <span style={{ fontWeight: 600, width: "25%", fontSize: "small" }}>Phone</span>
-    <span style={{ fontWeight: 600, width: "25%", fontSize: "small" }}>Email</span>
-    <span style={{ fontWeight: 600, width: "25%", fontSize: "small" }}>Location</span>
-  </div>
-  {fakeUsersList.map((user) => (
-    <div
-      key={user.id}
-      style={{
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        padding: "10px",
-        marginLeft: "10px",
-        borderBottom: "1px lightgray solid",
-        marginRight: 10,
-      }}
-    >
-      <span style={{ width: "25%", fontSize: "small" }}>{user.name}</span>
-      <span style={{ width: "25%", fontSize: "small" }}>{user.surname}</span>
-      <span style={{ width: "25%", fontSize: "small" }}>{user.phone}</span>
-      <span style={{ width: "25%", fontSize: "small" }}>{user.email}</span>
-      <span style={{ width: "25%", fontSize: "small" }}>{user.location}</span>
-    </div>
-  ))}
-</div>
+            <div style={{ width: "1px", backgroundColor: "gray" }}></div>
 
-<div style={{ width: "1px", backgroundColor: "gray" }}></div>
+            <div style={{ flex: 1, width: "50%" }}>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                  padding: "10px 10px 0",
+                  borderBottom: "1px lightgray solid",
+                  backgroundColor: "#fafafa",
+                }}
+              >
+                
+                <span
+                  style={{
+                    fontWeight: 600,
+                    fontSize: "small",
+                    marginRight: "-10px",
+                  }}
+                >
+                  
+                  Business Name
+                </span>
+                <span
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                  }}
+                >
+                  <PiCaretUpDownFill
+                    color={piCaretColor}
+                    onClick={handlePiCaretClick}
+                  />
+                  <AiOutlineSearch
+                    color={searchColor}
+                    onClick={handleSearchClick}
+                  />
+                </span>
+                <span
+                  style={{
+                    border: "none",
+                    borderLeft: "1px lightgray solid",
+                    marginRight: "50px",
+                  }}
+                >
+                  <span
+                    style={{
+                      fontWeight: 600,
+                      fontSize: "small",
+                      marginLeft: "20px",
+                    }}
+                  >
+                    Reg Number
+                    <PiCaretUpDownFill
+                      color={piCaretColor}
+                      onClick={handlePiCaretClick}
+                    />
+                  </span>
+                  <span
+                    style={{
+                      border: "none",
+                      borderRight: "1px lightgray solid",
+                      paddingRight: 10,
+                      marginRight: "2px",
+                    }}
+                  ></span>
+                  <span style={{ fontWeight: 600, fontSize: "small" }}>
+                    Type of Business
+                  </span>
+                  <span
+                    style={{
+                      border: "none",
+                      borderRight: "1px lightgray solid",
+                      paddingRight: 10,
+                      marginLeft: "1px",
+                    }}
+                  >
+                    <PiCaretUpDownFill
+                      color={piCaretColor}
+                      onClick={handlePiCaretClick}
+                    />
+                  </span>
+                  <span style={{ fontWeight: 600, fontSize: "small" }}>
+                    Industry
+                  </span>
+                  <span
+                    style={{
+                      border: "none",
+                      borderRight: "1px lightgray solid",
+                      paddingLeft: 5,
+                    }}
+                  >
+                    <PiCaretUpDownFill
+                      color={piCaretColor}
+                      onClick={handlePiCaretClick}
+                    />
+                  </span>
+                </span>
+              </div>
 
-<div style={{ flex: 1, width: "50%" }}>
-  
- 
-  <div
-    style={{
-      display: "flex",
-      flexDirection: "row",
-      justifyContent: "space-between",
-      padding: "10px 10px 0",
-      borderBottom: "1px lightgray solid",
-      backgroundColor: "#fafafa",
-    }}
-  >
-    <span style={{ fontWeight: 600, fontSize: "small", marginRight: "-10px" }}>Business Name</span>
-    <span
-      style={{
-        display: "flex",
-        flexDirection: "row",
-        alignItems: "center",
-      }}
-    >
-      <PiCaretUpDownFill color={piCaretColor} onClick={handlePiCaretClick} />
-      <AiOutlineSearch color={searchColor} onClick={handleSearchClick} />
-    </span>
-    <span
-      style={{
-        border: "none",
-        borderLeft: "1px lightgray solid",
-        marginRight: "50px",
-      }}
-    >
-      <span style={{ fontWeight: 600, fontSize: "small", marginLeft: "20px" }}>
-        Reg Number
-        <PiCaretUpDownFill color={piCaretColor} onClick={handlePiCaretClick} />
-      </span>
-      <span
-        style={{
-          border: "none",
-          borderRight: "1px lightgray solid",
-          paddingRight: 10,
-          marginRight: "2px",
-        }}
-      ></span>
-      <span style={{ fontWeight: 600, fontSize: "small" }}>
-        Type of Business
-      </span>
-      <span
-        style={{
-          border: "none",
-          borderRight: "1px lightgray solid",
-          paddingRight: 10,
-          marginLeft: "1px",
-        }}
-      >
-        <PiCaretUpDownFill color={piCaretColor} onClick={handlePiCaretClick} />
-      </span>
-      <span style={{ fontWeight: 600, fontSize: "small" }}>
-        Industry
-      </span>
-      <span
-        style={{
-          border: "none",
-          borderRight: "1px lightgray solid",
-          paddingLeft: 5,
-        }}
-      >
-        <PiCaretUpDownFill color={piCaretColor} onClick={handlePiCaretClick} />
-      </span>
-    </span>
-  </div>
-  
-  {fakeBusinessesList.map((business) => (
-    <div
-      key={business.id}
-      style={{
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        padding: "10px",
-        borderBottom: "1px lightgray solid",
-        marginRight: 15,
-      }}
-    >
-      <span style={{ width: "25%", fontSize: "small" }}>{business.name}</span>
-      <span style={{ width: "25%", fontSize: "small", marginLeft: "15px" }}>{business.regNum}</span>
-      <span style={{ width: "25%", fontSize: "small" }}>{business.bizType}</span>
-      <span style={{ width: "25%", fontSize: "small" }}>{business.Industry}</span>
-    </div>
-  ))}
-</div>
+              {fakeBusinessesList.map((business) => (
+                <div
+                  key={business.id}
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                    padding: "10px",
+                    borderBottom: "1px lightgray solid",
+                    marginRight: 15,
+                  }}
+                >
+                  <span style={{ width: "25%", fontSize: "small" }}>
+                    {business.name}
+                  </span>
+                  <span
+                    style={{
+                      width: "25%",
+                      fontSize: "small",
+                      marginLeft: "15px",
+                    }}
+                  >
+                    {business.regNum}
+                  </span>
+                  <span style={{ width: "25%", fontSize: "small" }}>
+                    {business.bizType}
+                  </span>
+                  <span style={{ width: "25%", fontSize: "small" }}>
+                    {business.Industry}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
     </div>
-  )
-};
+  );
+}
