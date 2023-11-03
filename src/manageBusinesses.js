@@ -119,7 +119,7 @@ export default function ManageBusinesses() {
       <div
         style={{
           height: "100%",
-          width: "30%",
+          width: "240px",
           border: "none",
           borderRight: "1px lightgray solid",
           padding: 20,
@@ -131,7 +131,7 @@ export default function ManageBusinesses() {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            padding: 10,
+
             marginTop: 20,
           }}
         >
@@ -221,7 +221,7 @@ export default function ManageBusinesses() {
           </div>
         </div>
       </div>
-      <div style={{ height: "100%", width: "70%" }}>
+      <div style={{ height: "100%", width: "100%" }}>
         <div
           style={{
             height: "15%",
