@@ -24,9 +24,16 @@ function Footer() {
             <p className="email-text">atlegilemarketing.co.za</p>
           </div>
           <div className="footer-links">
-            <h4>ORDER HISTORY</h4>
-            <h4>TERMS & CONDITIONS</h4>
-            <h4>PRIVACY POLICY</h4>
+            <a href="#">
+              <h4>ORDER HISTORY</h4>
+            </a>
+            <a href="#">
+              <h4>TERMS & CONDITIONS</h4>
+            </a>
+
+            <a href="#">
+              <h4>PRIVACY POLICY</h4>
+            </a>
           </div>
         </div>
         <div className="company-section">

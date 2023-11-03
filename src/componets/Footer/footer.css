@@ -61,6 +61,10 @@
   padding-top: 45px;
   padding-bottom: 15px;
 }
+.footer-links a {
+  text-decoration: none;
+  color: white;
+}
 .email-text {
   font-weight: bold;
 }

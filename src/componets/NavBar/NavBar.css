@@ -143,11 +143,11 @@
   background-color: white;
   /* background-color: rgb(170, 26, 26); */
   font-size: 20px;
-  color: black;
+  color: #252b42;
   text-align: center;
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
-  border: 1px solid black; /* Set the border size and color */
+  border: 1px solid #252b42; /* Set the border size and color */
   box-shadow: none; /* Remove the box shadow */
 }
 
