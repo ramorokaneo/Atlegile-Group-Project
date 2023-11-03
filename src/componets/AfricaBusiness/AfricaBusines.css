@@ -58,7 +58,7 @@
   padding-top: 5%;
 }
 .africa-header-text {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
 }
 .africa-container {
@@ -98,14 +98,15 @@
   width: 10vw;
   /* background-color: green; */
   border: 2px solid yellow;
-  padding: 12px;
+  padding: 20px 17px;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
 .card-text {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
 }
 .card-text-btn {
@@ -118,43 +119,43 @@
   /* background-color: red; */
   height: 20vh;
 }
-/* .africa-buttons {
+.africa-buttons {
   display: flex;
   flex-direction: row;
   width: 9vw;
   justify-content: space-between;
   margin-top: 10px;
 }
-.btn {
+/* .btn {
   padding: 4px;
   border-radius: 16px;
-} */
+}  */
 
 .africa-buttons {
   display: flex;
   flex-direction: row;
-  width: 8.5vw;
+  /* width: 8.5vw; */
   /* height: 3.5vh; */
   justify-content: space-between;
   margin-top: 10px;
   /* background-color: aqua; */
 }
 
-.btn {
-  /* padding: 4px 5px; */
-  padding-bottom: 8px;
-  padding-inline: 8px;
+.btn-shops {
+  padding: 5px 12px;
+  /* padding-bottom: 8px;
+  padding-inline: 8px; */
   /* padding: 4px; */
   align-items: center;
   text-align: center;
   border-radius: 16px;
-  /* background-color: rgb(170, 26, 26); */
+  background-color: white;
   color: black;
   text-align: center;
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
-  border: 1px solid black; /* Set the border size and color */
-  box-shadow: none; /* Remove the box shadow */
+  border: 1px solid black;
+  box-shadow: none;
 }
 
 .btn-link {
@@ -172,13 +173,13 @@
   color: white;
   cursor: pointer;
 }
-.btn-link:hover {
-  /* background-color: black; */
+/* .btn-link:hover {
+  background-color: black;
   cursor: pointer;
   color: white;
-  /* Set the border size and color */
-}
-.btn-shop:hover {
+  /* Set the border size and color 
+} */
+.btn-shops:hover {
   background-color: black;
   color: white;
   cursor: pointer;

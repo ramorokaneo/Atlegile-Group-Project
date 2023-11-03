@@ -14,10 +14,10 @@ export default function AfricaBusines() {
               </p>
               <div className="africa-buttons">
                 <a href="/shop" className="btn-link">
-                  <div className="btn btn-shop">SHOP</div>
+                  <button className="btn-shops">SHOP</button>
                 </a>
                 <a href="/about-us" className="btn-link">
-                  <div className="btn ">ABOUT US</div>
+                  <button className="btn-shops ">ABOUT US</button>
                 </a>
               </div>
             </div>

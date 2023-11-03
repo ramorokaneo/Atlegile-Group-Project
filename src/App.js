@@ -9,8 +9,8 @@ function App() {
   return (
     <div className="app">
       {/* Your main content here */}
-      {/* <Landing /> */}
-      <AboutUsPage />
+      <Landing />
+      {/* <AboutUsPage /> */}
     </div>
   );
 }

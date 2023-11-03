@@ -111,7 +111,7 @@
 
 /* Logo styles */
 .navbar-logo img {
-  max-width: 100px; /* Adjust the maximum width of your logo */
+  max-width: 200px; /* Adjust the maximum width of your logo */
 }
 
 /* Button styles */
@@ -139,9 +139,10 @@
   /* padding: 4px; */
   align-items: center;
   text-align: center;
-  border-radius: 16px;
+  border-radius: 20px;
   background-color: white;
   /* background-color: rgb(170, 26, 26); */
+  font-size: 20px;
   color: black;
   text-align: center;
   text-decoration: none;
@@ -159,15 +160,19 @@
 .more-info .btn {
   /* background-color: blue; */
   border: none;
-  padding: 5px;
-  padding-right: 12px;
-  padding-left: 12px;
+  padding: 8px;
+  text-transform: uppercase;
+
+  /* margin-left: 10px; */
+  padding-right: 18px;
+  padding-left: 18px;
 }
 
 .login .btn {
   /* background-color: red; */
-  padding: 5px;
-  margin-left: 5px;
-  padding-right: 12px;
-  padding-left: 12px;
+  text-transform: uppercase;
+  padding: 8px;
+  margin-left: 10px;
+  padding-right: 18px;
+  padding-left: 18px;
 }

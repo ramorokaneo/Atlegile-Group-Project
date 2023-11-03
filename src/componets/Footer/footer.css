@@ -1,12 +1,15 @@
 .footer {
-  background-color: black;
-  height: 55vh;
+  background-color: #070f18;
+  height: 50vh;
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
+  bottom: 0;
+  overflow: hidden;
+  /* padding-inline: 40vw; */
 }
 .container {
   color: white;
@@ -14,14 +17,15 @@
 .logo {
   height: 50px;
   color: white;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 .footer-hero {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 80vw;
+  width: 70vw;
+  margin-left: 10vw;
 }
 .company-text {
   text-transform: uppercase;
@@ -29,13 +33,33 @@
 }
 .footer-body {
   /* background-color: red; */
-  width: 40vw;
+  height: 40vh;
+  width: 35vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 50px;
   /* flex-grow: 2; */
 }
+.footer-body p {
+  font-weight: 700;
+}
+.footer-body h3 {
+  font-size: 30px;
+  text-transform: uppercase;
+}
 .footer-links {
+  display: flex;
+  height: 30vh;
+  flex-direction: column;
   /* background-color: blue; */
+  justify-content: space-around;
   font-weight: bold;
   width: 30vw;
+  /* padding: 20px 0; */
+  padding-top: 45px;
+  padding-bottom: 15px;
 }
 .email-text {
   font-weight: bold;
@@ -50,7 +74,7 @@
   width: 80vw;
 }
 .lion-image {
-  height: 200px;
+  height: 250px;
   color: white;
   position: absolute;
   bottom: 0;

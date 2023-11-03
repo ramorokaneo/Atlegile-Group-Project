@@ -1,6 +1,5 @@
 // Footer.js
 import React from "react";
-import "./landing.css";
 import Footer from "../componets/Footer/Footer";
 import FollowUs from "../componets/FollowUs/FollowUs";
 import SaveBigHeader from "../componets/SaveBigHeader/SaveBigHeader";
@@ -12,7 +11,7 @@ import SecureTech from "../componets/SecureTech/SecureTech";
 import LearnZa from "../componets/LearnZa/LearnZa";
 import TechWise from "../componets/TechWise/TechWise";
 import MindMatters from "../componets/MindMatters/MindMatters";
-import AboutUs from "../componets/AboutUs/AboutUs";
+// import AboutUs from "../componets/AboutUs/AboutUs";
 function Landing() {
   return (
     <>
