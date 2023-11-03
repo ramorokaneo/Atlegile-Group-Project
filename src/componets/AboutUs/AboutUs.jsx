@@ -2,6 +2,10 @@ import React from "react";
 import "./about.css";
 import logo from "../../icons/logo.svg";
 import Plane from "../../images/plane.svg";
+import Lion from "../../images/bigger-lion.png";
+// import ShopLeft from "../../images/shop-left.svg";
+// import shopRight from "../../images/shop-right.svg";
+
 export default function AboutUs() {
   const amsArr = [
     "Passion",
@@ -83,6 +87,11 @@ export default function AboutUs() {
             impact on society by nurturing local talent and fostering
             sustainable business growth.
           </p>
+        </div>
+        <div className="lion-images-container">
+          <div className="big-lion">
+            <img src={Lion} alt="big lion" />
+          </div>
         </div>
       </div>
     </div>

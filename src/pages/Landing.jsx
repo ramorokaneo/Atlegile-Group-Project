@@ -27,7 +27,7 @@ function Landing() {
       <SaveBigHeader />
       <MindMatters />
       <AfricaBusines />
-      <AboutUs />
+
       <Footer />
     </>
   );
