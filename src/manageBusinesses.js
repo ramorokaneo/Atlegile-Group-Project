@@ -49,7 +49,8 @@ export default function ManageBusinesses() {
         450 * ratioY
       )}px`;
     }
-
+    backgroundPositionX += (backgroundPositionX/2);
+    backgroundPositionY += 0;
     return { backgroundPositionX, backgroundPositionY, backgroundSize };
   }
 
