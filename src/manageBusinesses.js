@@ -132,7 +132,6 @@ export default function ManageBusinesses() {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-
             marginTop: 20,
           }}
         >
@@ -222,6 +221,7 @@ export default function ManageBusinesses() {
           </div>
         </div>
       </div>
+      
       <div style={{ height: "100%", width: "100%" }}>
         <div
           style={{

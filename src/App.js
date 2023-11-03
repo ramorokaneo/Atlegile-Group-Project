@@ -1,7 +1,8 @@
 import "./App.css";
 //import SignIn from "./signIn";
-import ManageBusinesses from "./manageBusinesses";
+//import ManageBusinesses from "./manageBusinesses";
 //import Footer from "./footer/footer";
+import BusinessAccount from "./businessAccount";
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
         <div style={{}}></div>
         <div style={{}}></div>
       </div> */}
-      <ManageBusinesses/>
+      <BusinessAccount/>
+
     </>
   );
 }
