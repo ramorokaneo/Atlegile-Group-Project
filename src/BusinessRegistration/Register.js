@@ -1,8 +1,12 @@
 import React from 'react'
 import logo from '../BusinessRegistration/cropped-AMS-Shadow-Queen-Logo_BNY-1320x772 1.png'
-import './registar.css'
+import './form.css'
+import { useNavigate } from 'react-router-dom'
 
 const Register = () => {
+
+  const nav = useNavigate()
+
   return (
     <div className="background">
     <div className="image-card">
@@ -27,54 +31,52 @@ const Register = () => {
       <div className="textInput-container">
         <form>
           <h3>BUSINESS REGISTRATION</h3>
-          <div className="inputbox">
-            <label htmlFor="name" >Business Name</label>
-            <input type="text" />
-          </div>
 
-          <div className="inputbox">
-            <label htmlFor="role" >Role</label>
-            <input type="text" />
-          </div>
+ <form>
+                <div class="group textInput-container">
+                  <input type="text" required />
+                  <label>Business Name</label>
+                </div>
 
-          <div className="inputbox">
-            <label htmlFor="password" >Reg Number</label>
-            <input type="text" />
-          </div>
+                <div class="group textInput-container">
+                  <input type="text" required />
+                  <label>Role</label>
+                </div>
 
-          <div className="inputbox">
-            <label htmlFor="username" >Website</label>
-            <input type="text" />
-          </div>
+                <div class="group textInput-container">
+                  <input type="text" required />
+                  <label>Website</label>
+                </div>
 
-          <div className="inputbox">
-            <label htmlFor="confirmPassword" >Location</label>
-            <input type="text" />
-          </div>
-          
+                <div class="group textInput-container">
+                  <input type="text" required />
+                  <label>Location</label>
+                </div>
 
-          <div className="form-group row">
-            <div className="inputbox">
-              <label htmlFor="type" >Types of business</label>
-              <input type="text" />
-            </div>
+                <div className="row">
+                  <div class="group textInput-container">
+                    <input type="text" required />
+                    <label>Business type</label>
+                  </div>
 
-            <div className="inputbox">
-              <label htmlFor="industry" >Industry</label>
-              <input type="text" />
-            </div>
-          </div>
+                  <div class="group textInput-container">
+                    <input type="text" required />
+                    <label>Industry</label>
+                  </div>
+                </div>
 
+                <div class="group textInput-container">
+                  <input type="text" required />
+                  <label>Phone Number</label>
+                </div>
 
-          <div className="inputbox">
-            <label htmlFor="confirmPassword" >Phone Number</label>
-            <input type="text" />
-          </div>
-          <div className="inputbox">
-            <label htmlFor="confirmPassword" >Bio</label>
-            <input type="text" />
-          </div>
-          <button type="submit" className="btn-continue">Continue</button>
+                <div class="group textInput-container">
+                  <input type="text" required />
+                  <label>Bio</label>
+                </div>
+                <button type="submit" className="btn-continue" onClick={() => nav('/addPhoto')}>Continue</button>
+              </form>
+       
         </form>
       </div>
     </div>

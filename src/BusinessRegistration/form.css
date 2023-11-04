@@ -1,0 +1,137 @@
+.textInput-container {
+    display: flex;
+    flex-direction: row; /* Change from row to column */
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    border: none;
+    margin-bottom: 4%;
+    width: 100%;
+    /* background-color: #757575; */
+    
+  }
+  
+  .container {
+    font-family: 'Roboto';
+    width: 100%;
+    margin: 30px auto 0;
+    display: block;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10%;
+    margin-top: 6%;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+  /* Styling for text input and select */
+  .group {
+    position: relative;
+    margin-bottom: 45px;
+  }
+  
+  input,
+  select {
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 90%;
+    border: none;
+    border-bottom: 1px solid #757575;
+    background: transparent;
+    margin-right: 10px;
+  }
+
+  
+  input:focus,
+  select:focus {
+    outline: none;
+  }
+  
+  /* LABEL ======================================= */
+  label {
+    color: #999;
+    font-size: 10px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+  }
+  
+  /* Active state for input */
+  input:focus ~ label,
+  input:valid ~ label {
+    top: -20px;
+    font-size: 14px;
+    color: lightgray;
+  }
+  
+  /* Active state for select */
+  select:focus ~ label,
+  select:valid ~ label {
+    top: -20px;
+    font-size: 14px;
+    color: lightgray;
+  }
+
+ 
+  
+  /* Active state for input and select */
+  input:focus ~ .bar:before,
+  input:focus ~ .bar:after,
+  select:focus ~ .bar:before,
+  select:focus ~ .bar:after {
+    width: 50%;
+  }
+  
+  /* Active state for input and select */
+  input:focus ~ .highlight,
+  select:focus ~ .highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease;
+  }
+  
+
+
+  /* Button styling */
+  button {
+    background-color: #072840;
+    color: white;
+    padding: 10px ;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    width:60%;
+
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* ANIMATIONS ================ */
+  @-webkit-keyframes inputHighlighter {
+      from { background: lightgray; }
+    to 	{ width:0; background:transparent; }
+  }
+  @-moz-keyframes inputHighlighter {
+      from { background:lightgray; }
+    to 	{ width:0; background:transparent; }
+  }
+  @keyframes inputHighlighter {
+      from { background:lightgray; }
+    to 	{ width:0; background:transparent; }
+  }
