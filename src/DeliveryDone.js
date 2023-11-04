@@ -7,7 +7,7 @@ import { BiMessageAlt } from "react-icons/pi";
 import { AiOutlineSearch } from "react-icons/ai";
 import "./OrderHistory.css";
 
-function Order() {
+function DeliveryDone() {
   const [isVisible, setIsVisible] = useState(true);
 
   const handlePress = () => {
@@ -686,7 +686,7 @@ function Order() {
                   flexDirection: "column",
                   justifyContent: "flex-start",
                   alignItems: "flex-start",
-                  paddingBottom: "25px",
+                  paddingBottom: "15px",
                   borderBottom: "1px white solid",
                 }}
               >
@@ -856,4 +856,4 @@ function Order() {
   );
 }
 
-export default Order;
+export default DeliveryDone;
