@@ -9,7 +9,20 @@ import "./OrderHistory.css";
 
 function DeliveryDone() {
   const [isVisible, setIsVisible] = useState(true);
+  const [component1Visible, setComponent1Visible] = useState(true);
+  const [component2Visible, setComponent2Visible] = useState(false);
+  const [component3Visible, setComponent3Visible] = useState(false);
 
+  const handleComponentA = () => {
+    setComponent1Visible(false);
+    setComponent2Visible(true);
+  };
+
+  const handleComponentB = () => {
+    setComponent1Visible(false);
+    setComponent2Visible(false);
+    setComponent3Visible(true);
+  };
   const handlePress = () => {
     setIsVisible(false); // Hide the first component upon clicking
   };
@@ -69,6 +82,12 @@ function DeliveryDone() {
     { product: "HD TV", item: 1, amount: 4500.0 },
   ];
 
+  const Dates = [
+    { month: "Jul", date: 2, status: "PICKED" },
+    { month: "Jul", date: 2, status: "null" },
+    { month: "Jul", date: 2, status: "null" },
+  ];
+
   return (
     <div
       style={{
@@ -117,7 +136,7 @@ function DeliveryDone() {
           borderBottom: "1px lightgray solid",
           display: "flex",
           flexDirection: "row",
-          height: "60%",
+          height: "100vh",
           width: "100%",
           alignItems: "center",
           //   backgroundColor: "yellow",
@@ -132,7 +151,7 @@ function DeliveryDone() {
             display: "flex",
             flexDirection: "colunm",
             alignItems: "center",
-            //   backgroundColor: "blue",
+            //  backgroundColor: "blue",
           }}
         ></div>
         <div
@@ -158,7 +177,7 @@ function DeliveryDone() {
               flexDirection: "row",
               justifyContent: "flex-start",
               alignItems: "center",
-              // backgroundColor: "green",
+              //backgroundColor: "green",
             }}
           >
             <div
@@ -558,7 +577,7 @@ function DeliveryDone() {
                   style={{
                     fontSize: "1.7rem",
                     fontWeight: "bold",
-                    paddingLeft: "10px",
+                    // paddingLeft: "10px",
                     margin: "0",
                     color: "white",
                   }}
@@ -644,7 +663,7 @@ function DeliveryDone() {
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: `${backgroundPositionX}px ${backgroundPositionY}px`,
                   backgroundSize: backgroundSize,
-                  height: "20%",
+                  height: "15%",
                   width: "90%",
                   paddingTop: "10px",
                   borderRadius: 20,
@@ -656,20 +675,15 @@ function DeliveryDone() {
                   height: "3%",
                   width: "90%",
                   border: "none",
-                  // borderBottom: "1px lightgray solid",
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "flex-start",
                   alignItems: "flex-start",
-                  // backgroundColor: "red",
-                  //paddingTop: "10px",
                 }}
               >
                 <p
                   style={{
                     fontSize: "0.7rem",
-                    //  fontWeight: "bold",
-                    //paddingLeft: "10px",
                     color: "grey",
                     margin: "0",
                   }}
@@ -686,7 +700,6 @@ function DeliveryDone() {
                   flexDirection: "column",
                   justifyContent: "flex-start",
                   alignItems: "flex-start",
-                  paddingBottom: "15px",
                   borderBottom: "1px white solid",
                 }}
               >
@@ -713,10 +726,10 @@ function DeliveryDone() {
                   alignItems: "flex-start",
                 }}
               >
-                {isVisible && (
+                {component1Visible && (
                   <div
                     style={{
-                      marginTop: "20px",
+                      marginTop: "10px",
                       width: "100px",
                       height: "30px",
                       border: "1px white solid",
@@ -725,7 +738,7 @@ function DeliveryDone() {
                       justifyContent: "space-between",
                       alignItems: "center",
                     }}
-                    onClick={handlePress}
+                    onClick={handleComponentA}
                   >
                     <p
                       style={{
@@ -751,79 +764,371 @@ function DeliveryDone() {
                     ></div>
                   </div>
                 )}
-                {!isVisible && (
+                {component2Visible && (
                   <>
                     <div
                       style={{
-                        marginTop: "20px",
-                        width: "100px",
-                        height: "30px",
-                    //    border: "1px white solid",
-                        borderRadius: 15,
+                        width: "100%",
+                        height: "90%",
                         display: "flex",
-                        justifyContent: "space-between",
-                        alignItems: "center",
+                        justifyContent: "flex-start",
+                        alignItems: "flex-start",
+                        flexDirection: "column",
+                        // backgroundColor: "red",
                       }}
                     >
                       <div
                         style={{
-                          height: "12px",
-                          width: "12px",
-                          borderRadius: 8,
-                          backgroundColor: "gray",
-                          marginRight: "5px",
+                          width: "300px",
+                          height: "30px",
+                          borderRadius: 15,
+                          display: "flex",
+                          justifyContent: "flex-start",
+                          alignItems: "center",
                           marginTop: "10px",
                         }}
-                      ></div>
+                      >
+                        <div
+                          style={{
+                            height: "12px",
+                            width: "12px",
+                            borderRadius: 8,
+                            backgroundColor: "gray",
+                            marginRight: "5px",
+                            marginTop: "10px",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            display: "flex",
+                          }}
+                        ></div>
+                        <p
+                          style={{
+                            color: "white",
+                            marginTop: "10px",
+                            height: "100%",
+                            marginRight: "5px",
+                            marginTop: "30px",
+                            justifyContent: "center",
+                            display: "flex",
+                          }}
+                        >
+                          Preocesing
+                        </p>
+                      </div>
+                      <div
+                        style={{
+                          marginTop: "1px",
+                          width: "300px",
+                          height: "30px",
+                          borderRadius: 15,
+                          display: "flex",
+                          justifyContent: "flex-start",
+                          alignItems: "center",
+                        }}
+                      >
+                        <div
+                          style={{
+                            height: "12px",
+                            width: "12px",
+                            borderRadius: 8,
+                            backgroundColor: "gray",
+                            marginRight: "5px",
+                            marginTop: "10px",
+                          }}
+                        ></div>
+                        <p
+                          style={{
+                            color: "white",
+                            marginTop: "10px",
+                            height: "100%",
+                            marginRight: "5px",
+                            marginTop: "30px",
+                            justifyContent: "center",
+                            display: "flex",
+                          }}
+                        >
+                          On the way
+                        </p>
+                      </div>
+                      <div
+                        style={{
+                          marginTop: "1px",
+                          width: "300px",
+                          height: "30px",
+                          borderRadius: 15,
+                          display: "flex",
+                          justifyContent: "flex-start",
+                          alignItems: "center",
+                        }}
+                      >
+                        <div
+                          style={{
+                            height: "12px",
+                            width: "12px",
+                            borderRadius: 8,
+                            backgroundColor: "gray",
+                            marginRight: "5px",
+                            marginTop: "10px",
+                          }}
+                        ></div>
+                        <p
+                          style={{
+                            color: "white",
+                            marginTop: "10px",
+                            height: "100%",
+                            marginRight: "5px",
+                            marginTop: "30px",
+                            justifyContent: "center",
+                            display: "flex",
+                          }}
+                        >
+                          Delivered
+                        </p>
+                      </div>
+                      <div
+                        style={{
+                          marginTop: "10px",
+                          width: "100px",
+                          height: "30px",
+                          border: "1px white solid",
+                          borderRadius: 15,
+                          display: "flex",
+                          justifyContent: "space-between",
+                          alignItems: "center",
+                        }}
+                      >
+                        <p
+                          style={{
+                            fontSize: "1rem",
+                            color: "white",
+                            margin: "0",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            display: "flex",
+                            marginLeft: "5px",
+                          }}
+                        >
+                          MESSAGE
+                        </p>
+                        <div
+                          style={{
+                            height: "18px",
+                            width: "18px",
+                            borderRadius: 8,
+                            backgroundColor: "gray",
+                            marginRight: "5px",
+                          }}
+                        ></div>
+                      </div>
+                      <div
+                        style={{
+                          height: "46px",
+                          width: "100%",
+                          marginRight: "5px",
+                          marginTop: "10px",
+                          justifyContent: "center",
+                          alignItems: "center",
+                          display: "flex",
+                          flexDirection: "column",
+                        }}
+                      >
+                        <div
+                          style={{
+                            height: "40%",
+                            width: "20%",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            display: "flex",
+                          }}
+                        >
+                          <p
+                            style={{
+                              color: "white",
+                              height: "100%",
+                              width: "100%",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              display: "flex",
+                            }}
+                          >
+                            AUTH PIN
+                          </p>
+                        </div>
+                        <div
+                          style={{
+                            height: "60%",
+                            width: "20%",
+                            //backgroundColor: "blue",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            display: "flex",
+                            marginTop: "5px",
+                          }}
+                        >
+                          <p
+                            style={{
+                              color: "white",
+                              height: "100%",
+                              width: "100%",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              display: "flex",
+                              fontSize: "2rem",
+                              fontWeight: "bold",
+                            }}
+                          >
+                            1234
+                          </p>
+                        </div>
+                      </div>
                     </div>
                     <div
                       style={{
-                        marginTop: "1px",
-                        width: "100px",
-                        height: "30px",
-                     //   border: "1px white solid",
-                        borderRadius: 15,
-                        display: "flex",
-                        justifyContent: "space-between",
+                        width: "100%",
+                        height: "20%",
                         alignItems: "center",
+                        justifyContent: "center",
+                        display: "flex",
                       }}
                     >
                       <div
                         style={{
-                          height: "12px",
-                          width: "12px",
-                          borderRadius: 8,
-                          backgroundColor: "gray",
-                          marginRight: "5px",
-                          marginTop: "10px",
+                          width: "80%",
+                          height: "30px",
+                          borderRadius: 15,
+                          alignItems: "center",
+                          justifyContent: "center",
+                          display: "flex",
+                          border: "1px white solid",
+                          marginTop:"30px"
                         }}
-                      ></div>
-                    </div>
-                    <div
-                      style={{
-                        marginTop: "1px",
-                        width: "100px",
-                        height: "30px",
-                       // border: "1px white solid",
-                        borderRadius: 15,
-                        display: "flex",
-                        justifyContent: "space-between",
-                        alignItems: "center",
-                      }}
-                    >
-                      <div
-                        style={{
-                          height: "12px",
-                          width: "12px",
-                          borderRadius: 8,
-                          backgroundColor: "gray",
-                          marginRight: "5px",
-                          marginTop: "10px",
-                        }}
-                      ></div>
+                        onClick={handleComponentB}
+                      >
+                        <p
+                          style={{
+                            fontSize: "1rem",
+                            color: "white",
+                          }}
+                        >
+                          ONGOING
+                        </p>
+                      </div>
                     </div>
                   </>
                 )}
+
+                <div
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "flex-start",
+                    flexDirection: "column",
+                 //  backgroundColor: "red",
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                    }}
+                  >
+                    {component3Visible &&
+                      Dates.map((item, index) => (
+                        <div
+                          style={{
+                            height: "70px",
+                            width: "60px",
+                            marginTop: "30px",
+                            display: "flex",
+                            flexDirection: "column",
+                            border: "1px white solid",
+                            marginLeft: "10px",
+                            backgroundColor:
+                              item.status === "PICKED" ? "#1e3950" : null,
+                          }}
+                          key={index}
+                        >
+                          <div
+                            style={{
+                              height: "50%",
+                              width: "100%",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                            }}
+                          >
+                            <p
+                              style={{
+                                fontSize: "1rem",
+                                color: "white",
+                                paddingTop: "10px",
+                              }}
+                            >
+                              {item.month}
+                            </p>
+                          </div>
+                          <div
+                            style={{
+                              height: "50%",
+                              width: "100%",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                            }}
+                          >
+                            <p
+                              style={{
+                                fontSize: "1.5rem",
+                                color: "white",
+                                fontWeight: "bold",
+                                paddingBottom: "10px",
+                              }}
+                            >
+                              {item.date}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                  </div>
+                  {component3Visible && (
+                    <div
+                      style={{
+                        width: "100%",
+                        height: "20%",
+                        //   backgroundColor: "yellow",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      <div
+                        style={{
+                          width: "100%",
+                          height: "30px",
+                          //backgroundColor: "red",
+                          borderRadius: 20,
+                          justifyContent: "center",
+                          display: "flex",
+                          alignItems: "center",
+                          border: "1px white solid",
+                        }}
+                      >
+                        <p
+                          style={{
+                            fontSize: "1.2rem",
+                            color: "white",
+                            // fontWeight: "bold",
+                            paddingBottom: "10px",
+                          }}
+                        >
+                          CHECKOUT
+                        </p>
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </div>
