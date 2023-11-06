@@ -3,40 +3,11 @@ import BlackSilk from "./blackSilk.jpg";
 import { IoMdStopwatch } from "react-icons/io";
 import { GoCheckCircleFill } from "react-icons/go";
 import BusinessAccountPlus from "./BusinessPlus+.jpg";
+import Card from "./components/Card/Card";
 
 export default function BusinessAccount() {
     // eslint-disable-next-line
-  const list = [
-    {
-      department: "English Department",
-      title: "GRAPHIC DESIGN",
-      description:
-        "We focus on ergonomics and meeting you where you work. It's only a keystroke away.",
-      sale: 0,
-      price: 4999.0,
-      rating: 4.9,
-    },
-
-    {
-      department: "English Department",
-      title: "GRAPHIC DESIGN",
-      description:
-        "We focus on ergonomics and meeting you where you work. It's only a keystroke away.",
-      sale: 0,
-      price: 4999.0,
-      rating: 4.9,
-    },
-
-    {
-      department: "English Department",
-      title: "GRAPHIC DESIGN",
-      description:
-        "We focus on ergonomics and meeting you where you work. It's only a keystroke away.",
-      sale: 0,
-      price: 4999.0,
-      rating: 4.9,
-    },
-  ];
+  const list = [1,2,3];
 
   return (
     <div style={{ display: "flex", flexDirection: "row", height: "100%" }}>
@@ -278,7 +249,9 @@ export default function BusinessAccount() {
               paddingRight: 10,
             }}
           >
-            <div style={{ width: "75%" }}></div>
+            <div style={{ width: "75%" }}>
+
+            </div>
             <div
               style={{
                 width: "25%",
