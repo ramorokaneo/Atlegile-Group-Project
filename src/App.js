@@ -12,8 +12,7 @@ function App() {
         <div style={{}}></div>
         <div style={{}}></div>
       </div> */}
-      <BusinessAccount/>
-
+      <BusinessAccount />
     </>
   );
 }

@@ -5,6 +5,7 @@ import { GoCheckCircleFill } from "react-icons/go";
 import BusinessAccountPlus from "./BusinessPlus+.jpg";
 
 export default function BusinessAccount() {
+    // eslint-disable-next-line
   const list = [
     {
       department: "English Department",
