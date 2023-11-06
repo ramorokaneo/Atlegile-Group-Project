@@ -2,6 +2,7 @@ import React from "react";
 import BlackSilk from "./blackSilk.jpg";
 import { IoMdStopwatch } from "react-icons/io";
 import { GoCheckCircleFill } from "react-icons/go";
+import BusinessAccountPlus from "./BusinessPlus+.jpg";
 
 export default function BusinessAccount() {
   const list = [
@@ -273,7 +274,7 @@ export default function BusinessAccount() {
               width: "100%",
               display: "flex",
               flexDirection: "row",
-              paddingRight:10
+              paddingRight: 10,
             }}
           >
             <div style={{ width: "75%" }}></div>
@@ -283,10 +284,15 @@ export default function BusinessAccount() {
                 display: "flex",
                 flexDirection: "column",
                 border: "1px lightgray solid",
-                padding:30
+                padding: 40,
+                alignItems: "center",
               }}
             >
-              <img src="./BusinessPlus+.jpg" alt="business plus logo" />
+              <img
+                src={BusinessAccountPlus}
+                alt="business plus logo"
+                style={{ width: "40%", marginBottom: 5 }}
+              />
               <p
                 style={{
                   color: "#252b42",
@@ -303,8 +309,8 @@ export default function BusinessAccount() {
                   fontWeight: 700,
                   fontSize: 15,
                   textAlign: "center",
-                  paddingTop:10,
-                  paddingBottom:10
+                  paddingTop: 10,
+                  paddingBottom: 10,
                 }}
               >
                 Unlock More Opportunities with Business Plus Subscription
@@ -328,61 +334,61 @@ export default function BusinessAccount() {
                   R150
                 </span>
                 <span
-                  style={{ color: "#b8d9f7", fontWeight: 700, fontSize: 15, }}
+                  style={{ color: "#b8d9f7", fontWeight: 700, fontSize: 15 }}
                 >
                   Per Month
                 </span>
               </p>
-              <p
-                style={{
-                  fontWeight: 700,
-                  fontSize: 13,
-                  display: "flex",
-                  alignItems: "center",
-                }}
-              >
-                {" "}
-                <GoCheckCircleFill
-                  color="#2dc071"
-                  size={30}
-                  style={{ marginRight: 7 }}
-                />{" "}
-                List Unlimited Products
-              </p>
-              <br />
-              <p
-                style={{
-                  fontWeight: 700,
-                  fontSize: 13,
-                  display: "flex",
-                  alignItems: "center",
-                }}
-              >
-                {" "}
-                <GoCheckCircleFill
-                  color="#2dc071"
-                  size={30}
-                  style={{ marginRight: 7 }}
-                />{" "}
-                Priority Support
-              </p>
-              <br />
-              <p
-                style={{
-                  fontWeight: 700,
-                  fontSize: 13,
-                  display: "flex",
-                  alignItems: "center",
-                }}
-              >
-                {" "}
-                <GoCheckCircleFill
-                  color="#2dc071"
-                  size={30}
-                  style={{ marginRight: 7 }}
-                />{" "}
-                Exclusive Promotions
-              </p>
+              <div style={{display:"flex",flexDirection:"column"}}>
+                <p
+                  style={{
+                    fontWeight: 700,
+                    fontSize: 13,
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  {" "}
+                  <GoCheckCircleFill
+                    color="#2dc071"
+                    size={30}
+                    style={{ marginRight: 7,marginBottom:10 }}
+                  />{" "}
+                  List Unlimited Products
+                </p>
+                <p
+                  style={{
+                    fontWeight: 700,
+                    fontSize: 13,
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  {" "}
+                  <GoCheckCircleFill
+                    color="#2dc071"
+                    size={30}
+                    style={{ marginRight: 7,marginBottom:10  }}
+                  />{" "}
+                  Priority Support
+                </p>
+                <p
+                  style={{
+                    fontWeight: 700,
+                    fontSize: 13,
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  {" "}
+                  <GoCheckCircleFill
+                    color="#2dc071"
+                    size={30}
+                    style={{ marginRight: 7 }}
+                  />{" "}
+                  Exclusive Promotions
+                </p>
+              </div>
             </div>
           </div>
         </div>
