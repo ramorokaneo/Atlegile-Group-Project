@@ -2,7 +2,11 @@ import React from "react";
 import "./card.css"; // Create a CSS file for styling
 import downloadIcon from "../../icons/download.svg";
 import RightIcon from "../../icons/icon-right.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+// import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { faHeart } from "@fortawesome/free-regular-svg-icons";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 const Card = () => {
   return (
     <div className="card-container">
@@ -14,6 +18,31 @@ const Card = () => {
               src={"./images/headsets.png"}
               alt="shop 2"
             />
+            <div className="card-icons">
+              <FontAwesomeIcon
+                icon={faHeart}
+                style={{
+                  fontSize: "1.5em",
+                  color: "black",
+                  backgroundColor: "white",
+                  padding: "12px",
+                  marginLeft: "13px",
+                  borderRadius: "50%",
+                }}
+              />
+              <FontAwesomeIcon
+                icon={faCartShopping}
+                e
+                style={{
+                  fontSize: "1.5em",
+                  color: "black",
+                  backgroundColor: "white",
+                  padding: "12px",
+                  marginLeft: "15px",
+                  borderRadius: "50%",
+                }}
+              />
+            </div>
           </div>
           <p className="image-sale">sale</p>
         </div>
