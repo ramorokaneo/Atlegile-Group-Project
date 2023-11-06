@@ -128,6 +128,8 @@ const LandingPageHeader = () => {
                     <img style={{ width: "100%" }} src={front} alt="LION ON ROCK" />
                 </div>
             </div>
+
+            <div></div>
         </div>
     );
 };

@@ -154,7 +154,6 @@
 .p-tag {
     text-align: center;
     margin-top: 60px;
-    /* margin-right: -70px; */
 }
 
 .market {
@@ -179,25 +178,7 @@
     border: 1px solid #333;
 }
 
-/* .flexbox-item-1 {
-    min-height: 170px;
-    margin-left: 330px;
-    margin-top: 70px;
-    width: 400px;
-}
 
-.flexbox-item-2 {
-    min-height: 200px;
-    margin-left: 740px;
-    margin-top: -212px;
-}
-
-.flexbox-item-3 {
-    min-height: 200px;
-    margin-left: 1149px;
-    margin-top: -212px;
-    width: 330px;
-} */
 
 .centered-text {
     display: flex;
@@ -205,29 +186,20 @@
     flex-direction: column;
 }
 
-/* .JUMP {
-    font-weight: normal;
-} */
+
 
 .image-container {
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     flex-direction: column;
 }
 
 .image-container img {
     max-width: 100%;
     max-height: 100%;
-    /* margin-bottom: 300px; */
 }
 
-.centered-and-bold {
-    /* text-align: center;
-    font-weight: bold; */
-    /* margin-top: -346px;
-    margin-right: 720px; */
-}
+
 
 .mini-heading {
     text-align: center;
@@ -243,22 +215,8 @@
     justify-content: center;
 }
 
-/* @media screen and (min-width: 480px) {
-    #above {
-        background-color: lightgreen;
-    }
-} */
-/* 
-.tainer {
-    text-align: center;
-    margin: 4 auto;
-    justify-content: space-between;
-}
- */
-
 span {
     padding: 10px;
-    /* border-radius: 1px; */
     margin: 4px;
     background-color: rgba(32, 62, 83, 1);
     color: white
@@ -267,7 +225,6 @@ span {
 
 .taine {
     display: flex;
-    /* flex-direction: column; */
     align-items: center;
 }
 
@@ -277,8 +234,6 @@ h5 {
     padding-bottom: 10px;
     padding-left: 40px;
     padding-right: 40px;
-
-    /* border-radius: 1px; */
     margin: 4px;
     background-color: rgba(32, 62, 83, 1);
     color: white
@@ -308,7 +263,7 @@ h5 {
 .pic-1 {
     background-image: url("../assets/BACKGROUND.png");
     background-repeat: no-repeat;
-    background-position: 200% -6300%;
+    background-position: 200% -600%;
     background-size: 1500px 900px;
     width: 100%;
     display: flex;

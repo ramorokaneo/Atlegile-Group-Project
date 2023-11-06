@@ -34,7 +34,7 @@
     margin-top: 160px;
 }
 
-.sign{
+.sign {
     justify-content: center;
     display: flex;
     font-size: medium;
@@ -72,7 +72,7 @@
     border-radius: 200px;
 }
 
-.Sign-with-google-link{
+.Sign-with-google-link {
     color: rgb(225, 68, 66);
     justify-content: center;
     display: flex;
@@ -80,3 +80,41 @@
     font-size: small;
 }
 
+
+@media only screen and (max-width: 768px) {
+    .background {
+        background-position: top;
+        height: 100%;
+    }
+
+    .flexbox-item-1 {
+        margin-left: 50px;
+    }
+
+    .logo {
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    .sign {
+        margin-top: 50px;
+    }
+
+    .sign-in-input {
+        width: 150px;
+        margin-left: 100px;
+    }
+
+    .forgot-password-link {
+        margin-left: 150px;
+    }
+
+    .submit-button {
+        margin-left: 100px;
+        margin-top: 30px;
+    }
+
+    .Sign-with-google-link {
+        margin-top: 60px;
+    }
+}
