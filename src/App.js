@@ -4,13 +4,15 @@ import React from "react";
 import "./App.css"; // Import your CSS file
 import Landing from "./pages/Landing";
 import AboutUsPage from "./pages/AboutUs";
+import ProductDetails from "./pages/ProductDetails";
 
 function App() {
   return (
     <div className="app">
       {/* Your main content here */}
-      <Landing />
+      {/* <Landing /> */}
       {/* <AboutUsPage /> */}
+      <ProductDetails />
     </div>
   );
 }

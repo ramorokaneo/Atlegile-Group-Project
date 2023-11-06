@@ -1,5 +1,5 @@
 /* follow styles */
-/*.navbar {
+/*.navbar-atlagile {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -10,12 +10,12 @@
   justify-content: center; /* Center align all elements horizontally 
 }
 
-.navbar-item {
+.navbar-atlagile-item {
   margin: 0 10px;
   padding: 10px;
 }
 
-.navbar-item a {
+.navbar-atlagile-item a {
   text-decoration: none;
   color: #fff;
 }
@@ -30,7 +30,7 @@
   text-align: center;
 }
 
-/* navbar Us styles 
+/* navbar-atlagile Us styles 
 .follow-us {
   margin: 0 10px; /* Add margin for spacing 
   /* padding: 10px; 
@@ -83,7 +83,7 @@
   margin-top: 10px;
 }
 
-.btn {
+.btn-atlagile {
   padding: 10px 16px; /* Increased padding for a larger button 
   border-radius: 16px;
   background-color: white;
@@ -93,13 +93,13 @@
   transition: background-color 0.3s, color 0.3s; /* Smooth transition on hover 
 }
 
-.btn:hover {
+.btn-atlagile:hover {
   background-color: black;
   color: white;
 } */
 
-/* Navbar styles */
-.navbar {
+/* Navbar-atlagile styles */
+.navbar-atlagile {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -110,17 +110,17 @@
 }
 
 /* Logo styles */
-.navbar-logo img {
+.navbar-atlagile-logo img {
   max-width: 200px; /* Adjust the maximum width of your logo */
 }
 
 /* Button styles */
-.navbar-buttons {
+.navbar-atlagile-buttons {
   display: flex;
   gap: 10px; /* Add some spacing between buttons */
 }
 
-/* .btn {
+/* .btn-atlagile {
   background-color: #555;
   color: #fff;
   border: none;
@@ -129,10 +129,10 @@
   cursor: pointer;
 }
 
-.btn:hover {
+.btn-atlagile:hover {
   background-color: #777;
 } */
-.btn {
+.btn-atlagile {
   /* padding: 4px 5px; */
   padding-bottom: 8px;
   padding-inline: 8px;
@@ -151,13 +151,13 @@
   box-shadow: none; /* Remove the box shadow */
 }
 
-.btn:hover {
+.btn-atlagile:hover {
   background-color: #252b42;
   color: white;
   cursor: pointer;
 }
 
-.more-info .btn {
+.more-info .btn-atlagile {
   /* background-color: blue; */
   border: none;
   padding: 8px;
@@ -168,7 +168,7 @@
   padding-left: 18px;
 }
 
-.login .btn {
+.login .btn-atlagile {
   /* background-color: red; */
   text-transform: uppercase;
   padding: 8px;
