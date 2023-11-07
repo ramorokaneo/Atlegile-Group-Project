@@ -1,16 +1,14 @@
-import React from "react";
-//import OrderHistory from './OrderHistory'
-import DeliveryDone from "./DeliveryDone";
-import LandingPageHeader from "./LandingPageHeader/LandingPageHeader";
-//import ManageUserScreen from "./ManageUserScreen";
+import "./App.css";
+//import SignIn from "./signIn";
+import ManageBusinesses from "./manageBusinesses";
+
 function App() {
   
 
   return (
-   <>
-   <DeliveryDone/>
-   {/* <LandingPageHeader/> */}
-   </>
+    <>
+      <ManageBusinesses/>
+    </>
   );
 }
 
