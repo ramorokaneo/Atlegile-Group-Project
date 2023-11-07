@@ -4,12 +4,17 @@ import { IoMdStopwatch } from "react-icons/io";
 import { GoCheckCircleFill } from "react-icons/go";
 import BusinessAccountPlus from "./BusinessPlus+.jpg";
 import Card from "./components/Card/Card";
+import FollowUs from "./components/FollowUs/FollowUs";
+import NavBar from "./components/NavBar/NavBar";
 export default function BusinessAccount() {
   // eslint-disable-next-line
   const list = [1, 2, 3];
 
   return (
     <>
+      <FollowUs />
+      <NavBar />
+
       <div style={{ display: "flex", flexDirection: "row", height: "100%" }}>
         <div
           style={{
