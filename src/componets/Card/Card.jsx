@@ -50,6 +50,7 @@ const Card = () => {
                   marginLeft: "15px",
                   borderRadius: "50%",
                 }}
+                onClick={() => console.log("Cart Icon Clicked!!!")}
                 className="icon"
               />
             </div>
@@ -73,7 +74,10 @@ const Card = () => {
           <p className="card-prices">
             $16.48<scan>$6.48</scan>
           </p>
-          <button className="view-button">
+          <button
+            onClick={() => console.log("View Button Clicked!!!")}
+            className="view-button"
+          >
             VIEW <img src={RightIcon} className="right-icon" alt="right icon" />
           </button>
         </div>
