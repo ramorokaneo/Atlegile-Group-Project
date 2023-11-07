@@ -1,13 +1,20 @@
-import React from "react";
+import { useState } from "react";
 import "./card.css"; // Create a CSS file for styling
 import downloadIcon from "../../icons/download.svg";
 import RightIcon from "../../icons/icon-right.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart as faHeartRed } from "@fortawesome/free-solid-svg-icons";
 
 // import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
+
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 const Card = () => {
+  const [isRed, setIsRed] = useState(false);
+
+  const toggleHeart = () => {
+    setIsRed((prevState) => !prevState);
+  };
   return (
     <div className="card-container">
       <div className="card-body">
@@ -20,19 +27,21 @@ const Card = () => {
             />
             <div className="card-icons">
               <FontAwesomeIcon
-                icon={faHeart}
+                icon={isRed ? faHeartRed : faHeart}
                 style={{
                   fontSize: "1.5em",
-                  color: "black",
+                  color: isRed ? "red" : "black",
                   backgroundColor: "white",
                   padding: "12px",
                   marginLeft: "13px",
                   borderRadius: "50%",
                 }}
+                className="icon"
+                onClick={toggleHeart}
               />
+
               <FontAwesomeIcon
                 icon={faCartShopping}
-                e
                 style={{
                   fontSize: "1.5em",
                   color: "black",
@@ -41,6 +50,7 @@ const Card = () => {
                   marginLeft: "15px",
                   borderRadius: "50%",
                 }}
+                className="icon"
               />
             </div>
           </div>

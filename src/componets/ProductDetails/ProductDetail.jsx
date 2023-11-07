@@ -31,7 +31,7 @@ export default function ProductDetail() {
         <div className="header-container">
           <p>HOME /&nbsp;</p>
           <p>VAAS /&nbsp;</p>
-          <p>Digital Marketing Course</p>
+          <p className="digital-text">Digital Marketing Course</p>
         </div>
         <div className="Product-details-body">
           <div className="Product-details-body-left">
@@ -87,6 +87,7 @@ export default function ProductDetail() {
                 })}
               </div>
             </div>
+            <p className="floating-display">Physical</p>
           </div>
         </div>
         <div className="related-products-container">

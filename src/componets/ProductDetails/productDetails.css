@@ -1,9 +1,11 @@
 .header-container {
   margin-top: 30px;
   padding: 20px;
+  padding-bottom: 10px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  color: gray;
   /* align-self: flex-start; */
 }
 
@@ -25,6 +27,7 @@
   /* flex-direction: row; */
 }
 .Product-details-body-right {
+  position: relative;
   padding-top: 50px;
   display: flex;
   flex-direction: column;
@@ -124,4 +127,17 @@
 }
 .Product-details-reviews h2 {
   margin-bottom: 50px;
+}
+.floating-display {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0px;
+  padding-inline: 10px;
+  border: 1px solid gray;
+  border-radius: 20px;
+}
+.digital-text {
+  color: black;
+  font-weight: 600;
 }

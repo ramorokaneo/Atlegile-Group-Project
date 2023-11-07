@@ -166,3 +166,6 @@
   font-weight: 700;
   margin-left: 5px;
 }
+.icon:hover {
+  cursor: pointer;
+}

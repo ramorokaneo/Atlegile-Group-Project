@@ -3,13 +3,15 @@ import star from "../../images/Vector.svg";
 import star2 from "../../images/Vector_2.svg";
 import "./reviews.css";
 export default function Reviews() {
+  const reviewsStarArr = [1, 2, 3, 4];
+
   return (
     <div className="reviews-container">
       <div className="stars-container">
-        <img src={star} alt="star" />
-        <img src={star} alt="star" />
-        <img src={star} alt="star" />
-        <img src={star} alt="star" />
+        {reviewsStarArr.map(() => {
+          return <img src={star} alt="" />;
+        })}
+
         <img src={star2} alt="star" />
       </div>
       <p className="card-description">
