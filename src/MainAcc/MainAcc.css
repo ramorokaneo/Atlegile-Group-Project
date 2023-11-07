@@ -80,7 +80,7 @@
   }
   
   label {
-    margin-right: 240px;
+    margin-right: 230px;
     font-size: small;
   }
 
@@ -94,6 +94,12 @@
     padding: 4px;
     margin-bottom: 10px;
   }
+
+  /* select {
+    width: 100%;
+    padding: 4px;
+    margin-bottom: 10px;
+  } */
   
   .submit-button {
       padding: 10px 80px;

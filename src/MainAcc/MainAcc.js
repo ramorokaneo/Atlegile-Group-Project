@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./MainAcc.css";
-import { FaCaretDown } from "react-icons/fa";
 
-function UserSignUp() {
+function MainAcc() {
   const [name, setName] = useState("");
   const [surname, setSurname] = useState("");
   const [phone, setPhone] = useState("");
@@ -20,7 +19,14 @@ function UserSignUp() {
     }
 
     // Handle form submission logic here
-    console.log("Form submitted:", { name, surname, phone, gender, email, location });
+    console.log("Form submitted:", {
+      name,
+      surname,
+      phone,
+      gender,
+      email,
+      location,
+    });
   };
 
   return (
@@ -64,15 +70,21 @@ function UserSignUp() {
             />
 
             <label>Gender</label>
-            <input
-              type="text"
-              placeholder=""
+            <div className="gender-dropdown">
+              <select
               className="form-group"
-              value={gender}
-              onChange={(e) => setGender(e.target.value)}
-              required
-              />
-              <FaCaretDown/>
+                value={gender}
+                onChange={(e) => setGender(e.target.value)}
+                required
+              >
+                <option value="" disabled>
+                  Select Gender
+                </option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
 
             <label>Email</label>
             <input
@@ -104,4 +116,4 @@ function UserSignUp() {
   );
 }
 
-export default UserSignUp;
+export default MainAcc;
