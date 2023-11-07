@@ -1,9 +1,20 @@
-import React from "react";
+import { useState } from "react";
 import "./card.css"; // Create a CSS file for styling
 import downloadIcon from "../../icons/download.svg";
 import RightIcon from "../../icons/icon-right.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart as faHeartRed } from "@fortawesome/free-solid-svg-icons";
 
+// import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { faHeart } from "@fortawesome/free-regular-svg-icons";
+
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 const Card = () => {
+  const [isRed, setIsRed] = useState(false);
+
+  const toggleHeart = () => {
+    setIsRed((prevState) => !prevState);
+  };
   return (
     <div className="card-container">
       <div className="card-body">
@@ -14,6 +25,35 @@ const Card = () => {
               src={"./images/headsets.png"}
               alt="shop 2"
             />
+            <div className="card-icons">
+              <FontAwesomeIcon
+                icon={isRed ? faHeartRed : faHeart}
+                style={{
+                  fontSize: "1.5em",
+                  color: isRed ? "red" : "black",
+                  backgroundColor: "white",
+                  padding: "12px",
+                  marginLeft: "13px",
+                  borderRadius: "50%",
+                }}
+                className="icon"
+                onClick={toggleHeart}
+              />
+
+              <FontAwesomeIcon
+                icon={faCartShopping}
+                style={{
+                  fontSize: "1.5em",
+                  color: "black",
+                  backgroundColor: "white",
+                  padding: "12px",
+                  marginLeft: "15px",
+                  borderRadius: "50%",
+                }}
+                onClick={() => console.log("Cart Icon Clicked!!!")}
+                className="icon"
+              />
+            </div>
           </div>
           <p className="image-sale">sale</p>
         </div>
@@ -34,7 +74,10 @@ const Card = () => {
           <p className="card-prices">
             $16.48<scan>$6.48</scan>
           </p>
-          <button className="view-button">
+          <button
+            onClick={() => console.log("View Button Clicked!!!")}
+            className="view-button"
+          >
             VIEW <img src={RightIcon} className="right-icon" alt="right icon" />
           </button>
         </div>
