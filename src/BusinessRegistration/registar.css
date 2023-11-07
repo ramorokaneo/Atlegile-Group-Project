@@ -59,6 +59,42 @@
   border: none;
   outline: none;
 }
+.dropdown {
+  position: relative;
+}
+
+
+.dropdown-trigger {
+  cursor: pointer;
+  position: absolute;
+  right: 10px; 
+  top: 50%;
+  transform: translateY(-50%);
+
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 100%;
+  border: 1px solid #ccc; 
+  border-radius: 4px;
+  padding: 8px; 
+}
+/* Show the dropdown content when the dropdown-trigger is clicked */
+.dropdown.active .dropdown-content {
+  display: block;
+}
+.group.textInput-container.select-role select {
+  border-bottom: 1px solid gray; 
+  width: 150%; 
+  margin-left: -5px; 
+}
+
 
 .form-group.row {
   display: flex;
