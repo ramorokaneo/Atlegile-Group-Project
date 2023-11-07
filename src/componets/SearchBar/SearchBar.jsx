@@ -28,9 +28,15 @@ export default function SearchBar() {
             placeholder="Search..."
           />
           <div className="icons-container">
-            <img src={filterIcon} className="icon" alt="icon filter" />
+            <img
+              src={filterIcon}
+              onClick={() => console.log("Filter Button Clicked!!!")}
+              className="icon"
+              alt="icon filter"
+            />
             <img
               src={searchIcon}
+              onClick={() => console.log("Search Button Clicked!!!")}
               className="icon icon-search"
               alt="icon search"
             />
