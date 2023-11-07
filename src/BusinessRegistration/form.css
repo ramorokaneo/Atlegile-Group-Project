@@ -34,7 +34,8 @@
   /* Styling for text input and select */
   .group {
     position: relative;
-    margin-bottom: 45px;
+    /* margin-bottom: 45px; */
+   
   }
   
   input,

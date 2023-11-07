@@ -130,25 +130,30 @@ const Register = () => {
               <label>Business Name</label>
             </div>
 
-            <div className="group textInput-container select-role">
-              {selectedRole ? null : (
-                <label style={{ marginRight: "20px", minWidth: "200px" }}>Role</label>
-              )}
-              <div className="dropdown">
-                <div className="scrollable-dropdown">
-                  <select
-                    value={selectedRole}
-                    onChange={(e) => selectRole(e.target.value)}
-                    style={{ fontSize: "12px" }}
-                  >
-                    {roleOptions.map((role, index) => (
-                      <option key={index} value={role}>
-                        {role}
-                      </option>
-                    ))}
-                  </select>
-                </div>
+            <div className="group  ">
+
+              <div style={{display: 'flex', flexDirection: 'column'}}>
+                 <div style={{padding: '8%', }}>
+                  {selectedRole ? null : 
+              <label style={{marginLeft: '-35%'}}>Role</label>}
               </div>
+              <div style={{width: '180%', marginLeft: '-34%' }}>
+                <select
+                  value={selectedRole}
+                  onChange={(e) => selectRole(e.target.value)}
+                  style={{ fontSize: "12px"}}
+                >
+                  {roleOptions.map((role, index) => (
+                    <option key={index} value={role}>
+                      {role}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              </div>
+
+             
+
             </div>
 
             <div className="group textInput-container">
@@ -161,13 +166,15 @@ const Register = () => {
               <label>Location</label>
             </div>
 
+
             <div className="row">
-              <div className="group textInput-container">
-                {selectedBusinessType ? null : (
-                  <label>Business type</label>
-                )}
+              
+              <div className="group ">
+           
+              {selectedBusinessType ? null : <label style={{marginTop: '-15%'}}>Business type</label>}
+
                 <div className="dropdown">
-                  <div className="scrollable-dropdown">
+                  <div>
                     <select
                       value={selectedBusinessType}
                       onChange={(e) => selectBusinessType(e.target.value)}
@@ -182,12 +189,14 @@ const Register = () => {
                   </div>
                 </div>
               </div>
+
+
+
               <div className="group textInput-container">
-                {selectedIndustry ? null : (
-                  <label>Industry</label>
-                )}
+            
+                {selectedIndustry ? null : <label style={{marginTop: '-11%'}}>Industry</label>}
                 <div className="dropdown">
-                  <div className="scrollable-dropdown">
+                  <div>
                     <select
                       value={selectedIndustry}
                       onChange={(e) => selectIndustry(e.target.value)}
@@ -201,6 +210,8 @@ const Register = () => {
                     </select>
                   </div>
                 </div>
+
+              
               </div>
             </div>
 
