@@ -2,8 +2,9 @@
 // import AltContact from './AltContact/AltContact';
 // import MainAcc from './MainAcc/MainAcc';
 // import ProdServices from './ProductsServices/ProdServices';
-import BusinessSecTech from './BusinessSecTech/BusinessSecTech';
-import './App.css';
+// import BusinessSecTech from './BusinessSecTech/BusinessSecTech';
+import BusinessAccount from "./businessAccount";
+import "./App.css";
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       {/* <AltContact /> */}
       {/* <MainAcc /> */}
       {/* <ProdServices /> */}
-      <BusinessSecTech />
+      {/* <BusinessSecTech /> */}
+      <BusinessAccount />
     </div>
   );
 }

@@ -1,0 +1,8 @@
+.background-image {
+        height: "20%";
+        background-image: url("../public/blackSilk.jpg");
+        background-Repeat: "no-repeat";
+        background-Position: "center";
+        background-Size: "cover";
+      
+}
