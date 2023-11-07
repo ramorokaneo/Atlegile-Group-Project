@@ -21,6 +21,7 @@ import plane from "./assets/plane.png";
 import shop from "./assets/Group.png";
 import back from "./assets/BACKGROUND.png";
 import front from "./assets/Roar.png";
+import "./components/Footer/Footer";
 
 function DeliveryDone() {
   const [isVisible, setIsVisible] = useState(true);
@@ -118,7 +119,7 @@ function DeliveryDone() {
     >
       <div
         style={{
-          height: "5%",
+          height: "5vh",
           width: "100%",
           border: "none",
           display: "flex",
@@ -129,24 +130,24 @@ function DeliveryDone() {
       >
         <div
           style={{
-            height: "100px",
+            height: "5vh",
             width: "23%",
             // backgroundColor: "red",
           }}
         ></div>
 
-        <FiPhone style={{ width: "2%", color: "white" }} />
-        <div style={{ width: "6%", color: "white" }}>(225) 555-0118</div>
+        <FiPhone style={{ width: "1%", color: "white" }} />
+        <div style={{ width: "7%", color: "white" }}>(225) 555-0118</div>
 
         <AiOutlineMail style={{ width: "1%", color: "white" }} />
         <div style={{ width: "9%", color: "white" }}>
           <p style={{ fontSize: "0.7rem" }}>michelle.rivera@example.com</p>
         </div>
-        <div style={{ width: "18%", color: "white", fontWeight: "bold" }}>
+        <div style={{ width: "20%", color: "white", fontWeight: "bold" }}>
           Follow US and get a chance to win 80% off
         </div>
 
-        <div style={{ width: "4.5%", color: "white", fontWeight: "bold" }}>
+        <div style={{ width: "5%", color: "white", fontWeight: "bold" }}>
           Follow Us :
         </div>
 
@@ -164,7 +165,7 @@ function DeliveryDone() {
         </div>
         <div
           style={{
-            height: "100px",
+            height: "5vh",
             width: "30%",
             // backgroundColor: "red",
           }}
@@ -172,13 +173,13 @@ function DeliveryDone() {
       </div>
       <div
         style={{
-          height: "100px",
+          height: "10vh",
           width: "100%",
           border: "none",
           display: "flex",
           flexDirection: "row",
           alignItems: "center",
-          backgroundColor: "white",
+          // backgroundColor: "green",
         }}
       >
         <div
@@ -312,10 +313,10 @@ function DeliveryDone() {
           borderBottom: "1px lightgray solid",
           display: "flex",
           flexDirection: "row",
-          height: "100vh",
+          height: "76vh",
           width: "100%",
           alignItems: "center",
-          //backgroundColor: "yellow",
+          // backgroundColor: "yellow",
         }}
       >
         <div
@@ -1320,18 +1321,132 @@ function DeliveryDone() {
           }}
         ></div>
       </div>
-      <div
+
+      <footer
         style={{
-          height: "28%",
+          backgroundColor: " #070f18",
           width: "100%",
-          border: "none",
-          borderBottom: "1px lightgray solid",
-          display: "flex",
-          flexDirection: "row",
-          alignItems: "center",
-          backgroundColor: "#072840",
+          height: "25vh",
         }}
-      ></div>
+      >
+        <div style={{ width: "80%", height: "20vh" }}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
+              width: "70vw",
+              marginLeft: "20vw",
+            }}
+          >
+            <div
+              style={{
+                height: "20vh",
+                width: "50vw",
+                //  backgroundColor: "yellow",
+                display: "flex",
+                flexDirection: "row",
+              }}
+            >
+              <div
+                style={{
+                  height: "20vh",
+                  width: "30vw",
+                  // backgroundColor: "red",
+                }}
+              >
+                <div style={{ height: "50px", marginBottom: "10px" }}>
+                  <img
+                    className="logo-image"
+                    src={"./images/logo2.png"}
+                    alt="AMS COMPANY"
+                  />
+                </div>
+                <p
+                  style={{ color: "white", boder: "none", fontWeight: "bold" }}
+                >
+                  Marketing Services
+                </p>
+                <p
+                  style={{
+                    color: "white",
+                    boder: "none",
+                    marginBottom: "10px",
+                  }}
+                >
+                  Welcome to AMS, where we specialize in building beautiful
+                  brands, marketing African businesses, and connecting them with
+                  a global customer base, driving sales of their exceptional
+                  products and services.
+                </p>
+                <p style={{ color: "white", fontWeight: "bold" }}>
+                  atlegilemarketing.co.za
+                </p>
+              </div>
+
+              <div
+                style={{
+                  height: "20vh",
+                  width: "20vw",
+                  //backgroundColor: "white",
+                }}
+              >
+                <div
+                  style={{
+                    display: "fext",
+                    height: "20vh",
+                    flexDirection: "column",
+                    justifyContent: "space-between",
+                    paddingTop: "40px",
+                  }}
+                >
+                  <a href="#">
+                    <h4
+                      style={{
+                        color: "white",
+                        paddingTop: "7px",
+                        boder: "none",
+                      }}
+                    >
+                      ORDER HISTORY
+                    </h4>
+                  </a>
+                  <a href="#">
+                    <h4 style={{ color: "white", paddingTop: "7px" }}>
+                      TERMS & CONDITIONS
+                    </h4>
+                  </a>
+
+                  <a href="#">
+                    <h4 style={{ color: "white", paddingTop: "7px" }}>
+                      PRIVACY POLICY
+                    </h4>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style={{ width: "27vw", marginLeft: "40vw" , color:"white"}}>
+            <p style={{ textTransform: "uppercase", paddingBottom: "20px" }}>
+              Atlegile Marketing Solutions (Pty) Ltd eCommerce 2023
+              {new Date().getFullYear()}{" "}
+            </p>
+          </div>
+        </div>
+        <div style={{ height: "10vh" }}>
+          <img
+            style={{
+              height: "100px",
+              color: "white",
+              position: "absolute",
+              bottom: "0",
+              right: "0",
+            }}
+            src={"./images/lion.png"}
+            alt="lion"
+          />
+        </div>
+      </footer>
     </div>
   );
 }
