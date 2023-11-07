@@ -6,6 +6,21 @@ import { BiMessageAlt } from "react-icons/pi";
 
 import { AiOutlineSearch } from "react-icons/ai";
 import "./OrderHistory.css";
+import "./LandingPageHeader/landingpageheader.css";
+import { FiPhone } from "react-icons/fi";
+import { AiOutlineMail } from "react-icons/ai";
+import { FaInstagram } from "react-icons/fa";
+import { FiYoutube } from "react-icons/fi";
+import { FiTwitter } from "react-icons/fi";
+import { SiFacebook } from "react-icons/si";
+import Logo from "./assets/Logo.png";
+import lion from "./assets/Lion.png";
+import shadow from "./assets/Shadow_Logo.png";
+import log from "./assets/Logo.png";
+import plane from "./assets/plane.png";
+import shop from "./assets/Group.png";
+import back from "./assets/BACKGROUND.png";
+import front from "./assets/Roar.png";
 
 function DeliveryDone() {
   const [isVisible, setIsVisible] = useState(true);
@@ -106,29 +121,190 @@ function DeliveryDone() {
           height: "5%",
           width: "100%",
           border: "none",
-          borderBottom: "1px lightgray solid",
           display: "flex",
           flexDirection: "row",
-
           alignItems: "center",
           backgroundColor: "#072840",
         }}
       >
-        <span>Shohn's part</span>
+        <div
+          style={{
+            height: "100px",
+            width: "23%",
+            // backgroundColor: "red",
+          }}
+        ></div>
+
+        <FiPhone style={{ width: "2%", color: "white" }} />
+        <div style={{ width: "6%", color: "white" }}>(225) 555-0118</div>
+
+        <AiOutlineMail style={{ width: "1%", color: "white" }} />
+        <div style={{ width: "9%", color: "white" }}>
+          <p style={{ fontSize: "0.7rem" }}>michelle.rivera@example.com</p>
+        </div>
+        <div style={{ width: "18%", color: "white", fontWeight: "bold" }}>
+          Follow US and get a chance to win 80% off
+        </div>
+
+        <div style={{ width: "4.5%", color: "white", fontWeight: "bold" }}>
+          Follow Us :
+        </div>
+
+        <div style={{ width: "1.5%", color: "white" }}>
+          <FaInstagram />
+        </div>
+        <div style={{ color: "white", width: "1.5%" }}>
+          <FiYoutube />
+        </div>
+        <div style={{ color: "white", width: "1.5%" }}>
+          <SiFacebook />
+        </div>
+        <div style={{ color: "white", width: "1.5%" }}>
+          <FiTwitter />
+        </div>
+        <div
+          style={{
+            height: "100px",
+            width: "30%",
+            // backgroundColor: "red",
+          }}
+        ></div>
       </div>
       <div
         style={{
-          height: "7%",
+          height: "100px",
           width: "100%",
           border: "none",
-          borderBottom: "1px lightgray solid",
           display: "flex",
           flexDirection: "row",
           alignItems: "center",
-          backgroundColor: "#072840",
+          backgroundColor: "white",
         }}
       >
-        <span>Dlozi's part</span>
+        <div
+          style={{
+            height: "100%",
+            width: "20%",
+            border: "none",
+            display: "flex",
+            flexDirection: "colunm",
+            alignItems: "center",
+            paddingBottom: "100px",
+          }}
+        ></div>
+
+        <div
+          style={{
+            width: "40%",
+          }}
+        >
+          <img
+            style={{
+              paddingLeft: "10px",
+              position: "relative",
+              height: "auto",
+              width: "100px",
+            }}
+            src={Logo}
+            alt=""
+          />
+        </div>
+
+        <div
+          style={{
+            width: "80px",
+            height: "40px",
+            backgroundColor: "#072840",
+            borderRadius: 50,
+            alignItems: "center",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          {" "}
+          <p style={{ color: "white" }}>SHOP</p>
+        </div>
+
+        <div
+          style={{
+            width: "100px",
+            height: "40px",
+            //backgroundColor: "#072840",
+            alignItems: "center",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          ABOUT US
+        </div>
+
+        <div
+          style={{
+            width: "140px",
+            height: "40px",
+            alignItems: "flex-start",
+            display: "flex",
+            justifyContent: "center",
+            flexDirection: "row",
+            //backgroundColor:'red'
+          }}
+        >
+          <div
+            style={{
+              width: "40px",
+              height: "40px",
+              backgroundColor: "gray",
+              borderRadius: "8%",
+              //  paddingLeft:32
+              alignItems: "center",
+              display: "flex",
+              justifyContent: "center",
+              flex: 1,
+            }}
+          >
+            <p style={{ fontSize: "1.4rem", color: "white" }}>AS</p>
+          </div>
+          <div
+            style={{
+              width: "100px",
+              height: "40px",
+              alignItems: "flex-start",
+              display: "flex",
+              justifyContent: "center",
+              flexDirection: "column",
+              //  backgroundColor: "brown",
+            }}
+          >
+            <div
+              style={{
+                margin: 0,
+                fontWeight: "medium",
+              }}
+            >
+              <p style={{ paddingLeft: 10, margin: 0, fontSize: "1.2rem" }}>
+                Welcome
+              </p>
+            </div>
+            <div>
+              <p style={{ paddingLeft: 10, fontSize: "0.8rem", margin: 0 }}>
+                jane
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          style={{
+            height: "100%",
+            width: "22%",
+            border: "none",
+            // borderBottom: "1px lightgray solid",
+            display: "flex",
+            flexDirection: "colunm",
+            alignItems: "center",
+            //  backgroundColor: "blue",
+          }}
+        ></div>
       </div>
       <div
         style={{
@@ -139,7 +315,7 @@ function DeliveryDone() {
           height: "100vh",
           width: "100%",
           alignItems: "center",
-          //   backgroundColor: "yellow",
+          //backgroundColor: "yellow",
         }}
       >
         <div
@@ -514,7 +690,6 @@ function DeliveryDone() {
                       style={{
                         height: "32%",
                         width: "100%",
-                        //   backgroundColor: "red",
                         justifyContent: "space-between",
                         display: "flex",
                         alignItems: "center",
@@ -522,7 +697,7 @@ function DeliveryDone() {
                     >
                       <p
                         style={{
-                          fontSize: "1rem",
+                          fontSize: "1.5rem",
                           fontWeight: "bold",
                           // paddingLeft: "10px",
                           margin: "0",
@@ -532,7 +707,7 @@ function DeliveryDone() {
                       </p>
                       <p
                         style={{
-                          fontSize: "1rem",
+                          fontSize: "1.5rem",
                           fontWeight: "bold",
                           paddingLeft: "10px",
                           margin: "0",
@@ -700,7 +875,6 @@ function DeliveryDone() {
                   flexDirection: "column",
                   justifyContent: "flex-start",
                   alignItems: "flex-start",
-                  borderBottom: "1px white solid",
                 }}
               >
                 <p
@@ -708,6 +882,7 @@ function DeliveryDone() {
                     fontSize: "1rem",
                     color: "white",
                     margin: "0",
+                    borderBottom: "1px white solid",
                   }}
                 >
                   In essence, AMS aims not to only he businesses grow but also
@@ -729,7 +904,7 @@ function DeliveryDone() {
                 {component1Visible && (
                   <div
                     style={{
-                      marginTop: "10px",
+                      marginTop: "20px",
                       width: "100px",
                       height: "30px",
                       border: "1px white solid",
@@ -1000,7 +1175,7 @@ function DeliveryDone() {
                           justifyContent: "center",
                           display: "flex",
                           border: "1px white solid",
-                          marginTop:"30px"
+                          marginTop: "30px",
                         }}
                         onClick={handleComponentB}
                       >
@@ -1025,7 +1200,7 @@ function DeliveryDone() {
                     justifyContent: "space-between",
                     alignItems: "flex-start",
                     flexDirection: "column",
-                 //  backgroundColor: "red",
+                    //  backgroundColor: "red",
                   }}
                 >
                   <div
