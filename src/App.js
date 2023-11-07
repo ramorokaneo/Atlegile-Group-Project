@@ -1,7 +1,8 @@
 // import UserSignUp from './UserSignUp/UserSignUp';
 // import AltContact from './AltContact/AltContact';
 // import MainAcc from './MainAcc/MainAcc';
-import ProdServices from './ProductsServices/ProdServices';
+// import ProdServices from './ProductsServices/ProdServices';
+import BusinessSecTech from './BusinessSecTech/BusinessSecTech';
 import './App.css';
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
       {/* <UserSignUp /> */}
       {/* <AltContact /> */}
       {/* <MainAcc /> */}
-      <ProdServices />
+      {/* <ProdServices /> */}
+      <BusinessSecTech />
     </div>
   );
 }
