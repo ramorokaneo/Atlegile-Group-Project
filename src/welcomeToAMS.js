@@ -92,16 +92,19 @@ const fakeBusinessesList = [
     Industry: "Technology",
   },
 ];
+
+
 export default function WelcomeToAMS() {
   const [piCaretColor, setPiCaretColor] = useState("gray");
   const [searchColor, setSearchColor] = useState("gray");
 
   const handlePiCaretClick = () => {
-    setPiCaretColor(piCaretColor === "gray" ? "blue" : "gray");
+    setPiCaretColor("gray"); 
   };
 
   const handleSearchClick = () => {
-    setSearchColor(searchColor === "gray" ? "green" : "gray");
+    setSearchColor("gray"); 
+    setPiCaretColor("gray");
   };
 
   const handleNavigateToDashboard = () => {
@@ -334,10 +337,10 @@ export default function WelcomeToAMS() {
                   style={{
                     display: "flex",
                     flexDirection: "row",
-                    // justifyContent: "flex-start",
+        
                     alignItems: "center",
                     marginRight: 10,
-                    // marginLeft: 10,
+                  
                   }}
                 >
                   <PiCaretUpDownFill
@@ -359,7 +362,7 @@ export default function WelcomeToAMS() {
                 <span
                   style={{
                     fontWeight: 600,
-                    // width: "25%",
+                  
                     fontSize: "small",
                     marginRight: 50,
 
@@ -378,7 +381,7 @@ export default function WelcomeToAMS() {
                 <span
                   style={{
                     fontWeight: 600,
-                    // width: "25%",
+              
                     fontSize: "small",
                     marginRight: 60,
 
@@ -397,7 +400,7 @@ export default function WelcomeToAMS() {
                 <span
                   style={{
                     fontWeight: 600,
-                    // width: "25%",
+                   
                     fontSize: "small",
                     marginRight: 70,
 
@@ -416,7 +419,7 @@ export default function WelcomeToAMS() {
                 <span
                   style={{
                     fontWeight: 600,
-                    // width: "25%",
+              
                     fontSize: "small",
                     marginRight: 50,
                     marginLeft: 15,
@@ -465,16 +468,16 @@ export default function WelcomeToAMS() {
                 width: "50%",
                 marginLeft: "10px",
                 translate: "",
-                // transform: ""
+           
               }}
               className="new-business-container"
             >
               <div
                 style={{
-                  // display: "inline-block",
+                
                   paddingBottom: 10,
                   border: "none",
-                  // borderBottom: "1px, lightgray solid",
+                  
                 }}
               >
                 <span style={{ fontWeight: 700 }}>NEW BUSINESSES</span>
@@ -584,7 +587,7 @@ export default function WelcomeToAMS() {
                     <span
                       style={{
                         border: "none",
-                        // borderRight: "1px lightgray solid",
+                    
                         paddingLeft: 5,
                       }}
                     >
