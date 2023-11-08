@@ -3,6 +3,7 @@ import "./App.css";
 //import ManageBusinesses from "./manageBusinesses";
 //import Footer from "./footer/footer";
 import BusinessAccount from "./businessAccount";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <div style={{}}></div>
       </div> */}
       <BusinessAccount />
+      <Footer />
     </>
   );
 }

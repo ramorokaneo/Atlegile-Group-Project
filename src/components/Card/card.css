@@ -25,6 +25,7 @@
   background-color: #369159;
 }
 .circular-image-div {
+  position: relative;
   background-color: gold;
   height: 5rem;
   width: 290px;
@@ -105,6 +106,13 @@
   font-size: 16px;
   color: #ffd700; /* Gold color for stars */
 }
+.card-icons {
+  position: absolute;
+  width: 8vw;
+  bottom: 20.5px;
+  /* margin-left: 10px; */
+  /* background-color: green; */
+}
 
 .card-description {
   margin-top: 10px;
@@ -157,4 +165,7 @@
   color: rgb(97, 151, 97);
   font-weight: 700;
   margin-left: 5px;
+}
+.icon:hover {
+  cursor: pointer;
 }

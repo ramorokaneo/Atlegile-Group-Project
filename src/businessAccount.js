@@ -4,61 +4,18 @@ import { IoMdStopwatch } from "react-icons/io";
 import { GoCheckCircleFill } from "react-icons/go";
 import BusinessAccountPlus from "./BusinessPlus+.jpg";
 import Card from "./components/Card/Card";
-import Footer from "./components/Footer/Footer";
-const logo = require("./cropped-AMS-Shadow-Queen-Logo_BNY-1320x772 1.png");
-
+import FollowUs from "./components/FollowUs/FollowUs";
+import NavBar from "./components/NavBar/NavBar";
 export default function BusinessAccount() {
-  const [editModal, setEditModal] = useState(false);
-
+  // eslint-disable-next-line
   const list = [1, 2, 3];
 
   return (
     <>
-      <div style={{ display: "flex", flexDirection: "row", height: "100%" }}>
-        {editModal
-          ? console.log("Edit modal is true")
-          : console.log("Edit modal is false")}
-        {editModal ? (
-          <div
-            style={{
-              zIndex: 1,
-              backgroundColor: "rgba(0,0,0,0.5)",
-              width: "100%",
-              height: "100%",
-              position: "fixed",
-              display: "flex",
-            }}
-          >
-            <div style={{ height: "100%", width: "33%" }}></div>
-            <div style={{ height: "100%", width: "33%" }}></div>
-            <div
-              style={{ height: "100%", width: "33%", backgroundColor: "white",paddingRight:60,paddingLeft:60 }}
-            >
-              <div
-                style={{
-                  height: "30%",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <img
-                  src={logo}
-                  alt="cropped AMS Shadow Queen Logo BNY-1320x772"
-                />
-              </div>
-              <div>
-              <p style={{ fontWeight: 600, fontSize: 30, marginBottom: 5 }}>
-                EDIT PRODUCT
-              </p>
-              <div></div>
-              <div></div>
-              
-              </div>
-            </div>
-          </div>
-        ) : null}
+      <FollowUs />
+      <NavBar />
 
+      <div style={{ display: "flex", flexDirection: "row", height: "100%" }}>
         <div
           style={{
             height: "100%",
@@ -295,7 +252,7 @@ export default function BusinessAccount() {
 
             <div
               style={{
-                border: "1px lightgray solid",
+                // border: "1px lightgray solid",
 
                 width: "100%",
                 display: "flex",
@@ -303,33 +260,34 @@ export default function BusinessAccount() {
                 paddingRight: 10,
               }}
             >
-              <div style={{ width: "75%", display: "flex" }}>
-                {list.map((item, index) => (
-                  <div key={index} onClick={() => setEditModal(true)}>
+              <div style={{ width: "75%" }}>
+                <div style={{ display: "flex" }}>
+                  {list.map(() => (
                     <Card />
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
               <div
                 style={{
-                  width: "25%",
+                  width: "26%",
                   display: "flex",
                   flexDirection: "column",
                   border: "1px lightgray solid",
                   padding: 40,
                   alignItems: "center",
+                  height: "70vh",
                 }}
               >
                 <img
                   src={BusinessAccountPlus}
                   alt="business plus logo"
-                  style={{ width: "40%", marginBottom: 5 }}
+                  style={{ width: "60%", marginBottom: 5 }}
                 />
                 <p
                   style={{
                     color: "#252b42",
                     fontWeight: 700,
-                    fontSize: 25,
+                    fontSize: 32,
                     textAlign: "center",
                   }}
                 >
@@ -339,7 +297,7 @@ export default function BusinessAccount() {
                   style={{
                     color: "#9e9e9e",
                     fontWeight: 700,
-                    fontSize: 15,
+                    fontSize: 16,
                     textAlign: "center",
                     paddingTop: 10,
                     paddingBottom: 10,
@@ -359,14 +317,14 @@ export default function BusinessAccount() {
                     style={{
                       color: "#23a6f0",
                       fontWeight: 700,
-                      fontSize: 30,
+                      fontSize: 40,
                       marginBottom: -10,
                     }}
                   >
                     R150
                   </span>
                   <span
-                    style={{ color: "#b8d9f7", fontWeight: 700, fontSize: 15 }}
+                    style={{ color: "#b8d9f7", fontWeight: 700, fontSize: 20 }}
                   >
                     Per Month
                   </span>
@@ -374,51 +332,55 @@ export default function BusinessAccount() {
                 <div style={{ display: "flex", flexDirection: "column" }}>
                   <p
                     style={{
+                      marginTop: 15,
                       fontWeight: 700,
-                      fontSize: 13,
+                      fontSize: 18,
                       display: "flex",
                       alignItems: "center",
-                      marginTop: 7,
                     }}
                   >
+                    {" "}
                     <GoCheckCircleFill
                       color="#2dc071"
-                      size={40}
-                      style={{ marginRight: 7 }}
-                    />
+                      size={30}
+                      style={{ marginRight: 7, marginBottom: 10 }}
+                    />{" "}
                     List Unlimited Products
                   </p>
                   <p
                     style={{
                       fontWeight: 700,
-                      fontSize: 13,
+                      fontSize: 18,
+                      marginTop: 15,
+
                       display: "flex",
                       alignItems: "center",
-                      marginTop: 7,
                     }}
                   >
+                    {" "}
                     <GoCheckCircleFill
                       color="#2dc071"
-                      size={40}
-                      style={{ marginRight: 7 }}
-                    />
+                      size={30}
+                      style={{ marginRight: 7, marginBottom: 10 }}
+                    />{" "}
                     Priority Support
                   </p>
-
                   <p
                     style={{
                       fontWeight: 700,
-                      fontSize: 13,
+                      fontSize: 18,
+                      marginTop: 15,
+
                       display: "flex",
                       alignItems: "center",
-                      marginTop: 7,
                     }}
                   >
+                    {" "}
                     <GoCheckCircleFill
                       color="#2dc071"
-                      size={40}
+                      size={30}
                       style={{ marginRight: 7 }}
-                    />
+                    />{" "}
                     Exclusive Promotions
                   </p>
                 </div>
@@ -427,7 +389,7 @@ export default function BusinessAccount() {
           </div>
         </div>
       </div>
-      <Footer />
+      <div style={{ marginTop: "40vh" }}></div>
     </>
   );
 }
