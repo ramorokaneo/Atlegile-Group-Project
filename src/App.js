@@ -1,9 +1,8 @@
-// import UserSignUp from './UserSignUp/UserSignUp';
-// import AltContact from './AltContact/AltContact';
-// import MainAcc from './MainAcc/MainAcc';
-// import ProdServices from './ProductsServices/ProdServices';
-// import BusinessSecTech from './BusinessSecTech/BusinessSecTech';
-import BusinessAccount from "./businessAccount";
+// import UserSignUp from "../src/components/UserSignUp/UserSignUp";
+// import AltContact from "../src/components/AltContact/AltContact";
+// import MainAcc from "../src/components/MainAcc/MainAcc";
+// import ProdServices from "../src/components/ProductsServices/ProdServices";
+import BusinessAccount from "../src/components/BusinessSecTech/businessAccount";
 import "./App.css";
 
 function App() {
@@ -13,7 +12,6 @@ function App() {
       {/* <AltContact /> */}
       {/* <MainAcc /> */}
       {/* <ProdServices /> */}
-      {/* <BusinessSecTech /> */}
       <BusinessAccount />
     </div>
   );

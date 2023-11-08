@@ -4,7 +4,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url("../../public/bg-img.jpg");
+    background-image: url("../../../public/bg-img.jpg");
   }
   
   .form-container {
@@ -32,74 +32,39 @@
       display: flex;
   }
   
-  .main-acc {
-      margin-left: 50px;
+  .alt-contact {
+      justify-content: center;
       display: flex;
       margin-top: 100px;
   }
-  .yourself {
-    margin-left: 50px;
-    display: flex;
-    margin-bottom: 10px;
-}
   
   form {
-    width: 380px;
+    width: 365px;
     height: 400px;
     gap: 20px;
-    /* background-color: beige; */
-  }
-
-  .fullname {
-    /* background-color: bisque; */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-left: 30px;
-    width: 350px;
   }
   
   .form-group {
     margin-bottom: 10px;
-    width: 300px;
+    width: 280px;
+    padding: 10px;
     border: none;
     outline: none;
     border-bottom: 1px solid #000;
-    margin-left: 20px;
-    font-size: medium ;
-  }
-
-  .form-group-1 {
-    margin-top: 20px;
-    width: 140px;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid #000;
-    margin-left: -230px;
+    margin-left: 50px;
     font-size: medium ;
   }
   
   label {
-    margin-right: 230px;
-    font-size: small;
-  }
-
-  .label-1 {
-    margin-right: 160px;
+    margin-right: 200px;
     font-size: small;
   }
   
   input {
     width: 100%;
-    padding: 4px;
+    padding: 8px;
     margin-bottom: 10px;
   }
-
-  /* select {
-    width: 100%;
-    padding: 4px;
-    margin-bottom: 10px;
-  } */
   
   .submit-button {
       padding: 10px 80px;

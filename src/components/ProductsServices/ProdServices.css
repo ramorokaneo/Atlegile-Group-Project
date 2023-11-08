@@ -4,33 +4,40 @@
   box-sizing: border-box;
 }
 
-.background-container {
-  width: 100%;
+.product-services-container {
+  /* width: vw !important; */
   height: 100vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /* background-color: blue; */
+  /* background-color: red; */
+
+   /* background-color: blue;  */
 }
 
-.form-container {
+
+.product-services-form-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  /* background-color: aqua; */
 }
 
 .form-item {
-  width: 390px;
-  margin: 30px;
-  background-color: #ffffff;
+  width: 360px;
+  margin: 5px;
+  /* background-color: #755959; */
 }
+
 
 .form-items {
   padding: 10px;
   min-height: 880px;
   margin-top: 0px;
   min-width: 449px;
-  margin-left: 1480px;
+  /* margin-left: 1480px; */
+  /* background-color: yellow; */
 }
+
 
 .logo {
   margin-left: 130px;
@@ -46,14 +53,14 @@
 }
 
 .upload-img {
-  /* background-color: aquamarine; */
+   /* background-color: aquamarine;  */
   margin-left: 50px;
   height: 190px;
   display: flex;
   justify-content: flex-start;
   overflow: scroll;
-  overflow-x:hidden;
-  overflow-y:hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .upload {
@@ -97,11 +104,11 @@ form {
 }
 
 .fullname {
-  /* background-color: bisque; */
+  /* background-color: rgb(199, 143, 75); */
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  margin-left: 30px;
+  justify-content: space-between;
+  margin-left: 20px;
   width: 350px;
   margin-bottom: 20px;
 }
@@ -121,7 +128,7 @@ form {
   border: none;
   outline: none;
   border-bottom: 1px solid #000;
-  margin-left: -10px;
+  /* margin-left: -10px; */
   font-size: medium;
   /* background-color:beige; */
 }
@@ -131,20 +138,23 @@ form {
   border: none;
   outline: none;
   border-bottom: 1px solid #000;
-  margin-left: -20px;
+  /* margin-left: 50px; */
   font-size: medium;
   /* background-color:azure; */
+  /* margin-left: -40px; */
+transform: translateX(-50px);
 }
 
 label {
-  margin-left: -90px;
+  /* margin-left: 20px; */
   margin-right: 130px;
   font-size: small;
 }
 
 .label-1 {
   /* background-color: antiquewhite; */
-  margin-bottom: 40px;
+  transform: translateX(20px);
+  margin-bottom: 30px;
 }
 
 input {
@@ -163,11 +173,11 @@ input {
   border-radius: 200px;
 }
 
-.not-now {
+/* .not-now {
   padding: 10px 80px;
-  background-color: white;
+  background-color: rgb(165, 135, 135);
   color: black;
   cursor: pointer;
   margin-left: 40px;
   border-radius: 200px;
-}
+} */

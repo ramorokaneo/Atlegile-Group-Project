@@ -69,8 +69,8 @@ function ProdServices() {
   };
 
   return (
-    <div className="background-container">
-      <div className="form-container">
+    <div className="product-services-container">
+      <div className="product-services-form-container">
         <div className="form-item form-items">
           <img src="./logo.png" alt="Logo" className="logo" />
           <h2 className="products-services">ADD PRODUCTS + SERVICES</h2>
@@ -121,7 +121,7 @@ function ProdServices() {
             </div>
             <div className="label-1">
               <label>
-                There will be VAT, Fee, and Delivery <br /> Fees added to this
+                There will be VAT, Fee, and Delivery<br/>  Fees added to this
                 amount
               </label>
             </div>
