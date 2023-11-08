@@ -318,10 +318,10 @@ function DeliveryDone() {
          // borderBottom: "1px lightgray solid",
           display: "flex",
           flexDirection: "row",
-          height: "76vh",
+         // height: "76vh",
           width: "100%",
           alignItems: "center",
-           backgroundColor: "yellow",
+           //backgroundColor: "yellow",
         }}
       >
         <div
@@ -346,12 +346,12 @@ function DeliveryDone() {
             flexDirection: "row",
             justifyContent: "flex-start",
             alignItems: "flex-start",
-             backgroundColor: "green",
+            // backgroundColor: "green",
           }}
         >
           <div
             style={{
-              height: "100%",
+              height: "76vh",
               width: "100%",
               border: "none",
               // borderBottom: "1px lightgray solid",
@@ -364,15 +364,15 @@ function DeliveryDone() {
           >
             <div
               style={{
-                height: "100%",
-                width: "60%",
+                height: "76vh",
+                width: "40vw",
                 border: "none",
                 // borderBottom: "1px lightgray solid",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
                 alignItems: "center",
-                // backgroundColor: "red",
+              //   backgroundColor: "red",
               }}
             >
               <div
@@ -385,7 +385,7 @@ function DeliveryDone() {
                   flexDirection: "column",
                   justifyContent: "flex-start",
                   alignItems: "flex-start",
-                  // backgroundColor: "yellow",
+               //    backgroundColor: "yellow",
                   //paddingTop:'10px'
                 }}
               >
@@ -399,7 +399,7 @@ function DeliveryDone() {
                     alignItems: "flex-start",
                     paddingTop: "20px",
                     flexDirection: "column",
-                    //   backgroundColor: "blue",
+                  //     backgroundColor: "blue",
                   }}
                 >
                   <div
@@ -435,12 +435,13 @@ function DeliveryDone() {
                 <div
                   style={{
                     width: "100%",
-                    height: "50%",
-                    justifyContent: "center",
+                    height: "55vh",
+                    justifyContent: "flex-start",
                     display: "flex",
                     alignItems: "flex-start",
-                    paddingTop: "20px",
+                    paddingTop: "40px",
                     flexDirection: "column",
+                    //backgroundColor:"brown"
                   }}
                 >
                   {data.map((item, index) => (
@@ -576,27 +577,21 @@ function DeliveryDone() {
                 <div
                   style={{
                     width: "100%",
-                    height: "40%",
+                    height: "10vh",
                     justifyContent: "center",
                     display: "flex",
                     alignItems: "flex-start",
-                    paddingTop: "20px",
+                   // paddingTop: "20px",
                     flexDirection: "column",
-                    //backgroundColor: "yellow",
+                 //   backgroundColor: "yellow",
                   }}
                 >
+                
                   <div
                     style={{
-                      height: "40%",
+                      height: "10vh",
                       width: "100%",
-                      //backgroundColor: "green",
-                    }}
-                  ></div>
-                  <div
-                    style={{
-                      height: "60%",
-                      width: "100%",
-                      //   backgroundColor: "yellow",
+                    //    backgroundColor: "green",
                     }}
                   >
                     <div
@@ -730,7 +725,7 @@ function DeliveryDone() {
             <div
               style={{
                 height: "96%",
-                width: "35%",
+                width: "20vw",
                 border: "none",
                 // borderBottom: "1px lightgray solid",
                 display: "flex",
@@ -810,7 +805,7 @@ function DeliveryDone() {
                 >
                   <p
                     style={{
-                      fontSize: "1rem",
+                      fontSize: "0.9rem",
                       color: "White",
                       margin: "0",
                     }}
@@ -829,7 +824,7 @@ function DeliveryDone() {
                 >
                   <p
                     style={{
-                      fontSize: "1rem",
+                      fontSize: "0.9rem",
                       color: "white",
                       margin: "0",
                     }}
@@ -844,8 +839,8 @@ function DeliveryDone() {
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: `${backgroundPositionX}px ${backgroundPositionY}px`,
                   backgroundSize: backgroundSize,
-                  height: "15%",
-                  width: "90%",
+                  height: "14vh",
+                  width: "17vw",
                   paddingTop: "10px",
                   borderRadius: 20,
                   marginBottom: "10px",
@@ -881,14 +876,16 @@ function DeliveryDone() {
                   flexDirection: "column",
                   justifyContent: "flex-start",
                   alignItems: "flex-start",
+                  borderBottom: "1px white solid",
+                  marginBottom:"10px"
                 }}
               >
                 <p
                   style={{
-                    fontSize: "1rem",
+                    fontSize: "0.9rem",
                     color: "white",
                     margin: "0",
-                    borderBottom: "1px white solid",
+                   
                   }}
                 >
                   In essence, AMS aims not to only he businesses grow but also
@@ -1218,7 +1215,75 @@ function DeliveryDone() {
                     {component3Visible && (
                       <div style={{ display: "flex", flexDirection: "row" }}>
                         {/* Component 1 */}
-
+                        <div
+                          style={{
+                            position: "relative",
+                            height: "70px",
+                            width: "60px",
+                            marginTop: "30px",
+                            display: "flex",
+                            flexDirection: "column",
+                            border: "1px white solid",
+                            marginLeft: "10px",
+                          }}
+                          //  onClick={handleDateTimeSelect}
+                        >
+                          <div
+                            style={{
+                              height: "50%",
+                              width: "100%",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                            }}
+                          >
+                            <p
+                              style={{
+                                fontSize: "1rem",
+                                color: "white",
+                                paddingTop: "10px",
+                              }}
+                            >
+                              Jul
+                            </p>
+                          </div>
+                          <div
+                            style={{
+                              height: "50%",
+                              width: "100%",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                            }}
+                          >
+                            <p
+                              style={{
+                                fontSize: "1.5rem",
+                                color: "white",
+                                fontWeight: "bold",
+                                paddingBottom: "10px",
+                              }}
+                            >
+                              2
+                            </p>
+                            <input
+                              type="date"
+                              id="birthday"
+                              name="birthday"
+                              style={{
+                                position: "absolute",
+                                top: 0,
+                                left: 0,
+                                width: "100%",
+                                height: "100%",
+                                opacity: 0,
+                                cursor: "pointer",
+                              }}
+                              // selected={selectedDate}
+                              onChange={handleDateChange}
+                            />
+                          </div>
+                        </div>
                         {/* Component 2 */}
                         <div
                           style={{
@@ -1293,6 +1358,7 @@ function DeliveryDone() {
                         {/* Component 3 */}
                         <div
                           style={{
+                            position: "relative",
                             height: "70px",
                             width: "60px",
                             marginTop: "30px",
@@ -1301,9 +1367,8 @@ function DeliveryDone() {
                             border: "1px white solid",
                             marginLeft: "10px",
                           }}
-                          // onClick={handleDateTimeSelect}
+                          //  onClick={handleDateTimeSelect}
                         >
-                          {/* Add current date here */}
                           <div
                             style={{
                               height: "50%",
@@ -1342,6 +1407,22 @@ function DeliveryDone() {
                             >
                               2
                             </p>
+                            <input
+                              type="date"
+                              id="birthday"
+                              name="birthday"
+                              style={{
+                                position: "absolute",
+                                top: 0,
+                                left: 0,
+                                width: "100%",
+                                height: "100%",
+                                opacity: 0,
+                                cursor: "pointer",
+                              }}
+                              // selected={selectedDate}
+                              onChange={handleDateChange}
+                            />
                           </div>
                         </div>
                       </div>
@@ -1450,11 +1531,11 @@ function DeliveryDone() {
         </div>
       </div>
 
-      {/* <div
+      <div
         style={{
           backgroundColor: " #070f18",
           width: "100%",
-          height: "25vh",
+          height: "30vh",
         }}
       >
         <div style={{ width: "80%", height: "20vh" }}>
@@ -1574,7 +1655,7 @@ function DeliveryDone() {
             alt="lion"
           />
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }
