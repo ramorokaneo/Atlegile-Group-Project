@@ -32,7 +32,7 @@ const Card = () => {
             15 Sales
           </p>
           <p className="card-prices">
-            $16.48<scan>$6.48</scan>
+            $16.48<span>$6.48</span>
           </p>
           <button className="view-button">
             VIEW <img src={RightIcon} className="right-icon" alt="right icon" />
