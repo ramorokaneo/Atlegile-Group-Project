@@ -127,7 +127,7 @@ export default function WelcomeToAMS() {
       <div
         style={{
           width: "20%",
-          height: "100%",
+          height: "100vh",
           border: "none",
           borderRight: "1px lightgray solid",
           padding: 20,
@@ -313,14 +313,20 @@ export default function WelcomeToAMS() {
                 style={{
                   display: "flex",
                   flexDirection: "row",
-                  justifyContent: "space-between",
-                  padding: "10px 10px 0",
+                  justifyContent: "flex-start",
+                  padding: "10px 10px",
                   borderBottom: "1px lightgray solid",
                   backgroundColor: "#fafafa",
                 }}
               >
                 <span
-                  style={{ fontWeight: 600, width: "25%", fontSize: "small" }}
+                  style={{
+                    fontWeight: 600,
+                    width: "1%",
+                    fontSize: "small",
+                    marginRight: 50,
+                    marginLeft: 10,
+                  }}
                 >
                   Name
                 </span>
@@ -328,7 +334,10 @@ export default function WelcomeToAMS() {
                   style={{
                     display: "flex",
                     flexDirection: "row",
+                    // justifyContent: "flex-start",
                     alignItems: "center",
+                    marginRight: 10,
+                    // marginLeft: 10,
                   }}
                 >
                   <PiCaretUpDownFill
@@ -341,22 +350,77 @@ export default function WelcomeToAMS() {
                   />
                 </span>
                 <span
-                  style={{ fontWeight: 600, width: "25%", fontSize: "small" }}
+                  style={{
+                    border: "none",
+                    borderRight: "1px lightgray solid",
+                    paddingLeft: 5,
+                  }}
+                ></span>
+                <span
+                  style={{
+                    fontWeight: 600,
+                    // width: "25%",
+                    fontSize: "small",
+                    marginRight: 50,
+
+                    marginLeft: 15,
+                  }}
                 >
                   Surname
                 </span>
                 <span
-                  style={{ fontWeight: 600, width: "25%", fontSize: "small" }}
+                  style={{
+                    border: "none",
+                    borderRight: "1px lightgray solid",
+                    paddingLeft: 5,
+                  }}
+                ></span>
+                <span
+                  style={{
+                    fontWeight: 600,
+                    // width: "25%",
+                    fontSize: "small",
+                    marginRight: 60,
+
+                    marginLeft: 15,
+                  }}
                 >
                   Phone
                 </span>
                 <span
-                  style={{ fontWeight: 600, width: "25%", fontSize: "small" }}
+                  style={{
+                    border: "none",
+                    borderRight: "1px lightgray solid",
+                    paddingLeft: 5,
+                  }}
+                ></span>
+                <span
+                  style={{
+                    fontWeight: 600,
+                    // width: "25%",
+                    fontSize: "small",
+                    marginRight: 70,
+
+                    marginLeft: 15,
+                  }}
                 >
                   Email
                 </span>
                 <span
-                  style={{ fontWeight: 600, width: "25%", fontSize: "small" }}
+                  style={{
+                    border: "none",
+                    borderRight: "1px lightgray solid",
+                    paddingLeft: 5,
+                  }}
+                ></span>
+                <span
+                  style={{
+                    fontWeight: 600,
+                    // width: "25%",
+                    fontSize: "small",
+                    marginRight: 50,
+                    marginLeft: 15,
+                  }}
                 >
                   Location
                 </span>
@@ -394,106 +458,145 @@ export default function WelcomeToAMS() {
             </div>
 
             <div style={{ width: "1px", backgroundColor: "gray" }}></div>
-
-            <div style={{ flex: 1, width: "50%" }}>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                width: "50%",
+                marginLeft: "10px",
+                translate: "",
+                // transform: ""
+              }}
+              className="new-business-container"
+            >
               <div
                 style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "space-between",
-                  padding: "10px 10px 0",
-                  borderBottom: "1px lightgray solid",
-                  backgroundColor: "#fafafa",
+                  // display: "inline-block",
+                  paddingBottom: 10,
+                  border: "none",
+                  // borderBottom: "1px, lightgray solid",
                 }}
               >
-                
-                <span
-                  style={{
-                    fontWeight: 600,
-                    fontSize: "small",
-                    marginRight: "-10px",
-                  }}
-                >
-                  
-                  Business Name
-                </span>
-                <span
+                <span style={{ fontWeight: 700 }}>NEW BUSINESSES</span>
+              </div>
+
+              <div style={{ flex: 1, width: "100%" }}>
+                <div
                   style={{
                     display: "flex",
                     flexDirection: "row",
-                    alignItems: "center",
-                  }}
-                >
-                  <PiCaretUpDownFill
-                    color={piCaretColor}
-                    onClick={handlePiCaretClick}
-                  />
-                  <AiOutlineSearch
-                    color={searchColor}
-                    onClick={handleSearchClick}
-                  />
-                </span>
-                <span
-                  style={{
-                    border: "none",
-                    borderLeft: "1px lightgray solid",
-                    marginRight: "50px",
+                    justifyContent: "flex-start",
+                    padding: "10px 10px",
+                    borderBottom: "1px lightgray solid",
+                    backgroundColor: "#fafafa",
                   }}
                 >
                   <span
                     style={{
                       fontWeight: 600,
                       fontSize: "small",
-                      marginLeft: "20px",
+                      marginRight: "10px",
                     }}
                   >
-                    Reg Number
-                    <PiCaretUpDownFill
-                      color={piCaretColor}
-                      onClick={handlePiCaretClick}
-                    />
+                    Business Name
                   </span>
                   <span
                     style={{
-                      border: "none",
-                      borderRight: "1px lightgray solid",
-                      paddingRight: 10,
-                      marginRight: "2px",
-                    }}
-                  ></span>
-                  <span style={{ fontWeight: 600, fontSize: "small" }}>
-                    Type of Business
-                  </span>
-                  <span
-                    style={{
-                      border: "none",
-                      borderRight: "1px lightgray solid",
-                      paddingRight: 10,
-                      marginLeft: "1px",
+                      display: "flex",
+                      flexDirection: "row",
+                      alignItems: "center",
+                      marginRight: "10px",
                     }}
                   >
                     <PiCaretUpDownFill
                       color={piCaretColor}
                       onClick={handlePiCaretClick}
                     />
-                  </span>
-                  <span style={{ fontWeight: 600, fontSize: "small" }}>
-                    Industry
+                    <AiOutlineSearch
+                      color={searchColor}
+                      onClick={handleSearchClick}
+                    />
                   </span>
                   <span
                     style={{
                       border: "none",
-                      borderRight: "1px lightgray solid",
-                      paddingLeft: 5,
+                      borderLeft: "1px lightgray solid",
+                      marginRight: "20px",
                     }}
                   >
-                    <PiCaretUpDownFill
-                      color={piCaretColor}
-                      onClick={handlePiCaretClick}
-                    />
+                    <span
+                      style={{
+                        fontWeight: 600,
+                        fontSize: "small",
+                        marginLeft: "20px",
+                      }}
+                    >
+                      Reg Number
+                      <PiCaretUpDownFill
+                        style={{ marginLeft: "20px" }}
+                        color={piCaretColor}
+                        onClick={handlePiCaretClick}
+                      />
+                    </span>
+                    <span
+                      style={{
+                        border: "none",
+                        borderRight: "1px lightgray solid",
+                        paddingRight: 10,
+                        marginRight: "2px",
+                      }}
+                    ></span>
+
+                    <span
+                      style={{
+                        fontWeight: 600,
+                        fontSize: "small",
+                        marginRight: "20px",
+                        marginLeft: "20px",
+                      }}
+                    >
+                      Type of Business
+                    </span>
+                    <span
+                      style={{
+                        border: "none",
+                        borderRight: "1px lightgray solid",
+                        paddingRight: 6,
+                        marginLeft: "10px",
+                      }}
+                    >
+                      <PiCaretUpDownFill
+                        style={{}}
+                        color={piCaretColor}
+                        onClick={handlePiCaretClick}
+                      />
+                    </span>
+                    <span
+                      style={{
+                        fontWeight: 600,
+                        fontSize: "small",
+                        marginRight: "50px",
+                        marginLeft: "20px",
+                      }}
+                    >
+                      Industry
+                    </span>
+                    <span
+                      style={{
+                        border: "none",
+                        // borderRight: "1px lightgray solid",
+                        paddingLeft: 5,
+                      }}
+                    >
+                      <PiCaretUpDownFill
+                        color={piCaretColor}
+                        onClick={handlePiCaretClick}
+                      />
+                    </span>
                   </span>
-                </span>
+                </div>
               </div>
+              <div></div>
 
               {fakeBusinessesList.map((business) => (
                 <div
@@ -501,7 +604,7 @@ export default function WelcomeToAMS() {
                   style={{
                     display: "flex",
                     flexDirection: "row",
-                    justifyContent: "space-between",
+                    justifyContent: "space-evenly",
                     padding: "10px",
                     borderBottom: "1px lightgray solid",
                     marginRight: 15,
@@ -514,7 +617,7 @@ export default function WelcomeToAMS() {
                     style={{
                       width: "25%",
                       fontSize: "small",
-                      marginLeft: "15px",
+                      marginLeft: "10px",
                     }}
                   >
                     {business.regNum}
