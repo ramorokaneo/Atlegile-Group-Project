@@ -3,24 +3,26 @@ import { GoCheckCircleFill } from "react-icons/go";
 import BusinessAccountPlus from "../../images/BusinessPlus+.jpg";
 import Card from "../Card/Card";
 import ProductsServices from "../ProductsServices/ProdServices";
+import "./businessAccount.css";
 export default function BusinessAccount() {
   const list = [1, 2, 3];
 
   return (
     <>
-
       <div style={{ display: "flex", flexDirection: "row", height: "100%" }}>
-
         <div style={{ height: "100%", width: "80%" }}>
-          <div
+          {/* <div
             style={{
               height: "20%",
-              backgroundImage: `url("./images/blackSilk.jpg")`,
+              backgroundImage: `url()`,
               backgroundRepeat: "no-repeat",
               backgroundPosition: `center`,
               backgroundSize: "cover",
             }}
-          ></div>
+          ></div> */}
+          <div className="imagefix-container">
+            <img src="../../images/blackSilk.jpg" alt="" />
+          </div>
           <div
             style={{
               height: "15%",
@@ -86,7 +88,6 @@ export default function BusinessAccount() {
 
             <div
               style={{
-
                 width: "100%",
                 display: "flex",
                 flexDirection: "row",
@@ -221,7 +222,7 @@ export default function BusinessAccount() {
             </div>
           </div>
         </div>
-          <ProductsServices />
+        <ProductsServices />
       </div>
     </>
   );
