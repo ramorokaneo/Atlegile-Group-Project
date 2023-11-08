@@ -102,9 +102,9 @@ export default function WelcomeToAMS() {
     setPiCaretColor("gray"); 
   };
 
+  
   const handleSearchClick = () => {
     setSearchColor("gray"); 
-    setPiCaretColor("gray");
   };
 
   const handleNavigateToDashboard = () => {
