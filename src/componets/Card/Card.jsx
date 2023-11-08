@@ -67,7 +67,7 @@ const Card = () => {
                   marginLeft: "15px",
                   borderRadius: "50%",
                 }}
-                className="faCart"
+                className="faCart icon"
               >
                 <img src={faCart} alt="" />
               </div>
