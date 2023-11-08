@@ -108,6 +108,7 @@
 }
 .card-icons {
   position: absolute;
+  display: flex;
   width: 8vw;
   bottom: 20.5px;
   /* margin-left: 10px; */
@@ -168,4 +169,8 @@
 }
 .icon:hover {
   cursor: pointer;
+}
+.faCart img {
+  width: 30px;
+  height: 30px;
 }
