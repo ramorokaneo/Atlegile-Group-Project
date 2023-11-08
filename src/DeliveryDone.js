@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import mapImage from "./mapImage.png";
-import { FaStar } from "react-icons/fa";
-import { PiCaretUpDownFill } from "react-icons/pi";
-import { BiMessageAlt } from "react-icons/pi";
 
-import { AiOutlineSearch } from "react-icons/ai";
 import "./OrderHistory.css";
 import "./LandingPageHeader/landingpageheader.css";
 import { FiPhone } from "react-icons/fi";
@@ -14,14 +10,11 @@ import { FiYoutube } from "react-icons/fi";
 import { FiTwitter } from "react-icons/fi";
 import { SiFacebook } from "react-icons/si";
 import Logo from "./assets/Logo.png";
-import lion from "./assets/Lion.png";
-import shadow from "./assets/Shadow_Logo.png";
-import log from "./assets/Logo.png";
-import plane from "./assets/plane.png";
-import shop from "./assets/Group.png";
-import back from "./assets/BACKGROUND.png";
-import front from "./assets/Roar.png";
+
 import "./components/Footer/Footer";
+import Datetime from "react-datetime";
+import "react-datepicker/dist/react-datepicker.css";
+import DatePicker from "react-datepicker";
 
 function DeliveryDone() {
   const [isVisible, setIsVisible] = useState(true);
@@ -39,6 +32,8 @@ function DeliveryDone() {
     setComponent2Visible(false);
     setComponent3Visible(true);
   };
+
+  const handleDateChange = () => {};
   const handlePress = () => {
     setIsVisible(false); // Hide the first component upon clicking
   };
@@ -99,10 +94,20 @@ function DeliveryDone() {
   ];
 
   const Dates = [
-    { month: "Jul", date: 2, status: "PICKED" },
+    { month: "Jul", date: 2, status: "PRESSED" },
     { month: "Jul", date: 2, status: "null" },
     { month: "Jul", date: 2, status: "null" },
   ];
+
+  const [selectedDateTime, setSelectedDateTime] = useState(null);
+  const [date, setDate] = useState(null); // Initialize it to null
+  const handleDateTimeSelect = (item) => {
+    const selectedDate = new Date().toLocaleDateString();
+    const selectedTime = new Date().toLocaleTimeString();
+    const selectedDateTime = `${selectedDate} ${selectedTime}`;
+    setSelectedDateTime(selectedDateTime);
+    setDate(selectedDateTime);
+  };
 
   return (
     <div
@@ -288,7 +293,7 @@ function DeliveryDone() {
             </div>
             <div>
               <p style={{ paddingLeft: 10, fontSize: "0.8rem", margin: 0 }}>
-                jane
+                Jane
               </p>
             </div>
           </div>
@@ -310,13 +315,13 @@ function DeliveryDone() {
       <div
         style={{
           border: "none",
-          borderBottom: "1px lightgray solid",
+         // borderBottom: "1px lightgray solid",
           display: "flex",
           flexDirection: "row",
           height: "76vh",
           width: "100%",
           alignItems: "center",
-          // backgroundColor: "yellow",
+           backgroundColor: "yellow",
         }}
       >
         <div
@@ -324,7 +329,7 @@ function DeliveryDone() {
             height: "100%",
             width: "20%",
             border: "none",
-            borderBottom: "1px lightgray solid",
+           // borderBottom: "1px lightgray solid",
             display: "flex",
             flexDirection: "colunm",
             alignItems: "center",
@@ -341,7 +346,7 @@ function DeliveryDone() {
             flexDirection: "row",
             justifyContent: "flex-start",
             alignItems: "flex-start",
-            //   backgroundColor: "green",
+             backgroundColor: "green",
           }}
         >
           <div
@@ -980,10 +985,10 @@ function DeliveryDone() {
                         <p
                           style={{
                             color: "white",
-                            marginTop: "10px",
+                            // marginTop: "10px",
                             height: "100%",
                             marginRight: "5px",
-                            marginTop: "30px",
+                            marginTop: "20px",
                             justifyContent: "center",
                             display: "flex",
                           }}
@@ -1015,10 +1020,10 @@ function DeliveryDone() {
                         <p
                           style={{
                             color: "white",
-                            marginTop: "10px",
+                            //marginTop: "10px",
                             height: "100%",
                             marginRight: "5px",
-                            marginTop: "30px",
+                            marginTop: "20px",
                             justifyContent: "center",
                             display: "flex",
                           }}
@@ -1050,10 +1055,10 @@ function DeliveryDone() {
                         <p
                           style={{
                             color: "white",
-                            marginTop: "10px",
+                            //  marginTop: "10px",
                             height: "100%",
                             marginRight: "5px",
-                            marginTop: "30px",
+                            marginTop: "20px",
                             justifyContent: "center",
                             display: "flex",
                           }}
@@ -1210,10 +1215,14 @@ function DeliveryDone() {
                       flexDirection: "row",
                     }}
                   >
-                    {component3Visible &&
-                      Dates.map((item, index) => (
+                    {component3Visible && (
+                      <div style={{ display: "flex", flexDirection: "row" }}>
+                        {/* Component 1 */}
+
+                        {/* Component 2 */}
                         <div
                           style={{
+                            position: "relative",
                             height: "70px",
                             width: "60px",
                             marginTop: "30px",
@@ -1221,10 +1230,8 @@ function DeliveryDone() {
                             flexDirection: "column",
                             border: "1px white solid",
                             marginLeft: "10px",
-                            backgroundColor:
-                              item.status === "PICKED" ? "#1e3950" : null,
                           }}
-                          key={index}
+                          //  onClick={handleDateTimeSelect}
                         >
                           <div
                             style={{
@@ -1242,7 +1249,7 @@ function DeliveryDone() {
                                 paddingTop: "10px",
                               }}
                             >
-                              {item.month}
+                              Jul
                             </p>
                           </div>
                           <div
@@ -1262,11 +1269,83 @@ function DeliveryDone() {
                                 paddingBottom: "10px",
                               }}
                             >
-                              {item.date}
+                              2
+                            </p>
+                            <input
+                              type="date"
+                              id="birthday"
+                              name="birthday"
+                              style={{
+                                position: "absolute",
+                                top: 0,
+                                left: 0,
+                                width: "100%",
+                                height: "100%",
+                                opacity: 0,
+                                cursor: "pointer",
+                              }}
+                              // selected={selectedDate}
+                              onChange={handleDateChange}
+                            />
+                          </div>
+                        </div>
+
+                        {/* Component 3 */}
+                        <div
+                          style={{
+                            height: "70px",
+                            width: "60px",
+                            marginTop: "30px",
+                            display: "flex",
+                            flexDirection: "column",
+                            border: "1px white solid",
+                            marginLeft: "10px",
+                          }}
+                          // onClick={handleDateTimeSelect}
+                        >
+                          {/* Add current date here */}
+                          <div
+                            style={{
+                              height: "50%",
+                              width: "100%",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                            }}
+                          >
+                            <p
+                              style={{
+                                fontSize: "1rem",
+                                color: "white",
+                                paddingTop: "10px",
+                              }}
+                            >
+                              Jul
+                            </p>
+                          </div>
+                          <div
+                            style={{
+                              height: "50%",
+                              width: "100%",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                            }}
+                          >
+                            <p
+                              style={{
+                                fontSize: "1.5rem",
+                                color: "white",
+                                fontWeight: "bold",
+                                paddingBottom: "10px",
+                              }}
+                            >
+                              2
                             </p>
                           </div>
                         </div>
-                      ))}
+                      </div>
+                    )}
                   </div>
                   {component3Visible && (
                     <div
@@ -1314,15 +1393,64 @@ function DeliveryDone() {
             height: "100%",
             width: "20%",
             border: "none",
-            borderBottom: "1px lightgray solid",
+           // borderBottom: "1px lightgray solid",
             display: "flex",
             flexDirection: "row",
             alignItems: "center",
+            //  backgroundColor:'red'
           }}
-        ></div>
+        >
+          {/*<div style={{ height:"250px", width:"350px", backgroundColor:"#f9f9f9",display:"flex", flexDirection:'row' }}>
+                      <div style={{ height:"250px", width:"200px", backgroundColor:"red", borderRight: "1px solid gray"}}>
+                        <div style={{height:"30px", width:"200px", backgroundColor:"#f9f9f9", borderBottom: "1px solid gray",borderRight:"1px sold gray",display:"flex",  justifyContent:"space-between"}}>
+                            <div style={{height :"30px",width : "40px", backgroundColor: "#f9f9f9", display:"flex",flexDirection:"row"}}>
+
+                              <div style={{height:"30px", width:"30px", display: "flex", alignItems: "center", justifyContent: "center"}}>
+                              <p>||</p>
+                              </div>
+                              <div style={{height:"30px", width:"10px", display: "flex", alignItems: "center", justifyContent: "center"}}>
+                              <p>|</p>
+                              </div>
+                            </div>
+
+                            <div style={{height :"30px",width : "40px", display:"flex",flexDirection:"column",}}>
+                              <div style={{height:"30px", width:"120px",  alignItems:"center", justifyContent:"center"}}>
+                                          <p>Jan 2022</p>
+                              </div>
+                          </div>
+                            <div style={{height :"30px",width : "40px", backgroundColor: "#f9f9f9", display:"flex",flexDirection:"row"}}>
+
+                           <div style=        {{height:"30px", width:"30px", display: "flex", alignItems: "center", justifyContent: "center"}}>
+                           <p>||</p>
+                               </div>
+                               <div style={{height:"30px", width:"10px", display: "flex", alignItems: "center", justifyContent: "center"}}>
+                            <p>|</p>
+                         </div>
+                          </div>
+                        </div>
+                        <div style={{height:"30px", width:"200px", backgroundColor:"yellow",display:"flex", flexDirection: "row"}}>
+                           
+                              
+                           <p>Mon</p>
+                           <p>Tue</p>
+                           <p>Wed</p>
+                           <p>thu</p>
+                        </div>
+
+                      </div>
+                      <div style={{ height:"250px", width:"150px", backgroundColor:"green"}}>
+                          <div style={{height:"30px", width:"150px", backgroundColor:"#f9f9f9", borderBottom: "1px solid gray"}}>
+
+                        </div>
+                      </div>
+
+
+                    </div>
+                     */}
+        </div>
       </div>
 
-      <footer
+      {/* <div
         style={{
           backgroundColor: " #070f18",
           width: "100%",
@@ -1400,7 +1528,7 @@ function DeliveryDone() {
                     paddingTop: "40px",
                   }}
                 >
-                  <a href="#">
+                  <div>
                     <h4
                       style={{
                         color: "white",
@@ -1410,23 +1538,23 @@ function DeliveryDone() {
                     >
                       ORDER HISTORY
                     </h4>
-                  </a>
-                  <a href="#">
+                  </div>
+                  <div>
                     <h4 style={{ color: "white", paddingTop: "7px" }}>
                       TERMS & CONDITIONS
                     </h4>
-                  </a>
+                  </div>
 
-                  <a href="#">
+                  <div>
                     <h4 style={{ color: "white", paddingTop: "7px" }}>
                       PRIVACY POLICY
                     </h4>
-                  </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div style={{ width: "27vw", marginLeft: "40vw" , color:"white"}}>
+          <div style={{ width: "27vw", marginLeft: "40vw", color: "white" }}>
             <p style={{ textTransform: "uppercase", paddingBottom: "20px" }}>
               Atlegile Marketing Solutions (Pty) Ltd eCommerce 2023
               {new Date().getFullYear()}{" "}
@@ -1446,7 +1574,7 @@ function DeliveryDone() {
             alt="lion"
           />
         </div>
-      </footer>
+      </div> */}
     </div>
   );
 }
