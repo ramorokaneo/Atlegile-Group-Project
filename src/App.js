@@ -1,6 +1,6 @@
 import React from "react";
-import WelcomeToAMS from "./welcomeToAMS";
-import "./App.css";
+import WelcomeToAMS from "./Pages/welcomeToAMS";
+import "./Pages/welcome.css";
 
 function App() {
   return (

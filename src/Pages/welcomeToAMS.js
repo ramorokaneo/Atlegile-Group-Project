@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { AiOutlineSearch } from "react-icons/ai";
 import { PiCaretUpDownFill } from "react-icons/pi";
-import clip from "./cilp.png";
+import clip from "../images/cilp.png";
 
 const fakeUsersList = [
   {
