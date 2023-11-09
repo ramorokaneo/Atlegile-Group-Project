@@ -1,10 +1,10 @@
-import "./App.css";
+
 import DeliveryDone from "./DeliveryDone";
-//import SignIn from "./signIn";
-//import ManageBusinesses from "./manageBusinesses";
-//import Footer from "./footer/footer";
+
 import BusinessAccount from "./Pages/Business Account/businessAccount";
+import SignIn from "./Pages/Sign In/signIn";
 import Footer from "./components/Footer/Footer";
+
 
 function App() {
   
@@ -12,7 +12,9 @@ function App() {
   return (
     <>
       {/* <ManageBusinesses/> */}
-      <DeliveryDone/>
+      {/* <DeliveryDone/> */}
+      {/* <BusinessAccount/> */}
+      {/* <SignIn/> */}
     </>
   );
 }
