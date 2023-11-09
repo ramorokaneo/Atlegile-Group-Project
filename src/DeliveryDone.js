@@ -1266,22 +1266,7 @@ function DeliveryDone() {
                             >
                               2
                             </p>
-                            <input
-                              type="date"
-                              id="birthday"
-                              name="birthday"
-                              style={{
-                                position: "absolute",
-                                top: 0,
-                                left: 0,
-                                width: "100%",
-                                height: "100%",
-                                opacity: 0,
-                                cursor: "pointer",
-                              }}
-                              // selected={selectedDate}
-                              onChange={handleDateChange}
-                            />
+                           
                           </div>
                         </div>
                         {/* Component 2 */}
@@ -1336,22 +1321,7 @@ function DeliveryDone() {
                             >
                               2
                             </p>
-                            <input
-                              type="date"
-                              id="birthday"
-                              name="birthday"
-                              style={{
-                                position: "absolute",
-                                top: 0,
-                                left: 0,
-                                width: "100%",
-                                height: "100%",
-                                opacity: 0,
-                                cursor: "pointer",
-                              }}
-                              // selected={selectedDate}
-                              onChange={handleDateChange}
-                            />
+                           
                           </div>
                         </div>
 
@@ -1407,22 +1377,7 @@ function DeliveryDone() {
                             >
                               2
                             </p>
-                            <input
-                              type="date"
-                              id="birthday"
-                              name="birthday"
-                              style={{
-                                position: "absolute",
-                                top: 0,
-                                left: 0,
-                                width: "100%",
-                                height: "100%",
-                                opacity: 0,
-                                cursor: "pointer",
-                              }}
-                              // selected={selectedDate}
-                              onChange={handleDateChange}
-                            />
+                           
                           </div>
                         </div>
                       </div>
@@ -1481,64 +1436,20 @@ function DeliveryDone() {
             //  backgroundColor:'red'
           }}
         >
-          {/*<div style={{ height:"250px", width:"350px", backgroundColor:"#f9f9f9",display:"flex", flexDirection:'row' }}>
-                      <div style={{ height:"250px", width:"200px", backgroundColor:"red", borderRight: "1px solid gray"}}>
-                        <div style={{height:"30px", width:"200px", backgroundColor:"#f9f9f9", borderBottom: "1px solid gray",borderRight:"1px sold gray",display:"flex",  justifyContent:"space-between"}}>
-                            <div style={{height :"30px",width : "40px", backgroundColor: "#f9f9f9", display:"flex",flexDirection:"row"}}>
-
-                              <div style={{height:"30px", width:"30px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-                              <p>||</p>
-                              </div>
-                              <div style={{height:"30px", width:"10px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-                              <p>|</p>
-                              </div>
-                            </div>
-
-                            <div style={{height :"30px",width : "40px", display:"flex",flexDirection:"column",}}>
-                              <div style={{height:"30px", width:"120px",  alignItems:"center", justifyContent:"center"}}>
-                                          <p>Jan 2022</p>
-                              </div>
-                          </div>
-                            <div style={{height :"30px",width : "40px", backgroundColor: "#f9f9f9", display:"flex",flexDirection:"row"}}>
-
-                           <div style=        {{height:"30px", width:"30px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-                           <p>||</p>
-                               </div>
-                               <div style={{height:"30px", width:"10px", display: "flex", alignItems: "center", justifyContent: "center"}}>
-                            <p>|</p>
-                         </div>
-                          </div>
-                        </div>
-                        <div style={{height:"30px", width:"200px", backgroundColor:"yellow",display:"flex", flexDirection: "row"}}>
-                           
-                              
-                           <p>Mon</p>
-                           <p>Tue</p>
-                           <p>Wed</p>
-                           <p>thu</p>
-                        </div>
-
-                      </div>
-                      <div style={{ height:"250px", width:"150px", backgroundColor:"green"}}>
-                          <div style={{height:"30px", width:"150px", backgroundColor:"#f9f9f9", borderBottom: "1px solid gray"}}>
-
-                        </div>
-                      </div>
-
-
-                    </div>
-                     */}
+ 
         </div>
       </div>
 
-      <div
+      {/* <div
         style={{
           backgroundColor: " #070f18",
           width: "100%",
-          height: "30vh",
+          height: "50vh",
+          display:"flex",
+          flexDirection:"row"
         }}
       >
-        <div style={{ width: "80%", height: "20vh" }}>
+        <div style={{ width: "80%", height: "50vh", }}>
           <div
             style={{
               display: "flex",
@@ -1546,41 +1457,43 @@ function DeliveryDone() {
               justifyContent: "space-between",
               width: "70vw",
               marginLeft: "20vw",
+             
             }}
           >
             <div
               style={{
-                height: "20vh",
+                height: "45vh",
                 width: "50vw",
-                //  backgroundColor: "yellow",
+               // backgroundColor: "yellow",
                 display: "flex",
                 flexDirection: "row",
               }}
             >
               <div
                 style={{
-                  height: "20vh",
+                  height: "45vh",
                   width: "30vw",
-                  // backgroundColor: "red",
+                 //  backgroundColor: "red",
                 }}
               >
-                <div style={{ height: "50px", marginBottom: "10px" }}>
+                <div style={{ height: "10vh", marginTop: "3vh" }}>
                   <img
-                    className="logo-image"
+                  //  style={{}}
                     src={"./images/logo2.png"}
                     alt="AMS COMPANY"
                   />
                 </div>
-                <p
-                  style={{ color: "white", boder: "none", fontWeight: "bold" }}
+                <h3
+                  style={{ color: "white", boder: "none", fontWeight: "bold", marginBottom:"4vh" }}
                 >
                   Marketing Services
-                </p>
+                </h3>
                 <p
                   style={{
                     color: "white",
                     boder: "none",
-                    marginBottom: "10px",
+                    marginBottom: "4vh",
+                    fontWeight:'bold'
                   }}
                 >
                   Welcome to AMS, where we specialize in building beautiful
@@ -1588,16 +1501,18 @@ function DeliveryDone() {
                   a global customer base, driving sales of their exceptional
                   products and services.
                 </p>
-                <p style={{ color: "white", fontWeight: "bold" }}>
+                <p style={{ color: "white", fontWeight: "bold", paddingTop:'15px' }}>
                   atlegilemarketing.co.za
                 </p>
               </div>
 
               <div
                 style={{
-                  height: "20vh",
+                  height: "45vh",
                   width: "20vw",
-                  //backgroundColor: "white",
+                //  backgroundColor: "white",
+                 alignItems:"center",
+                 display:"flex"
                 }}
               >
                 <div
@@ -1606,56 +1521,58 @@ function DeliveryDone() {
                     height: "20vh",
                     flexDirection: "column",
                     justifyContent: "space-between",
-                    paddingTop: "40px",
+                   // paddingTop: "40px",
                   }}
                 >
                   <div>
-                    <h4
+                    <p
                       style={{
                         color: "white",
-                        paddingTop: "7px",
+                        textTransform: "uppercase",
                         boder: "none",
                       }}
                     >
                       ORDER HISTORY
-                    </h4>
+                    </p>
                   </div>
                   <div>
-                    <h4 style={{ color: "white", paddingTop: "7px" }}>
+                    <p style={{ color: "white", paddingTop: "4vh",textTransform: "uppercase", }}>
                       TERMS & CONDITIONS
-                    </h4>
+                    </p>
                   </div>
 
                   <div>
-                    <h4 style={{ color: "white", paddingTop: "7px" }}>
+                    <p style={{ color: "white", paddingTop: "4vh",textTransform: "uppercase", }}>
                       PRIVACY POLICY
-                    </h4>
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div style={{ width: "27vw", marginLeft: "40vw", color: "white" }}>
+          <div style={{ width: "30vw", marginLeft: "40vw", color: "white" }}>
             <p style={{ textTransform: "uppercase", paddingBottom: "20px" }}>
               Atlegile Marketing Solutions (Pty) Ltd eCommerce 2023
               {new Date().getFullYear()}{" "}
             </p>
           </div>
         </div>
-        <div style={{ height: "10vh" }}>
+        <div style={{ height: "50vh",width:"20%" , justifyContent: "flex-end", alignItems: "end",
+              bottom: 0,
+              left: "0", }}>
           <img
             style={{
-              height: "100px",
+              height: "25vh",
               color: "white",
-              position: "absolute",
-              bottom: "0",
-              right: "0",
+              
+              // bottom: "0",
+              // right: "0",
             }}
             src={"./images/lion.png"}
             alt="lion"
           />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
