@@ -12,9 +12,8 @@
   background-repeat: no-repeat;
   /* background-color: red; */
 
-   /* background-color: blue;  */
+  /* background-color: blue;  */
 }
-
 
 .product-services-form-container {
   display: flex;
@@ -28,7 +27,6 @@
   /* background-color: #755959; */
 }
 
-
 .form-items {
   padding: 10px;
   min-height: 880px;
@@ -37,7 +35,6 @@
   /* margin-left: 1480px; */
   /* background-color: yellow; */
 }
-
 
 .logo {
   margin-left: 130px;
@@ -53,7 +50,7 @@
 }
 
 .upload-img {
-   /* background-color: aquamarine;  */
+  /* background-color: aquamarine;  */
   margin-left: 50px;
   height: 190px;
   display: flex;
@@ -142,7 +139,7 @@ form {
   font-size: medium;
   /* background-color:azure; */
   /* margin-left: -40px; */
-transform: translateX(-50px);
+  transform: translateX(-50px);
 }
 
 label {

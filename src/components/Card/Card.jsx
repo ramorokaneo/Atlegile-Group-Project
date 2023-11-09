@@ -7,7 +7,7 @@ import { faHeart as faHeartRed } from "@fortawesome/free-solid-svg-icons";
 
 // import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
-
+import faCart from "../../icons/shopping-cart.png";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 const Card = () => {
   const [isRed, setIsRed] = useState(false);
@@ -40,8 +40,8 @@ const Card = () => {
                 onClick={toggleHeart}
               />
 
-              <FontAwesomeIcon
-                icon={faCartShopping}
+              {/* <FontAwesomeIcon
+                icon={faCart}
                 style={{
                   fontSize: "1.5em",
                   color: "black",
@@ -52,7 +52,25 @@ const Card = () => {
                 }}
                 onClick={() => console.log("Cart Icon Clicked!!!")}
                 className="icon"
-              />
+              /> */}
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  fontSize: "1.5em",
+                  width: "2em",
+                  height: "2em",
+                  color: "black",
+                  backgroundColor: "white",
+                  padding: "12px",
+                  marginLeft: "15px",
+                  borderRadius: "50%",
+                }}
+                className="faCart icon"
+              >
+                <img src={faCart} alt="" />
+              </div>
             </div>
           </div>
           <p className="image-sale">sale</p>

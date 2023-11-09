@@ -16,7 +16,7 @@
   border-radius: 8px;
   /* background-color: red; */
   /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
-  justify-content: flex-start !important;
+
   /* overflow: hidden; */
   margin: 10px;
 }
@@ -86,7 +86,6 @@
 .content {
   flex: 2;
   padding: 20px;
-  /* align-self: flex-start; */
 }
 
 .header {
@@ -109,6 +108,7 @@
 }
 .card-icons {
   position: absolute;
+  display: flex;
   width: 8vw;
   bottom: 20.5px;
   /* margin-left: 10px; */
@@ -169,4 +169,8 @@
 }
 .icon:hover {
   cursor: pointer;
+}
+.faCart img {
+  width: 30px;
+  height: 30px;
 }
