@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import mapImage from "./mapImage.png";
 
-import "./OrderHistory.css";
-import "./LandingPageHeader/landingpageheader.css";
+//import "./OrderHistory.css";
+//import "./LandingPageHeader/landingpageheader.css";
 import { FiPhone } from "react-icons/fi";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaInstagram } from "react-icons/fa";
 import { FiYoutube } from "react-icons/fi";
 import { FiTwitter } from "react-icons/fi";
 import { SiFacebook } from "react-icons/si";
-import Logo from "./assets/Logo.png";
+import Logo from "./Logo.png"
 
-import "./components/Footer/Footer";
+import "../../components/Footer/Footer";
 import Datetime from "react-datetime";
 import "react-datepicker/dist/react-datepicker.css";
 import DatePicker from "react-datepicker";
