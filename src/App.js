@@ -1,7 +1,6 @@
 import "./App.css";
-//import SignIn from "./signIn";
-//import ManageBusinesses from "./manageBusinesses";
-//import Footer from "./footer/footer";
+import SignIn from "./Pages/Sign In/signIn";
+import ManageBusinesses from "./Pages/Manage Businesses/manageBusinesses";
 import BusinessAccount from "./Pages/Business Account/businessAccount";
 import Footer from "./components/Footer/Footer";
 
