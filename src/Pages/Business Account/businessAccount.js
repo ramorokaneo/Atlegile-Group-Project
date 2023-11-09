@@ -14,6 +14,7 @@ export default function BusinessAccount() {
   const [bannerModal, setBannerModal] = useState(false);
   const [paymentModal, setPaymentModal] = useState(false);
   const [businessAuthorization, setBusinessAuthorization] = useState(true);
+  const [businessRegistered, setBusinessRegistered] = useState(true);
 
   const list = [1, 2, 3];
   const [image, setImage] = useState(null);
@@ -51,22 +52,25 @@ export default function BusinessAccount() {
       {businessAuthorization ? (
         <div
           style={{
-            position: "absolute",
+            position: "fixed",
             width: "100%",
-            height: "100%",
+
             backgroundColor: "rgba(0, 0, 0, 0.5)", // Semi-transparent black overlay
             display: "flex",
             justifyContent: "center",
-            alignItems: "center",
+            padding: 30,
             zIndex: 1000, // Adjust as needed
+            overscrollBehavior: "contain",
           }}
           onClick={() => setBusinessAuthorization(false)}
         >
           <div
             style={{
               backgroundColor: "white",
-              paddingRight: 40,
-              paddingLeft: 40,
+              paddingRight: 60,
+              paddingLeft: 60,
+              paddingBottom: 20,
+              paddingTop: 20,
             }}
             id="businessAuthorization"
           >
@@ -85,11 +89,18 @@ export default function BusinessAccount() {
               />
             </div>
 
-            <p style={{ fontWeight: 600, fontSize: 30, marginBottom: 5 }}>
+            <p
+              style={{
+                fontWeight: 700,
+                fontSize: 20,
+                marginBottom: 20,
+                textAlign: "center",
+              }}
+            >
               BUSINESS REGISTRATION AUTHORIZATION
             </p>
 
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: "center", fontSize: 15 }}>
               Welcome to AMS, where we strive to ensure a secure and trustworthy
               environment for businesses and customers alike. As part of our
               commitment to maintaining the integrity of our platform, we have
@@ -112,10 +123,22 @@ export default function BusinessAccount() {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
+                  border: "1px gray solid",
                   width: "49%",
+                  padding: 10,
+                  marginBottom: 10,
                 }}
               >
-                <span>Enhance Trust</span>
+                <span
+                  style={{
+                    fontWeight: 700,
+                    fontSize: 15,
+                    marginBottom: 20,
+                    textAlign: "center",
+                  }}
+                >
+                  Enhance Trust
+                </span>
                 <p>
                   By confirming the legitimacy of businesses, we build trust
                   among our users, making it a safer place to conduct business.
@@ -126,10 +149,22 @@ export default function BusinessAccount() {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
+                  border: "1px gray solid",
                   width: "49%",
+                  padding: 10,
+                  marginBottom: 10,
                 }}
               >
-                <span>Review</span>
+                <span
+                  style={{
+                    fontWeight: 700,
+                    fontSize: 15,
+                    marginBottom: 20,
+                    textAlign: "center",
+                  }}
+                >
+                  Review
+                </span>
                 <p>
                   Our dedicated team will review the provided details, ensuring
                   they align with our platform's policies and standards.
@@ -140,10 +175,22 @@ export default function BusinessAccount() {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
+                  border: "1px gray solid",
                   width: "49%",
+                  padding: 10,
+                  marginBottom: 10,
                 }}
               >
-                <span>Verification</span>
+                <span
+                  style={{
+                    fontWeight: 700,
+                    fontSize: 15,
+                    marginBottom: 20,
+                    textAlign: "center",
+                  }}
+                >
+                  Verification
+                </span>
                 <p>
                   In some cases, we may request additional documents or
                   information to verify the authenticity of your business.
@@ -157,13 +204,59 @@ export default function BusinessAccount() {
                   alignItems: "center",
                   border: "1px gray solid",
                   width: "49%",
+                  padding: 10,
+                  marginBottom: 10,
                 }}
               >
-                <span>Approval</span>
+                <span
+                  style={{
+                    fontWeight: 700,
+                    fontSize: 15,
+                    marginBottom: 20,
+                    textAlign: "center",
+                  }}
+                >
+                  Approval
+                </span>
                 <p>
                   Once your registration is approved, your business profile will
                   be live on our platform, and you can start receiving orders
                   for your products and services.
+                </p>
+              </div>
+            </div>
+
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                flexWrap: "wrap",
+                justifyContent: "space-between",
+                paddingTop: 20,
+                paddingBottom: 20,
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  width: "49%",
+                  marginBottom: 10,
+                }}
+              >
+                <span
+                  style={{
+                    fontWeight: 700,
+                    fontSize: 15,
+                    marginBottom: 20,
+                  }}
+                >
+                  Timeframe
+                </span>
+                <p>
+                  The authorization process typically takes [X] business days,
+                  depending on the complexity of your business and the accuracy
+                  of the information provided.
                 </p>
               </div>
 
@@ -171,16 +264,147 @@ export default function BusinessAccount() {
                 style={{
                   display: "flex",
                   flexDirection: "column",
-                  alignItems: "center",
-                  border: "1px gray solid",
                   width: "49%",
+                  marginBottom: 10,
                 }}
               >
-                <span>Approval</span>
+                <span
+                  style={{
+                    fontWeight: 700,
+                    fontSize: 15,
+                    marginBottom: 20,
+                  }}
+                >
+                  Contact Us
+                </span>
                 <p>
-                  Once your registration is approved, your business profile will
-                  be live on our platform, and you can start receiving orders
-                  for your products and services.
+                  If you have any questions or require assistance during the
+                  authorization process, please don't hesitate to contact our
+                  support team at [Contact Information].
+                </p>
+              </div>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                border: "1px lightgray solid",
+                padding: 40,
+              }}
+            >
+              <img
+                src={BusinessAccountPlus}
+                alt="business plus logo"
+                style={{ width: "50%", marginBottom: 5 }}
+              />
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                }}
+              >
+                <p
+                  style={{
+                    color: "#252b42",
+                    fontWeight: 700,
+                    fontSize: 32,
+                    width: "50%",
+                  }}
+                >
+                  BUSINESS PLUS SUBSCRIPTION
+                </p>
+
+                <p
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexDirection: "column",
+                    width: "20%",
+                  }}
+                >
+                  <span
+                    style={{
+                      color: "#23a6f0",
+                      fontWeight: 700,
+                      fontSize: 40,
+                      marginBottom: -10,
+                    }}
+                  >
+                    R150
+                  </span>
+                  <span
+                    style={{ color: "#b8d9f7", fontWeight: 700, fontSize: 20 }}
+                  >
+                    Per Month
+                  </span>
+                </p>
+              </div>
+              <p
+                style={{
+                  color: "#9e9e9e",
+                  fontWeight: 700,
+                  fontSize: 16,
+                  paddingTop: 10,
+                  paddingBottom: 10,
+                }}
+              >
+                Unlock More Opportunities with Business Plus Subscription
+              </p>
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <p
+                  style={{
+                    marginTop: 15,
+                    fontWeight: 700,
+                    fontSize: 18,
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  {" "}
+                  <GoCheckCircleFill
+                    color="#2dc071"
+                    size={30}
+                    style={{ marginRight: 7, marginBottom: 10 }}
+                  />{" "}
+                  List Unlimited Products
+                </p>
+                <p
+                  style={{
+                    fontWeight: 700,
+                    fontSize: 18,
+                    marginTop: 15,
+
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  {" "}
+                  <GoCheckCircleFill
+                    color="#2dc071"
+                    size={30}
+                    style={{ marginRight: 7, marginBottom: 10 }}
+                  />{" "}
+                  Priority Support
+                </p>
+                <p
+                  style={{
+                    fontWeight: 700,
+                    fontSize: 18,
+                    marginTop: 15,
+
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  {" "}
+                  <GoCheckCircleFill
+                    color="#2dc071"
+                    size={30}
+                    style={{ marginRight: 7 }}
+                  />{" "}
+                  Exclusive Promotions
                 </p>
               </div>
             </div>
@@ -190,152 +414,208 @@ export default function BusinessAccount() {
       <FollowUs />
       <NavBar />
 
-      <div style={{ display: "flex", flexDirection: "row", height: "100%" }}>
+      <div style={{ display: "flex", flexDirection: "row" }}>
         <div
           style={{
-            height: "100%",
-            width: "20%",
-            padding: 30,
+            width: businessRegistered ? "20%" : "100%",
+            paddingLeft: 30,
+            paddingRight: 30,
             backgroundColor: "#f5f5f5",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
           }}
         >
-          <div
-            style={{
-              color: "white",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              marginTop: 20,
-            }}
-          >
+          <div id="sideNav">
             <div
               style={{
-                backgroundColor: "lightgray",
-                width: "150px",
-                height: "150px",
+                color: "white",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                borderRadius: "100%",
+                marginTop: 20,
               }}
             >
-              S
-            </div>
-          </div>
-
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              flexDirection: "column",
-            }}
-          >
-            <span style={{ fontSize: 30, fontWeight: 700 }}>SARAH</span>
-            <span style={{ fontSize: 14, fontWeight: 700 }}>0123456789</span>
-            <span style={{ fontWeight: 700 }}>example@mail.ccom</span>
-          </div>
-
-          <div style={{ textAlign: "center", marginTop: 30 }}>
-            <p>
-              1235 Vilakazi Street, Orlando West, Soweto, 1804, South Africa
-            </p>
-          </div>
-
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              flexDirection: "column",
-              padding: 30,
-              backgroundColor: "white",
-              marginTop: 30,
-            }}
-          >
-            <p>
-              <span style={{ color: "#072840", fontWeight: 600, fontSize: 22 }}>
-                Julian Jameson
-              </span>
-              <br />
-              <span style={{ color: "gray", fontWeight: 600 }}>
-                Alternative Contact
-              </span>
-            </p>
-          </div>
-
-          <div style={{ marginTop: 30 }}>
-            <div
-              style={{
-                border: "none",
-                borderBottom: "2px #072840 solid",
-                display: "flex",
-                flexDirection: "row",
-                paddingTop: 10,
-                paddingBottom: 10,
-                alignItems: "center",
-              }}
-            >
-              <IoMdStopwatch color="#072840" style={{ marginRight: 25 }} />
-              <a
-                href="http://localhost:3000/"
+              <div
                 style={{
-                  fontWeight: "bold",
-                  fontSize: 12,
-                  textDecoration: "none",
+                  backgroundColor: "lightgray",
+                  width: "150px",
+                  height: "150px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  borderRadius: "100%",
                 }}
               >
-                ORDER HISTORY
-              </a>
+                S
+              </div>
             </div>
+
             <div
               style={{
-                border: "none",
-                borderBottom: "2px #072840 solid",
                 display: "flex",
-                flexDirection: "row",
-                paddingTop: 10,
-                paddingBottom: 10,
                 alignItems: "center",
+                flexDirection: "column",
               }}
             >
-              <IoMdStopwatch color="#072840" style={{ marginRight: 25 }} />
-              <a
-                href="http://localhost:3000/"
-                style={{
-                  fontWeight: "bold",
-                  fontSize: 12,
-                  textDecoration: "none",
-                }}
-              >
-                TERMS & CONDITIONS
-              </a>
+              <span style={{ fontSize: 30, fontWeight: 700 }}>SARAH</span>
+              <span style={{ fontSize: 14, fontWeight: 700 }}>0123456789</span>
+              <span style={{ fontWeight: 700 }}>example@mail.ccom</span>
             </div>
+
+            <div style={{ textAlign: "center", marginTop: 30 }}>
+              <p>
+                1235 Vilakazi Street, Orlando West, Soweto, 1804, South Africa
+              </p>
+            </div>
+
             <div
               style={{
-                border: "none",
-                borderBottom: "2px #072840 solid",
                 display: "flex",
-                flexDirection: "row",
-                paddingTop: 10,
-                paddingBottom: 10,
                 alignItems: "center",
+                flexDirection: "column",
+                padding: 30,
+                backgroundColor: businessRegistered ? "white" : "",
+                marginTop: 30,
               }}
             >
-              <IoMdStopwatch color="#072840" style={{ marginRight: 25 }} />
-              <a
-                href="http://localhost:3000/"
+              <p>
+                <span
+                  style={{ color: "#072840", fontWeight: 600, fontSize: 22 }}
+                >
+                  Julian Jameson
+                </span>
+                <br />
+                <span style={{ color: "gray", fontWeight: 600 }}>
+                  Alternative Contact
+                </span>
+              </p>
+            </div>
+
+            <div style={{ marginTop: 30 }}>
+              <div
                 style={{
-                  fontWeight: "bold",
-                  fontSize: 12,
-                  textDecoration: "none",
+                  border: "none",
+                  borderBottom: businessRegistered ? "2px #072840 solid" : null,
+                  display: "flex",
+                  flexDirection: "row",
+                  paddingTop: 10,
+                  paddingBottom: 10,
+                  alignItems: "center",
                 }}
               >
-                PRIVACY POLICY
-              </a>
+                <IoMdStopwatch color="#072840" style={{ marginRight: 25 }} />
+                <a
+                  href="http://localhost:3000/"
+                  style={{
+                    fontWeight: "bold",
+                    fontSize: 12,
+                    textDecoration: "none",
+                  }}
+                >
+                  ORDER HISTORY
+                </a>
+              </div>
+              <div
+                style={{
+                  border: "none",
+                  borderBottom: businessRegistered ? "2px #072840 solid" : null,
+                  display: "flex",
+                  flexDirection: "row",
+                  paddingTop: 10,
+                  paddingBottom: 10,
+                  alignItems: "center",
+                }}
+              >
+                <IoMdStopwatch color="#072840" style={{ marginRight: 25 }} />
+                <a
+                  href="http://localhost:3000/"
+                  style={{
+                    fontWeight: "bold",
+                    fontSize: 12,
+                    textDecoration: "none",
+                  }}
+                >
+                  TERMS & CONDITIONS
+                </a>
+              </div>
+              <div
+                style={{
+                  border: "none",
+                  borderBottom: businessRegistered ? "2px #072840 solid" : null,
+                  display: "flex",
+                  flexDirection: "row",
+                  paddingTop: 10,
+                  paddingBottom: 10,
+                  alignItems: "center",
+                }}
+              >
+                <IoMdStopwatch color="#072840" style={{ marginRight: 25 }} />
+                <a
+                  href="http://localhost:3000/"
+                  style={{
+                    fontWeight: "bold",
+                    fontSize: 12,
+                    textDecoration: "none",
+                  }}
+                >
+                  PRIVACY POLICY
+                </a>
+              </div>
+            </div>
+
+            <div
+              style={{
+                // border: "1px #072840 solid",
+                display: businessRegistered?"none":"flex",
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "center",
+                paddingTop: 20,
+                paddingBottom: 150,
+              }}
+            >
+              <div
+                style={{
+                  color: "#072840",
+                  fontWeight: 600,
+                  fontSize: 14,
+                  border: "1px #072840 solid",
+                  padding: 10,
+                  borderRadius: 20,
+                  display: "inline-block",
+                  marginTop: 5,
+                  cursor: "pointer",
+                  marginRight: 5,
+                }}
+                onClick={() => setBusinessAuthorization(true)}
+              >
+                REGISTER BUSINESS
+              </div>
+
+              <div
+                style={{
+                  color: "#072840",
+                  fontWeight: 600,
+                  fontSize: 14,
+                  border: "1px #072840 solid",
+                  padding: 10,
+                  borderRadius: 20,
+                  display: "inline-block",
+                  marginTop: 5,
+                  cursor: "pointer",
+                }}
+                onClick={() => setBusinessAuthorization(true)}
+              >
+                REGISTER AS A FREELANCER
+              </div>
             </div>
           </div>
         </div>
 
-        <div style={{ height: "100%", width: "80%" }}>
+        <div
+          style={{ display: businessRegistered ? "" : "none", width: "80%" }}
+        >
           <div
             style={{
               height: "20%",
@@ -372,7 +652,7 @@ export default function BusinessAccount() {
             </p>
           </div>
 
-          <div style={{ height: "60%" }}>
+          <div style={{}}>
             {editModal ? (
               <div
                 style={{
@@ -958,9 +1238,7 @@ export default function BusinessAccount() {
                     borderRadius: 20,
                     display: "inline-block",
                     marginTop: 5,
-                    cursor: "pointer",
                   }}
-                  onClick={() => setBusinessAuthorization(true)}
                 >
                   AUTHORIZATION PENDING
                 </div>
@@ -987,11 +1265,11 @@ export default function BusinessAccount() {
 
             <div
               style={{
-                // border: "1px lightgray solid",
                 width: "100%",
                 display: "flex",
                 flexDirection: "row",
                 paddingRight: 10,
+                marginBottom: 20,
               }}
             >
               <div style={{ width: "75%" }}>
@@ -1004,7 +1282,7 @@ export default function BusinessAccount() {
 
               <div
                 style={{
-                  width: "26%",
+                  width: "25%",
                   display: "flex",
                   flexDirection: "column",
                   border: "1px lightgray solid",
@@ -1124,7 +1402,7 @@ export default function BusinessAccount() {
           </div>
         </div>
       </div>
-      <div style={{ marginTop: "40vh" }}></div>
+      {/* <div style={{ marginTop: "40vh" }}></div> */}
     </>
   );
 }

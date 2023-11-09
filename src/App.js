@@ -7,11 +7,8 @@ import Footer from "./components/Footer/Footer";
 function App() {
   return (
     <>
-      {/* <div style={{}}>
-        <div style={{}}></div>
-        <div style={{}}></div>
-        <div style={{}}></div>
-      </div> */}
+      {/* <SignIn/>
+      <ManageBusinesses/> */}
       <BusinessAccount />
       <Footer />
     </>
