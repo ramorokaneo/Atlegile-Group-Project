@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { FaGoogle } from "react-icons/fa";
 import './signIn.css'
-
+import { useNavigate} from 'react-router-dom';
 const logo = require("./cropped-AMS-Shadow-Queen-Logo_BNY-1320x772 1.png");
 
 export default function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isEmailValid, setIsEmailValid] = useState(true);
+  const navigate = useNavigate();
   // eslint-disable-next-line
   let validRegex = new RegExp("[a-z0-9]+@[a-z]+.[a-z]{2,3}");
   const handleEmailChange = (e) => {
@@ -20,6 +21,7 @@ export default function SignIn() {
     console.log("Email: ", email);
     console.log("Password: ", password);
     alert("Logged in successfully!")
+    navigate('Dashboard')
   };
 
   return (
