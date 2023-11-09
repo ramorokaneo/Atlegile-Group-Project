@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./SignUp.css";
-import { FcGoogle } from 'react-icons/fc';
+import { FcGoogle } from "react-icons/fc";
 import { FcNext } from "react-icons/fc";
 
 function UserSignUp() {
@@ -27,22 +27,21 @@ function UserSignUp() {
           <img src="./logo.png" alt="Logo" className="logo" />
           <h2 className="signUp">Sign Up</h2>
           <form onSubmit={handleSubmit}>
-
             <label>Email</label>
-            <input 
-              type="email" 
-              placeholder="" 
-              className="form-group" 
+            <input
+              type="email"
+              placeholder=""
+              className="form-group"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
 
             <label>Password</label>
-            <input 
-              type="password" 
-              placeholder="" 
-              className="form-group" 
+            <input
+              type="password"
+              placeholder=""
+              className="form-group"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
@@ -52,14 +51,22 @@ function UserSignUp() {
               <a href="/">FORGOT PASSWORD?</a>
             </div>
 
-            <button className="submit-button" type="submit">SIGN IN</button>
+            <button className="submit-button" type="submit">
+              SIGN IN
+            </button>
 
             <div className="google-signin">
-              <a href="/"><FcGoogle /> SIGN IN WITH GOOGLE</a>
+              <a href="/">
+                <FcGoogle /> SIGN IN WITH GOOGLE
+              </a>
             </div>
-
           </form>
-          <button className="signup-business" onClick={() => console.log("Sign up as a business clicked!")}>SIGN UP AS A BUSINESS <FcNext /></button>
+          <button
+            className="signup-business"
+            onClick={() => console.log("Sign up as a business clicked!")}
+          >
+            SIGN UP AS A BUSINESS <FcNext />
+          </button>
         </div>
       </div>
     </div>

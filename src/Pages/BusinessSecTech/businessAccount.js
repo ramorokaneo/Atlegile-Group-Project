@@ -1,8 +1,8 @@
 import React from "react";
 import { GoCheckCircleFill } from "react-icons/go";
 import BusinessAccountPlus from "../../images/BusinessPlus+.jpg";
-import Card from "../Card/Card";
-import ProductsServices from "../ProductsServices/ProdServices";
+import Card from "../../components/Card/Card";
+import ProductsServices from "../../components/ProductsServices/ProdServices";
 import "./businessAccount.css";
 export default function BusinessAccount() {
   const list = [1, 2, 3];

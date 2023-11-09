@@ -4,7 +4,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("../../../public/bg-img.jpg");
+  background-image: url("./bg-img.jpg");
 }
 
 .form-container {
