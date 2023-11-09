@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaGoogle } from "react-icons/fa";
+import './signIn.css'
 
 const logo = require("./cropped-AMS-Shadow-Queen-Logo_BNY-1320x772 1.png");
 

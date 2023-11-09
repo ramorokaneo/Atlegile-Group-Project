@@ -3,6 +3,7 @@ import { FaStar } from "react-icons/fa";
 import { PiCaretUpDownFill } from "react-icons/pi";
 import { AiOutlineSearch } from "react-icons/ai";
 import clipArt from "./clipArtBusinesses.png";
+import './manageBusiness.css'
 
 export default function ManageBusinesses() {
   function calculateBackgroundProperties() {
