@@ -9,7 +9,7 @@ import { faHeart as faHeartRed } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-const Card = () => {
+const Card = ({open}) => {
   const [isRed, setIsRed] = useState(false);
 
   const toggleHeart = () => {
@@ -75,7 +75,7 @@ const Card = () => {
             $16.48<span>$6.48</span>
           </p>
           <button
-            onClick={() => console.log("View Button Clicked!!!")}
+            onClick={open}
             className="view-button"
           >
             VIEW <img src={RightIcon} className="right-icon" alt="right icon" />
