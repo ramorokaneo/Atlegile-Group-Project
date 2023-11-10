@@ -9,9 +9,9 @@ import { FaInstagram } from "react-icons/fa";
 import { FiYoutube } from "react-icons/fi";
 import { FiTwitter } from "react-icons/fi";
 import { SiFacebook } from "react-icons/si";
-import Logo from "./Logo.png";
+import Logo from "./Logo.png"
 
-import Footer from "../../componets/Footer/Footer";
+import "../../components/Footer/Footer";
 import Datetime from "react-datetime";
 import "react-datepicker/dist/react-datepicker.css";
 import DatePicker from "react-datepicker";
@@ -315,13 +315,13 @@ function DeliveryDone() {
       <div
         style={{
           border: "none",
-          // borderBottom: "1px lightgray solid",
+         // borderBottom: "1px lightgray solid",
           display: "flex",
           flexDirection: "row",
-          // height: "76vh",
+         // height: "76vh",
           width: "100%",
           alignItems: "center",
-          //backgroundColor: "yellow",
+           //backgroundColor: "yellow",
         }}
       >
         <div
@@ -329,7 +329,7 @@ function DeliveryDone() {
             height: "100%",
             width: "20%",
             border: "none",
-            // borderBottom: "1px lightgray solid",
+           // borderBottom: "1px lightgray solid",
             display: "flex",
             flexDirection: "colunm",
             alignItems: "center",
@@ -372,7 +372,7 @@ function DeliveryDone() {
                 flexDirection: "column",
                 justifyContent: "center",
                 alignItems: "center",
-                //   backgroundColor: "red",
+              //   backgroundColor: "red",
               }}
             >
               <div
@@ -385,7 +385,7 @@ function DeliveryDone() {
                   flexDirection: "column",
                   justifyContent: "flex-start",
                   alignItems: "flex-start",
-                  //    backgroundColor: "yellow",
+               //    backgroundColor: "yellow",
                   //paddingTop:'10px'
                 }}
               >
@@ -399,7 +399,7 @@ function DeliveryDone() {
                     alignItems: "flex-start",
                     paddingTop: "20px",
                     flexDirection: "column",
-                    //     backgroundColor: "blue",
+                  //     backgroundColor: "blue",
                   }}
                 >
                   <div
@@ -581,16 +581,17 @@ function DeliveryDone() {
                     justifyContent: "center",
                     display: "flex",
                     alignItems: "flex-start",
-                    // paddingTop: "20px",
+                   // paddingTop: "20px",
                     flexDirection: "column",
-                    //   backgroundColor: "yellow",
+                 //   backgroundColor: "yellow",
                   }}
                 >
+                
                   <div
                     style={{
                       height: "10vh",
                       width: "100%",
-                      //    backgroundColor: "green",
+                    //    backgroundColor: "green",
                     }}
                   >
                     <div
@@ -876,7 +877,7 @@ function DeliveryDone() {
                   justifyContent: "flex-start",
                   alignItems: "flex-start",
                   borderBottom: "1px white solid",
-                  marginBottom: "10px",
+                  marginBottom:"10px"
                 }}
               >
                 <p
@@ -884,6 +885,7 @@ function DeliveryDone() {
                     fontSize: "0.9rem",
                     color: "white",
                     margin: "0",
+                   
                   }}
                 >
                   In essence, AMS aims not to only he businesses grow but also
@@ -1264,6 +1266,7 @@ function DeliveryDone() {
                             >
                               2
                             </p>
+                           
                           </div>
                         </div>
                         {/* Component 2 */}
@@ -1318,6 +1321,7 @@ function DeliveryDone() {
                             >
                               2
                             </p>
+                           
                           </div>
                         </div>
 
@@ -1373,6 +1377,7 @@ function DeliveryDone() {
                             >
                               2
                             </p>
+                           
                           </div>
                         </div>
                       </div>
@@ -1424,15 +1429,17 @@ function DeliveryDone() {
             height: "100%",
             width: "20%",
             border: "none",
-            // borderBottom: "1px lightgray solid",
+           // borderBottom: "1px lightgray solid",
             display: "flex",
             flexDirection: "row",
             alignItems: "center",
             //  backgroundColor:'red'
           }}
-        ></div>
+        >
+ 
+        </div>
       </div>
-      <Footer />
+
       {/* <div
         style={{
           backgroundColor: " #070f18",
