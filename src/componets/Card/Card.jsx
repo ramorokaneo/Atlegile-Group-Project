@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./card.css"; // Create a CSS file for styling
+import { Link } from "react-router-dom";
 import downloadIcon from "../../icons/download.svg";
 import RightIcon from "../../icons/icon-right.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -92,12 +93,13 @@ const Card = () => {
           <p className="card-prices">
             $16.48<scan>$6.48</scan>
           </p>
-          <button
+          <Link
+            to="/product-details"
             onClick={() => console.log("View Button Clicked!!!")}
             className="view-button"
           >
             VIEW <img src={RightIcon} className="right-icon" alt="right icon" />
-          </button>
+          </Link>
         </div>
       </div>
     </div>
