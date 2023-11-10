@@ -1,12 +1,17 @@
-
 import React from "react";
-import picture from "./GroupAtlegileUsers.png";
+//import picture from "./GroupAtlegileUsers.png";
 import { FaStar } from "react-icons/fa";
 import { PiCaretUpDownFill } from "react-icons/pi";
 import { PiCaretDownFill } from "react-icons/pi";
-
+import { FiPhone } from "react-icons/fi";
+import { AiOutlineMail } from "react-icons/ai";
+import { FaInstagram } from "react-icons/fa";
+import { FiYoutube } from "react-icons/fi";
+import { FiTwitter } from "react-icons/fi";
+import { SiFacebook } from "react-icons/si";
 import { AiOutlineSearch } from "react-icons/ai";
 import "./OrderHistory.css";
+import Logo from "./Logo.png";
 
 function OrderHistory() {
   function calculateBackgroundProperties() {
@@ -94,32 +99,191 @@ function OrderHistory() {
     >
       <div
         style={{
-          height: "5%",
+          height: "5vh",
           width: "100%",
           border: "none",
-          borderBottom: "1px lightgray solid",
           display: "flex",
           flexDirection: "row",
-
           alignItems: "center",
           backgroundColor: "#072840",
         }}
       >
-        <span>Shohn's part</span>
+        <div
+          style={{
+            height: "5vh",
+            width: "23%",
+            // backgroundColor: "red",
+          }}
+        ></div>
+
+        <FiPhone style={{ width: "1%", color: "white" }} />
+        <div style={{ width: "7%", color: "white" }}>(225) 555-0118</div>
+
+        <AiOutlineMail style={{ width: "1%", color: "white" }} />
+        <div style={{ width: "9%", color: "white" }}>
+          <p style={{ fontSize: "0.7rem" }}>michelle.rivera@example.com</p>
+        </div>
+        <div style={{ width: "20%", color: "white", fontWeight: "bold" }}>
+          Follow US and get a chance to win 80% off
+        </div>
+
+        <div style={{ width: "5%", color: "white", fontWeight: "bold" }}>
+          Follow Us :
+        </div>
+
+        <div style={{ width: "1.5%", color: "white" }}>
+          <FaInstagram />
+        </div>
+        <div style={{ color: "white", width: "1.5%" }}>
+          <FiYoutube />
+        </div>
+        <div style={{ color: "white", width: "1.5%" }}>
+          <SiFacebook />
+        </div>
+        <div style={{ color: "white", width: "1.5%" }}>
+          <FiTwitter />
+        </div>
+        <div
+          style={{
+            height: "5vh",
+            width: "30%",
+            // backgroundColor: "red",
+          }}
+        ></div>
       </div>
       <div
         style={{
-          height: "7%",
+          height: "10vh",
           width: "100%",
           border: "none",
-          borderBottom: "1px lightgray solid",
           display: "flex",
           flexDirection: "row",
           alignItems: "center",
-          backgroundColor: "#072840",
+          // backgroundColor: "green",
         }}
       >
-        <span>Dlozi's part</span>
+        <div
+          style={{
+            height: "100%",
+            width: "20%",
+            border: "none",
+            display: "flex",
+            flexDirection: "colunm",
+            alignItems: "center",
+            paddingBottom: "100px",
+          }}
+        ></div>
+
+        <div
+          style={{
+            width: "40%",
+          }}
+        >
+          <img
+            style={{
+              paddingLeft: "10px",
+              position: "relative",
+              height: "auto",
+              width: "100px",
+            }}
+            src={Logo}
+            alt=""
+          />
+        </div>
+
+        <div
+          style={{
+            width: "80px",
+            height: "40px",
+            backgroundColor: "#072840",
+            borderRadius: 50,
+            alignItems: "center",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          {" "}
+          <p style={{ color: "white" }}>SHOP</p>
+        </div>
+
+        <div
+          style={{
+            width: "100px",
+            height: "40px",
+            //backgroundColor: "#072840",
+            alignItems: "center",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          ABOUT US
+        </div>
+
+        <div
+          style={{
+            width: "140px",
+            height: "40px",
+            alignItems: "flex-start",
+            display: "flex",
+            justifyContent: "center",
+            flexDirection: "row",
+            //backgroundColor:'red'
+          }}
+        >
+          <div
+            style={{
+              width: "40px",
+              height: "40px",
+              backgroundColor: "gray",
+              borderRadius: "8%",
+              //  paddingLeft:32
+              alignItems: "center",
+              display: "flex",
+              justifyContent: "center",
+              flex: 1,
+            }}
+          >
+            <p style={{ fontSize: "1.4rem", color: "white" }}>AS</p>
+          </div>
+          <div
+            style={{
+              width: "100px",
+              height: "40px",
+              alignItems: "flex-start",
+              display: "flex",
+              justifyContent: "center",
+              flexDirection: "column",
+              //  backgroundColor: "brown",
+            }}
+          >
+            <div
+              style={{
+                margin: 0,
+                fontWeight: "medium",
+              }}
+            >
+              <p style={{ paddingLeft: 10, margin: 0, fontSize: "1.2rem" }}>
+                Welcome
+              </p>
+            </div>
+            <div>
+              <p style={{ paddingLeft: 10, fontSize: "0.8rem", margin: 0 }}>
+                Jane
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          style={{
+            height: "100%",
+            width: "22%",
+            border: "none",display: "flex",
+            flexDirection: "colunm",
+            alignItems: "center",
+            // backgroundColor: "blue",
+          }}
+        ></div>
       </div>
       <div
         style={{
@@ -130,7 +294,7 @@ function OrderHistory() {
           height: "60%",
           width: "100%",
           alignItems: "center",
-          //   backgroundColor: "yellow",
+         //   backgroundColor: "yellow",
         }}
       >
         <div
@@ -142,7 +306,7 @@ function OrderHistory() {
             display: "flex",
             flexDirection: "row",
             alignItems: "center",
-            //   backgroundColor: "blue",
+            //  backgroundColor: "blue",
           }}
         ></div>
         <div
@@ -155,7 +319,7 @@ function OrderHistory() {
             flexDirection: "row",
             justifyContent: "flex-start",
             alignItems: "flex-start",
-            //   backgroundColor: "green",
+           // backgroundColor: "green",
           }}
         >
           <div
@@ -163,12 +327,12 @@ function OrderHistory() {
               height: "100%",
               width: "100%",
               border: "none",
-              // borderBottom: "1px lightgray solid",
+              //borderBottom: "1px lightgray solid",
               display: "flex",
               flexDirection: "column",
               justifyContent: "flex-start",
               alignItems: "flex-start",
-               // backgroundColor: "green",
+             // backgroundColor: "red",
             }}
           >
             <die
@@ -176,22 +340,18 @@ function OrderHistory() {
                 height: "15%",
                 width: "60%",
                 border: "none",
-                // borderBottom: "1px lightgray solid",
                 display: "flex",
                 flexDirection: "row",
                 justifyContent: "flex-start",
                 alignItems: "flex-start",
-                //  backgroundColor: "green",
               }}
             >
-              <div className="headings">
+              <div style={{height:"50px", width: "100%", display:"flex", justifyContent:"space-between"}}>
                 <div
                   style={{
                     border: "none",
                     width: "20%",
-                    //   backgroundColor:'pink',
                     height: "100%",
-                    //borderBottom: "1px lightgray solid",
                     fontSize: "1rem",
                     fontWeight: "bold",
                     paddingTop: "15px",
@@ -202,9 +362,7 @@ function OrderHistory() {
                 <div
                   style={{
                     width: "40%",
-                    //   backgroundColor:'pink',
                     height: "100%",
-                    //  paddingLeft: 3,
                     borderBottom: "1px lightgray solid",
                     color: "gray",
                   }}
@@ -233,7 +391,6 @@ function OrderHistory() {
                     style={{
                       width: "90%",
                       height: "100%",
-                      //   backgroundColor: "pink",
                       color: "gray",
                     }}
                   >
@@ -243,7 +400,6 @@ function OrderHistory() {
                     style={{
                       width: "10%",
                       height: "100%",
-                      //   backgroundColor: "yellow",
                       justifyContent: "center",
                       alignItems: "center",
                       display: "flex",
@@ -258,16 +414,15 @@ function OrderHistory() {
                 <div
                   style={{
                     width: "10%",
-                    //  borderBottom: "1px lightgray solid",
                     height: "100%",
-                    // backgroundColor: "yellow",
-                    justifyContent: "flex-start",
+                    display:"flex",
+                    justifyContent: "center",
                     alignItems: "center",
-                    display: "flex",
+                    
                   }}
                 >
-                  <p style={{ fontSize: "40px", marginBottom: "40px" }}>
-                    <AiOutlineSearch color="gray" />
+                  <p style={{ fontSize: "40px" }}>
+                    <AiOutlineSearch color="black" />
                   </p>
                 </div>
               </div>
@@ -419,7 +574,8 @@ function OrderHistory() {
             borderBottom: "1px lightgray solid",
             display: "flex",
             flexDirection: "row",
-            alignItems: "center",          
+            alignItems: "center",
+          //  backgroundColor:"blue"
           }}
         ></div>
       </div>
