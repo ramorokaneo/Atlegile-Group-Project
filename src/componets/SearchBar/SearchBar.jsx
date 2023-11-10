@@ -14,7 +14,7 @@ export default function SearchBar() {
         />
       </div>
       <div className="search-bar-body">
-        <div className="logo">
+        <div className="search-bar-logo">
           <img
             className="logo-image"
             src={"./images/logo2.png"}

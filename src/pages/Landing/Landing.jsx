@@ -19,12 +19,28 @@ function Landing() {
       <Navbar />
       <SearchBar />
       <Explore />
-      <SecureTech />
+      <div
+        style={{ paddingLeft: "20vw", display: "flex", alignItems: "center" }}
+      >
+        <SecureTech />
+      </div>
       <SaveBigHeader />
-      <LearnZa />
-      <TechWise />
+      <div
+        style={{ paddingLeft: "20vw", display: "flex", alignItems: "center" }}
+      >
+        <LearnZa />
+      </div>
+      <div
+        style={{ paddingLeft: "20vw", display: "flex", alignItems: "center" }}
+      >
+        <TechWise />
+      </div>
       <SaveBigHeader />
-      <MindMatters />
+      <div
+        style={{ paddingLeft: "20vw", display: "flex", alignItems: "center" }}
+      >
+        <MindMatters />
+      </div>
       <AfricaBusines />
 
       <Footer />
