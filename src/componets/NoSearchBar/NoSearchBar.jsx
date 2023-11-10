@@ -4,9 +4,9 @@ export default function NoSearchBar() {
   return (
     <div className="no-search-bar-container">
       <div className="no-search-bar-body">
-        <div className="logo">
+        <div className="no-search-bar-logo">
           <img
-            className="logo-image"
+            className="no-search-bar-logo-image"
             src={"./images/logo2.png"}
             alt="AMS COMPANY"
           />
