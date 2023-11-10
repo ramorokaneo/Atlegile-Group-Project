@@ -1,4 +1,4 @@
-.footer {
+.atlegile-footer {
   background-color: #070f18;
   height: 50vh;
   color: white;
@@ -14,12 +14,12 @@
 .container {
   color: white;
 }
-.logo {
+.atlegile-footer-logo {
   height: 50px;
   color: white;
   margin-bottom: 30px;
 }
-.footer-hero {
+.atlegile-footer-hero {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -27,11 +27,11 @@
   width: 70vw;
   margin-left: 10vw;
 }
-.company-text {
+.atlegile-footer-company-text {
   text-transform: uppercase;
   padding-bottom: 80px;
 }
-.footer-body {
+.atlegile-footer-body {
   /* background-color: red; */
   height: 40vh;
   width: 35vw;
@@ -42,14 +42,14 @@
   margin-bottom: 50px;
   /* flex-grow: 2; */
 }
-.footer-body p {
+.atlegile-footer-body p {
   font-weight: 700;
 }
-.footer-body h3 {
+.atlegile-footer-body h3 {
   font-size: 30px;
   text-transform: uppercase;
 }
-.footer-links {
+.atlegile-footer-links {
   display: flex;
   height: 30vh;
   flex-direction: column;
@@ -61,14 +61,14 @@
   padding-top: 45px;
   padding-bottom: 15px;
 }
-.footer-links a {
+.atlegile-footer-links a {
   text-decoration: none;
   color: white;
 }
-.email-text {
+.atlegile-footer-email-text {
   font-weight: bold;
 }
-.footer-container {
+.atlegile-footer-container {
   display: flex;
   /* background-color: white; */
   margin-top: 80px;
@@ -77,7 +77,7 @@
   align-items: center;
   width: 80vw;
 }
-.lion-image {
+.atlegile-footer-lion-image {
   height: 250px;
   color: white;
   position: absolute;
@@ -85,7 +85,7 @@
   right: 0;
 }
 
-.lion-image-container {
+.atlegile-footer-lion-image-container {
   /* background-color: red; */
   height: 20vh;
 }
