@@ -25,12 +25,11 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/signin" element={<SignIN />} />
-        <Route path="/signup" element={<UserSignUp />}>
-          <Route path="contact" element={<altContact />} />
-          <Route path="main" element={<MainAcc />} />
-        </Route>
-        <Route path="/register" element={<UserSignUp />} />
+        <Route path="/sign-in" element={<SignIN />} />
+        <Route path="/sign-up" element={<UserSignUp />}></Route>
+        <Route path="/contact" element={<altContact />} />
+        <Route path="/main" element={<MainAcc />} />
+        {/* <Route path="/register" element={<UserSignUp />} /> */}
         <Route path="/about-us" element={<AboutUsPage />} />
         <Route path="/business-account" element={<BusinessAccount />} />
         <Route path="/business-tech" element={<BusinessTech />} />
