@@ -16,6 +16,7 @@ import ProductDetails from "../pages/ProductDetails/ProductDetails";
 import SignIN from "../pages/Sign_In_Screen/Signinscreen";
 import UserSignUp from "../pages/UserSignUp/UserSignUp";
 //import { useSelector } from "react-redux";
+import OrderHistory from "../pages/Order History/OrderHistory";
 import { BrowserRouter } from "react-router-dom";
 
 const App = () => {
@@ -25,17 +26,17 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/signin" element={<SignIN />} />
-        <Route path="/signup" element={<UserSignUp />}>
-          <Route path="contact" element={<altContact />} />
-          <Route path="main" element={<MainAcc />} />
-        </Route>
-        <Route path="/register" element={<UserSignUp />} />
+        <Route path="/sign-in" element={<SignIN />} />
+        <Route path="/sign-up" element={<UserSignUp />}></Route>
+        <Route path="/contact" element={<altContact />} />
+        <Route path="/main" element={<MainAcc />} />
+        {/* <Route path="/register" element={<UserSignUp />} /> */}
         <Route path="/about-us" element={<AboutUsPage />} />
         <Route path="/business-account" element={<BusinessAccount />} />
         <Route path="/business-tech" element={<BusinessTech />} />
         <Route path="/delivery-done" element={<DeliveryDone />} />
         <Route path="/product-details" element={<ProductDetails />} />
+        <Route path="/order-history" element={<OrderHistory />} />
         <Route path="*" element={<h1>PAGE NOT FOUND</h1>} />
       </Routes>
     </BrowserRouter>
