@@ -8,6 +8,10 @@ import { faMinus } from "@fortawesome/free-solid-svg-icons";
 import MindMatters from "../MindMatters/MindMatters";
 import circle from "../../images/circle.svg";
 import Reviews from "../Reviews/Reviews";
+import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import star from "../../images/Vector.svg";
+import star2 from "../../images/Vector_2.svg";
 
 export default function ProductDetail() {
   const [quantity, setQuantity] = React.useState(1);
@@ -86,6 +90,25 @@ export default function ProductDetail() {
                   return <Reviews />;
                 })}
               </div>
+            </div>
+            <div className="Product-details-pagination-container">
+              <div className="Product-details-pagination">
+                <FontAwesomeIcon icon={faChevronLeft} />
+                <p>1 </p>
+                <p>2</p>
+                <FontAwesomeIcon icon={faChevronRight} />
+              </div>
+            </div>
+            <div className="add-review-container">
+              <div className="add-review-stars">
+                <img src={star} alt="" />
+                <img src={star} alt="" />
+                <img src={star} alt="" />
+                <img src={star2} alt="" />
+                <img src={star2} alt="" />
+              </div>
+              <input type="text" placeholder="Write a review..." required />
+              <button className="add-review-btn">Review</button>
             </div>
             <p className="floating-display">Physical</p>
           </div>
