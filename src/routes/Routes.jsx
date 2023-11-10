@@ -16,6 +16,7 @@ import ProductDetails from "../pages/ProductDetails/ProductDetails";
 import SignIN from "../pages/Sign_In_Screen/Signinscreen";
 import UserSignUp from "../pages/UserSignUp/UserSignUp";
 //import { useSelector } from "react-redux";
+import OrderHistory from "../pages/Order History/OrderHistory";
 import { BrowserRouter } from "react-router-dom";
 
 const App = () => {
@@ -35,6 +36,7 @@ const App = () => {
         <Route path="/business-tech" element={<BusinessTech />} />
         <Route path="/delivery-done" element={<DeliveryDone />} />
         <Route path="/product-details" element={<ProductDetails />} />
+        <Route path="/order-history" element={<OrderHistory />} />
         <Route path="*" element={<h1>PAGE NOT FOUND</h1>} />
       </Routes>
     </BrowserRouter>
