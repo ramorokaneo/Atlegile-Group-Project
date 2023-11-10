@@ -4,8 +4,12 @@ import { FaStar } from "react-icons/fa";
 import { PiCaretUpDownFill } from "react-icons/pi";
 import { AiOutlineSearch } from "react-icons/ai";
 import "./ManageUserSceen.css";
+import { useNavigate } from "react-router-dom";
 function ManageUserScreen() {
+const navigate = useNavigate()
+
   function calculateBackgroundProperties() {
+
     const screenWidth = window.innerWidth;
     const screenHeight = window.innerHeight;
     let backgroundPositionX, backgroundPositionY, backgroundSize;
@@ -101,22 +105,22 @@ function ManageUserScreen() {
   ];
 
   const handlePress = () => {
-    console.log(`Pressed`);
+   console.log('Pressed');
   };
   const handleNavigateToAdmin = () => {
-    console.log(`Admin`);
+   navigate('/Admin');
   };
 
   const handleNavigateToDashboard = () => {
-    console.log(`Dashboard`);
+    navigate('/Dashboard');
   };
 
   const handleNavigateToBusinesses = () => {
-    console.log(`Businesses`);
+   navigate('/Businesses');
   };
 
   const handleNavigateToUsers = () => {
-    console.log(`Users`);
+    navigate('/mangeusers');
   };
 
   return (

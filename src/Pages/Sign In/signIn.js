@@ -21,7 +21,7 @@ export default function SignIn() {
     console.log("Email: ", email);
     console.log("Password: ", password);
     alert("Logged in successfully!")
-    navigate('Dashboard')
+    navigate('/Dashboard')
   };
 
   return (

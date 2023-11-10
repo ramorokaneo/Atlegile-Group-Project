@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { AiOutlineSearch } from "react-icons/ai";
 import { PiCaretUpDownFill } from "react-icons/pi";
-import clip from "../images/cilp.png";
+import clip from "./cilp.png";
 import { useNavigate } from 'react-router-dom';
 const fakeUsersList = [
   {
@@ -109,15 +109,15 @@ export default function WelcomeToAMS() {
 
   const handleNavigateToDashboard = () => {
    
-    navigate("Dashboard")
+    navigate('/Dashboard')
   };
 
   const handleNavigateToBusinesses = () => {
-    navigate("Businesses");
+    navigate('/Businesses');
   };
 
   const handleNavigateToUsers = () => {
-    navigate("mangeusers");
+    navigate('/mangeusers');
   };
   return (
     <div
