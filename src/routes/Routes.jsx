@@ -24,7 +24,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Navigate to="/login" />} />
+        <Route path="/" element={<Landing />} />
         <Route path="/signin" element={<SignIN />} />
         <Route path="/signup" element={<UserSignUp />}>
           <Route path="contact" element={<altContact />} />
@@ -35,8 +35,8 @@ const App = () => {
         <Route path="/business-account" element={<BusinessAccount />} />
         <Route path="/business-tech" element={<BusinessTech />} />
         <Route path="/delivery-done" element={<DeliveryDone />} />
-        <Route path="/home" element={<Landing />} />
-        <Route path="/product-details" element={<ProductDetails />} />=
+        <Route path="/product-details" element={<ProductDetails />} />
+        <Route path="*" element={<h1>PAGE NOT FOUND</h1>} />
       </Routes>
     </BrowserRouter>
   );
