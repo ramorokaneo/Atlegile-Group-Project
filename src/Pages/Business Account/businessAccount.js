@@ -516,6 +516,7 @@ export default function BusinessAccount() {
                   ORDER HISTORY
                 </a>
               </div>
+
               <div
                 style={{
                   border: "none",
@@ -539,6 +540,31 @@ export default function BusinessAccount() {
                   TERMS & CONDITIONS
                 </a>
               </div>
+
+              <div
+                style={{
+                  border: "none",
+                  borderBottom: businessRegistered ? "2px #072840 solid" : null,
+                  display: "flex",
+                  flexDirection: "row",
+                  paddingTop: 10,
+                  paddingBottom: 10,
+                  alignItems: "center",
+                }}
+              >
+                <IoMdStopwatch color="#072840" style={{ marginRight: 25 }} />
+                <a
+                  href="http://localhost:3000/"
+                  style={{
+                    fontWeight: "bold",
+                    fontSize: 12,
+                    textDecoration: "none",
+                  }}
+                >
+                  TERMS & CONDITIONS
+                </a>
+              </div>
+
               <div
                 style={{
                   border: "none",
@@ -567,7 +593,7 @@ export default function BusinessAccount() {
             <div
               style={{
                 // border: "1px #072840 solid",
-                display: businessRegistered?"none":"flex",
+                display: businessRegistered ? "none" : "flex",
                 flexDirection: "row",
                 alignItems: "center",
                 justifyContent: "center",
@@ -1262,7 +1288,7 @@ export default function BusinessAccount() {
                 </div>
               </div>
             </div>
-
+            <div></div>
             <div
               style={{
                 width: "100%",
