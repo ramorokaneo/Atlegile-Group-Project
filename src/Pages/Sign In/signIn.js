@@ -3,7 +3,9 @@ import { FaGoogle } from "react-icons/fa";
 import "./signIn.css";
 import { useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "./firebaseConfig";
+import { auth, googleProvider } from "./firebaseConfig";
+import { signInWithPopup } from "firebase/auth";
+
 const logo = require("./cropped-AMS-Shadow-Queen-Logo_BNY-1320x772 1.png");
 
 export default function SignIn() {
@@ -17,6 +19,18 @@ export default function SignIn() {
     const inputEmail = e.target.value;
     setEmail(inputEmail);
     setIsEmailValid(validRegex.test(inputEmail));
+  };
+
+  const signInWithGoogle = async () => {
+    try {
+      const result = await signInWithPopup(auth, googleProvider);
+      const user = result.user;
+      console.log("Google Sign-In Success:", user);
+      alert("Logged in successfully!");
+      navigate("/Dashboard");
+    } catch (error) {
+      console.error("Google Sign-In Error:", error.message);
+    }
   };
 
   const handleSignIn = () => {
@@ -183,9 +197,8 @@ export default function SignIn() {
               justifyContent: "center",
             }}>
             <FaGoogle color="#d32f2f" size={20} />
-            <a
+            <button
               className="button google"
-              href="http://localhost:3000/"
               style={{
                 color: "#d32f2f",
                 marginLeft: 5,
@@ -193,9 +206,13 @@ export default function SignIn() {
                 textDecoration: "none",
                 paddingTop: 15,
                 paddingBottom: 15,
-              }}>
+                border: "none",
+                backgroundColor: "#fff",
+                cursor: "pointer",
+              }}
+              onClick={signInWithGoogle}>
               SIGN IN WITH GOOGLE
-            </a>
+            </button>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
+import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore, doc } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -16,6 +16,7 @@ const firebaseConfig = {
   messagingSenderId: "140459942721",
   appId: "1:140459942721:web:3df294e58375a0fa3ff7c0",
   measurementId: "G-Q47XMTPVK3",
+  clientId: "140459942721-2ust092ib4ab69884blse1293hk4h2dl.apps.googleusercontent.com", 
 };
 
 // Initialize Firebase
@@ -23,6 +24,15 @@ const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 export const auth = getAuth(app);
 export const storage = getStorage(app);
-export { doc };
+const googleProvider = new GoogleAuthProvider();
+googleProvider.addScope("profile");
+googleProvider.addScope("email");
+
+export { doc, app, googleProvider };
+// export const db = getFirestore(app);
+// export const storage = getStorage(app);
+
+// export default app;
+// export { doc };
 
 export default app;
