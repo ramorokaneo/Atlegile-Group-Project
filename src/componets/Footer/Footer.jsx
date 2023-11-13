@@ -26,7 +26,7 @@ function Footer() {
             </p>
           </div>
           <div className="atlegile-footer-links">
-            <a href="#">
+            <a href="/order-history">
               <h4>ORDER HISTORY</h4>
             </a>
             <a href="#">
