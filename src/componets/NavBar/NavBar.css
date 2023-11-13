@@ -1,0 +1,67 @@
+/* Navbar-atlagile styles */
+.navbar-atlagile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  padding-inline: 15vw;
+  /* background-color: #333; */
+  color: #fff;
+}
+
+/* Logo styles */
+.navbar-atlagile-logo img {
+  max-width: 200px; /* Adjust the maximum width of your logo */
+}
+.navbar-atlagile-logo img:hover {
+  cursor: pointer;
+}
+/* Button styles */
+.navbar-atlagile-buttons {
+  display: flex;
+  gap: 10px; /* Add some spacing between buttons */
+}
+.btn-atlagile {
+  /* padding: 4px 5px; */
+  padding-bottom: 8px;
+  padding-inline: 8px;
+  /* padding: 4px; */
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
+  background-color: white;
+  /* background-color: rgb(170, 26, 26); */
+  font-size: 20px;
+  color: #252b42;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  border: 1px solid #252b42; /* Set the border size and color */
+  box-shadow: none; /* Remove the box shadow */
+}
+
+.btn-atlagile:hover {
+  background-color: #252b42;
+  color: white;
+  cursor: pointer;
+}
+
+.more-info .btn-atlagile {
+  /* background-color: blue; */
+  border: none;
+  padding: 8px;
+  text-transform: uppercase;
+
+  /* margin-left: 10px; */
+  padding-right: 18px;
+  padding-left: 18px;
+}
+
+.login .btn-atlagile {
+  /* background-color: red; */
+  text-transform: uppercase;
+  padding: 8px;
+  margin-left: 10px;
+  padding-right: 18px;
+  padding-left: 18px;
+}

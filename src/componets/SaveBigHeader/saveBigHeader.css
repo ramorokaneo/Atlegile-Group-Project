@@ -1,0 +1,61 @@
+.big-save-header-container {
+  color: white;
+  width: 100vw;
+
+  /* background-color: red; */
+  align-self: center;
+  margin-bottom: 40px;
+}
+.big-save-header-body {
+  background-color: #252b42;
+  width: 60vw;
+  height: 20vh;
+  margin-inline: auto;
+  align-items: center;
+  display: flex;
+  align-self: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-inline: 50px;
+}
+/* .arrow {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent; /* Adjust size as needed 
+  border-right: 10px solid transparent; /* Adjust size as needed 
+  border-bottom: 20px solid black; /* Adjust size and color as needed 
+  display: inline-block;
+  position: relative;
+} */
+.gold-price {
+  display: inline;
+  background-color: "red";
+  color: red;
+  width: 5vw;
+  font-size: 24px;
+  margin-right: 10px;
+}
+.arrow-left-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icons:hover {
+  cursor: pointer;
+}
+.smart-tv-text {
+  font-size: 30px;
+}
+.big-save-header-body-text {
+  margin-left: 35px;
+  text-align: left;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* align-items: center; */
+  /* background-color: red; */
+  height: 20vh;
+}
