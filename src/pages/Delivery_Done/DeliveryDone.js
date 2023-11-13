@@ -110,7 +110,9 @@ function DeliveryDone() {
   };
 
   return (
-    <div
+ 
+<>
+<div
       style={{
         height: "100vh",
         width: "100vw",
@@ -225,10 +227,11 @@ function DeliveryDone() {
             alignItems: "center",
             display: "flex",
             justifyContent: "center",
+            color:"white"
           }}
         >
           {" "}
-          <p style={{ color: "white" }}>SHOP</p>
+          SHOP
         </div>
 
         <div
@@ -266,9 +269,11 @@ function DeliveryDone() {
               display: "flex",
               justifyContent: "center",
               flex: 1,
+              fontSize:"1.4rem",
+              color:"white"
             }}
           >
-            <p style={{ fontSize: "1.4rem", color: "white" }}>AS</p>
+           AS
           </div>
           <div
             style={{
@@ -1177,17 +1182,12 @@ function DeliveryDone() {
                           display: "flex",
                           border: "1px white solid",
                           marginTop: "30px",
+                          fontSize: "1rem",
+                          color: "white",
                         }}
                         onClick={handleComponentB}
                       >
-                        <p
-                          style={{
-                            fontSize: "1rem",
-                            color: "white",
-                          }}
-                        >
-                          ONGOING
-                        </p>
+                        ONGOING
                       </div>
                     </div>
                   </>
@@ -1399,18 +1399,13 @@ function DeliveryDone() {
                           display: "flex",
                           alignItems: "center",
                           border: "1px white solid",
-                        }}
-                      >
-                        <p
-                          style={{
-                            fontSize: "1.2rem",
+                          fontSize: "1.2rem",
                             color: "white",
                             // fontWeight: "bold",
                             paddingBottom: "10px",
-                          }}
-                        >
-                          CHECKOUT
-                        </p>
+                        }}
+                      >
+                        CHECKOUT
                       </div>
                     </div>
                   )}
@@ -1432,142 +1427,10 @@ function DeliveryDone() {
           }}
         ></div>
       </div>
-      <Footer />
-      {/* <div
-        style={{
-          backgroundColor: " #070f18",
-          width: "100%",
-          height: "50vh",
-          display:"flex",
-          flexDirection:"row"
-        }}
-      >
-        <div style={{ width: "80%", height: "50vh", }}>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-between",
-              width: "70vw",
-              marginLeft: "20vw",
-             
-            }}
-          >
-            <div
-              style={{
-                height: "45vh",
-                width: "50vw",
-               // backgroundColor: "yellow",
-                display: "flex",
-                flexDirection: "row",
-              }}
-            >
-              <div
-                style={{
-                  height: "45vh",
-                  width: "30vw",
-                 //  backgroundColor: "red",
-                }}
-              >
-                <div style={{ height: "10vh", marginTop: "3vh" }}>
-                  <img
-                  //  style={{}}
-                    src={"./images/logo2.png"}
-                    alt="AMS COMPANY"
-                  />
-                </div>
-                <h3
-                  style={{ color: "white", boder: "none", fontWeight: "bold", marginBottom:"4vh" }}
-                >
-                  Marketing Services
-                </h3>
-                <p
-                  style={{
-                    color: "white",
-                    boder: "none",
-                    marginBottom: "4vh",
-                    fontWeight:'bold'
-                  }}
-                >
-                  Welcome to AMS, where we specialize in building beautiful
-                  brands, marketing African businesses, and connecting them with
-                  a global customer base, driving sales of their exceptional
-                  products and services.
-                </p>
-                <p style={{ color: "white", fontWeight: "bold", paddingTop:'15px' }}>
-                  atlegilemarketing.co.za
-                </p>
-              </div>
-
-              <div
-                style={{
-                  height: "45vh",
-                  width: "20vw",
-                //  backgroundColor: "white",
-                 alignItems:"center",
-                 display:"flex"
-                }}
-              >
-                <div
-                  style={{
-                    display: "fext",
-                    height: "20vh",
-                    flexDirection: "column",
-                    justifyContent: "space-between",
-                   // paddingTop: "40px",
-                  }}
-                >
-                  <div>
-                    <p
-                      style={{
-                        color: "white",
-                        textTransform: "uppercase",
-                        boder: "none",
-                      }}
-                    >
-                      ORDER HISTORY
-                    </p>
-                  </div>
-                  <div>
-                    <p style={{ color: "white", paddingTop: "4vh",textTransform: "uppercase", }}>
-                      TERMS & CONDITIONS
-                    </p>
-                  </div>
-
-                  <div>
-                    <p style={{ color: "white", paddingTop: "4vh",textTransform: "uppercase", }}>
-                      PRIVACY POLICY
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div style={{ width: "30vw", marginLeft: "40vw", color: "white" }}>
-            <p style={{ textTransform: "uppercase", paddingBottom: "20px" }}>
-              Atlegile Marketing Solutions (Pty) Ltd eCommerce 2023
-              {new Date().getFullYear()}{" "}
-            </p>
-          </div>
-        </div>
-        <div style={{ height: "50vh",width:"20%" , justifyContent: "flex-end", alignItems: "end",
-              bottom: 0,
-              left: "0", }}>
-          <img
-            style={{
-              height: "25vh",
-              color: "white",
-              
-              // bottom: "0",
-              // right: "0",
-            }}
-            src={"./images/lion.png"}
-            alt="lion"
-          />
-        </div>
-      </div> */}
-    </div>
-  );
+      </div>
+      <Footer/>
+</>
+        );
 }
 
 export default DeliveryDone;

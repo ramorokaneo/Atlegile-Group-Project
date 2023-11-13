@@ -95,8 +95,9 @@ function OrderHistory() {
           flex: 1,
           justifyContent: "flex-start",
           alignItems: "flex-start",
-          // backgroundColor: "red",
+         //backgroundColor: "red",
           flexDirection: "column",
+          
         }}
       >
         <div
@@ -202,10 +203,11 @@ function OrderHistory() {
               alignItems: "center",
               display: "flex",
               justifyContent: "center",
+              color:"white"
             }}
           >
             {" "}
-            <p style={{ color: "white" }}>SHOP</p>
+            SHOP
           </div>
 
           <div
@@ -243,9 +245,11 @@ function OrderHistory() {
                 display: "flex",
                 justifyContent: "center",
                 flex: 1,
+                color:"white",
+                fontSize:"1.4rem"
               }}
             >
-              <p style={{ fontSize: "1.4rem", color: "white" }}>AS</p>
+             AS
             </div>
             <div
               style={{
@@ -291,13 +295,13 @@ function OrderHistory() {
         <div
           style={{
             border: "none",
-            borderBottom: "1px lightgray solid",
+            //borderBottom: "1px lightgray solid",
             display: "flex",
             flexDirection: "row",
             height: "60%",
             width: "100%",
             alignItems: "center",
-            //   backgroundColor: "yellow",
+              //backgroundColor: "yellow",
           }}
         >
           <div
@@ -305,7 +309,7 @@ function OrderHistory() {
               height: "100%",
               width: "20%",
               border: "none",
-              borderBottom: "1px lightgray solid",
+            //  borderBottom: "1px lightgray solid",
               display: "flex",
               flexDirection: "row",
               alignItems: "center",
@@ -317,7 +321,7 @@ function OrderHistory() {
               height: "100%",
               width: "60%",
               border: "none",
-              borderBottom: "1px lightgray solid",
+             // borderBottom: "1px lightgray solid",
               display: "flex",
               flexDirection: "row",
               justifyContent: "flex-start",
@@ -580,7 +584,7 @@ function OrderHistory() {
               height: "100%",
               width: "20%",
               border: "none",
-              borderBottom: "1px lightgray solid",
+             // borderBottom: "1px lightgray solid",
               display: "flex",
               flexDirection: "row",
               alignItems: "center",
