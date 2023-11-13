@@ -1,4 +1,4 @@
-import React, { useState, useRef,useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import BlackSilk from "./blackSilk.jpg";
 import { IoMdStopwatch } from "react-icons/io";
 import { GoCheckCircleFill } from "react-icons/go";
@@ -7,9 +7,7 @@ import Card from "../../components/Card/Card";
 import FollowUs from "../../components/FollowUs/FollowUs";
 import NavBar from "../../components/NavBar/NavBar";
 import "./businessAccount.css";
-import $ from 'jquery';
-
-
+import $ from "jquery";
 
 const logo = require("./cropped-AMS-Shadow-Queen-Logo_BNY-1320x772 1.png");
 
@@ -17,10 +15,17 @@ export default function BusinessAccount() {
   const [editModal, setEditModal] = useState(false);
   const [bannerModal, setBannerModal] = useState(false);
   const [paymentModal, setPaymentModal] = useState(false);
-  const [businessAuthorization, setBusinessAuthorization] = useState(false);
+  const [businessAuthorization, setBusinessAuthorization] = useState(true);
   const [businessRegistered, setBusinessRegistered] = useState(true);
 
-  const list = [1, 2, 3];
+  const [productName, setProductName] = useState("");
+  const [otherBanner, setOtherBanner] = useState("");
+  const [priceOriginal,setPriceOriginal] = useState(0);
+  const [priceDiscount,setPriceDiscount] = useState(0);
+  const [quantity,setQuantity] = useState(0);
+
+  const list = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
   const [image, setImage] = useState(null);
   const fileInputRef = useRef(null);
 
@@ -44,7 +49,7 @@ export default function BusinessAccount() {
   };
 
   const handleSaveAddBanner = () => {
-    setBannerModal(false);
+    setBannerModal(true);
   };
 
   const handleSavePaymentInfo = () => {
@@ -83,7 +88,7 @@ export default function BusinessAccount() {
           aria-labelledby="exampleModalLongTitle"
           aria-hidden="true"
         >
-          <div class="modal-dialog" role="document" style={{maxWidth:"70%"}}>
+          <div class="modal-dialog" role="document" style={{ maxWidth: "70%" }}>
             <div class="modal-content">
               {/* <div class="modal-header">
                   <h5 class="modal-title" id="exampleModalLongTitle">
@@ -106,7 +111,7 @@ export default function BusinessAccount() {
                     paddingLeft: 60,
                     paddingBottom: 20,
                     paddingTop: 20,
-                    width:"100%"
+                    width: "100%",
                   }}
                   // id="businessAuthorization"
                 >
@@ -479,7 +484,7 @@ export default function BusinessAccount() {
             paddingRight: 30,
             backgroundColor: "#f5f5f5",
             display: "flex",
-            alignItems: "center",
+
             justifyContent: "center",
           }}
         >
@@ -645,6 +650,20 @@ export default function BusinessAccount() {
                   PRIVACY POLICY
                 </a>
               </div>
+              <div
+                style={{
+                  color:"#f44336",
+                  display: "flex",
+                  flexDirection: "row",
+                  paddingTop: 40,
+                  paddingBottom: 10,
+                  alignItems: "center",
+                  fontWeight:700,
+                  cursor:"pointer"
+                }}
+              >
+                SIGN OUT
+              </div>
             </div>
 
             <div
@@ -701,7 +720,7 @@ export default function BusinessAccount() {
         >
           <div
             style={{
-              height: "20%",
+              height: "20vh",
               backgroundImage: `url(${BlackSilk})`,
               backgroundRepeat: "no-repeat",
               backgroundPosition: `center`,
@@ -710,7 +729,7 @@ export default function BusinessAccount() {
           ></div>
           <div
             style={{
-              height: "15%",
+              height: "15vh",
               backgroundColor: "#072840",
               paddingTop: 20,
               paddingLeft: 30,
@@ -843,6 +862,7 @@ export default function BusinessAccount() {
                         <input
                           type="text"
                           placeholder="Name"
+                          onChange={(e)=>setProductName(e)}
                           style={{
                             width: "100%",
                             border: "none",
@@ -1307,7 +1327,13 @@ export default function BusinessAccount() {
                   PRODUCTS & SERVICES
                 </span>
                 <br />
-                <span style={{ fontWeight: 600, fontSize: 14 }}>
+                <span
+                  style={{
+                    display: businessAuthorization ? "none" : "",
+                    fontWeight: 600,
+                    fontSize: 14,
+                  }}
+                >
                   Please add a minimum of 3 products
                 </span>
                 <br />
@@ -1319,7 +1345,7 @@ export default function BusinessAccount() {
                     backgroundColor: "#fe951c",
                     padding: 10,
                     borderRadius: 20,
-                    display: "inline-block",
+                    display: businessAuthorization ? "none" : "inline-block",
                     marginTop: 5,
                   }}
                 >
@@ -1345,7 +1371,36 @@ export default function BusinessAccount() {
                 </div>
               </div>
             </div>
-            <div></div>
+
+            {businessAuthorization ? (
+              <div
+                style={{
+                  width: "100%",
+                  border: "1px red solid",
+                  height: "15vh",
+                }}
+              >
+                <div></div>
+                <div
+                  style={{
+                    display: "flex",
+                    cursor: "pointer",
+                    width: "15%",
+                    borderRadius: 20,
+                    border: "1px gray dashed",
+                    height: "100%",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontSize: 20,
+                    fontWeight: 700,
+                  }}
+                  onClick={handleSaveAddBanner}
+                >
+                  ADD BANNER
+                </div>
+              </div>
+            ) : null}
+
             <div
               style={{
                 width: "100%",
@@ -1355,132 +1410,138 @@ export default function BusinessAccount() {
                 marginBottom: 20,
               }}
             >
-              <div style={{ width: "75%" }}>
-                <div style={{ display: "flex" }}>
+              <div style={{}}>
+                <div style={{ display: "flex", flexWrap: "wrap" }}>
                   {list.map((item, index) => (
                     <Card key={index} open={() => setEditModal(true)} />
                   ))}
                 </div>
               </div>
 
-              <div
-                style={{
-                  width: "25%",
-                  display: "flex",
-                  flexDirection: "column",
-                  border: "1px lightgray solid",
-                  padding: 40,
-                  alignItems: "center",
-                  height: "70vh",
-                }}
-              >
-                <img
-                  src={BusinessAccountPlus}
-                  alt="business plus logo"
-                  style={{ width: "60%", marginBottom: 5 }}
-                />
-                <p
+              {businessAuthorization ? null : (
+                <div
                   style={{
-                    color: "#252b42",
-                    fontWeight: 700,
-                    fontSize: 32,
-                    textAlign: "center",
-                  }}
-                >
-                  BUSINESS PLUS SUBSCRIPTION
-                </p>
-                <p
-                  style={{
-                    color: "#9e9e9e",
-                    fontWeight: 700,
-                    fontSize: 16,
-                    textAlign: "center",
-                    paddingTop: 10,
-                    paddingBottom: 10,
-                  }}
-                >
-                  Unlock More Opportunities with Business Plus Subscription
-                </p>
-                <p
-                  style={{
+                    width: "700px",
                     display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
                     flexDirection: "column",
+                    border: "1px lightgray solid",
+                    padding: 40,
+                    alignItems: "center",
+                    height: "75vh",
                   }}
                 >
-                  <span
-                    style={{
-                      color: "#23a6f0",
-                      fontWeight: 700,
-                      fontSize: 40,
-                      marginBottom: -10,
-                    }}
-                  >
-                    R150
-                  </span>
-                  <span
-                    style={{ color: "#b8d9f7", fontWeight: 700, fontSize: 20 }}
-                  >
-                    Per Month
-                  </span>
-                </p>
-                <div style={{ display: "flex", flexDirection: "column" }}>
+                  <img
+                    src={BusinessAccountPlus}
+                    alt="business plus logo"
+                    style={{ width: "60%", marginBottom: 5 }}
+                  />
                   <p
                     style={{
-                      marginTop: 15,
+                      color: "#252b42",
                       fontWeight: 700,
-                      fontSize: 18,
-                      display: "flex",
-                      alignItems: "center",
+                      fontSize: 32,
+                      textAlign: "center",
                     }}
                   >
-                    {" "}
-                    <GoCheckCircleFill
-                      color="#2dc071"
-                      size={30}
-                      style={{ marginRight: 7, marginBottom: 10 }}
-                    />{" "}
-                    List Unlimited Products
+                    BUSINESS PLUS SUBSCRIPTION
                   </p>
                   <p
                     style={{
+                      color: "#9e9e9e",
                       fontWeight: 700,
-                      fontSize: 18,
-                      marginTop: 15,
+                      fontSize: 16,
+                      textAlign: "center",
+                      paddingTop: 10,
+                      paddingBottom: 10,
+                    }}
+                  >
+                    Unlock More Opportunities with Business Plus Subscription
+                  </p>
+                  <p
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      flexDirection: "column",
+                    }}
+                  >
+                    <span
+                      style={{
+                        color: "#23a6f0",
+                        fontWeight: 700,
+                        fontSize: 40,
+                        marginBottom: -10,
+                      }}
+                    >
+                      R150
+                    </span>
+                    <span
+                      style={{
+                        color: "#b8d9f7",
+                        fontWeight: 700,
+                        fontSize: 20,
+                      }}
+                    >
+                      Per Month
+                    </span>
+                  </p>
+                  <div style={{ display: "flex", flexDirection: "column" }}>
+                    <p
+                      style={{
+                        marginTop: 15,
+                        fontWeight: 700,
+                        fontSize: 18,
+                        display: "flex",
+                        alignItems: "center",
+                      }}
+                    >
+                      {" "}
+                      <GoCheckCircleFill
+                        color="#2dc071"
+                        size={30}
+                        style={{ marginRight: 7, marginBottom: 10 }}
+                      />{" "}
+                      List Unlimited Products
+                    </p>
+                    <p
+                      style={{
+                        fontWeight: 700,
+                        fontSize: 18,
+                        marginTop: 15,
 
-                      display: "flex",
-                      alignItems: "center",
-                    }}
-                  >
-                    {" "}
-                    <GoCheckCircleFill
-                      color="#2dc071"
-                      size={30}
-                      style={{ marginRight: 7, marginBottom: 10 }}
-                    />{" "}
-                    Priority Support
-                  </p>
-                  <p
-                    style={{
-                      fontWeight: 700,
-                      fontSize: 18,
-                      marginTop: 15,
+                        display: "flex",
+                        alignItems: "center",
+                      }}
+                    >
+                      {" "}
+                      <GoCheckCircleFill
+                        color="#2dc071"
+                        size={30}
+                        style={{ marginRight: 7, marginBottom: 10 }}
+                      />{" "}
+                      Priority Support
+                    </p>
+                    <p
+                      style={{
+                        fontWeight: 700,
+                        fontSize: 18,
+                        marginTop: 15,
 
-                      display: "flex",
-                      alignItems: "center",
-                    }}
-                  >
-                    {" "}
-                    <GoCheckCircleFill
-                      color="#2dc071"
-                      size={30}
-                      style={{ marginRight: 7 }}
-                    />{" "}
-                    Exclusive Promotions
-                  </p>
+                        display: "flex",
+                        alignItems: "center",
+                      }}
+                    >
+                      {" "}
+                      <GoCheckCircleFill
+                        color="#2dc071"
+                        size={30}
+                        style={{ marginRight: 7 }}
+                      />{" "}
+                      Exclusive Promotions
+                    </p>
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </div>
