@@ -54,8 +54,8 @@ form {
   margin-left: 50px;
 }
 
-label {
-  margin-right: 180px;
+.label {
+  margin-left: 50px;
   font-size: small;
 }
 

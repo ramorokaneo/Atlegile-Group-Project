@@ -24,8 +24,11 @@ function UserSignUp() {
   };
 
   const handleNotNow = () => {
-    // Navigate to the /landingscreen route programmatically
-    navigate("/landingscreen");
+    // Display an alert message
+    alert("Thank you for signing up");
+
+    // Navigate to the /usersignup route programmatically
+    navigate("/");
   };
 
   return (
@@ -35,7 +38,7 @@ function UserSignUp() {
           <img src="./logo.png" alt="Logo" className="logo" />
           <h2 className="alt-contact">ALTERNATIVE CONTACT</h2>
           <form onSubmit={handleSubmit}>
-            <label>Name</label>
+            <label className="label">Name</label>
             <input
               type="text"
               placeholder="Jane"
@@ -45,7 +48,7 @@ function UserSignUp() {
               required
             />
 
-            <label>Phone</label>
+            <label className="label">Phone</label>
             <input
               type="text"
               placeholder="0123456789"

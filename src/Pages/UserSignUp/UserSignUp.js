@@ -37,7 +37,7 @@ function UserSignUp() {
           <img src="./logo.png" alt="Logo" className="logo" />
           <h2 className="signUp">Sign Up</h2>
           <form onSubmit={handleSubmit}>
-            <label>Email</label>
+            <label className="label">Email</label>
             <input
               type="email"
               placeholder=""
@@ -47,7 +47,7 @@ function UserSignUp() {
               required
             />
 
-            <label>Password</label>
+            <label className="label">Password</label>
             <input
               type="password"
               placeholder=""

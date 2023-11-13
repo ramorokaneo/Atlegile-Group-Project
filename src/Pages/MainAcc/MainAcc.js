@@ -64,7 +64,7 @@ function MainAcc() {
               />
             </div>
 
-            <label>Phone</label>
+            <label className="label">Phone</label>
             <input
               type="text"
               placeholder="0123456789"
@@ -74,7 +74,7 @@ function MainAcc() {
               required
             />
 
-            <label>Gender</label>
+            <label className="label">Gender</label>
             <div className="gender-dropdown">
               <select
                 className="form-group"
@@ -91,7 +91,7 @@ function MainAcc() {
               </select>
             </div>
 
-            <label>Email</label>
+            <label className="label">Email</label>
             <input
               type="email"
               placeholder="example@gmail.com"
@@ -101,7 +101,7 @@ function MainAcc() {
               required
             />
 
-            <label>Location</label>
+            <label className="label">Location</label>
             <input
               type="text"
               placeholder="1235 Vilakazi Street, Orlando West, Soweto, 1804, South Africa"
