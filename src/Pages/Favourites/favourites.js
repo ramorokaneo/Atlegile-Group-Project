@@ -1,19 +1,12 @@
-import React, { useState, useRef,useEffect } from "react";
-import BlackSilk from "./blackSilk.jpg";
-import { IoMdStopwatch } from "react-icons/io";
-import { GoCheckCircleFill } from "react-icons/go";
-import BusinessAccountPlus from "./BusinessPlus+.jpg";
+import React, { useState, useRef, useEffect } from "react";
+import { IoMdStopwatch,IoMdSearch } from "react-icons/io";
 import Card from "../../components/Card/Card";
 import FollowUs from "../../components/FollowUs/FollowUs";
 import NavBar from "../../components/NavBar/NavBar";
-import "./businessAccount.css";
-import $ from 'jquery';
+import "./favourites.css";
+import $ from "jquery";
 
-
-
-const logo = require("./cropped-AMS-Shadow-Queen-Logo_BNY-1320x772 1.png");
-
-export default function BusinessAccount() {
+export default function Favourite() {
   const [editModal, setEditModal] = useState(false);
   const [bannerModal, setBannerModal] = useState(false);
   const [paymentModal, setPaymentModal] = useState(false);
@@ -63,412 +56,6 @@ export default function BusinessAccount() {
 
   return (
     <>
-      <div>
-        {/* <!-- Button trigger modal --> */}
-        <button
-          type="button"
-          class="btn btn-primary"
-          data-toggle="modal"
-          data-target="#exampleModalLong"
-        >
-          Launch demo modal
-        </button>
-
-        {/* <!-- Modal --> */}
-        <div
-          class="modal fade"
-          id="exampleModalLong"
-          tabindex="-1"
-          role="dialog"
-          aria-labelledby="exampleModalLongTitle"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog" role="document" style={{maxWidth:"70%"}}>
-            <div class="modal-content">
-              {/* <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLongTitle">
-                    Modal title
-                  </h5>
-                  <button
-                    type="button"
-                    class="close"
-                    data-dismiss="modal"
-                    aria-label="Close"
-                  >
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div> */}
-              <div class="modal-body">
-                <div
-                  style={{
-                    backgroundColor: "white",
-                    paddingRight: 60,
-                    paddingLeft: 60,
-                    paddingBottom: 20,
-                    paddingTop: 20,
-                    width:"100%"
-                  }}
-                  // id="businessAuthorization"
-                >
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      paddingBottom: 20,
-                      paddingTop: 20,
-                    }}
-                  >
-                    <img
-                      src={logo}
-                      alt="cropped AMS Shadow Queen Logo BNY-1320x772"
-                    />
-                  </div>
-
-                  <p
-                    style={{
-                      fontWeight: 700,
-                      fontSize: 20,
-                      marginBottom: 20,
-                      textAlign: "center",
-                    }}
-                  >
-                    BUSINESS REGISTRATION AUTHORIZATION
-                  </p>
-
-                  <p style={{ textAlign: "center", fontSize: 15 }}>
-                    Welcome to AMS, where we strive to ensure a secure and
-                    trustworthy environment for businesses and customers alike.
-                    As part of our commitment to maintaining the integrity of
-                    our platform, we have implemented an authorization process
-                    for new business registrations. This process is designed to
-                    verify the legitimacy and authenticity of the businesses
-                    that join our community.
-                  </p>
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      flexWrap: "wrap",
-                      justifyContent: "space-between",
-                      paddingTop: 20,
-                      paddingBottom: 20,
-                    }}
-                  >
-                    <div
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                        border: "1px gray solid",
-                        width: "49%",
-                        padding: 10,
-                        marginBottom: 10,
-                      }}
-                    >
-                      <span
-                        style={{
-                          fontWeight: 700,
-                          fontSize: 15,
-                          marginBottom: 20,
-                          textAlign: "center",
-                        }}
-                      >
-                        Enhance Trust
-                      </span>
-                      <p>
-                        By confirming the legitimacy of businesses, we build
-                        trust among our users, making it a safer place to
-                        conduct business.
-                      </p>
-                    </div>
-                    <div
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                        border: "1px gray solid",
-                        width: "49%",
-                        padding: 10,
-                        marginBottom: 10,
-                      }}
-                    >
-                      <span
-                        style={{
-                          fontWeight: 700,
-                          fontSize: 15,
-                          marginBottom: 20,
-                          textAlign: "center",
-                        }}
-                      >
-                        Review
-                      </span>
-                      <p>
-                        Our dedicated team will review the provided details,
-                        ensuring they align with our platform's policies and
-                        standards.
-                      </p>
-                    </div>
-                    <div
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                        border: "1px gray solid",
-                        width: "49%",
-                        padding: 10,
-                        marginBottom: 10,
-                      }}
-                    >
-                      <span
-                        style={{
-                          fontWeight: 700,
-                          fontSize: 15,
-                          marginBottom: 20,
-                          textAlign: "center",
-                        }}
-                      >
-                        Verification
-                      </span>
-                      <p>
-                        In some cases, we may request additional documents or
-                        information to verify the authenticity of your business.
-                      </p>
-                    </div>
-
-                    <div
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                        border: "1px gray solid",
-                        width: "49%",
-                        padding: 10,
-                        marginBottom: 10,
-                      }}
-                    >
-                      <span
-                        style={{
-                          fontWeight: 700,
-                          fontSize: 15,
-                          marginBottom: 20,
-                          textAlign: "center",
-                        }}
-                      >
-                        Approval
-                      </span>
-                      <p>
-                        Once your registration is approved, your business
-                        profile will be live on our platform, and you can start
-                        receiving orders for your products and services.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      flexWrap: "wrap",
-                      justifyContent: "space-between",
-                      paddingTop: 20,
-                      paddingBottom: 20,
-                    }}
-                  >
-                    <div
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        width: "49%",
-                        marginBottom: 10,
-                      }}
-                    >
-                      <span
-                        style={{
-                          fontWeight: 700,
-                          fontSize: 15,
-                          marginBottom: 20,
-                        }}
-                      >
-                        Timeframe
-                      </span>
-                      <p>
-                        The authorization process typically takes [X] business
-                        days, depending on the complexity of your business and
-                        the accuracy of the information provided.
-                      </p>
-                    </div>
-
-                    <div
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        width: "49%",
-                        marginBottom: 10,
-                      }}
-                    >
-                      <span
-                        style={{
-                          fontWeight: 700,
-                          fontSize: 15,
-                          marginBottom: 20,
-                        }}
-                      >
-                        Contact Us
-                      </span>
-                      <p>
-                        If you have any questions or require assistance during
-                        the authorization process, please don't hesitate to
-                        contact our support team at [Contact Information].
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      border: "1px lightgray solid",
-                      padding: 40,
-                    }}
-                  >
-                    <img
-                      src={BusinessAccountPlus}
-                      alt="business plus logo"
-                      style={{ width: "50%", marginBottom: 5 }}
-                    />
-                    <div
-                      style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        justifyContent: "space-between",
-                      }}
-                    >
-                      <p
-                        style={{
-                          color: "#252b42",
-                          fontWeight: 700,
-                          fontSize: 32,
-                          width: "50%",
-                        }}
-                      >
-                        BUSINESS PLUS SUBSCRIPTION
-                      </p>
-
-                      <p
-                        style={{
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          flexDirection: "column",
-                          width: "20%",
-                        }}
-                      >
-                        <span
-                          style={{
-                            color: "#23a6f0",
-                            fontWeight: 700,
-                            fontSize: 40,
-                            marginBottom: -10,
-                          }}
-                        >
-                          R150
-                        </span>
-                        <span
-                          style={{
-                            color: "#b8d9f7",
-                            fontWeight: 700,
-                            fontSize: 20,
-                          }}
-                        >
-                          Per Month
-                        </span>
-                      </p>
-                    </div>
-                    <p
-                      style={{
-                        color: "#9e9e9e",
-                        fontWeight: 700,
-                        fontSize: 16,
-                        paddingTop: 10,
-                        paddingBottom: 10,
-                      }}
-                    >
-                      Unlock More Opportunities with Business Plus Subscription
-                    </p>
-                    <div style={{ display: "flex", flexDirection: "column" }}>
-                      <p
-                        style={{
-                          marginTop: 15,
-                          fontWeight: 700,
-                          fontSize: 18,
-                          display: "flex",
-                          alignItems: "center",
-                        }}
-                      >
-                        {" "}
-                        <GoCheckCircleFill
-                          color="#2dc071"
-                          size={30}
-                          style={{ marginRight: 7, marginBottom: 10 }}
-                        />{" "}
-                        List Unlimited Products
-                      </p>
-                      <p
-                        style={{
-                          fontWeight: 700,
-                          fontSize: 18,
-                          marginTop: 15,
-
-                          display: "flex",
-                          alignItems: "center",
-                        }}
-                      >
-                        {" "}
-                        <GoCheckCircleFill
-                          color="#2dc071"
-                          size={30}
-                          style={{ marginRight: 7, marginBottom: 10 }}
-                        />{" "}
-                        Priority Support
-                      </p>
-                      <p
-                        style={{
-                          fontWeight: 700,
-                          fontSize: 18,
-                          marginTop: 15,
-
-                          display: "flex",
-                          alignItems: "center",
-                        }}
-                      >
-                        {" "}
-                        <GoCheckCircleFill
-                          color="#2dc071"
-                          size={30}
-                          style={{ marginRight: 7 }}
-                        />{" "}
-                        Exclusive Promotions
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-dismiss="modal"
-                  >
-                    Close
-                  </button>
-                  <button type="button" class="btn btn-primary">
-                    Save changes
-                  </button>
-                </div> */}
-            </div>
-          </div>
-        </div>
-      </div>
       <FollowUs />
       <NavBar />
       <div style={{ display: "flex", flexDirection: "row" }}>
@@ -696,7 +283,7 @@ export default function BusinessAccount() {
           </div>
         </div>
 
-        <div
+        {/* <div
           style={{ display: businessRegistered ? "" : "none", width: "80%" }}
         >
           <div
@@ -1482,6 +1069,26 @@ export default function BusinessAccount() {
                 </div>
               </div>
             </div>
+          </div>
+        </div> */}
+        <div style={{ paddingLeft: 20, paddingTop: 30 }}>
+          <div>
+            <p style={{ fontWeight: 700, fontSize: 18, marginBottom: -5 }}>
+              FAVOURITES
+            </p>
+          </div>
+          <div style={{display:"flex",flexDirection:"row",alignItems:"center"}}>
+          <input
+                          type="text"
+                          placeholder="Search"
+                          style={{
+                            width: "100%",
+                            border: "none",
+                            borderBottom: "1px gray solid",
+                            
+                          }}
+                        />
+<IoMdSearch color="#072840" size={20} style={{  }} />
           </div>
         </div>
       </div>
