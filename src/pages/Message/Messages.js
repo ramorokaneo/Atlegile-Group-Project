@@ -394,10 +394,17 @@ function Messages() {
                     item.status === "sent"
                       ? "10px"
                       : item.status === "recieved"
-                      ? 0
+                      ? "10px"
                       : 0,
-                  borderBottomRightRadius: "10px",
+                  borderBottomRightRadius:
+                  item.status === "sent"      
+                  ?"10px"
+                  : item.status === "recieved"
+                   ? 0
+                   : 0,
+                  
                   borderBottomLeftRadius: "10px",
+                    
 
                   borderTopLeftRadius:
                     item.status === "sent"
@@ -415,6 +422,8 @@ function Messages() {
                  
                 }}
               >
+                   
+
                 <p style={{ height:"uuto",margin: 0, color: "white",
                 
                 // position:"absolute"  
