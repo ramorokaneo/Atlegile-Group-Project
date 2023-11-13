@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./MainAcc.css";
+import { useNavigate } from "react-router-dom";
 
 function MainAcc() {
+  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [surname, setSurname] = useState("");
   const [phone, setPhone] = useState("");
@@ -27,6 +29,9 @@ function MainAcc() {
       email,
       location,
     });
+
+    // Navigate to the /altcontact route programmatically
+    navigate("/altcontact");
   };
 
   return (
@@ -72,7 +77,7 @@ function MainAcc() {
             <label>Gender</label>
             <div className="gender-dropdown">
               <select
-              className="form-group"
+                className="form-group"
                 value={gender}
                 onChange={(e) => setGender(e.target.value)}
                 required

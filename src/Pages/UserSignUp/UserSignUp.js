@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import "./SignUp.css";
+import { useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FcNext } from "react-icons/fc";
 
 function UserSignUp() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -18,6 +20,14 @@ function UserSignUp() {
 
     // Handle form submission logic here
     console.log("Form submitted:", { email, password });
+
+    // Navigate to the /mainacc route programmatically
+    navigate("/mainacc");
+  };
+
+  const handleBusinessSignUp = () => {
+    // Navigate to the /businesssignup route programmatically
+    navigate("/businesssignup");
   };
 
   return (
@@ -47,13 +57,13 @@ function UserSignUp() {
               required
             />
 
-            <div className="forgot-password">
-              <a href="/">FORGOT PASSWORD?</a>
-            </div>
-
             <button className="submit-button" type="submit">
-              SIGN IN
+              SIGN UP
             </button>
+
+            <div className="forgot-password">
+              <a href="/usersignin">ALREADY HAVE AN ACCOUNT?</a>
+            </div>
 
             <div className="google-signin">
               <a href="/">
@@ -61,10 +71,7 @@ function UserSignUp() {
               </a>
             </div>
           </form>
-          <button
-            className="signup-business"
-            onClick={() => console.log("Sign up as a business clicked!")}
-          >
+          <button className="signup-business" onClick={handleBusinessSignUp}>
             SIGN UP AS A BUSINESS <FcNext />
           </button>
         </div>

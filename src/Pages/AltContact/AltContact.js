@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./AltContact.css";
+import { useNavigate } from "react-router-dom";
 
 function UserSignUp() {
+  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
 
@@ -16,6 +18,14 @@ function UserSignUp() {
 
     // Handle form submission logic here
     console.log("Form submitted:", { name, phone });
+
+    // Navigate to the /landingscreen route programmatically
+    navigate("/landingscreen");
+  };
+
+  const handleNotNow = () => {
+    // Navigate to the /landingscreen route programmatically
+    navigate("/landingscreen");
   };
 
   return (
@@ -49,7 +59,10 @@ function UserSignUp() {
               CONTINUE
             </button>
           </form>
-          <button className="not-now">NOT NOW</button>
+
+          <button className="not-now" onClick={handleNotNow}>
+            NOT NOW
+          </button>
         </div>
       </div>
     </div>
