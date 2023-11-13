@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import BlackSilk from "./blackSilk.jpg";
 import { IoMdStopwatch } from "react-icons/io";
 import { GoCheckCircleFill } from "react-icons/go";
+import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import BusinessAccountPlus from "./BusinessPlus+.jpg";
 import Card from "../../components/Card/Card";
 import FollowUs from "../../components/FollowUs/FollowUs";
@@ -20,17 +21,39 @@ export default function BusinessAccount() {
 
   const [productName, setProductName] = useState("");
   const [otherBanner, setOtherBanner] = useState("");
-  const [priceOriginal,setPriceOriginal] = useState(0);
-  const [priceDiscount,setPriceDiscount] = useState(0);
-  const [quantity,setQuantity] = useState(0);
+  const [priceOriginal, setPriceOriginal] = useState(0);
+  const [priceDiscount, setPriceDiscount] = useState(0);
+  const [quantity, setQuantity] = useState(0);
+  const [bannerListLength, setBannerListLength] = useState(-1);
 
   const list = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  let bannerListIndex = 0;
+  let bannerList = [];
+
+  const increment = () => {
+    if (bannerListIndex === bannerList.length - 1) {
+      bannerListIndex = 0;
+    }
+    if (bannerListIndex < bannerList.length - 1) {
+      bannerListIndex += 1;
+    }
+  };
+
+  const decrement = () => {
+    if (bannerListIndex === 0) {
+      bannerListIndex = bannerList.length - 1;
+    }
+    if (bannerListIndex > 0) {
+      bannerListIndex -= 1;
+    }
+  };
 
   const [image, setImage] = useState(null);
   const fileInputRef = useRef(null);
 
   const handleFileChange = (e) => {
     const selectedImage = e.target.files[0];
+    //console.log("selectedImage: ", selectedImage);
     if (selectedImage) {
       const reader = new FileReader();
       reader.onload = (e) => {
@@ -49,7 +72,21 @@ export default function BusinessAccount() {
   };
 
   const handleSaveAddBanner = () => {
-    setBannerModal(true);
+    console.log("productName: ", productName);
+    console.log("priceOriginal: ", priceOriginal);
+    console.log("priceDiscount: ", priceDiscount);
+    console.log("otherBanner: ", otherBanner);
+    console.log("bannerList: ", bannerList);
+    bannerList.push({
+      backgroundImage: image,
+      productName: productName,
+      priceDiscount: priceDiscount,
+      quantity: quantity,
+      priceOriginal: priceOriginal,
+      other: otherBanner,
+    });
+    setBannerListLength(bannerList.length);
+    setBannerModal(false);
   };
 
   const handleSavePaymentInfo = () => {
@@ -72,7 +109,7 @@ export default function BusinessAccount() {
         {/* <!-- Button trigger modal --> */}
         <button
           type="button"
-          class="btn btn-primary"
+          className="btn btn-primary"
           data-toggle="modal"
           data-target="#exampleModalLong"
         >
@@ -81,29 +118,33 @@ export default function BusinessAccount() {
 
         {/* <!-- Modal --> */}
         <div
-          class="modal fade"
+          className="modal fade"
           id="exampleModalLong"
-          tabindex="-1"
+          tabIndex="-1"
           role="dialog"
           aria-labelledby="exampleModalLongTitle"
           aria-hidden="true"
         >
-          <div class="modal-dialog" role="document" style={{ maxWidth: "70%" }}>
-            <div class="modal-content">
-              {/* <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLongTitle">
+          <div
+            className="modal-dialog"
+            role="document"
+            style={{ maxWidth: "70%" }}
+          >
+            <div className="modal-content">
+              {/* <div className="modal-header">
+                  <h5 className="modal-title" id="exampleModalLongTitle">
                     Modal title
                   </h5>
                   <button
                     type="button"
-                    class="close"
+                    className="close"
                     data-dismiss="modal"
                     aria-label="Close"
                   >
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div> */}
-              <div class="modal-body">
+              <div className="modal-body">
                 <div
                   style={{
                     backgroundColor: "white",
@@ -458,15 +499,15 @@ export default function BusinessAccount() {
                   </div>
                 </div>
               </div>
-              {/* <div class="modal-footer">
+              {/* <div className="modal-footer">
                   <button
                     type="button"
-                    class="btn btn-secondary"
+                    className="btn btn-secondary"
                     data-dismiss="modal"
                   >
                     Close
                   </button>
-                  <button type="button" class="btn btn-primary">
+                  <button type="button" className="btn btn-primary">
                     Save changes
                   </button>
                 </div> */}
@@ -652,14 +693,14 @@ export default function BusinessAccount() {
               </div>
               <div
                 style={{
-                  color:"#f44336",
+                  color: "#f44336",
                   display: "flex",
                   flexDirection: "row",
                   paddingTop: 40,
                   paddingBottom: 10,
                   alignItems: "center",
-                  fontWeight:700,
-                  cursor:"pointer"
+                  fontWeight: 700,
+                  cursor: "pointer",
                 }}
               >
                 SIGN OUT
@@ -858,115 +899,112 @@ export default function BusinessAccount() {
                         />
                       </div>
 
-                      <form className="my-form">
-                        <input
-                          type="text"
-                          placeholder="Name"
-                          onChange={(e)=>setProductName(e)}
-                          style={{
-                            width: "100%",
-                            border: "none",
-                            borderBottom: "1px gray solid",
-                            paddingBottom: 5,
-                            marginTop: 30,
-                          }}
-                        />
+                      <input
+                        type="text"
+                        placeholder="Name"
+                        style={{
+                          width: "100%",
+                          border: "none",
+                          borderBottom: "1px gray solid",
+                          paddingBottom: 5,
+                          marginTop: 30,
+                        }}
+                      />
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "row",
+                          justifyContent: "space-between",
+                        }}
+                      >
                         <div
                           style={{
                             display: "flex",
-                            flexDirection: "row",
-                            justifyContent: "space-between",
+                            flexDirection: "column",
                           }}
                         >
-                          <div
+                          <input
+                            type="text"
+                            placeholder="Price"
                             style={{
-                              display: "flex",
-                              flexDirection: "column",
+                              border: "none",
+                              borderBottom: "1px gray solid",
+                              paddingBottom: 5,
+                              marginTop: 40,
                             }}
-                          >
-                            <input
-                              type="text"
-                              placeholder="Price"
-                              style={{
-                                border: "none",
-                                borderBottom: "1px gray solid",
-                                paddingBottom: 5,
-                                marginTop: 40,
-                              }}
-                            />
-                            <p style={{ fontSize: 12, paddingRight: 10 }}>
-                              There will VAT, Service Fees, Delivery Fees added
-                              to this amount.
-                            </p>
-                          </div>
-
-                          <div style={{}}>
-                            <input
-                              type="text"
-                              placeholder="Quantity"
-                              style={{
-                                border: "none",
-                                borderBottom: "1px gray solid",
-                                paddingBottom: 5,
-                                marginTop: 40,
-                                marginLeft: 20,
-                              }}
-                            />
-                            <p></p>
-                          </div>
+                          />
+                          <p style={{ fontSize: 12, paddingRight: 10 }}>
+                            There will VAT, Service Fees, Delivery Fees added to
+                            this amount.
+                          </p>
                         </div>
-                        <input
-                          type="text"
-                          placeholder="Description"
-                          style={{
-                            width: "100%",
-                            border: "none",
-                            borderBottom: "1px gray solid",
-                            paddingBottom: 5,
-                            marginTop: 40,
-                          }}
-                        />
-                        <input
-                          type="text"
-                          placeholder="Type of Product"
-                          style={{
-                            width: "100%",
-                            border: "none",
-                            borderBottom: "1px gray solid",
-                            paddingBottom: 5,
-                            marginTop: 40,
-                          }}
-                        />
-                        <input
-                          type="text"
-                          placeholder="Other"
-                          style={{
-                            width: "100%",
-                            border: "none",
-                            borderBottom: "1px gray solid",
-                            paddingBottom: 5,
-                            marginTop: 40,
-                          }}
-                        />
 
-                        <div
-                          onClick={handleSaveEditProduct}
-                          style={{
-                            color: "white",
-                            fontWeight: 600,
-                            fontSize: 14,
-                            backgroundColor: "#072840",
-                            borderRadius: 20,
-                            alignItems: "center",
-                            justifyContent: "center",
-                            textAlign: "center",
-                            padding: 10,
-                            marginTop: 20,
-                          }}
-                        >
-                          SAVE
+                        <div style={{}}>
+                          <input
+                            type="text"
+                            placeholder="Quantity"
+                            style={{
+                              border: "none",
+                              borderBottom: "1px gray solid",
+                              paddingBottom: 5,
+                              marginTop: 40,
+                              marginLeft: 20,
+                            }}
+                          />
+                          <p></p>
                         </div>
-                      </form>
+                      </div>
+                      <input
+                        type="text"
+                        placeholder="Description"
+                        style={{
+                          width: "100%",
+                          border: "none",
+                          borderBottom: "1px gray solid",
+                          paddingBottom: 5,
+                          marginTop: 40,
+                        }}
+                      />
+                      <input
+                        type="text"
+                        placeholder="Type of Product"
+                        style={{
+                          width: "100%",
+                          border: "none",
+                          borderBottom: "1px gray solid",
+                          paddingBottom: 5,
+                          marginTop: 40,
+                        }}
+                      />
+                      <input
+                        type="text"
+                        placeholder="Other"
+                        style={{
+                          width: "100%",
+                          border: "none",
+                          borderBottom: "1px gray solid",
+                          paddingBottom: 5,
+                          marginTop: 40,
+                        }}
+                      />
+
+                      <div
+                        onClick={handleSaveEditProduct}
+                        style={{
+                          color: "white",
+                          fontWeight: 600,
+                          fontSize: 14,
+                          backgroundColor: "#072840",
+                          borderRadius: 20,
+                          alignItems: "center",
+                          justifyContent: "center",
+                          textAlign: "center",
+                          padding: 10,
+                          marginTop: 20,
+                        }}
+                      >
+                        SAVE
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1076,99 +1114,102 @@ export default function BusinessAccount() {
                         />
                       </div>
 
-                      <form className="my-form">
-                        <input
-                          type="text"
-                          placeholder="Product Name"
-                          style={{
-                            width: "100%",
-                            border: "none",
-                            borderBottom: "1px gray solid",
-                            paddingBottom: 5,
-                            marginTop: 30,
-                          }}
-                        />
+                      <input
+                        type="text"
+                        placeholder="Product Name"
+                        onChange={(e) => setProductName(e.target.value)}
+                        style={{
+                          width: "100%",
+                          border: "none",
+                          borderBottom: "1px gray solid",
+                          paddingBottom: 5,
+                          marginTop: 30,
+                        }}
+                      />
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "row",
+                          justifyContent: "space-between",
+                        }}
+                      >
                         <div
                           style={{
                             display: "flex",
-                            flexDirection: "row",
-                            justifyContent: "space-between",
+                            flexDirection: "column",
                           }}
                         >
-                          <div
+                          <input
+                            type="text"
+                            placeholder="Discount Price"
+                            onChange={(e) => setPriceDiscount(e.target.value)}
                             style={{
-                              display: "flex",
-                              flexDirection: "column",
+                              border: "none",
+                              borderBottom: "1px gray solid",
+                              paddingBottom: 5,
+                              marginTop: 40,
                             }}
-                          >
-                            <input
-                              type="text"
-                              placeholder="Discount Price"
-                              style={{
-                                border: "none",
-                                borderBottom: "1px gray solid",
-                                paddingBottom: 5,
-                                marginTop: 40,
-                              }}
-                            />
-                          </div>
-
-                          <div style={{}}>
-                            <input
-                              type="text"
-                              placeholder="Quantity"
-                              style={{
-                                border: "none",
-                                borderBottom: "1px gray solid",
-                                paddingBottom: 5,
-                                marginTop: 40,
-                                marginLeft: 20,
-                              }}
-                            />
-                          </div>
+                          />
                         </div>
 
-                        <input
-                          type="text"
-                          placeholder="Original Price"
-                          style={{
-                            width: "100%",
-                            border: "none",
-                            borderBottom: "1px gray solid",
-                            paddingBottom: 5,
-                            marginTop: 40,
-                          }}
-                        />
-                        <input
-                          type="text"
-                          placeholder="Other"
-                          style={{
-                            width: "100%",
-                            border: "none",
-                            borderBottom: "1px gray solid",
-                            paddingBottom: 5,
-                            marginTop: 40,
-                          }}
-                        />
-
-                        <div
-                          onClick={handleSavePaymentInfo}
-                          style={{
-                            color: "white",
-                            fontWeight: 600,
-                            fontSize: 14,
-                            backgroundColor: "#072840",
-                            borderRadius: 20,
-                            alignItems: "center",
-                            justifyContent: "center",
-                            textAlign: "center",
-                            padding: 10,
-                            marginTop: 20,
-                          }}
-                        >
-                          SAVE
+                        <div style={{}}>
+                          <input
+                            type="text"
+                            placeholder="Quantity"
+                            onChange={(e) => setQuantity(e.target.value)}
+                            style={{
+                              border: "none",
+                              borderBottom: "1px gray solid",
+                              paddingBottom: 5,
+                              marginTop: 40,
+                              marginLeft: 20,
+                            }}
+                          />
                         </div>
-                      </form>
+                      </div>
+
+                      <input
+                        type="text"
+                        placeholder="Original Price"
+                        onChange={(e) => setPriceOriginal(e.target.value)}
+                        style={{
+                          width: "100%",
+                          border: "none",
+                          borderBottom: "1px gray solid",
+                          paddingBottom: 5,
+                          marginTop: 40,
+                        }}
+                      />
+                      <input
+                        type="text"
+                        placeholder="Other"
+                        onChange={(e) => setOtherBanner(e.target.value)}
+                        style={{
+                          width: "100%",
+                          border: "none",
+                          borderBottom: "1px gray solid",
+                          paddingBottom: 5,
+                          marginTop: 40,
+                        }}
+                      />
+
+                      <div
+                        onClick={handleSaveAddBanner}
+                        style={{
+                          color: "white",
+                          fontWeight: 600,
+                          fontSize: 14,
+                          backgroundColor: "#072840",
+                          borderRadius: 20,
+                          alignItems: "center",
+                          justifyContent: "center",
+                          textAlign: "center",
+                          padding: 10,
+                          marginTop: 20,
+                        }}
+                      >
+                        SAVE
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1380,7 +1421,41 @@ export default function BusinessAccount() {
                   height: "15vh",
                 }}
               >
-                <div></div>
+                {bannerListLength > -1 ? (
+                  <div
+                    style={{
+                      backgroundImage: `url(${bannerList[bannerListIndex].backgroundImage})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                      padding: 15,
+                    }}
+                  >
+                    <div>
+                      <div onClick={decrement}>
+                        <AiOutlineLeft />
+                      </div>
+                      <div>
+                        <p style={{ fontSize: 15, fontWeight: 600 }}>{}</p>
+                        <p style={{ fontSize: 25, fontWeight: 700 }}>{}</p>
+                        <p>
+                          <span>
+                            {bannerList[bannerListIndex].priceDiscount}
+                          </span>{" "}
+                          <span>
+                            {bannerList[bannerListIndex].priceOriginal}
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                    <div onClick={increment}>
+                      <AiOutlineRight />
+                    </div>
+                  </div>
+                ) : null}
                 <div
                   style={{
                     display: "flex",
@@ -1393,8 +1468,9 @@ export default function BusinessAccount() {
                     justifyContent: "center",
                     fontSize: 20,
                     fontWeight: 700,
+                    marginLeft: 10,
                   }}
-                  onClick={handleSaveAddBanner}
+                  onClick={() => setBannerModal(true)}
                 >
                   ADD BANNER
                 </div>
