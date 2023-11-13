@@ -11,6 +11,7 @@ import { FiTwitter } from "react-icons/fi";
 import { SiFacebook } from "react-icons/si";
 import Logo from "./Logo.png";
 
+import { TbSquareCheck } from "react-icons/bi";
 import Footer from "../../componets/Footer/Footer";
 import Datetime from "react-datetime";
 import "react-datepicker/dist/react-datepicker.css";
@@ -111,215 +112,367 @@ function Reciept() {
 
   return (
     <>
-      
-        <div
-          style={{
-            height: "5vh",
-            width: "100%",
-            border: "none",
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            backgroundColor: "#072840",
-          }}
-        >
-          <div
-            style={{
-              height: "5vh",
-              width: "23%",
-              // backgroundColor: "red",
-            }}
-          ></div>
-
-          <FiPhone style={{ width: "1%", color: "white" }} />
-          <div style={{ width: "7%", color: "white" }}>(225) 555-0118</div>
-
-          <AiOutlineMail style={{ width: "1%", color: "white" }} />
-          <div style={{ width: "9%", color: "white" }}>
-            <p style={{ fontSize: "0.7rem" }}>michelle.rivera@example.com</p>
-          </div>
-          <div style={{ width: "20%", color: "white", fontWeight: "bold" }}>
-            Follow US and get a chance to win 80% off
-          </div>
-
-          <div style={{ width: "5%", color: "white", fontWeight: "bold" }}>
-            Follow Us :
-          </div>
-
-          <div style={{ width: "1.5%", color: "white" }}>
-            <FaInstagram />
-          </div>
-          <div style={{ color: "white", width: "1.5%" }}>
-            <FiYoutube />
-          </div>
-          <div style={{ color: "white", width: "1.5%" }}>
-            <SiFacebook />
-          </div>
-          <div style={{ color: "white", width: "1.5%" }}>
-            <FiTwitter />
-          </div>
-          <div
-            style={{
-              height: "5vh",
-              width: "30%",
-              // backgroundColor: "red",
-            }}
-          ></div>
-        </div>
-        <div
-          style={{
-            height: "10vh",
-            width: "100%",
-            border: "none",
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            // backgroundColor: "green",
-          }}
-        >
-          <div
-            style={{
-              height: "100%",
-              width: "20%",
-              border: "none",
-              display: "flex",
-              flexDirection: "colunm",
-              alignItems: "center",
-              paddingBottom: "100px",
-            }}
-          ></div>
-
-          <div
-            style={{
-              width: "40%",
-            }}
-          >
-            <img
-              style={{
-                paddingLeft: "10px",
-                position: "relative",
-                height: "auto",
-                width: "100px",
-              }}
-              src={Logo}
-              alt=""
-            />
-          </div>
-
-          <div
-            style={{
-              width: "80px",
-              height: "40px",
-              backgroundColor: "#072840",
-              borderRadius: 50,
-              alignItems: "center",
-              display: "flex",
-              justifyContent: "center",
-              color: "white",
-            }}
-          >
-            {" "}
-            SHOP
-          </div>
-
-          <div
-            style={{
-              width: "100px",
-              height: "40px",
-              //backgroundColor: "#072840",
-              alignItems: "center",
-              display: "flex",
-              justifyContent: "center",
-            }}
-          >
-            ABOUT US
-          </div>
-
-          <div
-            style={{
-              width: "140px",
-              height: "40px",
-              alignItems: "flex-start",
-              display: "flex",
-              justifyContent: "center",
-              flexDirection: "row",
-              //backgroundColor:'red'
-            }}
-          >
-            <div
-              style={{
-                width: "40px",
-                height: "40px",
-                backgroundColor: "gray",
-                borderRadius: "8%",
-                //  paddingLeft:32
-                alignItems: "center",
-                display: "flex",
-                justifyContent: "center",
-                flex: 1,
-                color: "white",
-                fontSize: "1.4rem",
-              }}
-            >
-              AS
-            </div>
-            <div
-              style={{
-                width: "100px",
-                height: "40px",
-                alignItems: "flex-start",
-                display: "flex",
-                justifyContent: "center",
-                flexDirection: "column",
-                //  backgroundColor: "brown",
-              }}
-            >
-              <div
-                style={{
-                  margin: 0,
-                  fontWeight: "medium",
-                }}
-              >
-                <p style={{ paddingLeft: 10, margin: 0, fontSize: "1.2rem" }}>
-                  Welcome
-                </p>
-              </div>
-              <div>
-                <p style={{ paddingLeft: 10, fontSize: "0.8rem", margin: 0 }}>
-                  Jane
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div
-            style={{
-              height: "100%",
-              width: "22%",
-              border: "none",
-              display: "flex",
-              flexDirection: "colunm",
-              alignItems: "center",
-              // backgroundColor: "blue",
-            }}
-          ></div>
-        </div>
-
-        
-      <div  style={{
-          height: "85vh",
+      <div
+        style={{
+          height: "5vh",
           width: "100%",
           border: "none",
-        //   borderBottom: "1px lightgray solid",
           display: "flex",
           flexDirection: "row",
           alignItems: "center",
           backgroundColor: "#072840",
-        }}>
- 
+        }}
+      >
+        <div
+          style={{
+            height: "5vh",
+            width: "23%",
+            // backgroundColor: "red",
+          }}
+        ></div>
 
-      
+        <FiPhone style={{ width: "1%", color: "white" }} />
+        <div style={{ width: "7%", color: "white" }}>(225) 555-0118</div>
 
+        <AiOutlineMail style={{ width: "1%", color: "white" }} />
+        <div style={{ width: "9%", color: "white" }}>
+          <p style={{ fontSize: "0.7rem" }}>michelle.rivera@example.com</p>
+        </div>
+        <div style={{ width: "20%", color: "white", fontWeight: "bold" }}>
+          Follow US and get a chance to win 80% off
+        </div>
+
+        <div style={{ width: "5%", color: "white", fontWeight: "bold" }}>
+          Follow Us :
+        </div>
+
+        <div style={{ width: "1.5%", color: "white" }}>
+          <FaInstagram />
+        </div>
+        <div style={{ color: "white", width: "1.5%" }}>
+          <FiYoutube />
+        </div>
+        <div style={{ color: "white", width: "1.5%" }}>
+          <SiFacebook />
+        </div>
+        <div style={{ color: "white", width: "1.5%" }}>
+          <FiTwitter />
+        </div>
+        
+        <div
+          style={{
+            height: "5vh",
+            width: "30%",
+            // backgroundColor: "red",
+          }}
+        ></div>
+      </div>
+      <div
+        style={{
+          height: "10vh",
+          width: "100%",
+          border: "none",
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          // backgroundColor: "green",
+        }}
+      >
+        <div
+          style={{
+            height: "100%",
+            width: "20%",
+            border: "none",
+            display: "flex",
+            flexDirection: "colunm",
+            alignItems: "center",
+            paddingBottom: "100px",
+          }}
+        ></div>
+
+        <div
+          style={{
+            width: "40%",
+          }}
+        >
+          <img
+            style={{
+              paddingLeft: "10px",
+              position: "relative",
+              height: "auto",
+              width: "100px",
+            }}
+            src={Logo}
+            alt=""
+          />
+        </div>
+
+        <div
+          style={{
+            width: "80px",
+            height: "40px",
+            backgroundColor: "#072840",
+            borderRadius: 50,
+            alignItems: "center",
+            display: "flex",
+            justifyContent: "center",
+            color: "white",
+          }}
+        >
+          {" "}
+          SHOP
+        </div>
+
+        <div
+          style={{
+            width: "100px",
+            height: "40px",
+            //backgroundColor: "#072840",
+            alignItems: "center",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          ABOUT US
+        </div>
+
+        <div
+          style={{
+            width: "140px",
+            height: "40px",
+            alignItems: "flex-start",
+            display: "flex",
+            justifyContent: "center",
+            flexDirection: "row",
+            //backgroundColor:'red'
+          }}
+        >
+          <div
+            style={{
+              width: "40px",
+              height: "40px",
+              backgroundColor: "gray",
+              borderRadius: "8%",
+              //  paddingLeft:32
+              alignItems: "center",
+              display: "flex",
+              justifyContent: "center",
+              flex: 1,
+              color: "white",
+              fontSize: "1.4rem",
+            }}
+          >
+            AS
+          </div>
+          <div
+            style={{
+              width: "100px",
+              height: "40px",
+              alignItems: "flex-start",
+              display: "flex",
+              justifyContent: "center",
+              flexDirection: "column",
+              //  backgroundColor: "brown",
+            }}
+          >
+            <div
+              style={{
+                margin: 0,
+                fontWeight: "medium",
+              }}
+            >
+              <p style={{ paddingLeft: 10, margin: 0, fontSize: "1.2rem" }}>
+                Welcome
+              </p>
+            </div>
+            <div>
+              <p style={{ paddingLeft: 10, fontSize: "0.8rem", margin: 0 }}>
+                Jane
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          style={{
+            height: "100%",
+            width: "22%",
+            border: "none",
+            display: "flex",
+            flexDirection: "colunm",
+            alignItems: "center",
+            // backgroundColor: "blue",
+          }}
+        ></div>
+      </div>
+
+      <div
+        style={{
+          height: "85vh",
+          width: "100%",
+          border: "none",
+          //   borderBottom: "1px lightgray solid",
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+       //   backgroundColor: "#072840",
+          justifyContent: "center",
+        }}
+      >
+        <div
+          style={{
+            height: "85vh",
+            width: "60%",
+            border: "none",
+            //   borderBottom: "1px lightgray solid",
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "flex-start",
+            backgroundColor: "white",
+            justifyContent: "flex-start",
+            flexDirection: "column",
+          }}
+        >
+          <div
+            style={{ backgroundColor: "yellow", width: "100%", height: "33vh" }}
+          >
+
+{/* <div style={{ color: "white", width: "1.5%" }}>
+          <TbSquareCheck />
+        </div>
+         */}
+          </div>
+          <div
+            style={{
+              // backgroundColor: "red",
+              width: "60vw",
+              height: "10vh",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              fontWeight: "bold",
+            }}
+          >
+            THANK YOU FOR YOUR PATCHASE
+          </div>
+          <div
+            style={{
+              //   backgroundColor: "yellow",
+              width: "100%",
+              height: "5vh",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              fontWeight: "bold",
+            }}
+          >
+            <div
+              style={{
+                height: "12vh",
+                width: "69%",
+                alignItems: "center",
+                display: "flex",
+                justifyContent: "center",
+                fontWeight: "bold",
+              }}
+            >
+              your order has been sucdessfuly placed, and we apreciate your
+              trust in our products/services
+            </div>
+          </div>
+          <div
+            style={{
+              // backgroundColor: "red",
+              width: "100%",
+              height: "12vh",
+              alignItems: "center",
+              display: "flex",
+              justifyContent: "center",
+              
+            }}
+          >
+            <div
+              style={{
+               // backgroundColor: "red",
+                height: "12vh",
+                width: "15vw",
+                alignItems: "flex-start",
+                display: "flex",
+                justifyContent: "flex-start",
+               
+                flexDirection:"column"
+              }}
+            >
+                <div>
+                Order Ditails:
+
+                </div>
+                <div>
+                 Order Number:#AABBCC
+
+                </div>
+                <div>
+                Date:23 Oct 202x 
+
+                </div>
+                <div>
+                Total Amount: R4500.00
+
+                </div>
+            </div>
+          </div>
+
+          <div
+            style={{
+              width: "100%",
+              height: "15vh",
+              alignItems: "center",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <div
+              style={{
+                height: "12vh",
+                width: "69%",
+                alignItems: "center",
+                display: "flex",
+                justifyContent: "center",
+                fontWeight: "bold",
+              }}
+            >
+              our team is working diligently to process and ship your order. If
+              you have any question or concern, our customer support is here to
+              help. Contuct us at 0123456789
+            </div>
+          </div>
+          <div
+            style={{
+              // backgroundColor: "red",
+              width: "100%",
+              height: "15vh",
+              alignItems: "flex-start",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <div
+              style={{
+                height: "5vh",
+                width: "13vw",
+                alignItems: "center",
+                display: "flex",
+                justifyContent: "center",
+                fontWeight: "bold",
+                backgroundColor: "#072840",
+                borderRadius: 50,
+                color: "white",
+              }}
+            >
+              CONTINUE SHOPING
+            </div>
+          </div>
+        </div>
       </div>
       <Footer />
     </>

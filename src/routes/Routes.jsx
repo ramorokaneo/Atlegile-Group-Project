@@ -19,6 +19,7 @@ import UserSignUp from "../pages/UserSignUp/UserSignUp";
 import OrderHistory from "../pages/Order_History/OrderHistory";
 import { BrowserRouter } from "react-router-dom";
 import Messages from "../pages/Message/Messages"
+import Reciept from "../pages/Reciept/Reciept";
 
 const App = () => {
   // const { email, password } = useSelector((state) => state.auth);
@@ -40,8 +41,10 @@ const App = () => {
         <Route path="/order-history" element={<OrderHistory />} />
         <Route path="*" element={<h1>PAGE NOT FOUND</h1>} /> */}
      
-        <Route path="/messages" element={<Messages/>} />
-        Messages
+        {/* <Route path="/messages" element={<Messages/>} /> */}
+        <Route path="/reciept" element={<Reciept/>} />
+
+      
       </Routes>
     </BrowserRouter>
   );
