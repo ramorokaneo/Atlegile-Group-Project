@@ -1,0 +1,118 @@
+.background-container {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("./bg-img.jpg");
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.form-item {
+  width: 300px;
+  margin: 10px;
+  background-color: #ffffff;
+}
+
+.form-items {
+  padding: 13px;
+  min-height: 880px;
+  margin-top: 30px;
+  min-width: 400px;
+  margin-left: 1470px;
+}
+
+.logo {
+  margin-left: 130px;
+  margin-top: 200px;
+  display: flex;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+  align-items: center;
+}
+
+.signUp {
+  margin-left: 50px;
+  font-size: 30px;
+}
+
+.shop {
+  margin-right: 60px;
+  font-size: small;
+  cursor: pointer;
+}
+
+form {
+  width: 365px;
+  height: 400px;
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  width: 280px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #000;
+  margin-left: 50px;
+}
+
+.label {
+  margin-left: 50px;
+  font-size: small;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.forgot-password {
+  text-decoration: none;
+  color: #072840;
+  margin-top: 20px;
+  margin-left: 120px;
+  font-size: small;
+  cursor: pointer;
+}
+
+.google-signin {
+  text-decoration: none;
+  text-decoration-color: red;
+  margin-top: 45px;
+  margin-left: 120px;
+  font-size: small;
+  cursor: pointer;
+}
+
+.submit-button,
+.signup-business {
+  padding: 10px 80px;
+  cursor: pointer;
+  border-radius: 200px;
+}
+
+.submit-button {
+  background-color: rgb(8, 8, 44);
+  color: white;
+  border: none;
+  margin-left: 40px;
+  width: 340px;
+}
+
+.signup-business {
+  background-color: white;
+  color: black;
+  margin-left: 30px;
+  width: 340px;
+}
