@@ -8,15 +8,16 @@ import Card from "../../components/Card/Card";
 import FollowUs from "../../components/FollowUs/FollowUs";
 import NavBar from "../../components/NavBar/NavBar";
 import "./businessAccount.css";
-import $ from "jquery";
 
 const logo = require("./cropped-AMS-Shadow-Queen-Logo_BNY-1320x772 1.png");
+const bg = require("./blackSilk.jpg");
 
 export default function BusinessAccount() {
   const [editModal, setEditModal] = useState(false);
   const [bannerModal, setBannerModal] = useState(false);
   const [paymentModal, setPaymentModal] = useState(false);
   const [businessAuthorization, setBusinessAuthorization] = useState(true);
+  // eslint-disable-next-line
   const [businessRegistered, setBusinessRegistered] = useState(true);
 
   const [productName, setProductName] = useState("");
@@ -24,11 +25,22 @@ export default function BusinessAccount() {
   const [priceOriginal, setPriceOriginal] = useState(0);
   const [priceDiscount, setPriceDiscount] = useState(0);
   const [quantity, setQuantity] = useState(0);
-  const [bannerListLength, setBannerListLength] = useState(-1);
+  const [bannerListLength, setBannerListLength] = useState(0);
+  const [image, setImage] = useState(null);
+  const fileInputRef = useRef(null);
 
   const list = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   let bannerListIndex = 0;
-  let bannerList = [];
+  let bannerList = [
+    {
+      backgroundImage: bg,
+      productName: "productName",
+      priceDiscount: 12,
+      quantity: 3,
+      priceOriginal: 24,
+      other: "otherBanner",
+    },
+  ];
 
   const increment = () => {
     if (bannerListIndex === bannerList.length - 1) {
@@ -47,9 +59,6 @@ export default function BusinessAccount() {
       bannerListIndex -= 1;
     }
   };
-
-  const [image, setImage] = useState(null);
-  const fileInputRef = useRef(null);
 
   const handleFileChange = (e) => {
     const selectedImage = e.target.files[0];
@@ -93,15 +102,15 @@ export default function BusinessAccount() {
     setPaymentModal(false);
   };
 
-  // useEffect(() => {
-  //   // This will run once the component is mounted
-  //   $("#myModal").modal('show');
+  useEffect(() => {
+    // Simulate a button click when the component mounts
+    const businessPlusModalButton =
+      document.getElementById("businessPlusModal");
 
-  //   // Optionally, you might want to clean up when the component unmounts
-  //   return () => {
-  //     $("#myModal").modal('hide');
-  //   };
-  // }, []);
+    if (businessPlusModalButton) {
+      businessPlusModalButton.click();
+    }
+  }, []);
 
   return (
     <>
@@ -112,6 +121,8 @@ export default function BusinessAccount() {
           className="btn btn-primary"
           data-toggle="modal"
           data-target="#exampleModalLong"
+          id="businessPlusModal"
+          style={{ display: "none" }}
         >
           Launch demo modal
         </button>
@@ -525,7 +536,6 @@ export default function BusinessAccount() {
             paddingRight: 30,
             backgroundColor: "#f5f5f5",
             display: "flex",
-
             justifyContent: "center",
           }}
         >
@@ -810,16 +820,15 @@ export default function BusinessAccount() {
                 }}
               >
                 <div
-                  style={{ height: "100%", width: "33%" }}
+                  style={{ width: "33%" }}
                   onClick={() => setEditModal(false)}
                 ></div>
                 <div
-                  style={{ height: "100%", width: "33%" }}
+                  style={{ width: "33%" }}
                   onClick={() => setEditModal(false)}
                 ></div>
                 <div
                   style={{
-                    height: "100%",
                     width: "34%",
                     backgroundColor: "white",
                   }}
@@ -1025,17 +1034,17 @@ export default function BusinessAccount() {
                 }}
               >
                 <div
-                  style={{ height: "100%", width: "33%" }}
+                  style={{ height: "100%",width: "33%" }}
                   onClick={() => setBannerModal(false)}
                 ></div>
                 <div
-                  style={{ height: "100%", width: "33%" }}
+                  style={{height: "100%", width: "33%" }}
                   onClick={() => setBannerModal(false)}
                 ></div>
                 <div
                   style={{
-                    height: "100%",
                     width: "34%",
+                    height: "100%",
                     backgroundColor: "white",
                   }}
                 >
@@ -1330,7 +1339,7 @@ export default function BusinessAccount() {
                         </div>
 
                         <div
-                          onClick={handleSaveAddBanner}
+                          onClick={handleSavePaymentInfo}
                           style={{
                             color: "white",
                             fontWeight: 600,
@@ -1361,6 +1370,7 @@ export default function BusinessAccount() {
                 paddingBottom: 30,
                 paddingTop: 30,
                 paddingLeft: 30,
+                
               }}
             >
               <div style={{}}>
@@ -1417,8 +1427,12 @@ export default function BusinessAccount() {
               <div
                 style={{
                   width: "100%",
-                  border: "1px red solid",
+                  //border: "1px red solid",
                   height: "15vh",
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                  paddingLeft:10
                 }}
               >
                 {bannerListLength > -1 ? (
@@ -1432,27 +1446,69 @@ export default function BusinessAccount() {
                       justifyContent: "space-between",
                       alignItems: "center",
                       padding: 15,
+                      flex: 1,
                     }}
                   >
-                    <div>
-                      <div onClick={decrement}>
-                        <AiOutlineLeft />
+                    {/* <img
+                      src={bannerList[bannerListIndex].backgroundImage}
+                      alt="background"
+                    /> */}
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        alignItems: "center",
+                      }}
+                    >
+                      <div
+                        onClick={decrement}
+                        style={{ marginRight: 20, cursor: "pointer" }}
+                      >
+                        <AiOutlineLeft color="white" size={20} />
                       </div>
                       <div>
-                        <p style={{ fontSize: 15, fontWeight: 600 }}>{}</p>
-                        <p style={{ fontSize: 25, fontWeight: 700 }}>{}</p>
-                        <p>
-                          <span>
-                            {bannerList[bannerListIndex].priceDiscount}
+                        <div
+                          style={{
+                            fontSize: 15,
+                            fontWeight: 600,
+                            color: "white",
+                          }}
+                        >
+                          {bannerList[bannerListIndex].other}
+                        </div>
+                        <div
+                          style={{
+                            fontSize: 25,
+                            fontWeight: 700,
+                            color: "white",
+                          }}
+                        >
+                          {bannerList[bannerListIndex].productName}
+                        </div>
+                        <div>
+                          <span
+                            style={{
+                              fontSize: 18,
+                              fontWeight: 700,
+                              color: "#c29920",
+                            }}
+                          >
+                            R{bannerList[bannerListIndex].priceDiscount}
                           </span>{" "}
-                          <span>
-                            {bannerList[bannerListIndex].priceOriginal}
+                          <span
+                            style={{
+                              fontSize: 15,
+                              fontWeight: 400,
+                              color: "white",
+                            }}
+                          >
+                            R{bannerList[bannerListIndex].priceOriginal}
                           </span>
-                        </p>
+                        </div>
                       </div>
                     </div>
-                    <div onClick={increment}>
-                      <AiOutlineRight />
+                    <div onClick={increment} style={{ cursor: "pointer" }}>
+                      <AiOutlineRight color="white" size={20} />
                     </div>
                   </div>
                 ) : null}
