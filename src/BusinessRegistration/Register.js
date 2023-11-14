@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import logo from "../BusinessRegistration/cropped-AMS-Shadow-Queen-Logo_BNY-1320x772 1.png";
 import "./form.css";
 import { useNavigate } from "react-router-dom";
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { collection, addDoc } from "firebase/firestore";
 import db from "./firebaseConfig";
 
 const Register = () => {
@@ -19,9 +19,6 @@ const Register = () => {
   const selectRole = (role) => {
     setSelectedRole(role);
   };
-
-  // const user = auth.currentUser;
-  // const {uid} = user
 
   const selectBusinessType = (businessType) => {
     setSelectedBusinessType(businessType);
@@ -110,7 +107,7 @@ const Register = () => {
 
     try {
       // Add the user's information to the Firestore collection
-      const docRef = await addDoc(collection(db, "Business"), {
+      const docRef = await addDoc(collection(db, "BusinessRegistration"), {
         businessName,
         role: selectedRole,
         website,
@@ -119,12 +116,6 @@ const Register = () => {
         industry: selectedIndustry,
         phoneNumber,
         bio,
-        timestamp: serverTimestamp(),
-        cardholder: "",
-        Expiry: "",
-        CVV: "",
-        cardNumber: "",
-        regNumber: "",
       });
 
       console.log("Document written with ID: ", docRef.id);
