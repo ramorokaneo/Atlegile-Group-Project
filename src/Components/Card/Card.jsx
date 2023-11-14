@@ -95,7 +95,7 @@ const Card = () => {
           </p>
           <Link
             to="/productdetails"
-            onClick={() => console.log("View Button Clicked!!!")}
+            // onClick={() => console.log("View Button Clicked!!!")}
             className="view-button"
           >
             VIEW <img src={RightIcon} className="right-icon" alt="right icon" />
