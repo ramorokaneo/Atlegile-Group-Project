@@ -8,8 +8,9 @@ import Sign_In_Screen from "./Components/Sign_In_Screen/Signinscreen";
 // import Landing from "./Pages/Landing/Landing";
 // import AboutUs from "./Pages/AboutUs/AboutUs";
 // import ProductDetails from "./Pages/ProductDetails/ProductDetails";
-import AddPhoto from "./BusinessRegistration/AddPhoto"
-import Register from "./BusinessRegistration/Register";
+import AddPhoto from "./Components/BusinessRegistration/AddPhoto";
+import Register from "./Components/BusinessRegistration/Register";
+import PaymentInfo from "./Components/BusinessRegistration/PaymentInfo";
 
 function App() {
   return (
@@ -20,17 +21,19 @@ function App() {
         <Route path="/mainacc" element={<MainAcc />} />
         <Route path="/altcontact" element={<AltContact />} />
         <Route path="/signinscreen" element={<Sign_In_Screen />} />
-        
+        <Route path="/registerbusiness" element={<Register />} />
+        <Route path="/addPhoto" element={<AddPhoto />} />
+        <Route path="/paymentInfo" element={<PaymentInfo />} />
+
         {/* <Route path="/landingscreen" element={<Landing />} />
         <Route path="/aboutus" element={<AboutUs />} />
         // <Route path="/productdetails" element={<ProductDetails />} /> */}
         <Route path="/addphoto" element={<AddPhoto />} />
         <Route path="/businessregister" element={<Register />} />
-
-
       </Routes>
     </BrowserRouter>
   );
 }
 
 export default App;
+
