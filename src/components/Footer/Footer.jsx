@@ -1,15 +1,15 @@
-// Footer.js
+// atlegile-Footer.js
 import React from "react";
 import "./footer.css";
 function Footer() {
   return (
-    <footer className="footer">
-      <div className="footer-container">
-        <div className="footer-hero">
-          <div className="footer-body">
-            <div className="logo">
+    <footer className="atlegile-footer">
+      <div className="atlegile-footer-container">
+        <div className="atlegile-footer-hero">
+          <div className="atlegile-footer-body">
+            <div className="atlegile-footer-logo">
               <img
-                className="logo-image"
+                className="atlegile-footer-logo-image"
                 src={"./images/logo2.png"}
                 alt="AMS COMPANY"
               />
@@ -21,10 +21,12 @@ function Footer() {
               customer base, driving sales of their exceptional products and
               services.
             </p>
-            <p className="email-text">atlegilemarketing.co.za</p>
+            <p className="atlegile-footer-email-text">
+              atlegilemarketing.co.za
+            </p>
           </div>
-          <div className="footer-links">
-            <a href="#">
+          <div className="atlegile-footer-links">
+            <a href="/order-history">
               <h4>ORDER HISTORY</h4>
             </a>
             <a href="#">
@@ -36,15 +38,19 @@ function Footer() {
             </a>
           </div>
         </div>
-        <div className="company-section">
-          <p className="company-text">
+        <div className="atlegile-footer-company-section">
+          <p className="atlegile-footer-company-text">
             Atlegile Marketing Solutions (Pty) Ltd eCommerce 2023
             {new Date().getFullYear()}{" "}
           </p>
         </div>
       </div>
-      <div className="lion-image-container">
-        <img className="lion-image" src={"./images/lion.png"} alt="lion" />
+      <div className="atlegile-footer-lion-image-container">
+        <img
+          className="atlegile-footer-lion-image"
+          src={"./images/lion.png"}
+          alt="lion"
+        />
       </div>
     </footer>
   );

@@ -1,20 +1,4 @@
 import "./App.css";
-<<<<<<< HEAD
-import SignIn from "./Pages/Sign In/signIn";
-import ManageBusinesses from "./Pages/Manage Businesses/manageBusinesses";
-import BusinessAccount from "./Pages/Business Account/businessAccount";
-import Footer from "./components/Footer/Footer";
-import Favourite from "./Pages/Favourites/favourites";
-
-function App() {
-  return (
-    <>
-      {/* <SignIn/>
-      <ManageBusinesses/> */}
-      <BusinessAccount />
-      <Footer />
-    </>
-=======
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import Register from './components/Register';
 import UserSignUp from "./Components/UserSignUp/UserSignUp";
@@ -38,7 +22,6 @@ function App() {
         <Route path="/productdetails" element={<ProductDetails />} />
       </Routes>
     </BrowserRouter>
->>>>>>> e41507744b41264a348eb3853695020425abcbbc
   );
 }
 

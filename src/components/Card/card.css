@@ -108,6 +108,7 @@
 }
 .card-icons {
   position: absolute;
+  display: flex;
   width: 8vw;
   bottom: 20.5px;
   /* margin-left: 10px; */
@@ -120,6 +121,8 @@
 }
 
 .view-button {
+  text-decoration: none;
+  width: 7vw;
   background-color: white;
   color: #fff;
   border: none;
@@ -168,4 +171,8 @@
 }
 .icon:hover {
   cursor: pointer;
+}
+.faCart img {
+  width: 30px;
+  height: 30px;
 }
