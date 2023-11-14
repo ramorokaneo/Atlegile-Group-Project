@@ -32,10 +32,22 @@
   display: flex;
 }
 
-.signUp {
-  justify-content: center;
+.header {
   display: flex;
+  justify-content: space-between;
   margin-top: 100px;
+  align-items: center;
+}
+
+.signUp {
+  margin-left: 50px;
+  font-size: 30px;
+}
+
+.shop {
+  margin-right: 60px;
+  font-size: small;
+  cursor: pointer;
 }
 
 form {

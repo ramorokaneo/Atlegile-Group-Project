@@ -2,8 +2,13 @@ import React, { useState } from "react";
 import "./signinscreen.css";
 import Logo from '../../assets/Logo.png';
 import { FcGoogle } from 'react-icons/fc';
+import { FcNext } from "react-icons/fc";
+import { useNavigate } from "react-router-dom";
+
+
 
 const Signinscreen = () => {
+    const navigate = useNavigate();
     const [email, setemail] = useState('');
     const [password, setpassword] = useState("");
 
@@ -14,6 +19,11 @@ const Signinscreen = () => {
             console.log("Filling");
         }
     };
+    const handleShop = () => {
+        // Navigate to the /landingscreen route programmatically
+        navigate("/landingscreen");
+    };
+
 
     return (
         <div className="background">
@@ -21,6 +31,13 @@ const Signinscreen = () => {
                 <div className="flexbox-item flexbox-item-1">
                     <img src={Logo} alt="Logo" className="logo" />
                     <h1 className="sign">Sign In</h1>
+                    <div className="header">
+                        {/* <h2 className="signUp">Sign Up</h2> */}
+                        <p className="shop" onClick={handleShop}>
+                            SHOP
+                            <FcNext />
+                        </p>
+                    </div>
                     <input type="text" placeholder="Email" value={email} onChange={(e) => { setemail(e.target.value) }} required className="sign-in-input" />
                     <input type="password" placeholder="Password" value={password} onChange={(e) => { setpassword(e.target.value) }} className="sign-in-input" />
 
