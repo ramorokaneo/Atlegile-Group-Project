@@ -1,25 +1,72 @@
-import React from "react";
+// AddPhoto.js
+import React, { useState, useRef } from "react";
 import logo from "../BusinessRegistration/cropped-AMS-Shadow-Queen-Logo_BNY-1320x772 1.png";
+import placeholderImage from "./home.jpg"; // Import your placeholder image
 import "./registar.css";
 import SalesGrowth from "./SalesGrowth";
 import { useNavigate } from "react-router-dom";
+import { collection, addDoc } from "firebase/firestore";
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage"; // Import Firebase Storage functions
+import db from "./firebaseConfig";
 
 const AddPhoto = () => {
+  const nav = useNavigate();
+  const [productName, setProductName] = useState("");
+  const [price, setPrice] = useState("");
+  const [quantity, setQuantity] = useState("");
+  const [description, setDescription] = useState("");
+  const [productType, setProductType] = useState("");
+  const [other, setOther] = useState("");
+  const [images, setImages] = useState([]);
+  const fileInputRef = useRef(null);
 
-  const nav = useNavigate()
+  const storage = getStorage(); // Firebase Storage instance
+
+  const handleImageChange = (e) => {
+    const files = e.target.files;
+    setImages((prevImages) => [...prevImages, ...files]);
+  };
+
+  const handleImageUpload = async () => {
+    const uploadTasks = images.map(async (image) => {
+      const storageRef = ref(storage, `product_images/${image.name}`);
+      await uploadBytes(storageRef, image);
+      return getDownloadURL(storageRef);
+    });
+
+    return Promise.all(uploadTasks);
+  };
+
+  const handleButtonClick = () => {
+    fileInputRef.current.click();
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const imageUrls = await handleImageUpload();
+
+      const docRef = await addDoc(collection(db, "Products"), {
+        productName,
+        price,
+        quantity,
+        description,
+        productType,
+        other,
+        imageUrls,
+      });
+
+      console.log("Document written with ID: ", docRef.id);
+
+      nav("/paymentInfo");
+    } catch (error) {
+      console.error("Error adding document: ", error);
+    }
+  };
 
   return (
     <div className="background">
-      {/* <div className="image-card">
-        <div className="text-container">
-          <h4 style={{ color: "orange" }}>For business</h4>
-          <h1 style={{ color: "white" }}>Increased visibility</h1>
-          <h4 style={{ color: "white" }}>
-            Reach a wider audience and gain exposure to potential clients
-          </h4>
-        </div>
-      </div> */}
-
       <SalesGrowth />
       <div className="card">
         <div className="logo-container">
@@ -31,44 +78,66 @@ const AddPhoto = () => {
               justifyContent: "center",
               paddingTop: 120,
             }}
+            alt="Logo"
           />
         </div>
 
         <div className="textInput-container">
-          <form>
+          <form onSubmit={handleSubmit}>
             <h3 style={{ marginTop: "6%" }}>ADD PRODUCTS + SERVICES</h3>
 
             <div style={{ display: "flex" }}>
               <div
                 style={{
-                  backgroundColor: "purple",
-                  width: 90,
-                  height: 90,
-                  border: "solid",
-                  borderColor: "lightgray",
-                  // borderRadius: 6,
-                  borderWidth: 1,
-                  marginRight: 5,
+                  display: "flex",
+                  flexDirection: "row",
+                  flexWrap: "wrap",
                 }}
               >
-                <img
-                  src="https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                  width={90}
-                  height={90}
-                  style={{}}
-                />
+                {/* Display selected images */}
+                {images.length > 0 ? (
+                  images.map((image, index) => (
+                    <div
+                      key={index}
+                      style={{
+                        backgroundColor: "purple",
+                        width: 90,
+                        height: 90,
+                        border: "solid",
+                        borderColor: "lightgray",
+                        borderWidth: 1,
+                        marginRight: 5,
+                        marginBottom: 5,
+                      }}
+                    >
+                      <img
+                        src={URL.createObjectURL(image)}
+                        width={90}
+                        height={90}
+                        alt={`Selected ${index + 1}`}
+                      />
+                    </div>
+                  ))
+                ) : (
+                  // Placeholder image when no photos are selected
+                  <img
+                    src={placeholderImage}
+                    width={90}
+                    height={90}
+                    alt="Placeholder"
+                  />
+                )}
               </div>
 
               <div
                 style={{
-                  // backgroundColor: "purple",
                   width: 90,
                   height: 90,
                   border: "solid",
                   borderColor: "lightgray",
-                  // borderRadius: 6,
                   borderWidth: 1,
                   borderStyle: "dotted",
+                  marginRight: 5,
                 }}
               >
                 <div
@@ -78,7 +147,19 @@ const AddPhoto = () => {
                     alignItems: "center",
                   }}
                 >
+                  {/* Input for selecting image files */}
+                  <input
+                    type="file"
+                    accept="image/*"
+                    onChange={handleImageChange}
+                    style={{ display: "none" }}
+                    ref={fileInputRef}
+                    multiple
+                  />
+                  {/* Trigger the file input when the button is clicked */}
                   <button
+                    type="button"
+                    onClick={handleButtonClick}
                     style={{
                       backgroundColor: "white",
                       color: "gray",
@@ -95,48 +176,80 @@ const AddPhoto = () => {
               </div>
             </div>
 
-            <div class="group textInput-container">
-              <input type="text" required />
+            <div className="group textInput-container">
+              <input
+                type="text"
+                required
+                value={productName}
+                onChange={(e) => setProductName(e.target.value)}
+              />
               <label>Name</label>
             </div>
 
             <div className="row">
-
-              <div class="group textInput-container">
-                <input type="text" required />
+              <div className="group textInput-container">
+                <input
+                  type="text"
+                  required
+                  value={price}
+                  onChange={(e) => setPrice(e.target.value)}
+                />
                 <label>Price</label>
-               
-
               </div>
-            
 
-              <div class="group textInput-container">
-                <input type="text" required />
+              <div className="group textInput-container">
+                <input
+                  type="text"
+                  required
+                  value={quantity}
+                  onChange={(e) => setQuantity(e.target.value)}
+                />
                 <label>Quantity</label>
               </div>
             </div>
 
-            <span style={{fontSize: 8, color: 'lightgrey', width: '35%', marginLeft: '-65%'}}>
-                There will be VAT. Service Fee and Delivery Fees added to this
-                amount
-              </span>
+            <span
+              style={{
+                fontSize: 8,
+                color: "lightgrey",
+                width: "35%",
+                marginLeft: "-65%",
+              }}>
+              There will be VAT. Service Fee and Delivery Fees added to this
+              amount
+            </span>
 
-            <div class="group textInput-container">
-              <input type="text" required />
+            <div className="group textInput-container">
+              <input
+                type="text"
+                required
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+              />
               <label>Description</label>
             </div>
 
-            <div class="group textInput-container">
-              <input type="text" required />
+            <div className="group textInput-container">
+              <input
+                type="text"
+                required
+                value={productType}
+                onChange={(e) => setProductType(e.target.value)}
+              />
               <label>Type of product</label>
             </div>
 
-            <div class="group textInput-container">
-              <input type="text" required />
+            <div className="group textInput-container">
+              <input
+                type="text"
+                required
+                value={other}
+                onChange={(e) => setOther(e.target.value)}
+              />
               <label>Other</label>
             </div>
 
-            <button type="submit" className="btn-continue" onClick={() => nav('/paymentInfo')}>
+            <button type="submit" className="btn-continue">
               Continue
             </button>
           </form>
