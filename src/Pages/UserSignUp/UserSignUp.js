@@ -25,6 +25,11 @@ function UserSignUp() {
     navigate("/mainacc");
   };
 
+  const handleShop = () => {
+    // Navigate to the /landingscreen route programmatically
+    navigate("/landingscreen");
+  };
+
   const handleBusinessSignUp = () => {
     // Navigate to the /businesssignup route programmatically
     navigate("/businesssignup");
@@ -35,7 +40,13 @@ function UserSignUp() {
       <div className="form-container">
         <div className="form-item form-items">
           <img src="./logo.png" alt="Logo" className="logo" />
-          <h2 className="signUp">Sign Up</h2>
+          <div className="header">
+            <h2 className="signUp">Sign Up</h2>
+            <p className="shop" onClick={handleShop}>
+              SHOP
+              <FcNext />
+            </p>
+          </div>
           <form onSubmit={handleSubmit}>
             <label className="label">Email</label>
             <input
