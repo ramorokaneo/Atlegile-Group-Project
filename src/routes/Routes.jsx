@@ -28,20 +28,20 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Landing />} />
-        {/* <Route path="/sign-in" element={<SignIN />} />
+        <Route path="/sign-in" element={<SignIN />} />
         <Route path="/sign-up" element={<UserSignUp />}></Route>
         <Route path="/contact" element={<altContact />} />
-        <Route path="/main" element={<MainAcc />} /> */}
+        <Route path="/main" element={<MainAcc />} />
         {/* <Route path="/register" element={<UserSignUp />} /> */}
-        {/* <Route path="/about-us" element={<AboutUsPage />} />
+        <Route path="/about-us" element={<AboutUsPage />} />
         <Route path="/business-account" element={<BusinessAccount />} />
         <Route path="/business-tech" element={<BusinessTech />} />
         <Route path="/delivery-done" element={<DeliveryDone />} />
         <Route path="/product-details" element={<ProductDetails />} />
         <Route path="/order-history" element={<OrderHistory />} />
-        <Route path="*" element={<h1>PAGE NOT FOUND</h1>} /> */}
+        <Route path="*" element={<h1>PAGE NOT FOUND</h1>} />
      
-        {/* <Route path="/messages" element={<Messages/>} /> */}
+        <Route path="/messages" element={<Messages/>} />
         <Route path="/reciept" element={<Reciept/>} />
 
       

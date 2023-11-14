@@ -10,8 +10,8 @@ import { FiYoutube } from "react-icons/fi";
 import { FiTwitter } from "react-icons/fi";
 import { SiFacebook } from "react-icons/si";
 import Logo from "./Logo.png";
-
-import { TbSquareCheck } from "react-icons/bi";
+import { BsCheckSquare } from "react-icons/bs";
+import { GoDotFill } from "react-icons/go";
 import Footer from "../../componets/Footer/Footer";
 import Datetime from "react-datetime";
 import "react-datepicker/dist/react-datepicker.css";
@@ -110,6 +110,10 @@ function Reciept() {
     setDate(selectedDateTime);
   };
 
+
+  const handleNavigate =()=>{
+     console.log('navigate to shpoing')
+  }
   return (
     <>
       <div
@@ -158,7 +162,7 @@ function Reciept() {
         <div style={{ color: "white", width: "1.5%" }}>
           <FiTwitter />
         </div>
-        
+
         <div
           style={{
             height: "5vh",
@@ -315,7 +319,7 @@ function Reciept() {
           display: "flex",
           flexDirection: "row",
           alignItems: "center",
-       //   backgroundColor: "#072840",
+          //   backgroundColor: "#072840",
           justifyContent: "center",
         }}
       >
@@ -328,19 +332,23 @@ function Reciept() {
             display: "flex",
             flexDirection: "row",
             alignItems: "flex-start",
-            backgroundColor: "white",
+            // backgroundColor: "yellow",
             justifyContent: "flex-start",
             flexDirection: "column",
           }}
         >
           <div
-            style={{ backgroundColor: "yellow", width: "100%", height: "33vh" }}
+            style={{
+              width: "100%",
+              height: "25vh",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "flex-end",
+            }}
           >
-
-{/* <div style={{ color: "white", width: "1.5%" }}>
-          <TbSquareCheck />
-        </div>
-         */}
+            <BsCheckSquare
+              style={{ color: "green", width: "150px", height: "150px" }}
+            />
           </div>
           <div
             style={{
@@ -388,37 +396,57 @@ function Reciept() {
               alignItems: "center",
               display: "flex",
               justifyContent: "center",
-              
             }}
           >
             <div
               style={{
-               // backgroundColor: "red",
+                // backgroundColor: "red",
                 height: "12vh",
                 width: "15vw",
                 alignItems: "flex-start",
                 display: "flex",
                 justifyContent: "flex-start",
-               
-                flexDirection:"column"
+
+                flexDirection: "column",
               }}
             >
-                <div>
-                Order Ditails:
+              <div>Order Ditails:</div>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "flex-start",
+                  alignItems:"center",
+                  flexDirection: "row",
+                }}
+              >
+                <GoDotFill />
+                <div>Order Number:#AABBCC</div>
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "flex-start",
+                  alignItems:"center",
+                  flexDirection: "row",
+                }}
+              >
+                <GoDotFill />
+                <div>Date:23 Oct 202x</div>
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "flex-start",
+                  alignItems:"center",
+                  flexDirection: "row",
+                }}
+              >
+                <GoDotFill />
+                <div>Total Amount: R4500.00</div>
+              </div>
 
-                </div>
-                <div>
-                 Order Number:#AABBCC
-
-                </div>
-                <div>
-                Date:23 Oct 202x 
-
-                </div>
-                <div>
-                Total Amount: R4500.00
-
-                </div>
+             
+             
             </div>
           </div>
 
@@ -467,7 +495,9 @@ function Reciept() {
                 backgroundColor: "#072840",
                 borderRadius: 50,
                 color: "white",
+                cursor:"pointer"
               }}
+              onClick={handleNavigate}
             >
               CONTINUE SHOPING
             </div>

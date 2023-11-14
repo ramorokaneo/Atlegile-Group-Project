@@ -120,7 +120,7 @@ function Messages() {
       dateAntTime: "Wed 8:21 AM ",
       image: "OP",
       status: "recieved",
-      messages: "HI Pleas drop the pakedge nea the green box at hte gate ",
+      messages: "HI Pleas drop the pakedge nea the green box at hte gate leas drop the pakedge nea the green boleas drop the pakedge nea the green boleas drop the pakedge nea the green boleas drop the pakedge nea the green boleas drop the pakedge nea the green bo ",
     },
     {
       dateAntTime: "Wed 8:21 AM ",
@@ -341,7 +341,7 @@ function Messages() {
           //flexDirection: "row",
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: "#072840",
+        //  backgroundColor: "#072840",
         }}
       >
         <div
@@ -379,7 +379,19 @@ function Messages() {
                     : "inherit",
                 margin: "5px",
                 
+                maxWidth: "60%",
+                display: "flex",
+                flexDirection: "row",
+                // backgroundColor:
+                //     item.status === "sent"
+                //       ? "yellow"
+                //       : item.status === "recieved"
+                //       ? "yellow"
+                //       : "#ffffff",
+
+                flexDirection: "column",
               }}
+              
             >
               <div
                 style={{
@@ -390,45 +402,51 @@ function Messages() {
                       ? "#072840"
                       : "#ffffff",
                   padding: "10px",
-                  borderTopRightRadius:
-                    item.status === "sent"
-                      ? "10px"
-                      : item.status === "recieved"
-                      ? "10px"
-                      : 0,
-                  borderBottomRightRadius:
-                  item.status === "sent"      
-                  ?"10px"
-                  : item.status === "recieved"
-                   ? 0
-                   : 0,
-                  
-                  borderBottomLeftRadius: "10px",
-                    
 
-                  borderTopLeftRadius:
-                    item.status === "sent"
-                      ? "0px"
-                      : item.status === "recieved"
-                      ? "10px"
-                      : 0,
+                  maxWidth: "100%",
 
-                  maxWidth: "70%",
-                 
                   wordWrap: "break-word",
                   marginBottom: "10px",
-                  display:"flex",
-                  flexDirection:"row",
-                 
+                  display: "flex",
+                  flexDirection: "row",
+                  borderTopRightRadius:
+                  item.status === "sent"
+                    ? "10px"
+                    : item.status === "recieved"
+                    ? "10px"
+                    : 0,
+                borderBottomRightRadius:
+                  item.status === "sent"
+                    ? "10px"
+                    : item.status === "recieved"
+                    ? 0
+                    : 0,
+
+                borderBottomLeftRadius: "10px",
+
+                borderTopLeftRadius:
+                  item.status === "sent"
+                    ? "0px"
+                    : item.status === "recieved"
+                    ? "10px"
+                    : 0,
                 }}
               >
-                   
+                <p
+                  style={{
+                    height: "uuto",
+                    margin: 0,
+                    color: "white",
 
-                <p style={{ height:"uuto",margin: 0, color: "white",
-                
-                // position:"absolute"  
-                
-                }}>{item.messages}</p>
+                    // position:"absolute"
+                  }}
+                >
+                  {item.messages}
+                </p>
+              </div>
+              <div style={{fontSize:"0.8rem"}}>
+              {item.dateAntTime}
+
               </div>
             </div>
           ))}
