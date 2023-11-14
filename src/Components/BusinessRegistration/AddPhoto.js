@@ -1,13 +1,13 @@
 // AddPhoto.js
 import React, { useState, useRef } from "react";
 import logo from "../BusinessRegistration/cropped-AMS-Shadow-Queen-Logo_BNY-1320x772 1.png";
-import placeholderImage from "../assets/BACKGROUND.png"; // Import your placeholder image
+import placeholderImage from "./home.jpg"; // Import your placeholder image
 import "./registar.css";
 import SalesGrowth from "./SalesGrowth";
 import { useNavigate } from "react-router-dom";
 import { collection, addDoc } from "firebase/firestore";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage"; // Import Firebase Storage functions
-import { db } from "../config";
+import db from "./firebaseConfig";
 
 const AddPhoto = () => {
   const nav = useNavigate();
@@ -92,7 +92,8 @@ const AddPhoto = () => {
                   display: "flex",
                   flexDirection: "row",
                   flexWrap: "wrap",
-                }}>
+                }}
+              >
                 {/* Display selected images */}
                 {images.length > 0 ? (
                   images.map((image, index) => (
@@ -107,7 +108,8 @@ const AddPhoto = () => {
                         borderWidth: 1,
                         marginRight: 5,
                         marginBottom: 5,
-                      }}>
+                      }}
+                    >
                       <img
                         src={URL.createObjectURL(image)}
                         width={90}
@@ -136,13 +138,15 @@ const AddPhoto = () => {
                   borderWidth: 1,
                   borderStyle: "dotted",
                   marginRight: 5,
-                }}>
+                }}
+              >
                 <div
                   style={{
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                  }}>
+                  }}
+                >
                   {/* Input for selecting image files */}
                   <input
                     type="file"
@@ -163,7 +167,8 @@ const AddPhoto = () => {
                       flexDirection: "column",
                       justifyContent: "center",
                       alignItems: "center",
-                    }}>
+                    }}
+                  >
                     <h7>+</h7>
                     <span>Upload</span>
                   </button>

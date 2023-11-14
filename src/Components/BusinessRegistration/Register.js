@@ -3,7 +3,7 @@ import logo from "../BusinessRegistration/cropped-AMS-Shadow-Queen-Logo_BNY-1320
 import "./form.css";
 import { useNavigate } from "react-router-dom";
 import { collection, addDoc } from "firebase/firestore";
-import {db} from "../config";
+import db from "./firebaseConfig";
 
 const Register = () => {
   const nav = useNavigate();
