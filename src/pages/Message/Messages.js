@@ -120,7 +120,8 @@ function Messages() {
       dateAntTime: "Wed 8:21 AM ",
       image: "OP",
       status: "recieved",
-      messages: "HI Pleas drop the pakedge nea the green box at hte gate leas drop the pakedge nea the green boleas drop the pakedge nea the green boleas drop the pakedge nea the green boleas drop the pakedge nea the green boleas drop the pakedge nea the green bo ",
+      messages:
+        "HI Pleas drop the pakedge nea the green box at hte gate leas drop the pakedge nea the green boleas drop the pakedge nea the green boleas drop the pakedge nea the green boleas drop the pakedge nea the green boleas drop the pakedge nea the green bo ",
     },
     {
       dateAntTime: "Wed 8:21 AM ",
@@ -341,7 +342,7 @@ function Messages() {
           //flexDirection: "row",
           alignItems: "center",
           justifyContent: "center",
-        //  backgroundColor: "#072840",
+          //  backgroundColor: "#072840",
         }}
       >
         <div
@@ -377,77 +378,142 @@ function Messages() {
                     : item.status === "recieved"
                     ? "flex-end"
                     : "inherit",
-                margin: "5px",
-                
+                //   margin: "5px",
+
                 maxWidth: "60%",
                 display: "flex",
                 flexDirection: "row",
                 // backgroundColor:
-                //     item.status === "sent"
-                //       ? "yellow"
-                //       : item.status === "recieved"
-                //       ? "yellow"
-                //       : "#ffffff",
-
-                flexDirection: "column",
+                //   item.status === "sent"
+                //     ? "yellow"
+                //     : item.status === "recieved"
+                //     ? "yellow"
+                //     : "#ffffff",
               }}
-              
             >
-              <div
-                style={{
-                  backgroundColor:
-                    item.status === "sent"
-                      ? "#e6e6e6"
-                      : item.status === "recieved"
-                      ? "#072840"
-                      : "#ffffff",
-                  padding: "10px",
-
-                  maxWidth: "100%",
-
-                  wordWrap: "break-word",
-                  marginBottom: "10px",
-                  display: "flex",
-                  flexDirection: "row",
-                  borderTopRightRadius:
-                  item.status === "sent"
-                    ? "10px"
-                    : item.status === "recieved"
-                    ? "10px"
-                    : 0,
-                borderBottomRightRadius:
-                  item.status === "sent"
-                    ? "10px"
-                    : item.status === "recieved"
-                    ? 0
-                    : 0,
-
-                borderBottomLeftRadius: "10px",
-
-                borderTopLeftRadius:
-                  item.status === "sent"
-                    ? "0px"
-                    : item.status === "recieved"
-                    ? "10px"
-                    : 0,
-                }}
-              >
-                <p
+              {item.status === "sent" && (
+                <div
                   style={{
-                    height: "uuto",
-                    margin: 0,
-                    color: "white",
-
-                    // position:"absolute"
+                    minHeight: "30px",
+                    minWidth: "30px",
+                //    backgroundColor: "red",
+                    justifyContent: "flex-start",
+                    alignContent: "flex-start",
+                    display: "flex",
                   }}
                 >
-                  {item.messages}
-                </p>
-              </div>
-              <div style={{fontSize:"0.8rem"}}>
-              {item.dateAntTime}
+                  <div
+                    style={{
+                      height: "30px",
+                      width: "30px",
+                      color: "white",
+                      backgroundColor: "gray",
+                      borderRadius: "50%",
+                      justifyContent: "center",
+                      alignContent: "center",
+                      display: "flex",
+                    }}
+                  >
+                    OP
+                  </div>
+                </div>
+              )}
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <div
+                  style={{
+                    backgroundColor:
+                      item.status === "sent"
+                        ? "#e6e6e6"
+                        : item.status === "recieved"
+                        ? "#072840"
+                        : "#ffffff",
+                    padding: "10px",
 
+                    maxWidth: "100%",
+
+                    wordWrap: "break-word",
+                    // marginBottom: "5px",
+                    display: "flex",
+                    //  flexDirection: "row",
+                    borderTopRightRadius:
+                      item.status === "sent"
+                        ? "20px"
+                        : item.status === "recieved"
+                        ? "20px"
+                        : 0,
+                    borderBottomRightRadius:
+                      item.status === "sent"
+                        ? "20px"
+                        : item.status === "recieved"
+                        ? 0
+                        : 0,
+
+                    borderBottomLeftRadius: "20px",
+
+                    borderTopLeftRadius:
+                      item.status === "sent"
+                        ? "0px"
+                        : item.status === "recieved"
+                        ? "20px"
+                        : 0,
+                  }}
+                >
+                  <p
+                    style={{
+                      height: "uuto",
+                      margin: 0,
+                      color: "white",
+
+                      // position:"absolute"
+                    }}
+                  >
+                    {item.messages}
+                  </p>
+                </div>
+                <div
+                  style={{
+                    fontSize: "0.8rem",
+                    width: "100%",
+                    height: "outo",
+                    display: "flex",
+                    justifyContent:
+                      item.status === "sent"
+                        ? "flex-start"
+                        : item.status === "recieved"
+                        ? "flex-end"
+                        : "inherit",
+                  }}
+                >
+                  {item.dateAntTime}
+                </div>
               </div>
+              {item.status === "recieved" && (
+               <div
+               style={{
+                 minHeight: "30px",
+                 minWidth: "30px",
+                // backgroundColor: "red",
+                 justifyContent: "flex-start",
+                 alignContent: "flex-start",
+                 display: "flex",
+               }}
+             >
+               <div
+                 style={{
+                   height: "30px",
+                   width: "30px",
+                   color: "white",
+                   backgroundColor: "gray",
+                   borderRadius: "50%",
+                   justifyContent: "center",
+                   alignContent: "center",
+                   display: "flex",
+                 }}
+               >
+                 OP
+               </div>
+             </div>
+              )}
             </div>
           ))}
         </div>
