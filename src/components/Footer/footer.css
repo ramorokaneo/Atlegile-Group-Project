@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 .atlegile-footer {
+=======
+.footer {
+>>>>>>> origin/Tlhogi
   background-color: #070f18;
   height: 50vh;
   color: white;
@@ -14,12 +18,20 @@
 .container {
   color: white;
 }
+<<<<<<< HEAD
 .atlegile-footer-logo {
+=======
+.logo {
+>>>>>>> origin/Tlhogi
   height: 50px;
   color: white;
   margin-bottom: 30px;
 }
+<<<<<<< HEAD
 .atlegile-footer-hero {
+=======
+.footer-hero {
+>>>>>>> origin/Tlhogi
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -27,11 +39,19 @@
   width: 70vw;
   margin-left: 10vw;
 }
+<<<<<<< HEAD
 .atlegile-footer-company-text {
   text-transform: uppercase;
   padding-bottom: 80px;
 }
 .atlegile-footer-body {
+=======
+.company-text {
+  text-transform: uppercase;
+  padding-bottom: 80px;
+}
+.footer-body {
+>>>>>>> origin/Tlhogi
   /* background-color: red; */
   height: 40vh;
   width: 35vw;
@@ -42,6 +62,7 @@
   margin-bottom: 50px;
   /* flex-grow: 2; */
 }
+<<<<<<< HEAD
 .atlegile-footer-body p {
   font-weight: 700;
 }
@@ -50,6 +71,16 @@
   text-transform: uppercase;
 }
 .atlegile-footer-links {
+=======
+.footer-body p {
+  font-weight: 700;
+}
+.footer-body h3 {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.footer-links {
+>>>>>>> origin/Tlhogi
   display: flex;
   height: 30vh;
   flex-direction: column;
@@ -61,6 +92,7 @@
   padding-top: 45px;
   padding-bottom: 15px;
 }
+<<<<<<< HEAD
 .atlegile-footer-links a {
   text-decoration: none;
   color: white;
@@ -69,6 +101,16 @@
   font-weight: bold;
 }
 .atlegile-footer-container {
+=======
+.footer-links a {
+  text-decoration: none;
+  color: white;
+}
+.email-text {
+  font-weight: bold;
+}
+.footer-container {
+>>>>>>> origin/Tlhogi
   display: flex;
   /* background-color: white; */
   margin-top: 80px;
@@ -77,7 +119,11 @@
   align-items: center;
   width: 80vw;
 }
+<<<<<<< HEAD
 .atlegile-footer-lion-image {
+=======
+.lion-image {
+>>>>>>> origin/Tlhogi
   height: 250px;
   color: white;
   position: absolute;
@@ -85,7 +131,11 @@
   right: 0;
 }
 
+<<<<<<< HEAD
 .atlegile-footer-lion-image-container {
+=======
+.lion-image-container {
+>>>>>>> origin/Tlhogi
   /* background-color: red; */
   height: 20vh;
 }
