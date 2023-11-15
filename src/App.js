@@ -53,8 +53,8 @@ import Routes from "./routes/Routes";
 // import Landing from "./Pages/Landing/Landing";
 // import AboutUs from "./Pages/AboutUs/AboutUs";
 // import ProductDetails from "./Pages/ProductDetails/ProductDetails";
-import AddPhoto from "./BusinessRegistration/AddPhoto"
-import Register from "./BusinessRegistration/Register";
+import AddPhoto from "./Components/BusinessRegistration/AddPhoto"
+import Register from "./Components/BusinessRegistration/Register";
 
 >>>>>>> origin/Mpho_client
 function App() {

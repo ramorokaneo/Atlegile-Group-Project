@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import logo from "../BusinessRegistration/cropped-AMS-Shadow-Queen-Logo_BNY-1320x772 1.png";
 import "./form.css";
 import { useNavigate } from "react-router-dom";
-import { collection, addDoc } from "firebase/firestore";
-import db from "./firebaseConfig";
+// import { collection, addDoc } from "firebase/firestore";
+// import db from "./firebaseConfig";
 
 const Register = () => {
   const nav = useNavigate();
@@ -105,26 +105,27 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      // Add the user's information to the Firestore collection
-      const docRef = await addDoc(collection(db, "BusinessRegistration"), {
-        businessName,
-        role: selectedRole,
-        website,
-        location,
-        businessType: selectedBusinessType,
-        industry: selectedIndustry,
-        phoneNumber,
-        bio,
-      });
+    nav("/addPhoto");
+    // try {
+    //   // Add the user's information to the Firestore collection
+    //   const docRef = await addDoc(collection(db, "BusinessRegistration"), {
+    //     businessName,
+    //     role: selectedRole,
+    //     website,
+    //     location,
+    //     businessType: selectedBusinessType,
+    //     industry: selectedIndustry,
+    //     phoneNumber,
+    //     bio,
+    //   });
 
-      console.log("Document written with ID: ", docRef.id);
+    //   console.log("Document written with ID: ", docRef.id);
 
-      // Redirect to the next page after successful registration
-      nav("/addPhoto");
-    } catch (error) {
-      console.error("Error adding document: ", error);
-    }
+    //   // Redirect to the next page after successful registration
+    //   nav("/addPhoto");
+    // } catch (error) {
+    //   console.error("Error adding document: ", error);
+    // }
   };
 
   return (

@@ -1,13 +1,13 @@
 // AddPhoto.js
 import React, { useState, useRef } from "react";
 import logo from "../BusinessRegistration/cropped-AMS-Shadow-Queen-Logo_BNY-1320x772 1.png";
-import placeholderImage from "./home.jpg"; // Import your placeholder image
+import placeholderImage from "./login.jpg"; // Import your placeholder image
 import "./registar.css";
 import SalesGrowth from "./SalesGrowth";
 import { useNavigate } from "react-router-dom";
-import { collection, addDoc } from "firebase/firestore";
-import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage"; // Import Firebase Storage functions
-import db from "./firebaseConfig";
+// import { collection, addDoc } from "firebase/firestore";
+// import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage"; // Import Firebase Storage functions
+// import { db } from "../../config";
 
 const AddPhoto = () => {
   const nav = useNavigate();
@@ -20,22 +20,22 @@ const AddPhoto = () => {
   const [images, setImages] = useState([]);
   const fileInputRef = useRef(null);
 
-  const storage = getStorage(); // Firebase Storage instance
+  // const storage = getStorage(); // Firebase Storage instance
 
   const handleImageChange = (e) => {
     const files = e.target.files;
     setImages((prevImages) => [...prevImages, ...files]);
   };
 
-  const handleImageUpload = async () => {
-    const uploadTasks = images.map(async (image) => {
-      const storageRef = ref(storage, `product_images/${image.name}`);
-      await uploadBytes(storageRef, image);
-      return getDownloadURL(storageRef);
-    });
+  // const handleImageUpload = async () => {
+  //   const uploadTasks = images.map(async (image) => {
+  //     const storageRef = ref(storage, `product_images/${image.name}`);
+  //     await uploadBytes(storageRef, image);
+  //     return getDownloadURL(storageRef);
+  //   });
 
-    return Promise.all(uploadTasks);
-  };
+  //   return Promise.all(uploadTasks);
+  // };
 
   const handleButtonClick = () => {
     fileInputRef.current.click();
@@ -45,19 +45,19 @@ const AddPhoto = () => {
     e.preventDefault();
 
     try {
-      const imageUrls = await handleImageUpload();
+      // const imageUrls = await handleImageUpload();
 
-      const docRef = await addDoc(collection(db, "Products"), {
-        productName,
-        price,
-        quantity,
-        description,
-        productType,
-        other,
-        imageUrls,
-      });
+      // const docRef = await addDoc(collection(db, "Products"), {
+      //   productName,
+      //   price,
+      //   quantity,
+      //   description,
+      //   productType,
+      //   other,
+      //   imageUrls,
+      // });
 
-      console.log("Document written with ID: ", docRef.id);
+      // console.log("Document written with ID: ", docRef.id);
 
       nav("/paymentInfo");
     } catch (error) {
@@ -92,8 +92,7 @@ const AddPhoto = () => {
                   display: "flex",
                   flexDirection: "row",
                   flexWrap: "wrap",
-                }}
-              >
+                }}>
                 {/* Display selected images */}
                 {images.length > 0 ? (
                   images.map((image, index) => (
@@ -108,8 +107,7 @@ const AddPhoto = () => {
                         borderWidth: 1,
                         marginRight: 5,
                         marginBottom: 5,
-                      }}
-                    >
+                      }}>
                       <img
                         src={URL.createObjectURL(image)}
                         width={90}
@@ -138,15 +136,13 @@ const AddPhoto = () => {
                   borderWidth: 1,
                   borderStyle: "dotted",
                   marginRight: 5,
-                }}
-              >
+                }}>
                 <div
                   style={{
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                  }}
-                >
+                  }}>
                   {/* Input for selecting image files */}
                   <input
                     type="file"
@@ -167,8 +163,7 @@ const AddPhoto = () => {
                       flexDirection: "column",
                       justifyContent: "center",
                       alignItems: "center",
-                    }}
-                  >
+                    }}>
                     <h7>+</h7>
                     <span>Upload</span>
                   </button>

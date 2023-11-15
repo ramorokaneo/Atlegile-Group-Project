@@ -39,11 +39,11 @@ const firebaseConfig = {
   storageBucket: "atlegilemarketing.appspot.com",
   messagingSenderId: "162373605376",
   appId: "1:162373605376:web:113cc9cade343ac9c360e5",
-  measurementId: "G-9Z66TT7GSR"
+  measurementId: "G-9Z66TT7GSR",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-export {db}
+export { db };
