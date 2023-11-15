@@ -2,19 +2,40 @@ import React, { useState } from "react";
 import logo from "../BusinessRegistration/cropped-AMS-Shadow-Queen-Logo_BNY-1320x772 1.png";
 import "./form.css";
 import { useNavigate } from "react-router-dom";
-// import { collection, addDoc } from "firebase/firestore";
-// import { db } from "../../config";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { db } from "../../config";
+import useRegister from "./useRegister";
 
 const Register = () => {
   const nav = useNavigate();
-  const [businessName, setBusinessName] = useState("");
-  const [selectedRole, setSelectedRole] = useState("");
-  const [website, setWebsite] = useState("");
-  const [location, setLocation] = useState("");
-  const [selectedBusinessType, setSelectedBusinessType] = useState("");
-  const [selectedIndustry, setSelectedIndustry] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [bio, setBio] = useState("");
+const {
+  businessName,
+  setBusinessName,
+  selectedRole,
+  setSelectedRole,
+  website,
+  setWebsite,
+  regNumber,
+  setRegNumber,
+  location,
+  setLocation,
+  selectedBusinessType,
+  setSelectedBusinessType,
+  selectedIndustry,
+  setSelectedIndustry,
+  phoneNumber,
+  setPhoneNumber,
+  bio,
+  setBio,
+  expiry,
+  setExpiry,
+  cvv,
+  setCvv,
+  cardHolder,
+  setCardHolder,
+  cardNumber,
+  setCardNumber,
+} = useRegister()
 
   const selectRole = (role) => {
     setSelectedRole(role);
@@ -104,27 +125,33 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    nav("/addPhoto");
-    // try {
-    //   // Add the user's information to the Firestore collection
-    //   const docRef = await addDoc(collection(db, "BusinessRegistration"), {
-    //     businessName,
-    //     role: selectedRole,
-    //     website,
-    //     location,
-    //     businessType: selectedBusinessType,
-    //     industry: selectedIndustry,
-    //     phoneNumber,
-    //     bio,
-    //   });
+    // nav("/addPhoto");
+    try {
+      // Add the user's information to the Firestore collection
+      // const docRef = await addDoc(collection(db, "Business"), {
+      //   businessName,
+      //   role: selectedRole,
+      //   website,
+      //   location,
+      //   regNumber,
+      //   businessType: selectedBusinessType,
+      //   industry: selectedIndustry,
+      //   phoneNumber,
+      //   bio,
+      //   createdAt: serverTimestamp(),
+      //   cardHolder,
+      //   cardNumber,
+      //   expiry,
+      //   cvv,
+      // });
 
-    //   console.log("Document written with ID: ", docRef.id);
+      // console.log("Document written with ID: ", docRef.id);
 
-    //   // Redirect to the next page after successful registration
-    //   nav("/addPhoto");
-    // } catch (error) {
-    //   console.error("Error adding document: ", error);
-    // }
+      // Redirect to the next page after successful registration
+      nav("/addPhoto");
+    } catch (error) {
+      console.error("Error adding document: ", error);
+    }
   };
 
   return (
@@ -187,6 +214,16 @@ const Register = () => {
                   </select>
                 </div>
               </div>
+            </div>
+
+            <div className="group textInput-container">
+              <input
+                type="text"
+                value={regNumber}
+                onChange={(e) => setRegNumber(e.target.value)}
+                required
+              />
+              <label>Reg Number</label>
             </div>
 
             <div className="group textInput-container">
