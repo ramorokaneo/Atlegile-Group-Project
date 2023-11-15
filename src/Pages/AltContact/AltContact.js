@@ -1,34 +1,47 @@
 import React, { useState } from "react";
 import "./AltContact.css";
 import { useNavigate } from "react-router-dom";
+import { firebase } from "../../config";
 
 function UserSignUp() {
   const navigate = useNavigate();
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Check if name and phone are not empty
     if (name.trim() === "" || phone.trim() === "") {
       alert("Please fill in all fields before continuing.");
       return;
     }
 
-    // Handle form submission logic here
-    console.log("Form submitted:", { name, phone });
+    try {
+  
+      const firestore = firebase.firestore();
 
-    // Navigate to the /landingscreen route programmatically
-    navigate("/landingscreen");
+      await firestore.collection("users").add({
+        alternativeContact: {
+          name,
+          phone,
+          timestamp: firebase.firestore.FieldValue.serverTimestamp(), 
+        },
+      });
+
+      console.log("Alternative contact information submitted to 'users' collection in Firestore.");
+
+      navigate("/landingscreen");
+    } catch (error) {
+   
+      console.error("Error submitting alternative contact information:", error.message);
+      alert("Error submitting alternative contact information. Please try again.");
+    }
   };
 
   const handleNotNow = () => {
-    // Display an alert message
-    alert("Thank you for signing up");
+   
+    console.log("Not Now button clicked");
 
-    // Navigate to the /usersignup route programmatically
-    navigate("/");
   };
 
   return (

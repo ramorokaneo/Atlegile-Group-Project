@@ -3,35 +3,42 @@ import "./SignUp.css";
 import { useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FcNext } from "react-icons/fc";
+import {firebase} from "../../config";
 
 function UserSignUp() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Check if email and password are not empty
     if (email.trim() === "" || password.trim() === "") {
       alert("Please fill in all fields before signing in.");
       return;
     }
 
-    // Handle form submission logic here
-    console.log("Form submitted:", { email, password });
+    try {
+      // Create a new user with email and password using Firebase authentication
+      const userCredential = await firebase.auth().createUserWithEmailAndPassword(email, password);
 
-    // Navigate to the /mainacc route programmatically
-    navigate("/mainacc");
+      // If the user is signed up successfully
+      if (userCredential.user) {
+        console.log("User signed up:", userCredential.user);
+        navigate("/mainacc");
+      }
+    } catch (error) {
+      // Handle errors here, for example:
+      console.error("Error signing up:", error.message);
+      alert("Error signing up. Please try again.");
+    }
   };
 
   const handleShop = () => {
-    // Navigate to the /landingscreen route programmatically
     navigate("/landingscreen");
   };
 
   const handleBusinessSignUp = () => {
-    // Navigate to the /businesssignup route programmatically
     navigate("/businesssignup");
   };
 

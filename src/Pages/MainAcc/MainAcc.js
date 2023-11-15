@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./MainAcc.css";
 import { useNavigate } from "react-router-dom";
+import {firebase} from "../../config"; 
 
 function MainAcc() {
   const navigate = useNavigate();
@@ -11,29 +12,35 @@ function MainAcc() {
   const [email, setEmail] = useState("");
   const [location, setLocation] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Check if any of the fields are empty
     if (!name || !surname || !phone || !gender || !email || !location) {
       alert("Please fill in all fields before continuing.");
       return;
     }
 
-    // Handle form submission logic here
-    console.log("Form submitted:", {
-      name,
-      surname,
-      phone,
-      gender,
-      email,
-      location,
-    });
+    try {
+      const firestore = firebase.firestore();
 
-    // Navigate to the /altcontact route programmatically
-    navigate("/altcontact");
+      await firestore.collection("users").add({
+        name,
+        surname,
+        phone,
+        gender,
+        email,
+        location,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp(), 
+      });
+
+      console.log("User information submitted to Firestore.");
+
+      navigate("/altcontact");
+    } catch (error) {
+      console.error("Error submitting user information:", error.message);
+      alert("Error submitting user information. Please try again.");
+    }
   };
-
   return (
     <div className="background-container">
       <div className="form-container">
