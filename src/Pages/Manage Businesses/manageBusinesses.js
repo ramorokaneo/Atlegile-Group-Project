@@ -4,8 +4,10 @@ import { PiCaretUpDownFill } from "react-icons/pi";
 import { AiOutlineSearch } from "react-icons/ai";
 import clipArt from "./clipArtBusinesses.png";
 import './manageBusiness.css'
+import { useNavigate } from "react-router-dom"; 
 
 export default function ManageBusinesses() {
+  const navigate = useNavigate();
   function calculateBackgroundProperties() {
     const screenWidth = window.innerWidth;
     const screenHeight = window.innerHeight;
@@ -109,6 +111,22 @@ export default function ManageBusinesses() {
     },
   ];
 
+  const handleNavigateToAdmin = () => {
+    navigate('/Admin');
+   };
+ 
+   const handleNavigateToDashboard = () => {
+     navigate('/Dashboard');
+   };
+ 
+   const handleNavigateToBusinesses = () => {
+    navigate('/Businesses');
+   };
+ 
+   const handleNavigateToUsers = () => {
+    navigate('/mangeusers');
+   };
+
   return (
     <div
       style={{
@@ -174,6 +192,7 @@ export default function ManageBusinesses() {
               paddingBottom: 10,
               alignItems: "center",
             }}
+            onClick={() => handleNavigateToAdmin()}
           >
             <FaStar color="gray" style={{ marginRight: 25 }} />
             <span>Dashboard</span>
@@ -188,6 +207,7 @@ export default function ManageBusinesses() {
               paddingBottom: 10,
               alignItems: "center",
             }}
+            onClick={() => handleNavigateToDashboard()}
           >
             <FaStar color="gray" style={{ marginRight: 25 }} />
             <span>Admins</span>
@@ -201,7 +221,9 @@ export default function ManageBusinesses() {
               paddingTop: 10,
               paddingBottom: 10,
               alignItems: "center",
+              
             }}
+            onClick={() => handleNavigateToUsers()}
           >
             <FaStar color="gray" style={{ marginRight: 25 }} />
             <span>Users</span>
@@ -216,6 +238,8 @@ export default function ManageBusinesses() {
               paddingBottom: 10,
               alignItems: "center",
             }}
+            onClick={() => handleNavigateToBusinesses()}
+            
           >
             <FaStar color="gray" style={{ marginRight: 25 }} />
             <span>Businesses</span>
@@ -263,9 +287,12 @@ export default function ManageBusinesses() {
               border: "none",
               borderBottom: "1px lightgray solid",
               marginLeft: 10,
+              
             }}
+            
           >
-            <span style={{ fontWeight: 700 }}>USERS</span>
+            <span style={{ fontWeight: 700 }} >USERS</span>
+            
           </div>
 
           <div
@@ -276,6 +303,7 @@ export default function ManageBusinesses() {
               paddingBottom: 50,
               marginLeft: 10,
             }}
+           
           >
             <div
               style={{ width: "20%", display: "flex", flexDirection: "column" }}

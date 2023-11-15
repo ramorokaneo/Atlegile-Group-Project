@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { AiOutlineSearch } from "react-icons/ai";
 import { PiCaretUpDownFill } from "react-icons/pi";
-import clip from "../images/cilp.png";
-
+import clip from "./cilp.png";
+import { useNavigate } from 'react-router-dom';
 const fakeUsersList = [
   {
     id: "01",
@@ -97,7 +97,7 @@ const fakeBusinessesList = [
 export default function WelcomeToAMS() {
   const [piCaretColor, setPiCaretColor] = useState("gray");
   const [searchColor, setSearchColor] = useState("gray");
-
+  const navigate = useNavigate();
   const handlePiCaretClick = () => {
     setPiCaretColor("gray"); 
   };
@@ -108,15 +108,16 @@ export default function WelcomeToAMS() {
   };
 
   const handleNavigateToDashboard = () => {
-    console.log("Dashboard");
+   
+    navigate('/Dashboard')
   };
 
   const handleNavigateToBusinesses = () => {
-    console.log("Businesses");
+    navigate('/Businesses');
   };
 
   const handleNavigateToUsers = () => {
-    console.log("Users");
+    navigate('/mangeusers');
   };
   return (
     <div

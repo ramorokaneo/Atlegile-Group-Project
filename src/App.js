@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import Register from './components/Register';
@@ -75,6 +76,25 @@ function App() {
       <WelcomeToAMS />
     </div>
 >>>>>>> origin/Mahlatse
+=======
+
+import ManageUserScreen from "./Pages/Manage Users/ManageUserScreen";
+import SignIn from "./Pages/Sign In/signIn";
+import ManageBusinesses from "./Pages/Manage Businesses/manageBusinesses";
+import { Route, Routes } from "react-router";
+import WelcomeToAMS from "./Pages/Welcome To AMS/welcomeToAMS"
+function App() {
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<SignIn />} />
+        <Route path="/Dashboard" element={<WelcomeToAMS/>} />
+        <Route path="/Businesses" element={<ManageBusinesses/>} />
+        <Route path="/mangeusers" element={<ManageUserScreen/>} />    
+      </Routes>
+
+    </>
+>>>>>>> origin/Mpho
   );
 }
 
