@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import Register from './components/Register';
@@ -36,11 +37,14 @@ import "./Pages/welcome.css";
 >>>>>>> origin/Mahlatse
 
 =======
+=======
+>>>>>>> origin/Boiketlo
 // App.js
 import React from "react";
 //import Footer from "./componets/Footer";
 import "./App.css"; // Import your CSS file
 import Routes from "./routes/Routes";
+<<<<<<< HEAD
 >>>>>>> origin/Ristar
 
 
@@ -104,14 +108,12 @@ function App() {
     </div>
 >>>>>>> origin/Mahlatse
 =======
+=======
+>>>>>>> origin/Boiketlo
 
-import ManageUserScreen from "./Pages/Manage Users/ManageUserScreen";
-import SignIn from "./Pages/Sign In/signIn";
-import ManageBusinesses from "./Pages/Manage Businesses/manageBusinesses";
-import { Route, Routes } from "react-router";
-import WelcomeToAMS from "./Pages/Welcome To AMS/welcomeToAMS"
 function App() {
   return (
+<<<<<<< HEAD
     <>
       <Routes>
         <Route path="/" element={<SignIn />} />
@@ -127,6 +129,11 @@ function App() {
       <Routes />
     </div>
 >>>>>>> origin/Ristar
+=======
+    <div className="app">
+ <Routes />
+    </div>
+>>>>>>> origin/Boiketlo
   );
 }
 
