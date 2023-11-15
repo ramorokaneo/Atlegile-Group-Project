@@ -1,0 +1,174 @@
+.background {
+  background-image: url("https://images.pexels.com/photos/3750773/pexels-photo-3750773.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  width: 100%;
+}
+
+.card {
+  background-color: white;
+  width: 30%;
+  height: 98%;
+  display: flex;
+  margin: 0.5%;
+  flex-direction: column;
+}
+
+.logo-container {
+  /* background-color: lightgray; */
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.textInput-container {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin-top: auto;
+  border: none;
+  margin-bottom: 4%;
+}
+
+.inputbox {
+  position: relative;
+  border-bottom: 1px solid gray;
+  width: 100%;
+}
+.inputbox label {
+  position: absolute;
+  top: 15%;
+  color: gray;
+  font-size: 0.6em;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.inputbox input {
+  height: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.dropdown {
+  position: relative;
+}
+
+
+.dropdown-trigger {
+  cursor: pointer;
+  position: absolute;
+  right: 10px; 
+  top: 50%;
+  transform: translateY(-50%);
+
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 100%;
+  border: 1px solid #ccc; 
+  border-radius: 4px;
+  padding: 8px; 
+}
+/* Show the dropdown content when the dropdown-trigger is clicked */
+.dropdown.active .dropdown-content {
+  display: block;
+}
+.group.textInput-container.select-role select {
+  border-bottom: 1px solid gray; 
+  width: 150%; 
+  margin-left: -5px; 
+}
+
+
+.form-group.row {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+}
+
+.inputboxselect {
+  position: relative;
+  border-bottom: 1px solid gray;
+  width: 100px;
+}
+
+.inputboxselect label {
+  position: absolute;
+  top: 15%;
+  color: gray;
+  font-size: 0.6em;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.inputboxselect select {
+  height: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  /* font-size: 1em; */
+}
+
+.inputboxselect select::after {
+  content: "▼";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.form {
+  /* flex: 1; */
+  /* margin-right: 10px;  */
+}
+
+button {
+  background-color: #072840;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 2%;
+  /* margin-top: 5%; */
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.image-card {
+  background-image: url("./media\ bg-cover.png");
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  /* position: fixed; */
+  width: 68.5%;
+  height: 20%;
+  margin-top: auto;
+  margin-bottom: 0.5%;
+}
+
+.text-container {
+  /* background: lightblue; */
+  margin: 2%;
+}
