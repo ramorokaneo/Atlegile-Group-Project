@@ -22,4 +22,8 @@ if (!firebase.apps.length){
   firebase.initializeApp(firebaseConfig);
 }
 
+<<<<<<< HEAD
 export {firebase};
+=======
+export {firebase};
+>>>>>>> origin/Mahlatse

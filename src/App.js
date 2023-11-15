@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import Register from './components/Register';
@@ -25,12 +26,18 @@ import UserSignIn from "./Pages/UserSignIn";
 import LandingScreen from "./Pages/LandingScreen";
 import BusinessSignUp from "./Pages/BusinessSignUp";
 >>>>>>> origin/Tlhogi
+=======
+import React from "react";
+import WelcomeToAMS from "./Pages/welcomeToAMS";
+import "./Pages/welcome.css";
+>>>>>>> origin/Mahlatse
 
 
 
 >>>>>>> origin/Mbali
 function App() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <BrowserRouter>
       <Routes>
@@ -63,6 +70,11 @@ function App() {
       </div>
     </Router>
 >>>>>>> origin/Tlhogi
+=======
+    <div>
+      <WelcomeToAMS />
+    </div>
+>>>>>>> origin/Mahlatse
   );
 }
 

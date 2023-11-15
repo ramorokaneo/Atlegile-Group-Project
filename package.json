@@ -27,6 +27,7 @@
     "react-icons": "^4.11.0",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-regular-svg-icons": "^6.4.2",
@@ -39,6 +40,8 @@
 >>>>>>> origin/Mbali
 =======
 >>>>>>> origin/Tlhogi
+=======
+>>>>>>> origin/Mahlatse
     "react-router-dom": "^6.18.0",
     "react-scripts": "5.0.1",
     "sqlite3": "^5.1.6",
