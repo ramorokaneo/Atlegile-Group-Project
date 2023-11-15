@@ -3,6 +3,8 @@ import "./SignUp.css";
 import { useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FcNext } from "react-icons/fc";
+const logo = require("./Logo.png");
+//const backgroundImage = require("./bg-img.jpg")
 
 function UserSignUp() {
   const navigate = useNavigate();
@@ -35,10 +37,20 @@ function UserSignUp() {
   };
 
   return (
-    <div className="background-container">
+    <div
+      // style={{
+      //   width: "100%",
+      //   height: "100%",
+      //   backgroundImage: require('./bg-img.jpg'),
+      //   backgroundSize: "cover",
+      //   backgroundPosition: "center",
+      //   backgroundRepeat: "no-repeat",
+      // }}
+      className="background-container"
+    >
       <div className="form-container">
         <div className="form-item form-items">
-          <img src="./logo.png" alt="Logo" className="logo" />
+          <img src={logo} alt="Logo" />
           <div className="header">
             <h2 className="signUp">Sign Up</h2>
             <p className="shop" onClick={handleShop}>
@@ -72,8 +84,9 @@ function UserSignUp() {
               SIGN UP
             </button>
 
-            <a className="forgot-password" href="/signinscreen">ALREADY HAVE AN ACCOUNT?</a>
-
+            <a className="forgot-password" href="/signinscreen">
+              ALREADY HAVE AN ACCOUNT?
+            </a>
 
             <div className="google-signin">
               <a href="/">

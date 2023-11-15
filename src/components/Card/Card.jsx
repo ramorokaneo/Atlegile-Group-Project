@@ -9,7 +9,7 @@ import { faHeart as faHeartRed } from "@fortawesome/free-solid-svg-icons";
 // import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import faCart from "../../assets/icons/shopping-cart.png";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+
 const Card = () => {
   const [isRed, setIsRed] = useState(false);
 
