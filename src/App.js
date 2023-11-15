@@ -19,6 +19,7 @@ function App() {
         <Route path="/" element={<UserSignUp />} />
         <Route path="/mainacc" element={<MainAcc />} />
         <Route path="/altcontact" element={<AltContact />} />
+        {/* eslint-disable-next-line */}
         <Route path="/signinscreen" element={<Sign_In_Screen />} />
         
         {/* <Route path="/landingscreen" element={<Landing />} />
