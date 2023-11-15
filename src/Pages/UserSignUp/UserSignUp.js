@@ -3,7 +3,8 @@ import "./SignUp.css";
 import { useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FcNext } from "react-icons/fc";
-import {firebase} from "../../config";
+import { firebase } from "../../config";
+import { firestore } from "../../config";
 
 function UserSignUp() {
   const navigate = useNavigate();
@@ -19,16 +20,21 @@ function UserSignUp() {
     }
 
     try {
-      // Create a new user with email and password using Firebase authentication
-      const userCredential = await firebase.auth().createUserWithEmailAndPassword(email, password);
+      const userCredential = await firebase
+        .auth()
+        .createUserWithEmailAndPassword(email, password);
 
-      // If the user is signed up successfully
       if (userCredential.user) {
         console.log("User signed up:", userCredential.user);
+
+        await firestore.collection("Users").doc(userCredential.user.uid).set({
+          email: email,
+        });
+
+        // Navigate to "/mainacc" after successful sign-up
         navigate("/mainacc");
       }
     } catch (error) {
-      // Handle errors here, for example:
       console.error("Error signing up:", error.message);
       alert("Error signing up. Please try again.");
     }
@@ -50,8 +56,7 @@ function UserSignUp() {
           <div className="header">
             <h2 className="signUp">Sign Up</h2>
             <p className="shop" onClick={handleShop}>
-              SHOP
-              <FcNext />
+              SHOP <FcNext />
             </p>
           </div>
           <form onSubmit={handleSubmit}>

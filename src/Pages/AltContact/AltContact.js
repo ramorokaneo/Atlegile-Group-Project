@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./AltContact.css";
 import { useNavigate } from "react-router-dom";
-import { firebase } from "../../config";
+import { firebase, firestore } from "../../config";
 
 function UserSignUp() {
   const navigate = useNavigate();
@@ -17,31 +17,35 @@ function UserSignUp() {
     }
 
     try {
-  
-      const firestore = firebase.firestore();
+      const user = firebase.auth().currentUser;
 
-      await firestore.collection("users").add({
+      if (!user) {
+        // Handle user authentication issues
+        alert("User not authenticated. Please sign in.");
+        return;
+      }
+
+      const userRef = firestore.collection("Users");
+
+      await userRef.doc(user.uid).update({
         alternativeContact: {
           name,
           phone,
-          timestamp: firebase.firestore.FieldValue.serverTimestamp(), 
+          timestamp: firebase.firestore.FieldValue.serverTimestamp(),
         },
       });
 
-      console.log("Alternative contact information submitted to 'users' collection in Firestore.");
+      console.log("Alternative contact information submitted to 'Users' collection in Firestore.");
 
       navigate("/landingscreen");
     } catch (error) {
-   
       console.error("Error submitting alternative contact information:", error.message);
       alert("Error submitting alternative contact information. Please try again.");
     }
   };
 
   const handleNotNow = () => {
-   
     console.log("Not Now button clicked");
-
   };
 
   return (

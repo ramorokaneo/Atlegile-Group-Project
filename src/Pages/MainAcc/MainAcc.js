@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./MainAcc.css";
 import { useNavigate } from "react-router-dom";
-import {firebase} from "../../config"; 
+import { firebase, firestore } from "../../config";
 
 function MainAcc() {
   const navigate = useNavigate();
@@ -21,19 +21,19 @@ function MainAcc() {
     }
 
     try {
-      const firestore = firebase.firestore();
+      const userRef = firestore.collection("Users");
 
-      await firestore.collection("users").add({
+      await userRef.doc(email).set({
         name,
         surname,
         phone,
         gender,
         email,
         location,
-        timestamp: firebase.firestore.FieldValue.serverTimestamp(), 
+        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
       });
 
-      console.log("User information submitted to Firestore.");
+      console.log("User information submitted to Users collection in Firestore.");
 
       navigate("/altcontact");
     } catch (error) {
@@ -41,6 +41,31 @@ function MainAcc() {
       alert("Error submitting user information. Please try again.");
     }
   };
+
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  };
+
+  const handleSurnameChange = (e) => {
+    setSurname(e.target.value);
+  };
+
+  const handlePhoneChange = (e) => {
+    setPhone(e.target.value);
+  };
+
+  const handleGenderChange = (e) => {
+    setGender(e.target.value);
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleLocationChange = (e) => {
+    setLocation(e.target.value);
+  };
+
   return (
     <div className="background-container">
       <div className="form-container">
@@ -56,7 +81,7 @@ function MainAcc() {
                 placeholder="Jane"
                 className="form-group-1"
                 value={name}
-                onChange={(e) => setName(e.target.value)}
+                onChange={handleNameChange}
                 required
               />
 
@@ -66,7 +91,7 @@ function MainAcc() {
                 placeholder="Doe"
                 className="form-group-1"
                 value={surname}
-                onChange={(e) => setSurname(e.target.value)}
+                onChange={handleSurnameChange}
                 required
               />
             </div>
@@ -77,7 +102,7 @@ function MainAcc() {
               placeholder="0123456789"
               className="form-group"
               value={phone}
-              onChange={(e) => setPhone(e.target.value)}
+              onChange={handlePhoneChange}
               required
             />
 
@@ -86,7 +111,7 @@ function MainAcc() {
               <select
                 className="form-group"
                 value={gender}
-                onChange={(e) => setGender(e.target.value)}
+                onChange={handleGenderChange}
                 required
               >
                 <option value="" disabled>
@@ -104,7 +129,7 @@ function MainAcc() {
               placeholder="example@gmail.com"
               className="form-group"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={handleEmailChange}
               required
             />
 
@@ -114,7 +139,7 @@ function MainAcc() {
               placeholder="1235 Vilakazi Street, Orlando West, Soweto, 1804, South Africa"
               className="form-group"
               value={location}
-              onChange={(e) => setLocation(e.target.value)}
+              onChange={handleLocationChange}
               required
             />
 
