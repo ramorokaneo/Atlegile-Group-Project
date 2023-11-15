@@ -1,53 +1,68 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../BusinessRegistration/cropped-AMS-Shadow-Queen-Logo_BNY-1320x772 1.png";
 import "./form.css";
-import { useNavigate } from "react-router-dom";
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
-import { db } from "../../config";
+import { Navigate, useNavigate } from "react-router-dom";
 import useRegister from "./useRegister";
+import PaymentInfo from "./PaymentInfo";
 
 const Register = () => {
   const nav = useNavigate();
-const {
-  businessName,
-  setBusinessName,
-  selectedRole,
-  setSelectedRole,
-  website,
-  setWebsite,
-  regNumber,
-  setRegNumber,
-  location,
-  setLocation,
-  selectedBusinessType,
-  setSelectedBusinessType,
-  selectedIndustry,
-  setSelectedIndustry,
-  phoneNumber,
-  setPhoneNumber,
-  bio,
-  setBio,
-  expiry,
-  setExpiry,
-  cvv,
-  setCvv,
-  cardHolder,
-  setCardHolder,
-  cardNumber,
-  setCardNumber,
-} = useRegister()
+  const [businessName, setBusinessName] = useState("");
+  const [selectedRole, selectRole] = useState("");
+  const [website, setWebsite] = useState("");
+  const [regNumber, setRegNumber] = useState("");
+  const [location, setLocation] = useState("");
+  const [selectedBusinessType, selectBusinessType] = useState("");
+  const [selectedIndustry, selectIndustry] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [bio, setBio] = useState("");
+  // const [expiry, setExpiry] = useState("");
+  // const [cvv, setCvv] = useState("");
+  // const [cardHolder, updateCardHolder] = useState("");
+  // const [cardNumber, updateCardNumber] = useState("");
 
-  const selectRole = (role) => {
-    setSelectedRole(role);
-  };
+  // useEffect to store state in local storage
+  useEffect(() => {
+    localStorage.setItem("businessName", businessName);
+    localStorage.setItem("selectedRole", selectedRole);
+    localStorage.setItem("website", website);
+    localStorage.setItem("regNumber", regNumber);
+    localStorage.setItem("location", location);
+    localStorage.setItem("selectedBusinessType", selectedBusinessType);
+    localStorage.setItem("selectedIndustry", selectedIndustry);
+    localStorage.setItem("phoneNumber", phoneNumber);
+    localStorage.setItem("bio", bio);
+    // localStorage.setItem("expiry", expiry);
+    // localStorage.setItem("cvv", cvv);
+    // localStorage.setItem("cardHolder", cardHolder);
+    // localStorage.setItem("cardNumber", cardNumber);
+  }, [
+    businessName,
+    selectedRole,
+    website,
+    regNumber,
+    location,
+    selectedBusinessType,
+    selectedIndustry,
+    phoneNumber,
+    bio,
+    // expiry,
+    // cvv,
+    // cardHolder,
+    // cardNumber,
+  ]);
 
-  const selectBusinessType = (businessType) => {
-    setSelectedBusinessType(businessType);
-  };
+  // const selectRole = (role) => {
+  //   setSelectedRole(role);
+  // };
 
-  const selectIndustry = (industry) => {
-    setSelectedIndustry(industry);
-  };
+  // const selectBusinessType = (businessType) => {
+  //   setSelectedBusinessType(businessType);
+  // };
+
+  // const selectIndustry = (industry) => {
+  //   setSelectedIndustry(industry);
+  // };
 
   const emptyOption = [""];
 
@@ -125,32 +140,30 @@ const {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // nav("/addPhoto");
+
     try {
-      // Add the user's information to the Firestore collection
-      // const docRef = await addDoc(collection(db, "Business"), {
-      //   businessName,
-      //   role: selectedRole,
-      //   website,
-      //   location,
-      //   regNumber,
-      //   businessType: selectedBusinessType,
-      //   industry: selectedIndustry,
-      //   phoneNumber,
-      //   bio,
-      //   createdAt: serverTimestamp(),
-      //   cardHolder,
-      //   cardNumber,
-      //   expiry,
-      //   cvv,
-      // });
-
-      // console.log("Document written with ID: ", docRef.id);
-
-      // Redirect to the next page after successful registration
+      // You can add additional validation before proceeding with Firebase upload
       nav("/addPhoto");
+      // Render the Payment component to handle Firebase upload
+      return (
+        <PaymentInfo
+          businessName={businessName}
+          selectedRole={selectedRole}
+          website={website}
+          regNumber={regNumber}
+          location={location}
+          selectedBusinessType={selectedBusinessType}
+          selectedIndustry={selectedIndustry}
+          phoneNumber={phoneNumber}
+          bio={bio}
+          // expiry={expiry}
+          // cvv={cvv}
+          // cardHolder={cardHolder}
+          // cardNumber={cardNumber}
+        />
+      );
     } catch (error) {
-      console.error("Error adding document: ", error);
+      console.error("Error processing registration: ", error);
     }
   };
 
