@@ -30,7 +30,6 @@ export default function SignIn() {
         flexDirection: "column",
         height: "100%",
         width: "100%",
-
       }}
     >
       <div

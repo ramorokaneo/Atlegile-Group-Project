@@ -40,14 +40,10 @@
   
   input,
   select {
-    font-size: 18px;
-    padding: 10px 10px 10px 5px;
-    display: block;
-    width: 90%;
+
     border: none;
     border-bottom: 1px solid #757575;
-    background: transparent;
-    margin-right: 10px;
+
   }
 
   

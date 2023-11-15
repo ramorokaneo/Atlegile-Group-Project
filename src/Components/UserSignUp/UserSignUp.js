@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa6";
 const logo = require("./Logo.png");
+// eslint-disable-next-line
 const backgroundImage = require("./bg-img.jpg");
 
 function UserSignUp() {
@@ -48,27 +49,6 @@ function UserSignUp() {
       // }}
       className="background-container"
     >
-      {/* <div className="form-container">
-        <div className="form-item form-items">
-          
-          
-
-          <form onSubmit={handleSubmit}>
-
-            
-
-            
-
-            
-
-            <div className="google-signin">
-              
-            </div>
-          </form>
-          
-        </div>
-      </div> */}
-
       <div style={{ height: "100%", width: "70%" }}></div>
       <div
         style={{
@@ -105,8 +85,8 @@ function UserSignUp() {
                   flexDirection: "row",
                   alignItems: "center",
                   justifyContent: "space-between",
-                  paddingRight: 40,
-                  paddingLeft: 40,
+                  paddingRight: 60,
+                  paddingLeft: 60,
                 }}
               >
                 <span style={{ fontSize: 25, fontWeight: 700 }}>SIGN UP</span>
@@ -120,24 +100,24 @@ function UserSignUp() {
                   }}
                   onClick={handleShop}
                 >
-                  <span style={{ fontSize: 12, marginRight: 10 }}>SHOP</span>
+                  <span style={{fontSize: 12, marginRight: 10 }}>SHOP</span>
                   <FaAngleRight size={10} color="#59b0f6" />
                 </div>
               </div>
               <div
                 style={{
-                  paddingRight: 40,
-                  paddingLeft: 40,
+                  paddingRight: 60,
+                  paddingLeft: 60,
                 }}
               >
                 <br />
                 <div style={{}}>
-                  <span style={{ fontSize: 12, }}>Email</span>
+                  <span style={{ fontSize: 12 }}>Email</span>
                   <input
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    style={{ width: "100%"}}
+                    style={{ width: "100%" }}
                     required
                   />
                 </div>
@@ -153,7 +133,7 @@ function UserSignUp() {
                   />
                 </div>
                 <div
-                  onClick={handleBusinessSignUp}
+                  onClick={handleSubmit}
                   style={{
                     borderRadius: 20,
                     backgroundColor: "#072840",
@@ -164,6 +144,7 @@ function UserSignUp() {
                     color: "white",
                     fontSize: 12,
                     cursor: "pointer",
+                    
                   }}
                 >
                   SIGN UP
@@ -176,8 +157,8 @@ function UserSignUp() {
                   alignItems: "center",
                   justifyContent: "space-between",
                   height: "8vh",
-                  paddingRight: 40,
-                  paddingLeft: 40,
+                  paddingRight: 60,
+                  paddingLeft: 60,
                   marginTop: 10,
                 }}
               >
@@ -198,15 +179,20 @@ function UserSignUp() {
                   }}
                   href="/"
                 >
-                  <FaGoogle color="#d32f2f" size={20} style={{marginRight:5}}/> SIGN UP WITH GOOGLE
+                  <FaGoogle
+                    color="#d32f2f"
+                    size={20}
+                    style={{ marginRight: 5 }}
+                  />{" "}
+                  SIGN UP WITH GOOGLE
                 </a>
               </div>
             </div>
 
             <div
               style={{
-                paddingRight: 40,
-                paddingLeft: 40,
+                paddingRight: 60,
+                paddingLeft: 60,
               }}
             >
               <div
