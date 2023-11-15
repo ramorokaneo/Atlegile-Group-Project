@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Signinscreen from './Sign_In_Screen/Signinscreen';
-// import LandingPageHeader from './LandingPageHeader/LandingPageHeader';
+import LandingPageHeader from './LandingPageHeader/LandingPageHeader';
 
 
 
@@ -10,7 +10,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Signinscreen />} />
-        {/* <Route path="/" element={<LandingPageHeader/>}/>  */}
+        <Route path="/landingpageheader" element={<LandingPageHeader/>}/> 
       </Routes>
     </BrowserRouter>
   );

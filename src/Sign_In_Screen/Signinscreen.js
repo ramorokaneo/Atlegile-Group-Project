@@ -4,7 +4,7 @@ import Logo from "../assets/Logo.png"
 import { FcGoogle } from 'react-icons/fc';
 import { FcNext } from "react-icons/fc";
 import { useNavigate } from "react-router-dom";
-import {firebase} from "../../src/config";
+import { firebase } from "../../src/config";
 
 const Signinscreen = () => {
     const navigate = useNavigate();
@@ -21,7 +21,7 @@ const Signinscreen = () => {
 
     const handleShop = () => {
        
-        navigate("/landingscreen");
+        navigate("/landingpageheader");
     };
 
     useEffect(() => {
@@ -69,7 +69,7 @@ const Signinscreen = () => {
 
 
 
-                    <button type="submit" className="submit-button" onClick={handleSignIn} required>Sign In</button>
+                    <button type="submit" className="submit-button" onClick={handleShop} required>Sign In</button>
 
 
                     <a className="forgot-password" href="/">DONT HAVE AN ACCOUNT?</a>
