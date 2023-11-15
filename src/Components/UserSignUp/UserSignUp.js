@@ -60,20 +60,19 @@ function UserSignUp() {
           </div>
 
           <form onSubmit={handleSubmit}>
-            <label className="label">Email</label>
+
             <input
               type="email"
-              placeholder=""
+              placeholder="Email"
               className="form-group"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
 
-            <label className="label">Password</label>
             <input
               type="password"
-              placeholder=""
+              placeholder="Password"
               className="form-group"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
