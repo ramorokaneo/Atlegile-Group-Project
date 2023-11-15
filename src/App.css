@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 *{
 =======
 .App {
@@ -483,3 +484,10 @@ html, body, #root{
 >>>>>>> origin/Mpho
 
 >>>>>>> origin/Mahlatse
+=======
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+>>>>>>> origin/Ristar

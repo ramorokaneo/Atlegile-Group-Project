@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import Register from './components/Register';
@@ -34,6 +35,13 @@ import WelcomeToAMS from "./Pages/welcomeToAMS";
 import "./Pages/welcome.css";
 >>>>>>> origin/Mahlatse
 
+=======
+// App.js
+import React from "react";
+//import Footer from "./componets/Footer";
+import "./App.css"; // Import your CSS file
+import Routes from "./routes/Routes";
+>>>>>>> origin/Ristar
 
 
 >>>>>>> origin/Mbali
@@ -47,6 +55,7 @@ import Register from "./BusinessRegistration/Register";
 >>>>>>> origin/Mpho_client
 function App() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <BrowserRouter>
@@ -113,6 +122,11 @@ function App() {
 
     </>
 >>>>>>> origin/Mpho
+=======
+    <div className="app">
+      <Routes />
+    </div>
+>>>>>>> origin/Ristar
   );
 }
 
