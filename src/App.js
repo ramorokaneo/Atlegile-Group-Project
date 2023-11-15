@@ -9,6 +9,7 @@ import UserSignUp from "./Components/UserSignUp/UserSignUp";
 import MainAcc from "./Components/MainAcc/MainAcc";
 import AltContact from "./Components/AltContact/AltContact";
 import Sign_In_Screen from "./Components/Sign_In_Screen/Signinscreen";
+<<<<<<< HEAD
 import Landing from "./Pages/Landing/Landing";
 import AboutUs from "./Pages/AboutUs/AboutUs";
 import ProductDetails from "./Pages/ProductDetails/ProductDetails";
@@ -36,6 +37,14 @@ import "./Pages/welcome.css";
 
 
 >>>>>>> origin/Mbali
+=======
+// import Landing from "./Pages/Landing/Landing";
+// import AboutUs from "./Pages/AboutUs/AboutUs";
+// import ProductDetails from "./Pages/ProductDetails/ProductDetails";
+import AddPhoto from "./BusinessRegistration/AddPhoto"
+import Register from "./BusinessRegistration/Register";
+
+>>>>>>> origin/Mpho_client
 function App() {
   return (
 <<<<<<< HEAD
@@ -48,13 +57,22 @@ function App() {
         <Route path="/mainacc" element={<MainAcc />} />
         <Route path="/altcontact" element={<AltContact />} />
         <Route path="/signinscreen" element={<Sign_In_Screen />} />
-        <Route path="/landingscreen" element={<Landing />} />
+        
+        {/* <Route path="/landingscreen" element={<Landing />} />
         <Route path="/aboutus" element={<AboutUs />} />
+<<<<<<< HEAD
         <Route path="/productdetails" element={<ProductDetails />} />
 =======
         <Route path="/" element={<Signinscreen />} />
         {/* <Route path="/" element={<LandingPageHeader/>}/>  */}
 >>>>>>> origin/Mbali
+=======
+        // <Route path="/productdetails" element={<ProductDetails />} /> */}
+        <Route path="/addphoto" element={<AddPhoto />} />
+        <Route path="/businessregister" element={<Register />} />
+
+
+>>>>>>> origin/Mpho_client
       </Routes>
     </BrowserRouter>
 =======
