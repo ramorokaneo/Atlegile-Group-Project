@@ -12,7 +12,7 @@ import { SiFacebook } from "react-icons/si";
 import { AiOutlineSearch } from "react-icons/ai";
 import "./OrderHistory.css";
 import Logo from "./Logo.png";
-import Footer from "../../componets/Footer/Footer";
+import Footer from "../../components/Footer/Footer";
 
 function OrderHistory() {
   function calculateBackgroundProperties() {

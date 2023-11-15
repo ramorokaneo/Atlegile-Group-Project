@@ -11,7 +11,7 @@ import { FiTwitter } from "react-icons/fi";
 import { SiFacebook } from "react-icons/si";
 import Logo from "./Logo.png";
 
-import Footer from "../../componets/Footer/Footer";
+import Footer from "../../components/Footer/Footer";
 import Datetime from "react-datetime";
 import "react-datepicker/dist/react-datepicker.css";
 import DatePicker from "react-datepicker";

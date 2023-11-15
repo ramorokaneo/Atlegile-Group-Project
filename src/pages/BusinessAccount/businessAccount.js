@@ -3,9 +3,9 @@ import BlackSilk from "./blackSilk.jpg";
 import { IoMdStopwatch } from "react-icons/io";
 import { GoCheckCircleFill } from "react-icons/go";
 import BusinessAccountPlus from "./BusinessPlus+.jpg";
-import Card from "../../componets/Card/Card";
-import FollowUs from "../../componets/FollowUs/FollowUs";
-import NavBar from "../../componets/NavBar/NavBar";
+import Card from "../../components/Card/Card";
+import FollowUs from "../../components/FollowUs/FollowUs";
+import NavBar from "../../components/NavBar/NavBar";
 import "./businessAccount.css";
 const logo = require("./cropped-AMS-Shadow-Queen-Logo_BNY-1320x772 1.png");
 

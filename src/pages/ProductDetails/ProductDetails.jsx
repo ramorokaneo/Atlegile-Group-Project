@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "../../componets/NavBar/NavBar";
-import ProductDetail from "../../componets/ProductDetails/ProductDetail";
+import Navbar from "../../components/NavBar/NavBar";
+import ProductDetail from "../../components/ProductDetails/ProductDetail";
 export default function ProductDetails() {
   return (
     <>
