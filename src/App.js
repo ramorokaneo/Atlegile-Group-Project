@@ -11,16 +11,13 @@ import UserSignUp from "./Components/UserSignUp/UserSignUp";
 import MainAcc from "./Components/MainAcc/MainAcc";
 import AltContact from "./Components/AltContact/AltContact";
 import Sign_In_Screen from "./Components/Sign_In_Screen/Signinscreen";
-<<<<<<< HEAD
 import Landing from "./Pages/Landing/Landing";
 import AboutUs from "./Pages/AboutUs/AboutUs";
-import ProductDetails from "./Pages/ProductDetails/ProductDetails";
-=======
+import ProductDetails from "./Pages/ProductDetails/ProductDetails"
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Signinscreen from './Sign_In_Screen/Signinscreen';
 // import LandingPageHeader from './LandingPageHeader/LandingPageHeader';
-=======
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import UserSignUp from "./Pages/UserSignUp/UserSignUp";
@@ -29,42 +26,25 @@ import AltContact from "./Pages/AltContact/AltContact";
 import UserSignIn from "./Pages/UserSignIn";
 import LandingScreen from "./Pages/LandingScreen";
 import BusinessSignUp from "./Pages/BusinessSignUp";
->>>>>>> origin/Tlhogi
-=======
 import React from "react";
 import WelcomeToAMS from "./Pages/welcomeToAMS";
 import "./Pages/welcome.css";
->>>>>>> origin/Mahlatse
-
-=======
-=======
->>>>>>> origin/Boiketlo
-// App.js
 import React from "react";
 //import Footer from "./componets/Footer";
 import "./App.css"; // Import your CSS file
 import Routes from "./routes/Routes";
-<<<<<<< HEAD
->>>>>>> origin/Ristar
-
-
->>>>>>> origin/Mbali
-=======
 // import Landing from "./Pages/Landing/Landing";
 // import AboutUs from "./Pages/AboutUs/AboutUs";
 // import ProductDetails from "./Pages/ProductDetails/ProductDetails";
 import AddPhoto from "./Components/BusinessRegistration/AddPhoto"
 import Register from "./Components/BusinessRegistration/Register";
 
->>>>>>> origin/Mpho_client
+
 function App() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     <BrowserRouter>
       <Routes>
-<<<<<<< HEAD
         {/* <Route path='/' element={<Register />} /> */}
         <Route path="/" element={<UserSignUp />} />
         <Route path="/mainacc" element={<MainAcc />} />
@@ -73,22 +53,15 @@ function App() {
         
         {/* <Route path="/landingscreen" element={<Landing />} />
         <Route path="/aboutus" element={<AboutUs />} />
-<<<<<<< HEAD
+
         <Route path="/productdetails" element={<ProductDetails />} />
-=======
         <Route path="/" element={<Signinscreen />} />
         {/* <Route path="/" element={<LandingPageHeader/>}/>  */}
->>>>>>> origin/Mbali
-=======
         // <Route path="/productdetails" element={<ProductDetails />} /> */}
         <Route path="/addphoto" element={<AddPhoto />} />
         <Route path="/businessregister" element={<Register />} />
-
-
->>>>>>> origin/Mpho_client
       </Routes>
     </BrowserRouter>
-=======
     <Router>
       <div className="App">
         <Routes>
@@ -101,19 +74,15 @@ function App() {
         </Routes>
       </div>
     </Router>
->>>>>>> origin/Tlhogi
-=======
+
     <div>
       <WelcomeToAMS />
     </div>
->>>>>>> origin/Mahlatse
-=======
-=======
->>>>>>> origin/Boiketlo
+
 
 function App() {
   return (
-<<<<<<< HEAD
+
     <>
       <Routes>
         <Route path="/" element={<SignIn />} />
@@ -123,17 +92,15 @@ function App() {
       </Routes>
 
     </>
->>>>>>> origin/Mpho
-=======
+
     <div className="app">
       <Routes />
     </div>
->>>>>>> origin/Ristar
-=======
+
     <div className="app">
  <Routes />
     </div>
->>>>>>> origin/Boiketlo
+
   );
 }
 

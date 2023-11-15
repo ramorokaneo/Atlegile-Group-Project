@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./MainAcc.css";
+import "./MainAccount.css";
 
 function MainAcc() {
   const [name, setName] = useState("");

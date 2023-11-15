@@ -4,74 +4,22 @@
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
-    "@fortawesome/free-brands-svg-icons": "^6.4.2",
-    "@fortawesome/free-regular-svg-icons": "^6.4.2",
-    "@fortawesome/free-solid-svg-icons": "^6.4.2",
-    "@fortawesome/react-fontawesome": "^0.2.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "firebase": "^10.6.0",
-=======
     "crypto": "^1.0.1",
     "express": "^4.18.2",
-<<<<<<< HEAD
-=======
-    "bootstrap": "^5.2.3",
-    "crypto": "^1.0.1",
-    "express": "^4.18.2",
-    "firebase": "^10.6.0",
-    "font-awesome": "^4.7.0",
->>>>>>> origin/Mpho_client
     "jquery": "^3.7.1",
-=======
     "firebase": "^10.6.0",
->>>>>>> origin/Mpho
     "mkdirp": "^3.0.1",
     "passport": "^0.6.0",
     "passport-google-oauth": "^2.0.0",
     "passport-google-oidc": "^0.1.0",
->>>>>>> origin/Dlozi
-    "react": "^18.2.0",
-<<<<<<< HEAD
-    "react-calendar": "^4.6.1",
-    "react-datepicker": "^4.21.0",
-    "react-datetime": "^3.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.11.0",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-regular-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "bootstrap": "^5.2.3",
-    "font-awesome": "^4.7.0",
-    "react-bootstrap": "^2.7.0",
-=======
->>>>>>> origin/Mbali
-=======
->>>>>>> origin/Tlhogi
-=======
->>>>>>> origin/Mahlatse
-=======
->>>>>>> origin/Mpho
-=======
-    "react-bootstrap": "^2.7.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.11.0",
->>>>>>> origin/Mpho_client
-    "react-router-dom": "^6.18.0",
-    "react-scripts": "5.0.1",
     "sqlite3": "^5.1.6",
-=======
     "react-calendar": "^4.6.1",
     "react-datepicker": "^4.21.0",
     "react-datetime": "^3.2.0",
@@ -80,18 +28,11 @@
     "react-icons": "^4.11.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.18.0",
-    "react-scripts": "5.0.1",
     "react-toastify": "^7.0.4",
     "toastify": "^2.0.1",
->>>>>>> origin/Ristar
-=======
-    "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.18.0",
     "react-scripts": "5.0.1",
->>>>>>> origin/Boiketlo
     "web-vitals": "^2.1.4"
   },
   "scripts": {

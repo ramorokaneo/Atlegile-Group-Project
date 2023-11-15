@@ -3,8 +3,8 @@ import { GoCheckCircleFill } from "react-icons/go";
 import BusinessAccountPlus from "../../images/BusinessPlus+.jpg";
 import Card from "../../componets/Card/Card";
 import ProductsServices from "../../componets/ProductsServices/ProdServices";
-import "./businessAccount.css";
-export default function BusinessAccount() {
+import "./BusinessSecTech.css";
+export default function BusinessSecTech() {
   const list = [1, 2, 3];
 
   return (
