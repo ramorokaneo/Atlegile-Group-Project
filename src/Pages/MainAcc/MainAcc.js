@@ -11,7 +11,8 @@ function MainAcc() {
   const [gender, setGender] = useState("");
   const [email, setEmail] = useState("");
   const [location, setLocation] = useState("");
-
+  const user = firebase.auth().currentUser
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -21,9 +22,9 @@ function MainAcc() {
     }
 
     try {
-      const userRef = firestore.collection("Users");
+      const userRef = firestore.collection("Users").doc(user.uid);
 
-      await userRef.doc(email).set({
+      await userRef.set({
         name,
         surname,
         phone,
@@ -31,6 +32,7 @@ function MainAcc() {
         email,
         location,
         timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+        uid: user.uid
       });
 
       console.log("User information submitted to Users collection in Firestore.");

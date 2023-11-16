@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import "./AltContact.css";
 import { useNavigate } from "react-router-dom";
+import { getFirestore, doc, setDoc, serverTimestamp, updateDoc } from "firebase/firestore";
 import { firebase, firestore } from "../../config";
 
-function UserSignUp() {
+function AltContact() {
   const navigate = useNavigate();
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -20,27 +21,52 @@ function UserSignUp() {
       const user = firebase.auth().currentUser;
 
       if (!user) {
-        // Handle user authentication issues
         alert("User not authenticated. Please sign in.");
         return;
       }
 
-      const userRef = firestore.collection("Users");
-
-      await userRef.doc(user.uid).update({
-        alternativeContact: {
-          name,
-          phone,
-          timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-        },
+      // const firestore = getFirestore();
+      // const userRef = doc(firestore, "Users", user.uid);
+      // firestore.
+      await firestore.collection("Users").doc(user.uid).set({
+        
+          name: localStorage.getItem("name"),
+          surname: localStorage.getItem("surname"),
+          phone: localStorage.getItem("phone"),
+          gender: localStorage.getItem("gender"),
+          email: localStorage.getItem("email"),
+          location: localStorage.getItem("location"),
+          alternativeContact: {
+            name,
+            phone,
+            timestamp: serverTimestamp(),
+          },
+        
       });
+      // await updateDoc(
+      //   userRef,
+      //   {
+      //     name: localStorage.getItem("name"),
+      //     surname: localStorage.getItem("surname"),
+      //     phone: localStorage.getItem("phone"),
+      //     gender: localStorage.getItem("gender"),
+      //     email: localStorage.getItem("email"),
+      //     location: localStorage.getItem("location"),
+      //     alternativeContact: {
+      //       name,
+      //       phone,
+      //       timestamp: serverTimestamp(),
+      //     },
+      //   },
+      //   { merge: true }
+      // );
 
       console.log("Alternative contact information submitted to 'Users' collection in Firestore.");
 
       navigate("/landingscreen");
     } catch (error) {
       console.error("Error submitting alternative contact information:", error.message);
-      alert("Error submitting alternative contact information. Please try again.");
+      // alert("Error submitting alternative contact information. Please try again.");
     }
   };
 
@@ -89,4 +115,4 @@ function UserSignUp() {
   );
 }
 
-export default UserSignUp;
+export default AltContact;

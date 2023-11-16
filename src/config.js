@@ -2,7 +2,6 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyCUZPB-xKEut_0fXFLHEIg2KrJgpf8mjA0",
   authDomain: "atlegilemarketing.firebaseapp.com",
@@ -17,6 +16,6 @@ if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
 }
 
-const firestore = firebase.firestore(); // Get Firestore instance
+const firestore = firebase.firestore(); 
 
 export { firebase, firestore };

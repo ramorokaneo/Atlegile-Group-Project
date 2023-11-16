@@ -3,8 +3,7 @@ import "./SignUp.css";
 import { useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FcNext } from "react-icons/fc";
-import { firebase } from "../../config";
-import { firestore } from "../../config";
+import { firebase, firestore } from "../../config";
 
 function UserSignUp() {
   const navigate = useNavigate();
@@ -27,6 +26,7 @@ function UserSignUp() {
       if (userCredential.user) {
         console.log("User signed up:", userCredential.user);
 
+        // Create a user document with the UID in the Users collection
         await firestore.collection("Users").doc(userCredential.user.uid).set({
           email: email,
         });
