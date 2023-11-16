@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import mapImage from "./mapImage.png";
 
 //import "./OrderHistory.css";
@@ -10,32 +10,35 @@ import { FiYoutube } from "react-icons/fi";
 import { FiTwitter } from "react-icons/fi";
 import { SiFacebook } from "react-icons/si";
 import Logo from "./Logo.png";
-
-import Footer from "../../componets/Footer/Footer";
-import Datetime from "react-datetime";
 import "react-datepicker/dist/react-datepicker.css";
-import DatePicker from "react-datepicker";
+import Footer from "../../componets/Footer/Footer";
+// import Datetime from "react-datetime";
+// import DatePicker from "react-datepicker";
 
 function Cart() {
-  const [isVisible, setIsVisible] = useState(true);
-  const [component1Visible, setComponent1Visible] = useState(true);
-  const [component2Visible, setComponent2Visible] = useState(false);
-  const [component3Visible, setComponent3Visible] = useState(false);
+  // const [isVisible, setIsVisible] = useState(true);
+  // const [component1Visible, setComponent1Visible] = useState(true);
+  // const [component2Visible, setComponent2Visible] = useState(false);
+  // const [component3Visible, setComponent3Visible] = useState(false);
 
-  const handleComponentA = () => {
-    setComponent1Visible(false);
-    setComponent2Visible(true);
-  };
+  // const handleComponentA = () => {
+  //   setComponent1Visible(false);
+  //   setComponent2Visible(true);
+  // };
 
-  const handleComponentB = () => {
-    setComponent1Visible(false);
-    setComponent2Visible(false);
-    setComponent3Visible(true);
-  };
+  // const handleComponentB = () => {
+  //   setComponent1Visible(false);
+  //   setComponent2Visible(false);
+  //   setComponent3Visible(true);
+  // };
 
-  const handleDateChange = () => {};
-  const handlePress = () => {
-    setIsVisible(false); // Hide the first component upon clicking
+  // const handleDateChange = () => {};
+  // const handlePress = () => {
+  //   setIsVisible(false); // Hide the first component upon clicking
+  // };
+  const submitRef = useRef(null);
+  const handleCheckout = () => {
+    submitRef.current.click();
   };
   function calculateBackgroundProperties() {
     const screenWidth = window.innerWidth;
@@ -93,21 +96,21 @@ function Cart() {
     { product: "HD TV", item: 1, amount: 4500.0 },
   ];
 
-  const Dates = [
-    { month: "Jul", date: 2, status: "PRESSED" },
-    { month: "Jul", date: 2, status: "null" },
-    { month: "Jul", date: 2, status: "null" },
-  ];
+  // const Dates = [
+  //   { month: "Jul", date: 2, status: "PRESSED" },
+  //   { month: "Jul", date: 2, status: "null" },
+  //   { month: "Jul", date: 2, status: "null" },
+  // ];
 
-  const [selectedDateTime, setSelectedDateTime] = useState(null);
-  const [date, setDate] = useState(null); // Initialize it to null
-  const handleDateTimeSelect = (item) => {
-    const selectedDate = new Date().toLocaleDateString();
-    const selectedTime = new Date().toLocaleTimeString();
-    const selectedDateTime = `${selectedDate} ${selectedTime}`;
-    setSelectedDateTime(selectedDateTime);
-    setDate(selectedDateTime);
-  };
+  // const [selectedDateTime, setSelectedDateTime] = useState(null);
+  // const [date, setDate] = useState(null); // Initialize it to null
+  // const handleDateTimeSelect = (item) => {
+  //   const selectedDate = new Date().toLocaleDateString();
+  //   const selectedTime = new Date().toLocaleTimeString();
+  //   const selectedDateTime = `${selectedDate} ${selectedTime}`;
+  //   setSelectedDateTime(selectedDateTime);
+  //   setDate(selectedDateTime);
+  // };
 
   return (
     <>
@@ -185,7 +188,7 @@ function Cart() {
             display: "flex",
             flexDirection: "row",
             alignItems: "center",
-            // backgroundColor: "green",
+            //backgroundColor: "green",
           }}
         >
           <div
@@ -312,7 +315,7 @@ function Cart() {
               display: "flex",
               flexDirection: "colunm",
               alignItems: "center",
-              //  backgroundColor: "blue",
+              // backgroundColor: "blue",
             }}
           ></div>
         </div>
@@ -337,7 +340,7 @@ function Cart() {
               display: "flex",
               flexDirection: "colunm",
               alignItems: "center",
-              //  backgroundColor: "blue",
+              //backgroundColor: "blue",
             }}
           ></div>
           <div
@@ -369,7 +372,7 @@ function Cart() {
               <div
                 style={{
                   height: "76vh",
-                  width: "40vw", 
+                  width: "40vw",
                   border: "none",
                   // borderBottom: "1px lightgray solid",
                   display: "flex",
@@ -381,15 +384,16 @@ function Cart() {
               >
                 <div
                   style={{
-                    height: "73vh",
-                    width: "96%",
+                    height: "100%",
+                    width: "100%",
                     border: "none",
+                    paddingRight: 20,
                     // borderBottom: "1px lightgray solid",
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "flex-start",
                     alignItems: "flex-start",
-                    // backgroundColor: "yellow",
+                    //backgroundColor: "yellow",
                     //paddingTop:'10px'
                   }}
                 >
@@ -417,7 +421,7 @@ function Cart() {
                         // backgroundColor: "green",
                       }}
                     >
-                      ORDER #AABBCC
+                      Account / Cart /
                     </div>
                     <div
                       style={{
@@ -742,7 +746,7 @@ function Cart() {
 
               <div
                 style={{
-                  height: "96%",
+                  height: "100%",
                   width: "20vw",
                   border: "none",
                   // borderBottom: "1px lightgray solid",
@@ -751,11 +755,12 @@ function Cart() {
                   justifyContent: "flex-start",
                   alignItems: "center",
                   backgroundColor: "#072840",
+                  zIndex: 3,
                 }}
               >
                 <div
                   style={{
-                    height: "8%",
+                    //height: "8%",
                     width: "90%",
                     border: "none",
                     // borderBottom: "1px lightgray solid",
@@ -781,7 +786,7 @@ function Cart() {
                 </div>
                 <div
                   style={{
-                    height: "12%",
+                    //height: "12%",
                     width: "90%",
                     border: "none",
                     borderBottom: "1px white solid",
@@ -814,11 +819,12 @@ function Cart() {
                   </div>
                   <div
                     style={{
-                      height: "40%",
+                      //height: "40%",
                       width: "100%",
                       justifyContent: "flex-start",
                       display: "flex",
                       alignItems: "flex-start",
+                      //backgroundColor: "yellow",
                     }}
                   >
                     <p
@@ -861,12 +867,12 @@ function Cart() {
                     width: "17vw",
                     paddingTop: "10px",
                     borderRadius: 20,
-                    marginBottom: "10px",
+                    //marginBottom: "10px",
                   }}
                 ></div>
                 <div
                   style={{
-                    height: "3%",
+                    //height: "3%",
                     width: "90%",
                     border: "none",
                     display: "flex",
@@ -915,10 +921,31 @@ function Cart() {
                     width: "90%",
                     border: "none",
                     display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "flex-start",
+                    alignItems: "flex-start",
+                  }}
+                >
+                  <p
+                    style={{
+                      fontSize: "0.9rem",
+                      color: "white",
+                    }}
+                  >
+                    Select delivery date
+                  </p>
+                </div>
+
+                <div
+                  style={{
+                    width: "90%",
+                    border: "none",
+                    display: "flex",
                     flex: 1,
                     flexDirection: "column",
                     justifyContent: "flex-start",
                     alignItems: "flex-start",
+                    //backgroundColor: "green",
                   }}
                 >
                   <div
@@ -927,9 +954,10 @@ function Cart() {
                       height: "100%",
                       display: "flex",
                       justifyContent: "space-between",
-                      alignItems: "flex-start",
+                      //alignItems: "flex-start",
                       flexDirection: "column",
-                      //  backgroundColor: "red",
+                      //backgroundColor: "red",
+                      paddingBottom: 25,
                     }}
                   >
                     <div
@@ -938,169 +966,167 @@ function Cart() {
                         flexDirection: "row",
                       }}
                     >
-                      <div style={{ display: "flex", flexDirection: "row" }}>
-                        {/* Component 1 */}
+                      {/* Component 1 */}
+                      <div
+                        style={{
+                          position: "relative",
+                          height: "70px",
+                          width: "60px",
+                          //marginTop: "30px",
+                          display: "flex",
+                          flexDirection: "column",
+                          border: "1px white solid",
+                          marginLeft: "10px",
+                        }}
+                        //  onClick={handleDateTimeSelect}
+                      >
                         <div
                           style={{
-                            position: "relative",
-                            height: "70px",
-                            width: "60px",
-                            marginTop: "30px",
+                            height: "50%",
+                            width: "100%",
                             display: "flex",
-                            flexDirection: "column",
-                            border: "1px white solid",
-                            marginLeft: "10px",
+                            alignItems: "center",
+                            justifyContent: "center",
                           }}
-                          //  onClick={handleDateTimeSelect}
                         >
-                          <div
+                          <p
                             style={{
-                              height: "50%",
-                              width: "100%",
-                              display: "flex",
-                              alignItems: "center",
-                              justifyContent: "center",
+                              fontSize: "1rem",
+                              color: "white",
+                              paddingTop: "10px",
                             }}
                           >
-                            <p
-                              style={{
-                                fontSize: "1rem",
-                                color: "white",
-                                paddingTop: "10px",
-                              }}
-                            >
-                              Jul
-                            </p>
-                          </div>
-                          <div
-                            style={{
-                              height: "50%",
-                              width: "100%",
-                              display: "flex",
-                              alignItems: "center",
-                              justifyContent: "center",
-                            }}
-                          >
-                            <p
-                              style={{
-                                fontSize: "1.5rem",
-                                color: "white",
-                                fontWeight: "bold",
-                                paddingBottom: "10px",
-                              }}
-                            >
-                              2
-                            </p>
-                          </div>
+                            Jul
+                          </p>
                         </div>
-                        {/* Component 2 */}
                         <div
                           style={{
-                            position: "relative",
-                            height: "70px",
-                            width: "60px",
-                            marginTop: "30px",
+                            height: "50%",
+                            width: "100%",
                             display: "flex",
-                            flexDirection: "column",
-                            border: "1px white solid",
-                            marginLeft: "10px",
+                            alignItems: "center",
+                            justifyContent: "center",
                           }}
-                          //  onClick={handleDateTimeSelect}
                         >
-                          <div
+                          <p
                             style={{
-                              height: "50%",
-                              width: "100%",
-                              display: "flex",
-                              alignItems: "center",
-                              justifyContent: "center",
+                              fontSize: "1.5rem",
+                              color: "white",
+                              fontWeight: "bold",
+                              paddingBottom: "10px",
                             }}
                           >
-                            <p
-                              style={{
-                                fontSize: "1rem",
-                                color: "white",
-                                paddingTop: "10px",
-                              }}
-                            >
-                              Jul
-                            </p>
-                          </div>
-                          <div
-                            style={{
-                              height: "50%",
-                              width: "100%",
-                              display: "flex",
-                              alignItems: "center",
-                              justifyContent: "center",
-                            }}
-                          >
-                            <p
-                              style={{
-                                fontSize: "1.5rem",
-                                color: "white",
-                                fontWeight: "bold",
-                                paddingBottom: "10px",
-                              }}
-                            >
-                              2
-                            </p>
-                          </div>
+                            2
+                          </p>
                         </div>
+                      </div>
+                      {/* Component 2 */}
+                      <div
+                        style={{
+                          position: "relative",
+                          height: "70px",
+                          width: "60px",
+                          //marginTop: "30px",
+                          display: "flex",
+                          flexDirection: "column",
+                          border: "1px white solid",
+                          marginLeft: "10px",
+                        }}
+                        //  onClick={handleDateTimeSelect}
+                      >
+                        <div
+                          style={{
+                            height: "50%",
+                            width: "100%",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <p
+                            style={{
+                              fontSize: "1rem",
+                              color: "white",
+                              paddingTop: "10px",
+                            }}
+                          >
+                            Jul
+                          </p>
+                        </div>
+                        <div
+                          style={{
+                            height: "50%",
+                            width: "100%",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <p
+                            style={{
+                              fontSize: "1.5rem",
+                              color: "white",
+                              fontWeight: "bold",
+                              paddingBottom: "10px",
+                            }}
+                          >
+                            2
+                          </p>
+                        </div>
+                      </div>
 
-                        {/* Component 3 */}
+                      {/* Component 3 */}
+                      <div
+                        style={{
+                          position: "relative",
+                          height: "70px",
+                          width: "60px",
+                          //marginTop: "30px",
+                          display: "flex",
+                          flexDirection: "column",
+                          border: "1px white solid",
+                          marginLeft: "10px",
+                        }}
+                        //  onClick={handleDateTimeSelect}
+                      >
                         <div
                           style={{
-                            position: "relative",
-                            height: "70px",
-                            width: "60px",
-                            marginTop: "30px",
+                            height: "50%",
+                            width: "100%",
                             display: "flex",
-                            flexDirection: "column",
-                            border: "1px white solid",
-                            marginLeft: "10px",
+                            alignItems: "center",
+                            justifyContent: "center",
                           }}
-                          //  onClick={handleDateTimeSelect}
                         >
-                          <div
+                          <p
                             style={{
-                              height: "50%",
-                              width: "100%",
-                              display: "flex",
-                              alignItems: "center",
-                              justifyContent: "center",
+                              fontSize: "1rem",
+                              color: "white",
+                              paddingTop: "10px",
                             }}
                           >
-                            <p
-                              style={{
-                                fontSize: "1rem",
-                                color: "white",
-                                paddingTop: "10px",
-                              }}
-                            >
-                              Jul
-                            </p>
-                          </div>
-                          <div
+                            Jul
+                          </p>
+                        </div>
+                        <div
+                          style={{
+                            height: "50%",
+                            width: "100%",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <p
                             style={{
-                              height: "50%",
-                              width: "100%",
-                              display: "flex",
-                              alignItems: "center",
-                              justifyContent: "center",
+                              fontSize: "1.5rem",
+                              color: "white",
+                              fontWeight: "bold",
+                              paddingBottom: "10px",
                             }}
                           >
-                            <p
-                              style={{
-                                fontSize: "1.5rem",
-                                color: "white",
-                                fontWeight: "bold",
-                                paddingBottom: "10px",
-                              }}
-                            >
-                              2
-                            </p>
-                          </div>
+                            2
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -1108,31 +1134,70 @@ function Cart() {
                     <div
                       style={{
                         width: "100%",
-                        height: "30%",
-                        //  backgroundColor: "yellow",
-                        display: "flex",
+                        // height: "30px",
+                        //backgroundColor: "red",
+                        borderRadius: 20,
                         justifyContent: "center",
-                        alignItems: "flex-start",
+                        display: "flex",
+                        alignItems: "center",
+                        border: "1px white solid",
+                        fontSize: "1.2rem",
+                        color: "white",
+                        padding: 5,
+                        cursor:"pointer"
+                        // fontWeight: "bold",
+                        // paddingBottom: "10px",
+                      }}
+
+                      onClick={handleCheckout}
+                    >
+                      CHECKOUT{" "}
+                    </div>
+                    <div
+                      style={{
+                        width: "100%",
+                        color: "white",
+                        display: "none",
                       }}
                     >
-                      <div
-                        style={{
-                          width: "100%",
-                          height: "30px",
-                          //backgroundColor: "red",
-                          borderRadius: 20,
-                          justifyContent: "center",
-                          display: "flex",
-                          alignItems: "center",
-                          border: "1px white solid",
-                          fontSize: "1.2rem",
-                          color: "white",
-                          // fontWeight: "bold",
-                          // paddingBottom: "10px",
-                        }}
+                      <form
+                        action="https://sandbox.payfast.co.za​/eng/process"
+                        method="post"
                       >
-                        CHECKOUT
-                      </div>
+                        <input
+                          type="hidden"
+                          name="merchant_id"
+                          value="10000100"
+                        />
+                        <input
+                          type="hidden"
+                          name="merchant_key"
+                          value="46f0cd694581a"
+                        />
+                        <input
+                          type="hidden"
+                          name="return_url"
+                          value="https://atlegilemarketing.firebaseapp.com/"
+                        />
+                        <input
+                          type="hidden"
+                          name="cancel_url"
+                          value="https://atlegilemarketing.firebaseapp.com/"
+                        />
+                        <input
+                          type="hidden"
+                          name="notify_url"
+                          value="https://atlegilemarketing.firebaseapp.com/"
+                        />
+
+                        <input type="hidden" name="amount" value="3170.00" />
+                        <input
+                          type="hidden"
+                          name="item_name"
+                          value="Test Product"
+                        />
+                        <input type="submit" id="submitBTN" ref={submitRef} />
+                      </form>
                     </div>
                   </div>
                 </div>
