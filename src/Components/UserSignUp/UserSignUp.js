@@ -39,14 +39,6 @@ function UserSignUp() {
 
   return (
     <div
-      // style={{
-      //   width: "100%",
-      //   height: "100%",
-      //   backgroundImage: "url('./bg-img.jpg')",
-      //   backgroundSize: "cover",
-      //   backgroundPosition: "center",
-      //   backgroundRepeat: "no-repeat",
-      // }}
       className="background-container"
     >
       <div style={{ height: "100%", width: "70%" }}></div>
