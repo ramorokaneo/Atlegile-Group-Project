@@ -16,6 +16,8 @@ import SalesGrowth from "./Components/BusinessRegistration/SalesGrowth";
 // import Messages from "./pages/Message/Messages";
 // import OrderHistory from "./pages/Order_History/OrderHistory";
 // import Reciept from "./pages/Reciept/Reciept"
+import AltContact from "./Components/AltContact/AltContact"
+
 
 
 
@@ -24,10 +26,11 @@ function App() {
     // <div>Atlegile Marketing Solutions.</div>
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<UserSignUp />} />
+        <Route path='/' element={<Landing />} />
         <Route path='/mainacc' element={<MainAcc />} />
-        <Route path='/altcontact' element={<UserSignUp />} />
+        <Route path='/usersignup' element={<UserSignUp />} />
         <Route path='/signinscreen' element={<Signinscreen />} />
+        <Route path='/alt' element={<AltContact />} />
         <Route path='/addphoto' element={<AddPhoto />} />
         <Route path='/marketing' element={<MarketingSupport />} />
         <Route path='/paymentinfo' element={<PaymentInfo />} />
