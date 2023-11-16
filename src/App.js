@@ -10,12 +10,12 @@ import MarketingSupport from "./Components/BusinessRegistration/MarketingSupport
 import PaymentInfo from "./Components/BusinessRegistration/PaymentInfo";
 import Register from "./Components/BusinessRegistration/Register";
 import SalesGrowth from "./Components/BusinessRegistration/SalesGrowth";
-import ProdServices from "./Components/ProductsServices/ProdServices";
-import BusinessAccount from "./pages/BusinessAccount/businessAccount"
-import DeliveryDone from "./pages/Delivery_Done/DeliveryDone";
-import Messages from "./pages/Message/Messages";
-import OrderHistory from "./pages/Order_History/OrderHistory";
-import Reciept from "./pages/Reciept/Reciept";
+import ProductServices from "./Components/ProductsServices/ProdServices";
+import BusinessAccount from "./Pages/BusinessAccount/businessAccount";
+import DeliveryDone from "./Pages/Delivery_Done/DeliveryDone";
+import Messages from "./Pages/Message/Messages";
+import OrderHistory from "./Pages/Order_History/OrderHistory";
+import Reciept from "./Pages/Reciept/Reciept";
 
 
 

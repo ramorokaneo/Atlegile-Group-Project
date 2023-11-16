@@ -12,7 +12,7 @@ import { SiFacebook } from "react-icons/si";
 import Logo from "./Logo.png";
 import { BsCheckSquare } from "react-icons/bs";
 import { GoDotFill } from "react-icons/go";
-import Footer from "../../componets/Footer/Footer";
+import Footer from "../../Components/Footer/Footer";
 import Datetime from "react-datetime";
 import "react-datepicker/dist/react-datepicker.css";
 import DatePicker from "react-datepicker";
