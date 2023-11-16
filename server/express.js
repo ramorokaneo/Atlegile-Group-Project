@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 app.use(morgan("tiny"));
 
-mongoose.connect("mongodb://127.0.0.1:27017/********"); //Replace ****** with db name
+mongoose.connect("mongodb://127.0.0.1:27017/AMS"); //Replace ****** with db name
 
 //Routes for user authentication and authorization using JWT tokens
 
