@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 <<<<<<< HEAD
 import './UserSignUp.css'; 
 =======
-import './SignUp.css'; 
+import '/SignUp.css'; 
 >>>>>>> eae132d9b5c460ac977461669796f6b1d449cdc3
 
 function UserSignUp() {
