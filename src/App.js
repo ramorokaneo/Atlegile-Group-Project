@@ -4,7 +4,7 @@ import MainAcc from "../src/Components/MainAcc/MainAcc";
 import UserSignUp from "../src/Components/UserSignUp/UserSignUp";
 import Signinscreen from "./Components/Sign_In_Screen/Signinscreen";
 import Landing from "./Pages/Landing/Landing";
-import AboutUs from "./Components/AboutUs/AboutUs";
+// import AboutUs from "./Components/AboutUs/AboutUs";
 import AddPhoto from "./Components/BusinessRegistration/AddPhoto";
 import MarketingSupport from "./Components/BusinessRegistration/MarketingSupport";
 import PaymentInfo from "./Components/BusinessRegistration/PaymentInfo";
