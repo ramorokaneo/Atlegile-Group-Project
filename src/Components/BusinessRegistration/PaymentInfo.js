@@ -128,8 +128,7 @@ const PaymentInfo = () => {
                     <select
                       style={{ fontSize: "12px", width: "200px" }}
                       value={selectedExpiry}
-                      onChange={handleExpiryChange}
-                    >
+                      onChange={handleExpiryChange}>
                       <option value=""></option>
                       {expiryOptions.map((expiry, index) => (
                         <option key={index} value={expiry}>
