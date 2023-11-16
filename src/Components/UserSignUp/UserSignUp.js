@@ -38,27 +38,27 @@ function UserSignUp() {
   };
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid" style={{ height: "100vh", overflow: "hidden" }}>
       <div className="row">
-        <div className="col-md-8" style={{ height: "100%" }}>
+        <div className="col-md-8">
           {/* Your background container */}
         </div>
         <div className="col-md-4" style={{ padding: 10 }}>
-          <div className="background-container">
-            <div style={{ height: "100%", backgroundColor: "white" }}>
+          <div className="background-container" style={{ height: "100%" }}>
+            <div style={{ height: "100%", backgroundColor: "white", display: "flex", flexDirection: "column" }}>
               <div className="d-flex align-items-center justify-content-center" style={{ height: "50%" }}>
                 <img src={logo} alt="Logo" style={{ width: 250 }} />
               </div>
-              <div className="d-flex flex-column justify-content-between" style={{ height: "50%" }}>
+              <div className="d-flex flex-column justify-content-between" style={{ height: "50%", padding: "0 20px" }}>
                 <div>
-                  <div className="d-flex justify-content-between pr-5 pl-5">
+                  <div className="d-flex justify-content-between">
                     <span className="font-weight-bold" style={{ fontSize: 25 }}>SIGN UP</span>
                     <div className="d-flex align-items-center" style={{ cursor: "pointer" }} onClick={handleShop}>
                       <span style={{ fontSize: 12, marginRight: 10 }}>SHOP</span>
                       <FaAngleRight size={10} color="#59b0f6" />
                     </div>
                   </div>
-                  <div className="pr-5 pl-5">
+                  <div>
                     <br />
                     <div className="">
                       <span style={{ fontSize: 12 }}>Email</span>
@@ -88,7 +88,7 @@ function UserSignUp() {
                       SIGN UP
                     </div>
                   </div>
-                  <div className="d-flex flex-column align-items-center justify-content-between" style={{ height: "8vh", paddingRight: 60, paddingLeft: 60, marginTop: 10 }}>
+                  <div className="d-flex flex-column align-items-center justify-content-between" style={{ height: "8vh", marginTop: 10 }}>
                     <a
                       href="/signinscreen"
                       className="font-weight-bold"
@@ -111,7 +111,7 @@ function UserSignUp() {
                   </div>
                 </div>
 
-                <div className="pr-5 pl-5">
+                <div>
                   <div
                     onClick={handleBusinessSignUp}
                     className="btn btn-outline-primary mb-4"
