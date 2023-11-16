@@ -37,7 +37,7 @@ function UserSignUp() {
         <div className="col-md-8">
           {/* Your background container */}
         </div>
-        <div className="col-md-4" style={{ padding: 10 }}>
+        <div className="col-md-4" style={{ padding:20 }}>
           <div className="background-container">
             <div style={{ backgroundColor: "white", display: "flex", flexDirection: "column" }}>
               <div className="d-flex align-items-center justify-content-center">

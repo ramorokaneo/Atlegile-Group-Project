@@ -21,7 +21,6 @@ import SalesGrowth from "./Components/BusinessRegistration/SalesGrowth";
 
 function App() {
   return (
-    // <div>Atlegile Marketing Solutions.</div>
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<UserSignUp />} />
