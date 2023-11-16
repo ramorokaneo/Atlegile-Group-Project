@@ -10,6 +10,12 @@ import MarketingSupport from "./Components/BusinessRegistration/MarketingSupport
 import PaymentInfo from "./Components/BusinessRegistration/PaymentInfo";
 import Register from "./Components/BusinessRegistration/Register";
 import SalesGrowth from "./Components/BusinessRegistration/SalesGrowth";
+import ProductServices from "./Components/ProductsServices/ProdServices";
+import BusinessAccount from "./Pages/BusinessAccount/businessAccount";
+import DeliveryDone from "./Pages/Delivery_Done/DeliveryDone";
+import Messages from "./Pages/Message/Messages";
+import OrderHistory from "./Pages/Order_History/OrderHistory";
+import Reciept from "./Pages/Reciept/Reciept";
 // import ProdServices from "./Components/ProductsServices/ProdServices";
 // import BusinessAccount from "./pages/BusinessAccount/businessAccount"
 // import DeliveryDone from "./pages/Delivery_Done/DeliveryDone";
@@ -17,8 +23,6 @@ import SalesGrowth from "./Components/BusinessRegistration/SalesGrowth";
 // import OrderHistory from "./pages/Order_History/OrderHistory";
 // import Reciept from "./pages/Reciept/Reciept"
 import AltContact from "./Components/AltContact/AltContact"
-
-
 
 
 function App() {
@@ -35,12 +39,12 @@ function App() {
         <Route path='/paymentinfo' element={<PaymentInfo />} />
         <Route path='/register' element={<Register />} />
         <Route path='/salesgrowth' element={<SalesGrowth />} />
-        {/* <Route path='/productservices' element={<ProdServices />} /> */}
-        {/* <Route path='busaccount' element={<BusinessAccount />} /> */}
-        {/* <Route path='/delivery' element={<DeliveryDone />} /> */}
-        {/* <Route path='/messages' element={<Messages/>}/> */}
-        {/* <Route path='/order' element={<OrderHistory/>}/> */}
-        {/* <Route path='/rep' element={<Reciept />} /> */}
+        <Route path='/productservices' element={<ProductServices />} />
+        <Route path='busaccount' element={<BusinessAccount />} />
+        <Route path='/delivery' element={<DeliveryDone />} />
+        <Route path='/messages' element={<Messages/>}/>
+        <Route path='/order' element={<OrderHistory/>}/>
+        <Route path='/rep' element={<Reciept />} />
       </Routes>
     </BrowserRouter>
   )
