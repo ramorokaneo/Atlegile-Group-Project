@@ -1,41 +1,41 @@
-// AddPhoto.js
 import React, { useState, useRef } from "react";
 import logo from "../BusinessRegistration/cropped-AMS-Shadow-Queen-Logo_BNY-1320x772 1.png";
-import placeholderImage from "./login.jpg"; // Import your placeholder image
+import placeholderImage from "./login.jpg";
 import "./registar.css";
 import SalesGrowth from "./SalesGrowth";
 import { useNavigate } from "react-router-dom";
-// import { collection, addDoc } from "firebase/firestore";
-// import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage"; // Import Firebase Storage functions
-// import { db } from "../../config";
+import { collection, addDoc } from "firebase/firestore";
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { db } from "./config";
 
 const AddPhoto = () => {
   const nav = useNavigate();
   const [productName, setProductName] = useState("");
+  const [businessName, setBusinessName] = useState("");
   const [price, setPrice] = useState("");
   const [quantity, setQuantity] = useState("");
   const [description, setDescription] = useState("");
-  const [productType, setProductType] = useState("");
-  const [other, setOther] = useState("");
+  const [brand, setBrand] = useState("");
   const [images, setImages] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("");
   const fileInputRef = useRef(null);
 
-  // const storage = getStorage(); // Firebase Storage instance
+  const storage = getStorage();
 
   const handleImageChange = (e) => {
     const files = e.target.files;
     setImages((prevImages) => [...prevImages, ...files]);
   };
 
-  // const handleImageUpload = async () => {
-  //   const uploadTasks = images.map(async (image) => {
-  //     const storageRef = ref(storage, `product_images/${image.name}`);
-  //     await uploadBytes(storageRef, image);
-  //     return getDownloadURL(storageRef);
-  //   });
+  const handleImageUpload = async () => {
+    const uploadTasks = images.map(async (image) => {
+      const storageRef = ref(storage, `product_images/${image.name}`);
+      await uploadBytes(storageRef, image);
+      return getDownloadURL(storageRef);
+    });
 
-  //   return Promise.all(uploadTasks);
-  // };
+    return Promise.all(uploadTasks);
+  };
 
   const handleButtonClick = () => {
     fileInputRef.current.click();
@@ -45,20 +45,23 @@ const AddPhoto = () => {
     e.preventDefault();
 
     try {
-      // const imageUrls = await handleImageUpload();
+      const imageUrls = await handleImageUpload();
 
-      // const docRef = await addDoc(collection(db, "Products"), {
-      //   productName,
-      //   price,
-      //   quantity,
-      //   description,
-      //   productType,
-      //   other,
-      //   imageUrls,
-      // });
+      // Save the entered details to Firebase Firestore
+      const docRef = await addDoc(collection(db, "Products"), {
+        productName,
+        price,
+        quantity,
+        description,
+        brand,
+        selectedCategory,
+        imageUrls,
+        businessName,
+      });
 
-      // console.log("Document written with ID: ", docRef.id);
+      console.log("Document written with ID: ", docRef.id);
 
+      // Redirect to the paymentInfo page
       nav("/paymentInfo");
     } catch (error) {
       console.error("Error adding document: ", error);
@@ -93,7 +96,6 @@ const AddPhoto = () => {
                   flexDirection: "row",
                   flexWrap: "wrap",
                 }}>
-                {/* Display selected images */}
                 {images.length > 0 ? (
                   images.map((image, index) => (
                     <div
@@ -117,7 +119,6 @@ const AddPhoto = () => {
                     </div>
                   ))
                 ) : (
-                  // Placeholder image when no photos are selected
                   <img
                     src={placeholderImage}
                     width={90}
@@ -143,7 +144,6 @@ const AddPhoto = () => {
                     justifyContent: "center",
                     alignItems: "center",
                   }}>
-                  {/* Input for selecting image files */}
                   <input
                     type="file"
                     accept="image/*"
@@ -152,7 +152,6 @@ const AddPhoto = () => {
                     ref={fileInputRef}
                     multiple
                   />
-                  {/* Trigger the file input when the button is clicked */}
                   <button
                     type="button"
                     onClick={handleButtonClick}
@@ -179,6 +178,16 @@ const AddPhoto = () => {
                 onChange={(e) => setProductName(e.target.value)}
               />
               <label>Name</label>
+            </div>
+
+            <div className="group textInput-container">
+              <input
+                type="text"
+                required
+                value={businessName}
+                onChange={(e) => setBusinessName(e.target.value)}
+              />
+              <label>Business Name</label>
             </div>
 
             <div className="row">
@@ -224,24 +233,51 @@ const AddPhoto = () => {
               <label>Description</label>
             </div>
 
+            {/* Dropdown for product categories */}
             <div className="group textInput-container">
-              <input
-                type="text"
-                required
-                value={productType}
-                onChange={(e) => setProductType(e.target.value)}
-              />
-              <label>Type of product</label>
+              <label>Product Category</label>
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}>
+                <option value="" disabled></option>
+                {[
+                  "Electronics",
+                  "Clothing and Apparel",
+                  "Home and Furniture",
+                  "Beauty and Personal Care",
+                  "Sports and Outdoors",
+                  "Toys and Games",
+                  "Books and Stationery",
+                  "Health and Wellness",
+                  "Automotive",
+                  "Grocery and Gourmet",
+                  "Jewelry and Watches",
+                  "Home Improvement",
+                  "Pet Supplies",
+                  "Office Supplies",
+                  "Music and Instruments",
+                  "Garden and Outdoor Living",
+                  "Art and Craft Supplies",
+                  "Travel and Luggage",
+                  "Baby and Maternity",
+                  "Electrical and Lighting",
+                  // ... (add other categories)
+                ].map((category, index) => (
+                  <option key={index} value={category}>
+                    {category}
+                  </option>
+                ))}
+              </select>
             </div>
 
             <div className="group textInput-container">
               <input
                 type="text"
                 required
-                value={other}
-                onChange={(e) => setOther(e.target.value)}
+                value={brand}
+                onChange={(e) => setBrand(e.target.value)}
               />
-              <label>Other</label>
+              <label>brand</label>
             </div>
 
             <button type="submit" className="btn-continue">

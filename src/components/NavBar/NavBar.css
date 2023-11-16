@@ -1,105 +1,3 @@
-
-
-/* follow styles */
-/*.navbar-atlagile {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  background-color: #252b42;
-  flex-direction: row;
-  color: #fff;
-  justify-content: center; /* Center align all elements horizontally 
-}
-
-.navbar-atlagile-item {
-  margin: 0 10px;
-  padding: 10px;
-}
-
-.navbar-atlagile-item a {
-  text-decoration: none;
-  color: #fff;
-}
-
-/* Contact Info styles 
-.contact-info {
-  margin: 0 10px; /* Add margin for spacing 
-  padding: 10px;
-  /* background-color: #555; 
-  color: #fff;
-  display: flex;
-  text-align: center;
-}
-
-/* navbar-atlagile Us styles 
-.follow-us {
-  margin: 0 10px; /* Add margin for spacing 
-  /* padding: 10px; 
-  display: flex;
-  /* background-color: #555; 
-  color: #fff;
-  width: 20vw;
-  text-align: center;
-}
-
-/* Social Icons styles 
-.social-icons {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center; /* Center align icons horizontally 
-}
-
-.social-icons .follow-item {
-  margin: 5px 10px; /* Add margin for spacing 
-  padding: 5px;
-}
-.follow-us1 {
-  font-weight: bold;
-}
-.fa-phone {
-  color: white;
-}
-.social-icons .follow-item a {
-  text-decoration: none;
-  color: #fff;
-}
-
-/* Additional styling for the "Follow us and get a chance to win 80% off" text 
-.follow-us p:first-of-type {
-  font-weight: bold;
-}
-
-/* Additional styling for the "Follow us:" label 
-.follow-us p:last-of-type {
-  margin-top: 10px;
-  font-weight: bold;
-}
- .africa-buttons {
-  display: flex;
-  flex-direction: row;
-  width: 9vw;
-  justify-content: space-between;
-  margin-top: 10px;
-}
-
-.btn-atlagile {
-  padding: 10px 16px; /* Increased padding for a larger button 
-  border-radius: 16px;
-  background-color: white;
-  color: black;
-  text-align: center;
-  text-decoration: none; /* To remove the underline 
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition on hover 
-}
-
-.btn-atlagile:hover {
-  background-color: black;
-  color: white;
-} */
-
 /* Navbar-atlagile styles */
 .navbar-atlagile {
   display: flex;
@@ -115,32 +13,14 @@
 .navbar-atlagile-logo img {
   max-width: 200px; /* Adjust the maximum width of your logo */
 }
-
 .navbar-atlagile-logo img:hover {
   cursor: pointer;
 }
-
-
-
 /* Button styles */
 .navbar-atlagile-buttons {
   display: flex;
   gap: 10px; /* Add some spacing between buttons */
 }
-
-/* .btn-atlagile {
-  background-color: #555;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.btn-atlagile:hover {
-  background-color: #777;
-} */
-
 .btn-atlagile {
   /* padding: 4px 5px; */
   padding-bottom: 8px;

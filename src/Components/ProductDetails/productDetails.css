@@ -34,7 +34,7 @@
   /* justify-content: space-around; */
   align-items: flex-start;
   /* height: 30vh; */
-  padding-inline: 20px;
+  padding-inline: 50px;
 }
 .Product-details-body-right-top {
   /* padding-top: 70px; */
@@ -42,7 +42,7 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
-  height: 30vh;
+  /* height: 40vh; */
   width: 100%;
 
   /* background-color: antiquewhite; */
@@ -84,7 +84,9 @@
   /* padding: 16px; */
 }
 .Product-details-body-left {
-  width: 50vw;
+  background-color: red;
+  display: block;
+  width: 50vw !important;
   height: 80vh;
 }
 .mind-mattters-containers {
@@ -170,7 +172,6 @@
   border-bottom: 2px solid gray;
 }
 .add-review-btn {
-  margin-top: 20px;
   width: 100%;
   background-color: #252b42;
   color: white;
