@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MainAcc from "../src/Components/MainAcc/MainAcc";
 import UserSignUp from "../src/Components/UserSignUp/UserSignUp";
 import Signinscreen from "./Components/Sign_In_Screen/Signinscreen";
-// import Landing from "./Pages/Landing/Landing";
+import Landing from "./Pages/Landing/Landing";
 // import AboutUs from "./Components/AboutUs/AboutUs";
 import AddPhoto from "./Components/BusinessRegistration/AddPhoto";
 import MarketingSupport from "./Components/BusinessRegistration/MarketingSupport";
@@ -16,18 +16,20 @@ import SalesGrowth from "./Components/BusinessRegistration/SalesGrowth";
 // import Messages from "./pages/Message/Messages";
 // import OrderHistory from "./pages/Order_History/OrderHistory";
 // import Reciept from "./pages/Reciept/Reciept"
+import AltContact from "./Components/AltContact/AltContact"
+
 
 
 
 function App() {
   return (
-    // <div>Atlegile Marketing Solutions.</div>
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<UserSignUp />} />
+        <Route path='/' element={<Landing />} />
         <Route path='/mainacc' element={<MainAcc />} />
-        <Route path='/altcontact' element={<UserSignUp />} />
+        <Route path='/usersignup' element={<UserSignUp />} />
         <Route path='/signinscreen' element={<Signinscreen />} />
+        <Route path='/alt' element={<AltContact />} />
         <Route path='/addphoto' element={<AddPhoto />} />
         <Route path='/marketing' element={<MarketingSupport />} />
         <Route path='/paymentinfo' element={<PaymentInfo />} />
