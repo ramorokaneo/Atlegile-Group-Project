@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-=======
+
+
 /* follow styles */
 /*.navbar-atlagile {
   list-style: none;
@@ -100,7 +100,6 @@
   color: white;
 } */
 
->>>>>>> origin/Tlhogi
 /* Navbar-atlagile styles */
 .navbar-atlagile {
   display: flex;
@@ -116,20 +115,18 @@
 .navbar-atlagile-logo img {
   max-width: 200px; /* Adjust the maximum width of your logo */
 }
-<<<<<<< HEAD
+
 .navbar-atlagile-logo img:hover {
   cursor: pointer;
 }
-=======
 
->>>>>>> origin/Tlhogi
+
+
 /* Button styles */
 .navbar-atlagile-buttons {
   display: flex;
   gap: 10px; /* Add some spacing between buttons */
 }
-<<<<<<< HEAD
-=======
 
 /* .btn-atlagile {
   background-color: #555;
@@ -143,7 +140,7 @@
 .btn-atlagile:hover {
   background-color: #777;
 } */
->>>>>>> origin/Tlhogi
+
 .btn-atlagile {
   /* padding: 4px 5px; */
   padding-bottom: 8px;

@@ -21,7 +21,7 @@ const Signinscreen = () => {
     };
     const handleShop = () => {
         // Navigate to the /landingscreen route programmatically
-        navigate("/landingscreen");
+        navigate("/addphoto");
     };
 
 
@@ -30,9 +30,9 @@ const Signinscreen = () => {
             <div className="flexbox-container">
                 <div className="flexbox-item flexbox-item-1">
                     <img src={Logo} alt="Logo" className="logo" />
-                    <h1 className="sign">Sign In</h1>
+                    {/* <h1 className="sign">Sign In</h1> */}
                     <div className="header">
-                        {/* <h2 className="signUp">Sign Up</h2> */}
+                        <h2 className="signUp">Sign Up</h2>
                         <p className="shop" onClick={handleShop}>
                             SHOP
                             <FcNext />
@@ -45,7 +45,7 @@ const Signinscreen = () => {
 
 
 
-                    <button type="submit" className="submit-button" onClick={handleSignIn} required>Sign In</button>
+                    <button type="submit" className="submit-button" onClick={handleShop} required>Sign In</button>
 
 
                     <a className="forgot-password" href="/">DONT HAVE AN ACCOUNT?</a>
