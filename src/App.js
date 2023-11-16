@@ -23,7 +23,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<UserSignUp />} />
+        <Route path='/' element={<Landing />} />
         <Route path='/mainacc' element={<MainAcc />} />
         <Route path='/altcontact' element={<UserSignUp />} />
         <Route path='/signinscreen' element={<Signinscreen />} />
