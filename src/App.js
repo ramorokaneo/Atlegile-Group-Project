@@ -15,7 +15,7 @@ import BusinessAccount from "./pages/BusinessAccount/businessAccount"
 import DeliveryDone from "./pages/Delivery_Done/DeliveryDone";
 import Messages from "./pages/Message/Messages";
 import OrderHistory from "./pages/Order_History/OrderHistory";
-import Reciept from "./pages/Reciept/Reciept"
+import Reciept from "./pages/Reciept/Reciept";
 
 
 
