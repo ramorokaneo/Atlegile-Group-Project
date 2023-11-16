@@ -4,7 +4,7 @@ import "./form.css";
 import MarketingSupport from "./MarketingSupport";
 import { useNavigate } from "react-router-dom";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
-import { db } from "../../config";
+import { db } from "./config";
 
 const PaymentInfo = () => {
   const nav = useNavigate();

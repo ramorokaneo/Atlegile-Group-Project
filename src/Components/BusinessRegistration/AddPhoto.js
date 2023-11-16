@@ -6,7 +6,7 @@ import SalesGrowth from "./SalesGrowth";
 import { useNavigate } from "react-router-dom";
 import { collection, addDoc } from "firebase/firestore";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
-import { db } from "../../config";
+import { db } from "./config";
 
 const AddPhoto = () => {
   const nav = useNavigate();
