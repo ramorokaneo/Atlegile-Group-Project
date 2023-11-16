@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./MainAcc.css";
 import { useNavigate } from "react-router-dom";
+const logo = require("./Logo.png");
 
 function MainAcc() {
   const navigate = useNavigate();
@@ -30,91 +31,179 @@ function MainAcc() {
       location,
     });
 
-    // Navigate to the /altcontact route programmatically
-    navigate("/altcontact");
+    navigate("/alt");
   };
 
   return (
     <div className="background-container">
-      <div className="form-container">
-        <div className="form-item form-items">
-          <img src="./logo.png" alt="Logo" className="logo" />
-          <h3 className="main-acc">Main Account Holder</h3>
-          <h2 className="yourself">TELL US ABOUT YOURSELF</h2>
-          <form onSubmit={handleSubmit}>
-            <div className="fullname">
-              <label className="label-1">Name</label>
-              <input
-                type="text"
-                placeholder="Jane"
-                className="form-group-1"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
-              />
-
-              <label className="label-1">Surname</label>
-              <input
-                type="text"
-                placeholder="Doe"
-                className="form-group-1"
-                value={surname}
-                onChange={(e) => setSurname(e.target.value)}
-                required
-              />
-            </div>
-
-            <label className="label">Phone</label>
-            <input
-              type="text"
-              placeholder="0123456789"
-              className="form-group"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              required
-            />
-
-            <label className="label">Gender</label>
-            <div className="gender-dropdown">
-              <select
-                className="form-group"
-                value={gender}
-                onChange={(e) => setGender(e.target.value)}
-                required
+      <div style={{ height: "100%", width: "70%" }}></div>
+      <div
+        style={{
+          height: "100%",
+          width: "30%",
+          padding: 10,
+        }}
+      >
+        <div style={{ height: "100%", backgroundColor: "white" }}>
+          <div
+            style={{
+              width: "100%",
+              height: "35%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <img src={logo} alt="Logo" style={{ width: 250 }} />
+          </div>
+          <div
+            style={{
+              width: "100%",
+              height: "50%",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
+            }}
+          >
+            <div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  paddingRight: 60,
+                  paddingLeft: 60,
+                }}
               >
-                <option value="" disabled>
-                  Select Gender
-                </option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-              </select>
+                <span style={{ fontSize: 15, fontWeight: 700 }}>
+                  Main Account Holder
+                </span>
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  paddingRight: 60,
+                  paddingLeft: 60,
+                  marginBottom: "10px",
+                }}
+              >
+                <span style={{ fontSize: 25, fontWeight: 700 }}>
+                  TELL US ABOUT YOURSELF
+                </span>
+              </div>
+              <div
+                style={{
+                  paddingRight: 60,
+                  paddingLeft: 60,
+                }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "space-evenly",
+                  }}
+                >
+                  <div style={{}}>
+                    <span style={{ fontSize: 12 }}>Name</span>
+                    <input
+                      type="text"
+                      placeholder="Jane"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      style={{ width: "90%" }}
+                      required
+                    />
+                  </div>
+                  <div style={{}}>
+                    <span style={{ fontSize: 12 }}>Surname</span>
+                    <input
+                      type="text"
+                      placeholder="Doe"
+                      value={surname}
+                      onChange={(e) => setSurname(e.target.value)}
+                      style={{ width: "100%" }}
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div style={{}}>
+                  <span style={{ fontSize: 12 }}>Phone</span>
+                  <input
+                    type="text"
+                    placeholder="0123456789"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    style={{ width: "100%" }}
+                    required
+                  />
+                </div>
+
+                <div style={{}}>
+                  <span style={{ fontSize: 12 }}>Gender</span>
+                  <select
+                    placeholder="Select gender"
+                    value={gender}
+                    onChange={(e) => setGender(e.target.value)}
+                    style={{ width: "100%" }}
+                    required
+                  >
+                    <option value="" disabled>
+                      Select Gender
+                    </option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div style={{}}>
+                  <span style={{ fontSize: 12 }}>Email</span>
+                  <input
+                    type="email"
+                    placeholder="example@gmail.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    style={{ width: "100%" }}
+                    required
+                  />
+                </div>
+
+                <div style={{}}>
+                  <span style={{ fontSize: 12 }}>Location</span>
+                  <input
+                    type="text"
+                    placeholder="1235 Vilakazi Street, Orlando West, Seweto, 1804, South africa"
+                    value={location}
+                    onChange={(e) => setLocation(e.target.value)}
+                    style={{ width: "100%" }}
+                    required
+                  />
+                </div>
+                <div
+                  onClick={handleSubmit}
+                  style={{
+                    borderRadius: 20,
+                    backgroundColor: "#072840",
+                    textAlign: "center",
+                    marginTop: 20,
+                    padding: 10,
+                    fontWeight: 600,
+                    color: "white",
+                    fontSize: 12,
+                    cursor: "pointer",
+                  }}
+                >
+                  CONTINUE
+                </div>
+              </div>
             </div>
-
-            <label className="label">Email</label>
-            <input
-              type="email"
-              placeholder="example@gmail.com"
-              className="form-group"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-
-            <label className="label">Location</label>
-            <input
-              type="text"
-              placeholder="1235 Vilakazi Street, Orlando West, Soweto, 1804, South Africa"
-              className="form-group"
-              value={location}
-              onChange={(e) => setLocation(e.target.value)}
-              required
-            />
-
-            <button className="submit-button" type="submit">
-              CONTINUE
-            </button>
-          </form>
+          </div>
         </div>
       </div>
     </div>

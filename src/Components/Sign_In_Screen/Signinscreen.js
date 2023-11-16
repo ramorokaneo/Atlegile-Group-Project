@@ -11,47 +11,29 @@ const Signinscreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSignIn = () => {
-    if (email === "" || password === "") {
-      console.log("Good");
-    } else {
-      console.log("Filling");
+  const handleSignIn = (e) => {
+    e.preventDefault();
+
+    // Check if email and password are not empty
+    if (email.trim() === "" || password.trim() === "") {
+      alert("Please fill in all fields before signing in.");
+      return;
     }
+
+    // Handle form submission logic here
+    console.log("Form submitted:", { email, password });
+
+    // Navigate to the /mainacc route programmatically
+    navigate("/");
   };
+
   const handleShop = () => {
     // Navigate to the /landingscreen route programmatically
-    navigate("/landingscreen");
+    navigate("/");
   };
 
   return (
     <div className="background">
-      {/* <div className="flexbox-container">
-                <div className="flexbox-item flexbox-item-1">
-                    <img src={Logo} alt="Logo" className="logo" />
-                    <h1 className="sign">Sign In</h1>
-                    <div className="header">
-                        {/* <h2 className="signIN">Sign IN</h2> 
-                        <p className="shop" onClick={handleShop}>
-                            SHOP
-                            <FcNext />
-                        </p>
-                    </div>
-                    <input type="text" placeholder="Email" value={email} onChange={(e) => { setemail(e.target.value) }} required className="sign-in-input" />
-                    <input type="password" placeholder="Password" value={password} onChange={(e) => { setpassword(e.target.value) }} className="sign-in-input" />
-
-                    <a href="#/" className="forgot-password-link">Forgot Password?</a>
-
-
-
-                    <button type="submit" className="submit-button" onClick={handleSignIn} required>Sign In</button>
-
-
-                    <a className="forgot-password" href="/">DONT HAVE AN ACCOUNT?</a>
-
-
-                    <a href="https://accounts.google.com/InteractiveLogin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&emr=1&followIN=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&osid=1&passive=1209600&service=mail&ifkv=AVQVeyxNQ2A432r4bfY_nLZnSse1n4WLox8NOt3k4n4yU4mXFzdxmjwDpFI1rp9-wKRm_5qI3Xgc&theme=glif&flowName=GlifWebSignIn&flowEntry=ServiceLogin" className="Sign-with-google-link"><FcGoogle /> Sign In With Google</a>
-                </div>
-            </div> */}
       <div style={{ height: "100%", width: "70%" }}></div>
       <div
         style={{
@@ -64,13 +46,13 @@ const Signinscreen = () => {
           <div
             style={{
               width: "100%",
-              height: "50%",
+              height: "35%",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
             }}
           >
-            <img src={logo} alt="Logo" style={{  }} />
+            <img src={logo} alt="Logo" style={{ width: 250 }} />
           </div>
           <div
             style={{
@@ -90,6 +72,7 @@ const Signinscreen = () => {
                   justifyContent: "space-between",
                   paddingRight: 60,
                   paddingLeft: 60,
+                  marginTop: "30px",
                 }}
               >
                 <span style={{ fontSize: 25, fontWeight: 700 }}>SIGN IN</span>
@@ -112,35 +95,35 @@ const Signinscreen = () => {
                 </div>
               </div>
 
-            <div
+              <div
                 style={{
                   paddingRight: 60,
                   paddingLeft: 60,
                 }}
-            >
-                <br />
+              >
                 <div style={{}}>
                   <span style={{ fontSize: 12 }}>Email</span>
                   <input
                     type="email"
+                    placeholder="example@gmail.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     style={{ width: "100%" }}
                     required
                   />
                 </div>
-                <br />
                 <div style={{}}>
                   <span style={{ fontSize: 12 }}>Password</span>
                   <input
                     type="password"
+                    placeholder="**********"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     style={{ width: "100%" }}
                     required
                   />
                 </div>
-                
+
                 <div
                   style={{
                     display: "flex",
@@ -202,7 +185,7 @@ const Signinscreen = () => {
               >
                 <a
                   style={{ color: "#072840", fontSize: 12, fontWeight: 600 }}
-                  href="/signinscreen"
+                  href="/usersignup"
                 >
                   DON'T HAVE AN ACCOUNT?
                 </a>
