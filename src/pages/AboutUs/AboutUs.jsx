@@ -1,10 +1,10 @@
 import React from "react";
-import AboutUs from "../../componets/AboutUs/AboutUs";
-import Footer from "../../componets/Footer/Footer";
-import FollowUs from "../../componets/FollowUs/FollowUs";
-import Navbar from "../../componets/NavBar/NavBar";
-// import SearchBar from "../../componets/SearchBar/SearchBar";
-import NoSearchBar from "../../componets/NoSearchBar/NoSearchBar";
+import AboutUs from "../../Components/AboutUs/AboutUs";
+import Footer from "../../Components/Footer/Footer";
+import FollowUs from "../../Components/FollowUs/FollowUs";
+import Navbar from "../../Components/NavBar/NavBar";
+// import SearchBar from "../../Components/SearchBar/SearchBar";
+import NoSearchBar from "../../Components/NoSearchBar/NoSearchBar";
 
 export default function AboutUsPage() {
   return (
