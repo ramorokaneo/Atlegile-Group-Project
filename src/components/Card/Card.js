@@ -65,7 +65,7 @@ const Card = ({ item }) => {
         </div>
         <div className="content">
           <div className="header">
-            <h2 className="title">{item?.productType}</h2>
+            <h2 className="title">{item?.selectedCategory}</h2>
             <div className="rating">⭐ 0.0</div>
           </div>
           <h1>{item?.productName}</h1>
@@ -79,7 +79,7 @@ const Card = ({ item }) => {
             <scan> R{item?.price}</scan>
           </p>
           <Link
-            to="/product-details"
+            to={`/product-details/${item.key}`}
             onClick={() => console.log("View Button Clicked!!!")}
             className="view-button"
           >

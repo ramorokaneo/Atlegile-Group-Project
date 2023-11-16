@@ -1,4 +1,5 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import Carausel from "../Carousel/Carausel";
 import "./productDetails.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,10 +14,14 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import star from "../../images/Vector.svg";
 import star2 from "../../images/Vector_2.svg";
 // import { useFetchProducts } from "../../hooks/useFetchProducts";
+import { useFetchSingleProduct } from "../../hooks/useFetchSingleProduct";
 
 export default function ProductDetail({ firebaseProducts }) {
+  const { id } = useParams();
+
+  const { singleProduct } = useFetchSingleProduct(id);
   // const firebaseProducts = data.firebaseProducts;
-  // console.log("firebase Products : ", firebaseProducts);
+  // console.log("firebase Single Products : ", firebaseSingleProducts);
   const [quantity, setQuantity] = React.useState(1);
   const reviewsArr = [1, 2, 3];
   const handleIncrease = () => {
@@ -37,23 +42,24 @@ export default function ProductDetail({ firebaseProducts }) {
       <div className="Product-details-container-body">
         <div className="header-container">
           <p>HOME /&nbsp;</p>
-          <p>VAAS /&nbsp;</p>
-          <p className="digital-text">Digital Marketing Course</p>
+          <p>{singleProduct?.brand} /&nbsp;</p>
+          <p className="digital-text">{singleProduct?.productName}</p>
         </div>
         <div className="Product-details-body">
           <div className="Product-details-body-left">
-            <Carausel />
+            <div style={{ width: "35vw" }}>
+              <Carausel images={singleProduct?.imageUrls} />
+            </div>
           </div>
           <div className="Product-details-body-right">
             <div className="Product-details-body-right-top">
               <h1 className="Product-details-header">
-                Digital Marketing Course
+                {singleProduct?.productName}
               </h1>
               <p className="Product-details-desc">
-                An in-depth online course covering digital marketing strategies
-                and techniques.
+                {singleProduct?.description}
               </p>
-              <p className="Product-details-price">R1500</p>
+              <p className="Product-details-price">R{singleProduct?.price}</p>
               <p className="Product-details-quantity">Quantity</p>
               <div className="Product-details-counter-container">
                 <div className="Product-details-counter">

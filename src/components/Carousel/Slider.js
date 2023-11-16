@@ -21,11 +21,11 @@ function Slider({ slides }) {
         />
       }
     >
-      {slides.map((slide) => (
-        <Carousel.Item key={slide.image} interval={slide.interval}>
+      {slides?.map((slide) => (
+        <Carousel.Item key={slide} interval={2000}>
           <img
             className="d-block w-100 h-200 slider-img"
-            src={slide.image}
+            src={slide}
             alt="First slide"
           />
         </Carousel.Item>
