@@ -187,7 +187,7 @@ const Register = () => {
             height={50}
             style={{
               justifyContent: "center",
-              paddingTop: 120,
+              marginTop: 90,
             }}
             alt="Logo"
           />
@@ -207,18 +207,18 @@ const Register = () => {
               <label>Business Name</label>
             </div>
 
-            <div className="group  ">
+            <div className="group ">
               <div style={{ display: "flex", flexDirection: "column" }}>
-                <div style={{ padding: "8%" }}>
+                <div style={{ padding: "3%" }}>
                   {selectedRole ? null : (
                     <label style={{ marginLeft: "-35%" }}>Profession</label>
                   )}
                 </div>
-                <div style={{ width: "180%", marginLeft: "-34%" }}>
+                <div style={{ width: "155%", marginLeft: "-20%" }}>
                   <select
                     value={selectedRole}
                     onChange={(e) => selectRole(e.target.value)}
-                    style={{ fontSize: "12px" }}>
+                    style={{ fontSize: "15px" }}>
                     {roleOptions.map((role, index) => (
                       <option key={index} value={role}>
                         {role}
@@ -259,10 +259,17 @@ const Register = () => {
               <label>Location</label>
             </div>
 
-            <div className="row">
-              <div className="group ">
+            <div
+              className="row"
+              style={{ display: "flex", backgroundColor: "", width: "100%" }}>
+              <div
+                className="group "
+                style={{
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                }}>
                 {selectedBusinessType ? null : (
-                  <label style={{ marginTop: "-15%" }}>Business type</label>
+                  <label style={{ marginTop: "0%" }}>Business type</label>
                 )}
 
                 <div className="dropdown">
@@ -281,11 +288,17 @@ const Register = () => {
                 </div>
               </div>
 
-              <div className="group textInput-container">
+              <div
+                className="group textInput-container"
+                style={{
+                  width: "100%",
+                  // backgroundColor: "whitesmoke",
+                  padding: 15,
+                }}>
                 {selectedIndustry ? null : (
-                  <label style={{ marginTop: "-11%" }}>Industry</label>
+                  <label style={{ paddingTop: "0%" }}>Industry</label>
                 )}
-                <div className="dropdown">
+                <div className="dropdown" style={{ width: "100%" }}>
                   <div>
                     <select
                       value={selectedIndustry}
@@ -321,7 +334,7 @@ const Register = () => {
               />
               <label>Bio</label>
             </div>
-            <button type="submit" className="btn-continue">
+            <button type="submit" className="btn-continue" style={{marginBottom:20}}>
               Continue
             </button>
           </form>
