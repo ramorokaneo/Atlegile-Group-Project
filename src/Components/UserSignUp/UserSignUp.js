@@ -4,8 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa6";
 const logo = require("./Logo.png");
-// eslint-disable-next-line
-const backgroundImage = require("./bg-img.jpg");
 
 function UserSignUp() {
   const navigate = useNavigate();
@@ -29,12 +27,12 @@ function UserSignUp() {
   };
   const handleShop = () => {
     // Navigate to the /landingscreen route programmatically
-    navigate("/landingscreen");
+    navigate("/");
   };
 
   const handleBusinessSignUp = () => {
     // Navigate to the /businesssignup route programmatically
-    navigate("/businesssignup");
+    navigate("/register");
   };
 
   return (
@@ -54,6 +52,7 @@ function UserSignUp() {
             style={{
               width: "100%",
               height: "51vh",
+
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -79,6 +78,7 @@ function UserSignUp() {
                   justifyContent: "space-between",
                   paddingRight: 60,
                   paddingLeft: 60,
+                  marginBottom: "10px",
                 }}
               >
                 <span style={{ fontSize: 25, fontWeight: 700 }}>SIGN UP</span>
@@ -92,7 +92,7 @@ function UserSignUp() {
                   }}
                   onClick={handleShop}
                 >
-                  <span style={{fontSize: 12, marginRight: 10 }}>SHOP</span>
+                  <span style={{ fontSize: 12, marginRight: 10 }}>SHOP</span>
                   <FaAngleRight size={10} color="#59b0f6" />
                 </div>
               </div>
@@ -102,7 +102,6 @@ function UserSignUp() {
                   paddingLeft: 60,
                 }}
               >
-                <br />
                 <div style={{}}>
                   <span style={{ fontSize: 12 }}>Email</span>
                   <input
@@ -113,7 +112,6 @@ function UserSignUp() {
                     required
                   />
                 </div>
-                <br />
                 <div style={{}}>
                   <span style={{ fontSize: 12 }}>Password</span>
                   <input
@@ -136,7 +134,6 @@ function UserSignUp() {
                     color: "white",
                     fontSize: 12,
                     cursor: "pointer",
-                    
                   }}
                 >
                   SIGN UP
@@ -198,6 +195,7 @@ function UserSignUp() {
                   fontWeight: 600,
                   fontSize: 12,
                   cursor: "pointer",
+                  marginTop: "130px",
                 }}
               >
                 SIGN UP AS A BUSINESS <FaAngleRight size={10} color="#59b0f6" />
