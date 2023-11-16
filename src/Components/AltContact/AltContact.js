@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./AltContact.css";
 import { useNavigate } from "react-router-dom";
 
-function UserSignUp() {
+function AltContact() {
   const navigate = useNavigate();
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -72,4 +72,4 @@ function UserSignUp() {
   );
 }
 
-export default UserSignUp;
+export default AltContact;
