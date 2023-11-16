@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 *{
-=======
+
 .App {
   width: 100vw;
   height: 100vh;
@@ -309,7 +305,7 @@
   flex-direction: column;
   justify-content: center;
   border-bottom: 1px solid #cfcfcf;
->>>>>>> origin/Mpho
+
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -319,10 +315,7 @@ html, body, #root{
   width: 100%;
   height: 100%;
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/Tlhogi
-=======
+
 /* .App {
   text-align: center;
 =======
@@ -434,7 +427,7 @@ html, body, #root{
 #root {
   /* Your CSS styles for the #root element here */
 
->>>>>>> origin/Mpho
+
 }
 
 .App-logo {
@@ -448,7 +441,7 @@ html, body, #root{
   }
 }
 
-<<<<<<< HEAD
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -471,8 +464,8 @@ html, body, #root{
   to {
     transform: rotate(360deg);
   }
-} */
-=======
+}
+
 @media (max-width: 701px) {
   /* CSS rules for screens with a maximum width of 768px or less */
   /* Place your styles here */
@@ -482,22 +475,14 @@ html, body, #root{
   }
 }
 
->>>>>>> origin/Mpho
-
->>>>>>> origin/Mahlatse
-=======
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
->>>>>>> origin/Ristar
-=======
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-
->>>>>>> origin/Boiketlo
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
