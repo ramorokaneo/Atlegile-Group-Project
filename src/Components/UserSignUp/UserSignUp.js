@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import "./SignUp.css";
 import { useNavigate } from "react-router-dom";
-import { FcGoogle } from "react-icons/fc";
-import { FcNext } from "react-icons/fc";
+import { FaGoogle } from "react-icons/fa";
+import { FaAngleRight } from "react-icons/fa6";
+const logo = require("./Logo.png");
+// eslint-disable-next-line
+const backgroundImage = require("./bg-img.jpg");
 
 function UserSignUp() {
   const navigate = useNavigate();
@@ -35,55 +38,180 @@ function UserSignUp() {
   };
 
   return (
-    <div className="background-container">
-      <div className="form-container">
-        <div className="form-item form-items">
-          <img src="./logo.png" alt="Logo" className="logo" />
-          <div className="header">
-            <h2 className="signUp">Sign Up</h2>
-            <p className="shop" onClick={handleShop}>
-              SHOP
-              <FcNext />
-            </p>
+    <div
+      // style={{
+      //   width: "100%",
+      //   height: "100%",
+      //   backgroundImage: "url('./bg-img.jpg')",
+      //   backgroundSize: "cover",
+      //   backgroundPosition: "center",
+      //   backgroundRepeat: "no-repeat",
+      // }}
+      className="background-container"
+    >
+      <div style={{ height: "100%", width: "70%" }}></div>
+      <div
+        style={{
+          height: "100%",
+          width: "30%",
+          padding: 10,
+        }}
+      >
+        <div style={{ height: "100%", backgroundColor: "white" }}>
+          <div
+            style={{
+              width: "100%",
+              height: "50%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <img src={logo} alt="Logo" style={{ width: 250 }} />
           </div>
-
-          <form onSubmit={handleSubmit}>
-            <label className="label">Email</label>
-            <input
-              type="email"
-              placeholder=""
-              className="form-group"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-
-            <label className="label">Password</label>
-            <input
-              type="password"
-              placeholder=""
-              className="form-group"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-
-            <button className="submit-button" type="submit">
-              SIGN UP
-            </button>
-
-            <a className="forgot-password" href="/signinscreen">ALREADY HAVE AN ACCOUNT?</a>
-
-
-            <div className="google-signin">
-              <a href="/">
-                <FcGoogle /> SIGN IN WITH GOOGLE
-              </a>
+          <div
+            style={{
+              width: "100%",
+              height: "50%",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
+            }}
+          >
+            <div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  paddingRight: 60,
+                  paddingLeft: 60,
+                }}
+              >
+                <span style={{ fontSize: 25, fontWeight: 700 }}>SIGN UP</span>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    cursor: "pointer",
+                  }}
+                  onClick={handleShop}
+                >
+                  <span style={{fontSize: 12, marginRight: 10 }}>SHOP</span>
+                  <FaAngleRight size={10} color="#59b0f6" />
+                </div>
+              </div>
+              <div
+                style={{
+                  paddingRight: 60,
+                  paddingLeft: 60,
+                }}
+              >
+                <br />
+                <div style={{}}>
+                  <span style={{ fontSize: 12 }}>Email</span>
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    style={{ width: "100%" }}
+                    required
+                  />
+                </div>
+                <br />
+                <div style={{}}>
+                  <span style={{ fontSize: 12 }}>Password</span>
+                  <input
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    style={{ width: "100%" }}
+                    required
+                  />
+                </div>
+                <div
+                  onClick={handleSubmit}
+                  style={{
+                    borderRadius: 20,
+                    backgroundColor: "#072840",
+                    textAlign: "center",
+                    marginTop: 20,
+                    padding: 10,
+                    fontWeight: 600,
+                    color: "white",
+                    fontSize: 12,
+                    cursor: "pointer",
+                    
+                  }}
+                >
+                  SIGN UP
+                </div>
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  height: "8vh",
+                  paddingRight: 60,
+                  paddingLeft: 60,
+                  marginTop: 10,
+                }}
+              >
+                <a
+                  style={{ color: "#072840", fontSize: 12, fontWeight: 600 }}
+                  href="/signinscreen"
+                >
+                  ALREADY HAVE AN ACCOUNT?
+                </a>
+                <a
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    color: "#d32f2f",
+                    fontSize: 12,
+                    fontWeight: 600,
+                  }}
+                  href="/"
+                >
+                  <FaGoogle
+                    color="#d32f2f"
+                    size={20}
+                    style={{ marginRight: 5 }}
+                  />{" "}
+                  SIGN UP WITH GOOGLE
+                </a>
+              </div>
             </div>
-          </form>
-          <button className="signup-business" onClick={handleBusinessSignUp}>
-            SIGN UP AS A BUSINESS <FcNext />
-          </button>
+
+            <div
+              style={{
+                paddingRight: 60,
+                paddingLeft: 60,
+              }}
+            >
+              <div
+                onClick={handleBusinessSignUp}
+                style={{
+                  borderRadius: 20,
+                  border: "1px #072840 solid",
+                  textAlign: "center",
+                  marginBottom: 20,
+                  padding: 5,
+                  fontWeight: 600,
+                  fontSize: 12,
+                  cursor: "pointer",
+                }}
+              >
+                SIGN UP AS A BUSINESS <FaAngleRight size={10} color="#59b0f6" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
