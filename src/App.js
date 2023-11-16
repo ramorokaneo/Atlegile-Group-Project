@@ -23,7 +23,6 @@ import AltContact from "./Components/AltContact/AltContact"
 
 function App() {
   return (
-    // <div>Atlegile Marketing Solutions.</div>
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Landing />} />
