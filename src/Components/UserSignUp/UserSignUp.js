@@ -4,11 +4,7 @@ import { FaGoogle } from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa6";
 import logo from "./Logo.png";
 import 'bootstrap/dist/css/bootstrap.min.css';
-<<<<<<< HEAD
-import './UserSignUp.css'; 
-=======
-import '/SignUp.css'; 
->>>>>>> eae132d9b5c460ac977461669796f6b1d449cdc3
+import '/SignUp.css'
 
 function UserSignUp() {
   const navigate = useNavigate();
