@@ -1,0 +1,52 @@
+.explore-container {
+  width: 100%;
+  padding-top: 20px;
+  /* background-color: red; */
+  height: 14rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.explore-circles-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 30px;
+  width: 17vw;
+  /* background-color: chartreuse; */
+}
+.explore-circles {
+  background-color: gold;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-one-container {
+  background-color: rgb(0, 0, 0);
+  height: 4rem;
+  width: 4rem;
+  color: white;
+  /* align-self: center; */
+  /* padding: 0.5rem; */
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.explore-container h2 {
+  font-size: 2rem;
+}
+
+.explore-circles:hover {
+  cursor: pointer;
+  background-color: rgba(255, 217, 0, 0.4);
+}
+.circle-one-container:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}

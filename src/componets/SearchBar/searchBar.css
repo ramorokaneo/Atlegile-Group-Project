@@ -1,0 +1,69 @@
+.search-bar-container {
+  width: 100%;
+  height: 15rem;
+  background-color: #070f18;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.shop2-image {
+  height: 15rem;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.shop1-image {
+  height: 15rem;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.search-bar-body {
+  /* background-color: #070f18; */
+  width: 30vw;
+  height: 15rem;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.search-bar-logo {
+  margin-top: 50px;
+  height: 50px;
+  color: white;
+  margin-bottom: 50px;
+  /* background-color: red; */
+}
+.search-input {
+  /* padding: 15px 15px 5px 15px; */
+  font-size: 16px;
+  width: 80%;
+  border: none;
+  height: 40px;
+  border-bottom: 2px solid gray;
+}
+.search-input-container {
+  padding: 10px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  height: 60px;
+}
+
+.icons-container {
+  display: flex;
+  justify-content: space-around;
+}
+.icon {
+  margin-left: 10px;
+}
+.icon-search {
+  cursor: pointer;
+  margin-left: 20px;
+}
+.icons-container:hover {
+  cursor: pointer;
+}
