@@ -53,7 +53,7 @@ function UserSignUp() {
           <div
             style={{
               width: "100%",
-              height: "51%",
+              height: "51vh",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
