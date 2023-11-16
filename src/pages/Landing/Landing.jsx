@@ -1,17 +1,17 @@
 // Footer.js
 import React from "react";
-import Footer from "../../componets/Footer/Footer";
-import FollowUs from "../../componets/FollowUs/FollowUs";
-import SaveBigHeader from "../../componets/SaveBigHeader/SaveBigHeader";
-import AfricaBusines from "../../componets/AfricaBusiness/AfricaBusines";
-import Navbar from "../../componets/NavBar/NavBar";
-import SearchBar from "../../componets/SearchBar/SearchBar";
-import Explore from "../../componets/Explore/Explore";
-import SecureTech from "../../componets/SecureTech/SecureTech";
-import LearnZa from "../../componets/LearnZa/LearnZa";
-import TechWise from "../../componets/TechWise/TechWise";
-import MindMatters from "../../componets/MindMatters/MindMatters";
-// import AboutUs from "../../componets/AboutUs/AboutUs";
+import Footer from "../../Components/Footer/Footer";
+import FollowUs from "../../Components/FollowUs/FollowUs";
+import SaveBigHeader from "../../Components/SaveBigHeader/SaveBigHeader";
+import AfricaBusines from "../../Components/AfricaBusiness/AfricaBusines";
+import Navbar from "../../Components/NavBar/NavBar";
+import SearchBar from "../../Components/SearchBar/SearchBar";
+import Explore from "../../Components/Explore/Explore";
+import SecureTech from "../../Components/SecureTech/SecureTech";
+import LearnZa from "../../Components/LearnZa/LearnZa";
+import TechWise from "../../Components/TechWise/TechWise";
+import MindMatters from "../../Components/MindMatters/MindMatters";
+// import AboutUs from "../../Components/AboutUs/AboutUs";
 function Landing() {
   return (
     <>
