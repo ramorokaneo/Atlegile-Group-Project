@@ -462,11 +462,12 @@ function Reciept() {
             <div
               style={{
                 height: "12vh",
-                width: "69%",
+                width: "60%",
                 alignItems: "center",
                 display: "flex",
                 justifyContent: "center",
                 fontWeight: "bold",
+               // backgroundColor:"red"
               }}
             >
               our team is working diligently to process and ship your order. If

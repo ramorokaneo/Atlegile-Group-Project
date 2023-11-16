@@ -16,12 +16,12 @@ import Datetime from "react-datetime";
 import "react-datepicker/dist/react-datepicker.css";
 import DatePicker from "react-datepicker";
 
-function DeliveryDone() {
+function Cart() {
   const [isVisible, setIsVisible] = useState(true);
   const [component1Visible, setComponent1Visible] = useState(true);
   const [component2Visible, setComponent2Visible] = useState(false);
   const [component3Visible, setComponent3Visible] = useState(false);
-  const [chatmodelVisble, setChatmodelVisible] = useState(false);
+
   const handleComponentA = () => {
     setComponent1Visible(false);
     setComponent2Visible(true);
@@ -109,348 +109,8 @@ function DeliveryDone() {
     setDate(selectedDateTime);
   };
 
-  const handleMessageButtonClick = () => {
-    setChatmodelVisible(!chatmodelVisble);
-  };
-
-  const chats = [
-    {
-      dateAntTime: "Wed 8:21 AM ",
-      image: "OP",
-      status: "sent",
-      messages: "Hello",
-    },
-    {
-      dateAntTime: "Wed 8:21 AM ",
-      image: "OP",
-      status: "recieved",
-      messages:
-        "HI Pleas drop the pakedge nea the green box at hte gate leas drop the pakedge nea the green boleas drop the pakedge nea the green boleas drop the pakedge nea the green boleas drop the pakedge nea the green boleas drop the pakedge nea the green bo ",
-    },
-    {
-      dateAntTime: "Wed 8:21 AM ",
-      image: "OP",
-      status: "sent",
-      messages: "i see it, okey i will live it there",
-    },
-    {
-      dateAntTime: "Wed 8:21 AM ",
-      image: "OP",
-      status: "recieved",
-      messages: "Hello",
-    },
-    {
-      dateAntTime: "Wed 8:21 AM ",
-      image: "OP",
-      status: "recieved",
-      messages:
-        "HI Pleas drop the pakedge nea the green box at hte gate leas drop the pakedge nea the green boleas drop the pakedge nea the green boleas drop the pakedge nea the green boleas drop the pakedge nea the green boleas drop the pakedge nea the green bo ",
-    },
-    {
-      dateAntTime: "Wed 8:21 AM ",
-      image: "OP",
-      status: "recieved",
-      messages:
-        "HI Pleas drop the pakedge nea the green box at hte gate leas drop the pakedge nea the green boleas drop the pakedge nea the green boleas drop the pakedge nea the green boleas drop the pakedge nea the green boleas drop the pakedge nea the green bo ",
-    },
-    {
-      dateAntTime: "Wed 8:21 AM ",
-      image: "OP",
-      status: "recieved",
-      messages:
-        "HI Pleas drop the pakedge nea the green box at hte gate leas drop the pakedge nea the green boleas drop the pakedge nea the green boleas drop the pakedge nea the green boleas drop the pakedge nea the green boleas drop the pakedge nea the green bo ",
-    },
-  ];
-
   return (
     <>
-      {chatmodelVisble && (
-        <div
-          style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100vw",
-            height: "100vh",
-            backgroundColor: "rgba(0, 0, 0, 0.5)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            zIndex: 999,
-          }}
-        >
-          <div
-            style={{
-              height: "100vh",
-              width: "100vw",
-              //  border: "none",
-              //  borderBottom: "1px lightgray solid",
-              display: "flex",
-              //flexDirection: "row",
-              alignItems: "center",
-              justifyContent: "center",
-              //backgroundColor: "#072840",
-              // flexDirection: "column",
-            }}
-          >
-            <div
-              style={{
-                height: "90vh",
-                width: "27vw",
-                //border: "1px solid gray",
-                border: "1px lightgray solid",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                backgroundColor: "white",
-                flexDirection: "column",
-              }}
-            >
-              <div
-                style={{
-                  height: "85vh",
-                  width: "25vw",
-                  border: "none",
-                  //   borderBottom: "1px lightgray solid",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  backgroundColor: "white",
-                  zIndex: 900,
-                  overflowY: "auto",
-
-                 
-                }}
-                
-              >
-                <div
-                  style={{
-                    height: "5vh",
-                    width: "25vw",
-                    justifyContent: "flex-start",
-                    display: "flex",
-                    alignItems: "center",
-                  }}
-                >
-                  CHAT TO DRIVER
-                </div>
-                {chats.map((item, index) => (
-                  <div
-                    key={index}
-                    style={{
-                      alignSelf:
-                        item.status === "sent"
-                          ? "flex-start"
-                          : item.status === "recieved"
-                          ? "flex-end"
-                          : "inherit",
-
-                      maxWidth: "60%",
-                      display: "flex",
-                      flexDirection: "row",
-                    
-                    }}
-                  >
-                    {item.status === "sent" && (
-                      <div
-                        style={{
-                          minHeight: "30px",
-                          minWidth: "30px",
-                          justifyContent: "center",
-                          alignItems: "flex-start",
-                          display: "flex",
-                          marginRight: "10px",
-                        }}
-                      >
-                        <div
-                          style={{
-                            height: "30px",
-                            width: "30px",
-                            color: "white",
-                            backgroundColor: "gray",
-                            borderRadius: "50%",
-                            justifyContent: "center",
-                            alignItems: "center",
-                            display: "flex",
-                          }}
-                        >
-                          OP
-                        </div>
-                      </div>
-                    )}
-                    <div style={{ display: "flex", flexDirection: "column" }}>
-                      <div
-                        style={{
-                          backgroundColor:
-                            item.status === "sent"
-                              ? "#e6e6e6"
-                              : item.status === "recieved"
-                              ? "#072840"
-                              : "#ffffff",
-                          padding: "10px",
-
-                          maxWidth: "100%",
-
-                          wordWrap: "break-word",
-                          display: "flex",
-                          borderTopRightRadius:
-                            item.status === "sent"
-                              ? "20px"
-                              : item.status === "recieved"
-                              ? "20px"
-                              : 0,
-                          borderBottomRightRadius:
-                            item.status === "sent"
-                              ? "20px"
-                              : item.status === "recieved"
-                              ? 0
-                              : 0,
-
-                          borderBottomLeftRadius: "20px",
-
-                          borderTopLeftRadius:
-                            item.status === "sent"
-                              ? "0px"
-                              : item.status === "recieved"
-                              ? "20px"
-                              : 0,
-                        }}
-                      >
-                        <p
-                          style={{
-                            height: "auto",
-                            margin: 0,
-                            color:
-                              item.status === "sent"
-                                ? "black"
-                                : item.status === "recieved"
-                                ? "#ffffff"
-                                : "black",
-                          }}
-                        >
-                          {item.messages}
-                        </p>
-                      </div>
-                      <div
-                        style={{
-                          fontSize: "0.8rem",
-                          width: "100%",
-                          height: "outo",
-                          display: "flex",
-                          justifyContent:
-                            item.status === "sent"
-                              ? "flex-start"
-                              : item.status === "recieved"
-                              ? "flex-end"
-                              : "inherit",
-                        }}
-                      >
-                        {item.dateAntTime}
-                      </div>
-                    </div>
-                    {item.status === "recieved" && (
-                      <div
-                        style={{
-                          minHeight: "30px",
-                          minWidth: "30px",
-                          justifyContent: "flex-end",
-                          alignItems: "flext-start",
-                          display: "flex",
-                          marginLeft: "10px",
-                        }}
-                      >
-                        <div
-                          style={{
-                            height: "30px",
-                            width: "30px",
-                            color: "white",
-                            backgroundColor: "gray",
-                            borderRadius: "50%",
-                            justifyContent: "center",
-                            alignItems: "center",
-                            display: "flex",
-                          }}
-                        >
-                          OP
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-              <div
-                style={{
-                  height: "12vh",
-                  width: "25vw",
-                  border: "none",
-                  display: "flex",
-                  flexDirection: "row",
-                  alignItems: "center",
-              //   backgroundColor: "blue",
-                }}
-              >
-                <div
-                  style={{
-                    height: "5vh",
-                    width: "20vw",
-                    border: "none",
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                 //      backgroundColor: "red",
-                  }}
-                >
-                  <div style={{ height: "25px", width: "100%", color: "gray" }}>
-                    Sent Message
-                  </div>
-                  <div
-                    style={{
-                      flex: 1,
-                      width: "100%",
-                      display: "flex",
-                      justifyContent: "flex-start",
-                      alignItems: "center",
-                      borderBottom: " 1px solid black",
-                      fontSize: "1.3rem",
-                   //   backgroundColor: "yellow",
-                    }}
-                  >
-                    Thank you
-                  </div>
-                </div>
-                <div
-                  style={{
-                    width: "5vw",
-                    height: "5vh",
-                    // border: "none",
-                    display: "flex",
-                    //  flexDirection: "row",
-                    alignItems: "center",
-                   // backgroundColor: "white",
-                  }}
-                >
-                  <div
-                    style={{
-                      width: "5vw",
-                      height: "5vh",
-                      backgroundColor: "#072840",
-                      borderRadius: "40px",
-                      display: "flex",
-                      //  flexDirection: "row",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      color: "white",
-                    }}
-                  >
-                    SEND
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
       <div
         style={{
           height: "100vh",
@@ -709,19 +369,19 @@ function DeliveryDone() {
               <div
                 style={{
                   height: "76vh",
-                  width: "40vw",
+                  width: "40vw", 
                   border: "none",
                   // borderBottom: "1px lightgray solid",
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "center",
                   alignItems: "center",
-                  //   backgroundColor: "red",
+                  // backgroundColor: "red",
                 }}
               >
                 <div
                   style={{
-                    height: "96%",
+                    height: "73vh",
                     width: "96%",
                     border: "none",
                     // borderBottom: "1px lightgray solid",
@@ -729,63 +389,78 @@ function DeliveryDone() {
                     flexDirection: "column",
                     justifyContent: "flex-start",
                     alignItems: "flex-start",
-                    //    backgroundColor: "yellow",
+                    // backgroundColor: "yellow",
                     //paddingTop:'10px'
                   }}
                 >
                   {" "}
                   <div
                     style={{
-                      width: "100%",
-                      height: "10%",
-                      justifyContent: "center",
+                      width: "26vw",
+                      height: "13vh",
+                      justifyContent: "space-between",
                       display: "flex",
                       alignItems: "flex-start",
-                      paddingTop: "20px",
+                      // paddingTop: "20px",
                       flexDirection: "column",
-                      //     backgroundColor: "blue",
+                      //backgroundColor: "blue",
                     }}
                   >
                     <div
                       style={{
                         fontSize: "1rem",
-                        fontWeight: "bold",
-
-                        margin: "0",
+                        //  fontWeight: "bold",
+                        height: "6vh",
+                        width: "26vw",
+                        color: "gray",
+                        // margin: "0",
+                        // backgroundColor: "green",
                       }}
                     >
                       ORDER #AABBCC
                     </div>
                     <div
                       style={{
-                        fontSize: "1.7rem",
-                        fontWeight: "bold",
-                        margin: "0",
+                        width: "26vh",
+                        height: "7vh",
+                        justifyContent: "flex-start",
+                        display: "flex",
+                        alignItems: "flex-start",
+                        // paddingTop: "20px",
+                        flexDirection: "column",
+                        //  backgroundColor: "red",
                       }}
                     >
-                      PRODUCTS
-                    </div>
-                    <div
-                      style={{
-                        fontSize: "1rem",
-                        fontWeight: "bold",
+                      <div
+                        style={{
+                          fontSize: "1.7rem",
+                          fontWeight: "bold",
+                        }}
+                      >
+                        CART
+                      </div>
+                      <div
+                        style={{
+                          fontSize: "1rem",
+                          fontWeight: "bold",
 
-                        margin: "0",
-                      }}
-                    >
-                      27 JUL, 202X
+                          // margin: "0",
+                        }}
+                      >
+                        27 JUL, 202X
+                      </div>
                     </div>
                   </div>
                   <div
                     style={{
                       width: "100%",
-                      height: "55vh",
+                      height: "60vh",
                       justifyContent: "flex-start",
                       display: "flex",
                       alignItems: "flex-start",
-                      paddingTop: "40px",
+                      //  paddingTop: "40px",
                       flexDirection: "column",
-                      //backgroundColor:"brown"
+                      //      backgroundColor: "brown",
                     }}
                   >
                     {data.map((item, index) => (
@@ -1246,292 +921,6 @@ function DeliveryDone() {
                     alignItems: "flex-start",
                   }}
                 >
-                  {component1Visible && (
-                    <div
-                      style={{
-                        marginTop: "20px",
-                        width: "100px",
-                        height: "30px",
-                        border: "1px white solid",
-                        borderRadius: 15,
-                        display: "flex",
-                        justifyContent: "space-between",
-                        alignItems: "center",
-                      }}
-                      onClick={handleMessageButtonClick}
-                    >
-                      <p
-                        style={{
-                          fontSize: "1rem",
-                          color: "white",
-                          margin: "0",
-                          justifyContent: "center",
-                          alignItems: "center",
-                          display: "flex",
-                          marginLeft: "5px",
-                        }}
-                      >
-                        MESSAGE
-                      </p>
-                      <div
-                        style={{
-                          height: "18px",
-                          width: "18px",
-                          borderRadius: 8,
-                          backgroundColor: "gray",
-                          marginRight: "5px",
-                        }}
-                      ></div>
-                    </div>
-                  )}
-                  {component2Visible && (
-                    <>
-                      <div
-                        style={{
-                          width: "100%",
-                          height: "90%",
-                          display: "flex",
-                          justifyContent: "flex-start",
-                          alignItems: "flex-start",
-                          flexDirection: "column",
-                          // backgroundColor: "red",
-                        }}
-                      >
-                        <div
-                          style={{
-                            width: "300px",
-                            height: "30px",
-                            borderRadius: 15,
-                            display: "flex",
-                            justifyContent: "flex-start",
-                            alignItems: "center",
-                            marginTop: "10px",
-                          }}
-                        >
-                          <div
-                            style={{
-                              height: "12px",
-                              width: "12px",
-                              borderRadius: 8,
-                              backgroundColor: "gray",
-                              marginRight: "5px",
-                              marginTop: "10px",
-                              justifyContent: "center",
-                              alignItems: "center",
-                              display: "flex",
-                            }}
-                          ></div>
-                          <p
-                            style={{
-                              color: "white",
-                              // marginTop: "10px",
-                              height: "100%",
-                              marginRight: "5px",
-                              marginTop: "20px",
-                              justifyContent: "center",
-                              display: "flex",
-                            }}
-                          >
-                            Preocesing
-                          </p>
-                        </div>
-                        <div
-                          style={{
-                            marginTop: "1px",
-                            width: "300px",
-                            height: "30px",
-                            borderRadius: 15,
-                            display: "flex",
-                            justifyContent: "flex-start",
-                            alignItems: "center",
-                          }}
-                        >
-                          <div
-                            style={{
-                              height: "12px",
-                              width: "12px",
-                              borderRadius: 8,
-                              backgroundColor: "gray",
-                              marginRight: "5px",
-                              marginTop: "10px",
-                            }}
-                          ></div>
-                          <p
-                            style={{
-                              color: "white",
-                              //marginTop: "10px",
-                              height: "100%",
-                              marginRight: "5px",
-                              marginTop: "20px",
-                              justifyContent: "center",
-                              display: "flex",
-                            }}
-                          >
-                            On the way
-                          </p>
-                        </div>
-                        <div
-                          style={{
-                            marginTop: "1px",
-                            width: "300px",
-                            height: "30px",
-                            borderRadius: 15,
-                            display: "flex",
-                            justifyContent: "flex-start",
-                            alignItems: "center",
-                          }}
-                        >
-                          <div
-                            style={{
-                              height: "12px",
-                              width: "12px",
-                              borderRadius: 8,
-                              backgroundColor: "gray",
-                              marginRight: "5px",
-                              marginTop: "10px",
-                            }}
-                          ></div>
-                          <p
-                            style={{
-                              color: "white",
-                              //  marginTop: "10px",
-                              height: "100%",
-                              marginRight: "5px",
-                              marginTop: "20px",
-                              justifyContent: "center",
-                              display: "flex",
-                            }}
-                          >
-                            Delivered
-                          </p>
-                        </div>
-                        <div
-                          style={{
-                            marginTop: "10px",
-                            width: "100px",
-                            height: "30px",
-                            border: "1px white solid",
-                            borderRadius: 15,
-                            display: "flex",
-                            justifyContent: "space-between",
-                            alignItems: "center",
-                          }}
-                        >
-                          <p
-                            style={{
-                              fontSize: "1rem",
-                              color: "white",
-                              margin: "0",
-                              justifyContent: "center",
-                              alignItems: "center",
-                              display: "flex",
-                              marginLeft: "5px",
-                            }}
-                          >
-                            MESSAGE
-                          </p>
-                          <div
-                            style={{
-                              height: "18px",
-                              width: "18px",
-                              borderRadius: 8,
-                              backgroundColor: "gray",
-                              marginRight: "5px",
-                            }}
-                          ></div>
-                        </div>
-                        <div
-                          style={{
-                            height: "46px",
-                            width: "100%",
-                            marginRight: "5px",
-                            marginTop: "10px",
-                            justifyContent: "center",
-                            alignItems: "center",
-                            display: "flex",
-                            flexDirection: "column",
-                          }}
-                        >
-                          <div
-                            style={{
-                              height: "40%",
-                              width: "20%",
-                              alignItems: "center",
-                              justifyContent: "center",
-                              display: "flex",
-                            }}
-                          >
-                            <p
-                              style={{
-                                color: "white",
-                                height: "100%",
-                                width: "100%",
-                                alignItems: "center",
-                                justifyContent: "center",
-                                display: "flex",
-                              }}
-                            >
-                              AUTH PIN
-                            </p>
-                          </div>
-                          <div
-                            style={{
-                              height: "60%",
-                              width: "20%",
-                              //backgroundColor: "blue",
-                              alignItems: "center",
-                              justifyContent: "center",
-                              display: "flex",
-                              marginTop: "5px",
-                            }}
-                          >
-                            <p
-                              style={{
-                                color: "white",
-                                height: "100%",
-                                width: "100%",
-                                alignItems: "center",
-                                justifyContent: "center",
-                                display: "flex",
-                                fontSize: "2rem",
-                                fontWeight: "bold",
-                              }}
-                            >
-                              1234
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        style={{
-                          width: "100%",
-                          height: "20%",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          display: "flex",
-                        }}
-                      >
-                        <div
-                          style={{
-                            width: "80%",
-                            height: "30px",
-                            borderRadius: 15,
-                            alignItems: "center",
-                            justifyContent: "center",
-                            display: "flex",
-                            border: "1px white solid",
-                            marginTop: "30px",
-                            fontSize: "1rem",
-                            color: "white",
-                          }}
-                          onClick={handleComponentB}
-                        >
-                          ONGOING
-                        </div>
-                      </div>
-                    </>
-                  )}
-
                   <div
                     style={{
                       width: "100%",
@@ -1549,205 +938,202 @@ function DeliveryDone() {
                         flexDirection: "row",
                       }}
                     >
-                      {component3Visible && (
-                        <div style={{ display: "flex", flexDirection: "row" }}>
-                          {/* Component 1 */}
+                      <div style={{ display: "flex", flexDirection: "row" }}>
+                        {/* Component 1 */}
+                        <div
+                          style={{
+                            position: "relative",
+                            height: "70px",
+                            width: "60px",
+                            marginTop: "30px",
+                            display: "flex",
+                            flexDirection: "column",
+                            border: "1px white solid",
+                            marginLeft: "10px",
+                          }}
+                          //  onClick={handleDateTimeSelect}
+                        >
                           <div
                             style={{
-                              position: "relative",
-                              height: "70px",
-                              width: "60px",
-                              marginTop: "30px",
+                              height: "50%",
+                              width: "100%",
                               display: "flex",
-                              flexDirection: "column",
-                              border: "1px white solid",
-                              marginLeft: "10px",
+                              alignItems: "center",
+                              justifyContent: "center",
                             }}
-                            //  onClick={handleDateTimeSelect}
                           >
-                            <div
+                            <p
                               style={{
-                                height: "50%",
-                                width: "100%",
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
+                                fontSize: "1rem",
+                                color: "white",
+                                paddingTop: "10px",
                               }}
                             >
-                              <p
-                                style={{
-                                  fontSize: "1rem",
-                                  color: "white",
-                                  paddingTop: "10px",
-                                }}
-                              >
-                                Jul
-                              </p>
-                            </div>
-                            <div
-                              style={{
-                                height: "50%",
-                                width: "100%",
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                              }}
-                            >
-                              <p
-                                style={{
-                                  fontSize: "1.5rem",
-                                  color: "white",
-                                  fontWeight: "bold",
-                                  paddingBottom: "10px",
-                                }}
-                              >
-                                2
-                              </p>
-                            </div>
+                              Jul
+                            </p>
                           </div>
-                          {/* Component 2 */}
                           <div
                             style={{
-                              position: "relative",
-                              height: "70px",
-                              width: "60px",
-                              marginTop: "30px",
+                              height: "50%",
+                              width: "100%",
                               display: "flex",
-                              flexDirection: "column",
-                              border: "1px white solid",
-                              marginLeft: "10px",
+                              alignItems: "center",
+                              justifyContent: "center",
                             }}
-                            //  onClick={handleDateTimeSelect}
                           >
-                            <div
+                            <p
                               style={{
-                                height: "50%",
-                                width: "100%",
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
+                                fontSize: "1.5rem",
+                                color: "white",
+                                fontWeight: "bold",
+                                paddingBottom: "10px",
                               }}
                             >
-                              <p
-                                style={{
-                                  fontSize: "1rem",
-                                  color: "white",
-                                  paddingTop: "10px",
-                                }}
-                              >
-                                Jul
-                              </p>
-                            </div>
-                            <div
-                              style={{
-                                height: "50%",
-                                width: "100%",
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                              }}
-                            >
-                              <p
-                                style={{
-                                  fontSize: "1.5rem",
-                                  color: "white",
-                                  fontWeight: "bold",
-                                  paddingBottom: "10px",
-                                }}
-                              >
-                                2
-                              </p>
-                            </div>
-                          </div>
-
-                          {/* Component 3 */}
-                          <div
-                            style={{
-                              position: "relative",
-                              height: "70px",
-                              width: "60px",
-                              marginTop: "30px",
-                              display: "flex",
-                              flexDirection: "column",
-                              border: "1px white solid",
-                              marginLeft: "10px",
-                            }}
-                            //  onClick={handleDateTimeSelect}
-                          >
-                            <div
-                              style={{
-                                height: "50%",
-                                width: "100%",
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                              }}
-                            >
-                              <p
-                                style={{
-                                  fontSize: "1rem",
-                                  color: "white",
-                                  paddingTop: "10px",
-                                }}
-                              >
-                                Jul
-                              </p>
-                            </div>
-                            <div
-                              style={{
-                                height: "50%",
-                                width: "100%",
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                              }}
-                            >
-                              <p
-                                style={{
-                                  fontSize: "1.5rem",
-                                  color: "white",
-                                  fontWeight: "bold",
-                                  paddingBottom: "10px",
-                                }}
-                              >
-                                2
-                              </p>
-                            </div>
+                              2
+                            </p>
                           </div>
                         </div>
-                      )}
+                        {/* Component 2 */}
+                        <div
+                          style={{
+                            position: "relative",
+                            height: "70px",
+                            width: "60px",
+                            marginTop: "30px",
+                            display: "flex",
+                            flexDirection: "column",
+                            border: "1px white solid",
+                            marginLeft: "10px",
+                          }}
+                          //  onClick={handleDateTimeSelect}
+                        >
+                          <div
+                            style={{
+                              height: "50%",
+                              width: "100%",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                            }}
+                          >
+                            <p
+                              style={{
+                                fontSize: "1rem",
+                                color: "white",
+                                paddingTop: "10px",
+                              }}
+                            >
+                              Jul
+                            </p>
+                          </div>
+                          <div
+                            style={{
+                              height: "50%",
+                              width: "100%",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                            }}
+                          >
+                            <p
+                              style={{
+                                fontSize: "1.5rem",
+                                color: "white",
+                                fontWeight: "bold",
+                                paddingBottom: "10px",
+                              }}
+                            >
+                              2
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* Component 3 */}
+                        <div
+                          style={{
+                            position: "relative",
+                            height: "70px",
+                            width: "60px",
+                            marginTop: "30px",
+                            display: "flex",
+                            flexDirection: "column",
+                            border: "1px white solid",
+                            marginLeft: "10px",
+                          }}
+                          //  onClick={handleDateTimeSelect}
+                        >
+                          <div
+                            style={{
+                              height: "50%",
+                              width: "100%",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                            }}
+                          >
+                            <p
+                              style={{
+                                fontSize: "1rem",
+                                color: "white",
+                                paddingTop: "10px",
+                              }}
+                            >
+                              Jul
+                            </p>
+                          </div>
+                          <div
+                            style={{
+                              height: "50%",
+                              width: "100%",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                            }}
+                          >
+                            <p
+                              style={{
+                                fontSize: "1.5rem",
+                                color: "white",
+                                fontWeight: "bold",
+                                paddingBottom: "10px",
+                              }}
+                            >
+                              2
+                            </p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    {component3Visible && (
+
+                    <div
+                      style={{
+                        width: "100%",
+                        height: "30%",
+                        //  backgroundColor: "yellow",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "flex-start",
+                      }}
+                    >
                       <div
                         style={{
                           width: "100%",
-                          height: "20%",
-                          //   backgroundColor: "yellow",
-                          display: "flex",
+                          height: "30px",
+                          //backgroundColor: "red",
+                          borderRadius: 20,
                           justifyContent: "center",
+                          display: "flex",
                           alignItems: "center",
+                          border: "1px white solid",
+                          fontSize: "1.2rem",
+                          color: "white",
+                          // fontWeight: "bold",
+                          // paddingBottom: "10px",
                         }}
                       >
-                        <div
-                          style={{
-                            width: "100%",
-                            height: "30px",
-                            //backgroundColor: "red",
-                            borderRadius: 20,
-                            justifyContent: "center",
-                            display: "flex",
-                            alignItems: "center",
-                            border: "1px white solid",
-                            fontSize: "1.2rem",
-                            color: "white",
-                            // fontWeight: "bold",
-                            paddingBottom: "10px",
-                          }}
-                        >
-                          CHECKOUT
-                        </div>
+                        CHECKOUT
                       </div>
-                    )}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1772,4 +1158,4 @@ function DeliveryDone() {
   );
 }
 
-export default DeliveryDone;
+export default Cart;

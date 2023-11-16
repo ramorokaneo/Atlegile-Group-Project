@@ -139,199 +139,7 @@ function Messages() {
 
   return (
     <>
-      {/* <div
-        style={{
-          height: "5vh",
-          width: "100%",
-          border: "none",
-          display: "flex",
-          flexDirection: "row",
-          alignItems: "center",
-          backgroundColor: "#072840",
-        }}
-      >
-        <div
-          style={{
-            height: "5vh",
-            width: "23%",
-            // backgroundColor: "red",
-          }}
-        ></div>
-
-        <FiPhone style={{ width: "1%", color: "white" }} />
-        <div style={{ width: "7%", color: "white" }}>(225) 555-0118</div>
-
-        <AiOutlineMail style={{ width: "1%", color: "white" }} />
-        <div style={{ width: "9%", color: "white" }}>
-          <p style={{ fontSize: "0.7rem" }}>michelle.rivera@example.com</p>
-        </div>
-        <div style={{ width: "20%", color: "white", fontWeight: "bold" }}>
-          Follow US and get a chance to win 80% off
-        </div>
-
-        <div style={{ width: "5%", color: "white", fontWeight: "bold" }}>
-          Follow Us :
-        </div>
-
-        <div style={{ width: "1.5%", color: "white" }}>
-          <FaInstagram />
-        </div>
-        <div style={{ color: "white", width: "1.5%" }}>
-          <FiYoutube />
-        </div>
-        <div style={{ color: "white", width: "1.5%" }}>
-          <SiFacebook />
-        </div>
-        <div style={{ color: "white", width: "1.5%" }}>
-          <FiTwitter />
-        </div>
-        <div
-          style={{
-            height: "5vh",
-            width: "30%",
-            // backgroundColor: "red",
-          }}
-        ></div>
-      </div> */}
-
-      {/* <div
-        style={{
-          height: "10vh",
-          width: "100%",
-          border: "none",
-          display: "flex",
-          flexDirection: "row",
-          alignItems: "center",
-          // backgroundColor: "green",
-        }}
-      >
-        <div
-          style={{
-            height: "100%",
-            width: "20%",
-            border: "none",
-            display: "flex",
-            flexDirection: "colunm",
-            alignItems: "center",
-            paddingBottom: "100px",
-          }}
-        ></div>
-
-        <div
-          style={{
-            width: "40%",
-          }}
-        >
-          <img
-            style={{
-              paddingLeft: "10px",
-              position: "relative",
-              height: "auto",
-              width: "100px",
-            }}
-            src={Logo}
-            alt=""
-          />
-        </div>
-
-        <div
-          style={{
-            width: "80px",
-            height: "40px",
-            backgroundColor: "#072840",
-            borderRadius: 50,
-            alignItems: "center",
-            display: "flex",
-            justifyContent: "center",
-            color: "white",
-          }}
-        >
-          {" "}
-          SHOP
-        </div>
-
-        <div
-          style={{
-            width: "100px",
-            height: "40px",
-            //backgroundColor: "#072840",
-            alignItems: "center",
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          ABOUT US
-        </div>
-
-        <div
-          style={{
-            width: "140px",
-            height: "40px",
-            alignItems: "flex-start",
-            display: "flex",
-            justifyContent: "center",
-            flexDirection: "row",
-            //backgroundColor:'red'
-          }}
-        >
-          <div
-            style={{
-              width: "40px",
-              height: "40px",
-              backgroundColor: "gray",
-              borderRadius: "8%",
-              //  paddingLeft:32
-              alignItems: "center",
-              display: "flex",
-              justifyContent: "center",
-              flex: 1,
-              color: "white",
-              fontSize: "1.4rem",
-            }}
-          >
-            AS
-          </div>
-          <div
-            style={{
-              width: "100px",
-              height: "40px",
-              alignItems: "flex-start",
-              display: "flex",
-              justifyContent: "center",
-              flexDirection: "column",
-              //  backgroundColor: "brown",
-            }}
-          >
-            <div
-              style={{
-                margin: 0,
-                fontWeight: "medium",
-              }}
-            >
-              <p style={{ paddingLeft: 10, margin: 0, fontSize: "1.2rem" }}>
-                Welcome
-              </p>
-            </div>
-            <div>
-              <p style={{ paddingLeft: 10, fontSize: "0.8rem", margin: 0 }}>
-                Jane
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div
-          style={{
-            height: "100%",
-            width: "22%",
-            border: "none",
-            display: "flex",
-            flexDirection: "colunm",
-            alignItems: "center",
-            // backgroundColor: "blue",
-          }}
-        ></div>
-      </div> */}
+      
 
       <div
         style={{
@@ -380,17 +188,11 @@ function Messages() {
                     : item.status === "recieved"
                     ? "flex-end"
                     : "inherit",
-                //   margin: "5px",
-
+            
                 maxWidth: "60%",
                 display: "flex",
                 flexDirection: "row",
-                // backgroundColor:
-                //   item.status === "sent"
-                //     ? "yellow"
-                //     : item.status === "recieved"
-                //     ? "yellow"
-                //     : "#ffffff",
+               
               }}
             >
               {item.status === "sent" && (
@@ -528,7 +330,7 @@ function Messages() {
             display: "flex",
             flexDirection: "row",
             alignItems: "center",
-        //    backgroundColor: "yellow",
+            //    backgroundColor: "yellow",
           }}
         >
           <div
@@ -539,12 +341,10 @@ function Messages() {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-           //   backgroundColor: "red",
+              //   backgroundColor: "red",
             }}
           >
-            <div
-              style={{ height: "25px", width: "100%", color:"gray" }}
-            >
+            <div style={{ height: "25px", width: "100%", color: "gray" }}>
               Sent Message
             </div>
             <div
@@ -555,7 +355,7 @@ function Messages() {
                 justifyContent: "flex-start",
                 alignItems: "center",
                 borderBottom: " 1px solid black",
-                fontSize: "1.3rem"
+                fontSize: "1.3rem",
               }}
             >
               Thank you
@@ -564,28 +364,28 @@ function Messages() {
           <div
             style={{
               width: "5vw",
-              height:"5vh",
+              height: "5vh",
               // border: "none",
               display: "flex",
               //  flexDirection: "row",
               alignItems: "center",
             }}
           >
-            <div style={{
-              width: "5vw",
-              height:"5vh",
-              backgroundColor:"#072840",
-             borderRadius:"40px",
-              display: "flex",
-              //  flexDirection: "row",
-              alignItems: "center",
-              justifyContent:"center",
-              color:"white"
-              }}>
-
+            <div
+              style={{
+                width: "5vw",
+                height: "5vh",
+                backgroundColor: "#072840",
+                borderRadius: "40px",
+                display: "flex",
+                //  flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "white",
+              }}
+            >
               SEND
             </div>
-
           </div>
         </div>
       </div>
