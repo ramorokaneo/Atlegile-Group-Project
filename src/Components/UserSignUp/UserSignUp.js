@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa6";
 const logo = require("./Logo.png");
-// eslint-disable-next-line
-const backgroundImage = require("./bg-img.jpg");
+// // eslint-disable-next-line
+// const backgroundImage = require("./bg-img.jpg");
 
 function UserSignUp() {
   const navigate = useNavigate();
