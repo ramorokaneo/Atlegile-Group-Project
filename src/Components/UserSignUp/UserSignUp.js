@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import "./SignUp.css";
 import { useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa6";
-import logo from "./Logo.png";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import "./SignUp.css";
+const logo = require("./Logo.png");
+// eslint-disable-next-line
+const backgroundImage = require("./bg-img.jpg");
 
 function UserSignUp() {
   const navigate = useNavigate();
@@ -26,7 +27,6 @@ function UserSignUp() {
     // Navigate to the /mainacc route programmatically
     navigate("/mainacc");
   };
-
   const handleShop = () => {
     // Navigate to the /landingscreen route programmatically
     navigate("/landingscreen");
@@ -38,87 +38,177 @@ function UserSignUp() {
   };
 
   return (
-    <div className="container-fluid">
-      <div className="row">
-        <div className="col-md-8" style={{ height: "100%" }}>
-          {/* Your background container */}
-        </div>
-        <div className="col-md-4" style={{ padding: 10 }}>
-          <div className="background-container">
-            <div style={{ height: "100%", backgroundColor: "white" }}>
-              <div className="d-flex align-items-center justify-content-center" style={{ height: "50%" }}>
-                <img src={logo} alt="Logo" style={{ width: 250 }} />
+    <div
+      // style={{
+      //   width: "100%",
+      //   height: "100%",
+      //   backgroundImage: "url('./bg-img.jpg')",
+      //   backgroundSize: "cover",
+      //   backgroundPosition: "center",
+      //   backgroundRepeat: "no-repeat",
+      // }}
+      className="background-container"
+    >
+      <div style={{ height: "100%", width: "70%" }}></div>
+      <div
+        style={{
+          height: "100%",
+          width: "30%",
+          padding: 10,
+        }}
+      >
+        <div style={{ height: "100%", backgroundColor: "white" }}>
+          <div
+            style={{
+              width: "100%",
+              height: "51%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <img src={logo} alt="Logo" style={{ width: 250 }} />
+          </div>
+          <div
+            style={{
+              width: "100%",
+              height: "50%",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
+            }}
+          >
+            <div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  paddingRight: 60,
+                  paddingLeft: 60,
+                }}
+              >
+                <span style={{ fontSize: 25, fontWeight: 700 }}>SIGN UP</span>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    cursor: "pointer",
+                  }}
+                  onClick={handleShop}
+                >
+                  <span style={{fontSize: 12, marginRight: 10 }}>SHOP</span>
+                  <FaAngleRight size={10} color="#59b0f6" />
+                </div>
               </div>
-              <div className="d-flex flex-column justify-content-between" style={{ height: "50%" }}>
-                <div>
-                  <div className="d-flex justify-content-between pr-5 pl-5">
-                    <span className="font-weight-bold" style={{ fontSize: 25 }}>SIGN UP</span>
-                    <div className="d-flex align-items-center" style={{ cursor: "pointer" }} onClick={handleShop}>
-                      <span style={{ fontSize: 12, marginRight: 10 }}>SHOP</span>
-                      <FaAngleRight size={10} color="#59b0f6" />
-                    </div>
-                  </div>
-                  <div className="pr-5 pl-5">
-                    <br />
-                    <div className="">
-                      <span style={{ fontSize: 12 }}>Email</span>
-                      <input
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        className="form-control"
-                        required
-                      />
-                    </div>
-                    <br />
-                    <div className="">
-                      <span style={{ fontSize: 12 }}>Password</span>
-                      <input
-                        type="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        className="form-control"
-                        required
-                      />
-                    </div>
-                    <div
-                      onClick={handleSubmit}
-                      className="btn btn-primary mt-4"
-                    >
-                      SIGN UP
-                    </div>
-                  </div>
-                  <div className="d-flex flex-column align-items-center justify-content-between" style={{ height: "8vh", paddingRight: 60, paddingLeft: 60, marginTop: 10 }}>
-                    <a
-                      href="/signinscreen"
-                      className="font-weight-bold"
-                      style={{ color: "#072840", fontSize: 12 }}
-                    >
-                      ALREADY HAVE AN ACCOUNT?
-                    </a>
-                    <a
-                      href="/"
-                      className="d-flex align-items-center"
-                      style={{
-                        color: "#d32f2f",
-                        fontSize: 12,
-                        fontWeight: 600,
-                      }}
-                    >
-                      <FaGoogle color="#d32f2f" size={20} style={{ marginRight: 5 }} />
-                      SIGN UP WITH GOOGLE
-                    </a>
-                  </div>
+              <div
+                style={{
+                  paddingRight: 60,
+                  paddingLeft: 60,
+                }}
+              >
+                <br />
+                <div style={{}}>
+                  <span style={{ fontSize: 12 }}>Email</span>
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    style={{ width: "100%" }}
+                    required
+                  />
                 </div>
+                <br />
+                <div style={{}}>
+                  <span style={{ fontSize: 12 }}>Password</span>
+                  <input
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    style={{ width: "100%" }}
+                    required
+                  />
+                </div>
+                <div
+                  onClick={handleSubmit}
+                  style={{
+                    borderRadius: 20,
+                    backgroundColor: "#072840",
+                    textAlign: "center",
+                    marginTop: 20,
+                    padding: 10,
+                    fontWeight: 600,
+                    color: "white",
+                    fontSize: 12,
+                    cursor: "pointer",
+                    
+                  }}
+                >
+                  SIGN UP
+                </div>
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  height: "8vh",
+                  paddingRight: 60,
+                  paddingLeft: 60,
+                  marginTop: 10,
+                }}
+              >
+                <a
+                  style={{ color: "#072840", fontSize: 12, fontWeight: 600 }}
+                  href="/signinscreen"
+                >
+                  ALREADY HAVE AN ACCOUNT?
+                </a>
+                <a
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    color: "#d32f2f",
+                    fontSize: 12,
+                    fontWeight: 600,
+                  }}
+                  href="/"
+                >
+                  <FaGoogle
+                    color="#d32f2f"
+                    size={20}
+                    style={{ marginRight: 5 }}
+                  />{" "}
+                  SIGN UP WITH GOOGLE
+                </a>
+              </div>
+            </div>
 
-                <div className="pr-5 pl-5">
-                  <div
-                    onClick={handleBusinessSignUp}
-                    className="btn btn-outline-primary mb-4"
-                  >
-                    SIGN UP AS A BUSINESS <FaAngleRight size={10} color="#59b0f6" />
-                  </div>
-                </div>
+            <div
+              style={{
+                paddingRight: 60,
+                paddingLeft: 60,
+              }}
+            >
+              <div
+                onClick={handleBusinessSignUp}
+                style={{
+                  borderRadius: 20,
+                  border: "1px #072840 solid",
+                  textAlign: "center",
+                  marginBottom: 20,
+                  padding: 5,
+                  fontWeight: 600,
+                  fontSize: 12,
+                  cursor: "pointer",
+                }}
+              >
+                SIGN UP AS A BUSINESS <FaAngleRight size={10} color="#59b0f6" />
               </div>
             </div>
           </div>
