@@ -44,7 +44,7 @@ function App() {
         <Route path="/delivery" element={<DeliveryDone />} />
         <Route path="/messages" element={<Messages />} />
         <Route path="/order" element={<OrderHistory />} />
-        <Route path="/ProductDetails" element={<ProductDetails />} />
+        <Route path="/ProductDetails/:id" element={<ProductDetails />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/rep" element={<Reciept />} />
       </Routes>

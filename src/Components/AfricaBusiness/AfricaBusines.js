@@ -13,7 +13,7 @@ export default function AfricaBusines() {
                 High Impact Enter prise + Skills Development Solutions
               </p>
               <div className="africa-buttons">
-                <a href="/shop" className="btn-link">
+                <a href="/" className="btn-link">
                   <button className="btn-shops">SHOP</button>
                 </a>
                 <a href="/about-us" className="btn-link">

@@ -25,7 +25,7 @@ const Navbar = () => {
       </Link>
       <div className="navbar-atlagile-buttons">
         <div className="more-info">
-          <Link to="/shop" className="btn-atlagile">
+          <Link to="/" className="btn-atlagile">
             {" "}
             Shop
           </Link>
@@ -52,8 +52,7 @@ const Navbar = () => {
             justifyContent: "center",
             flexDirection: "row",
             //backgroundColor:'red'
-          }}
-        >
+          }}>
           <div
             style={{
               width: "40px",
@@ -65,8 +64,7 @@ const Navbar = () => {
               display: "flex",
               justifyContent: "center",
               flex: 1,
-            }}
-          >
+            }}>
             <p style={{ fontSize: "1.4rem", color: "white" }}>AS</p>
           </div>
           <div
@@ -78,22 +76,19 @@ const Navbar = () => {
               justifyContent: "center",
               flexDirection: "column",
               //  backgroundColor: "brown",
-            }}
-          >
+            }}>
             <div
               style={{
                 margin: 0,
                 fontWeight: "medium",
-              }}
-            >
+              }}>
               <p
                 style={{
                   paddingLeft: 10,
                   margin: 0,
                   fontSize: "1.2rem",
                   color: "black",
-                }}
-              >
+                }}>
                 Welcome
               </p>
             </div>
@@ -104,8 +99,7 @@ const Navbar = () => {
                   fontSize: "0.8rem",
                   margin: 0,
                   color: "black",
-                }}
-              >
+                }}>
                 Jane
               </p>
             </div>

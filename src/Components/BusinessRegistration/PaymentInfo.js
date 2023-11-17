@@ -70,7 +70,7 @@ const PaymentInfo = () => {
       });
 
       // Redirect to the next page (adjust as needed)
-      nav("/nextPage");
+      nav("/");
     } catch (error) {
       console.error("Error updating document: ", error);
     }
