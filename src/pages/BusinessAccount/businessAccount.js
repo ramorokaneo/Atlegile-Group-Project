@@ -1,13 +1,13 @@
 import React, { useState, useRef } from "react";
-import BlackSilk from "./blackSilk.jpg";
+import BlackSilk from "../../images/blackSilk.jpg";
 import { IoMdStopwatch } from "react-icons/io";
 import { GoCheckCircleFill } from "react-icons/go";
-import BusinessAccountPlus from "./BusinessPlus+.jpg";
-import Card from "../../componets/Card/Card";
-import FollowUs from "../../componets/FollowUs/FollowUs";
-import NavBar from "../../componets/NavBar/NavBar";
+import BusinessAccountPlus from "../../images/BusinessPlus+.jpg";
+import Card from "../../Components/Card/Card";
+import FollowUs from "../../Components/FollowUs/FollowUs";
+import NavBar from "../../Components/NavBar/NavBar";
 import "./businessAccount.css";
-const logo = require("./cropped-AMS-Shadow-Queen-Logo_BNY-1320x772 1.png");
+const logo = require("../../images/cropped-AMS-Shadow-Queen-Logo_BNY-1320x772 1.png");
 
 export default function BusinessAccount() {
   const [editModal, setEditModal] = useState(false);

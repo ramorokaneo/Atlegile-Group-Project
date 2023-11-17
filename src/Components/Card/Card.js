@@ -79,7 +79,7 @@ const Card = ({ item }) => {
             <scan> R{item?.price}</scan>
           </p>
           <Link
-            to={`/product-details/${item.key}`}
+            to={`/ProductDetails/${item.key}`}
             onClick={() => console.log("View Button Clicked!!!")}
             className="view-button"
           >

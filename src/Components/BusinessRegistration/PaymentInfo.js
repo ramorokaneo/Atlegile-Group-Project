@@ -70,7 +70,7 @@ const PaymentInfo = () => {
       });
 
       // Redirect to the next page (adjust as needed)
-      nav("/nextPage");
+      nav("/");
     } catch (error) {
       console.error("Error updating document: ", error);
     }
@@ -88,7 +88,7 @@ const PaymentInfo = () => {
             height={50}
             style={{
               justifyContent: "center",
-              paddingTop: 120,
+              marginTop: 120,
             }}
             alt="Logo"
           />
