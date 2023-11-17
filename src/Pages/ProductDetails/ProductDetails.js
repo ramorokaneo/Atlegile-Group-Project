@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "../../components/NavBar/NavBar";
-import ProductDetail from "../../components/ProductDetails/ProductDetail";
+import Navbar from "../../Components/NavBar/NavBar";
+import ProductDetail from "../../Components/ProductDetails/ProductDetail";
 
 import { useFetchProducts } from "../../hooks/useFetchProducts";
 
