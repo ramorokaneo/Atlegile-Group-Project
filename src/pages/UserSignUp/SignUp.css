@@ -32,10 +32,22 @@
   display: flex;
 }
 
-.signUp {
-  justify-content: center;
+.header {
   display: flex;
+  justify-content: space-between;
   margin-top: 100px;
+  align-items: center;
+}
+
+.signUp {
+  margin-left: 50px;
+  font-size: 30px;
+}
+
+.shop {
+  margin-right: 60px;
+  font-size: small;
+  cursor: pointer;
 }
 
 form {
@@ -54,8 +66,8 @@ form {
   margin-left: 50px;
 }
 
-label {
-  margin-right: 180px;
+.label {
+  margin-left: 50px;
   font-size: small;
 }
 
@@ -69,18 +81,17 @@ input {
   text-decoration: none;
   color: #072840;
   margin-top: 20px;
-  margin-left: 210px;
+  margin-left: 120px;
   font-size: small;
-  margin-bottom: 15px;
   cursor: pointer;
 }
 
 .google-signin {
   text-decoration: none;
   text-decoration-color: red;
-  margin-top: 30px; 
+  margin-top: 55px;
+  margin-left: 120px;
   font-size: small;
-  margin-left: 40px;
   cursor: pointer;
 }
 

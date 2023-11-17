@@ -1,23 +1,53 @@
 import React, { useState } from "react";
 import "./SignUp.css";
+import { useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FcNext } from "react-icons/fc";
+import { firebase, firestore } from "../../firebase/firebase.config";
 
 function UserSignUp() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Check if email and password are not empty
     if (email.trim() === "" || password.trim() === "") {
       alert("Please fill in all fields before signing in.");
       return;
     }
 
-    // Handle form submission logic here
-    console.log("Form submitted:", { email, password });
+    try {
+      const userCredential = await firebase
+        .auth()
+        .createUserWithEmailAndPassword(email, password);
+
+      if (userCredential.user) {
+        console.log("User signed up:", userCredential.user);
+        // const userObject = { name: "John", age: 30 };
+        // localStorage.setItem("user", (userObject));
+
+        // Create a user document with the UID in the Users collection
+        await firestore.collection("Users").doc(userCredential.user.uid).set({
+          email: email,
+        });
+
+        // Navigate to "/mainacc" after successful sign-up
+        navigate("/main");
+      }
+    } catch (error) {
+      console.error("Error signing up:", error.message);
+      alert("Error signing up. Please try again.");
+    }
+  };
+
+  const handleShop = () => {
+    navigate("/landingscreen");
+  };
+
+  const handleBusinessSignUp = () => {
+    navigate("/businesssignup");
   };
 
   return (
@@ -25,9 +55,14 @@ function UserSignUp() {
       <div className="form-container">
         <div className="form-item form-items">
           <img src="./logo.png" alt="Logo" className="logo" />
-          <h2 className="signUp">Sign Up</h2>
+          <div className="header">
+            <h2 className="signUp">Sign Up</h2>
+            <p className="shop" onClick={handleShop}>
+              SHOP <FcNext />
+            </p>
+          </div>
           <form onSubmit={handleSubmit}>
-            <label>Email</label>
+            <label className="label">Email</label>
             <input
               type="email"
               placeholder=""
@@ -37,7 +72,7 @@ function UserSignUp() {
               required
             />
 
-            <label>Password</label>
+            <label className="label">Password</label>
             <input
               type="password"
               placeholder=""
@@ -47,13 +82,13 @@ function UserSignUp() {
               required
             />
 
-            <div className="forgot-password">
-              <a href="/">FORGOT PASSWORD?</a>
-            </div>
-
             <button className="submit-button" type="submit">
-              SIGN IN
+              SIGN UP
             </button>
+
+            <div className="forgot-password">
+              <a href="/usersignin">ALREADY HAVE AN ACCOUNT?</a>
+            </div>
 
             <div className="google-signin">
               <a href="/">
@@ -61,10 +96,7 @@ function UserSignUp() {
               </a>
             </div>
           </form>
-          <button
-            className="signup-business"
-            onClick={() => console.log("Sign up as a business clicked!")}
-          >
+          <button className="signup-business" onClick={handleBusinessSignUp}>
             SIGN UP AS A BUSINESS <FcNext />
           </button>
         </div>

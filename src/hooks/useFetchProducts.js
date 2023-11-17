@@ -11,6 +11,8 @@ import {
   onSnapshot,
 } from "firebase/firestore";
 import { FIRESTORE_DB } from "../firebase/firebase.config";
+import { firebase, firestore } from "../firebase/firebase.config";
+
 // import auth from "../firebase/firebase.config.js";
 
 export const useFetchProducts = () => {
