@@ -61,6 +61,7 @@
 }
 .dropdown {
   position: relative;
+ 
 }
 
 
@@ -83,7 +84,8 @@
   top: 100%;
   border: 1px solid #ccc; 
   border-radius: 4px;
-  padding: 8px; 
+  padding: 10px; 
+  
 }
 /* Show the dropdown content when the dropdown-trigger is clicked */
 .dropdown.active .dropdown-content {
@@ -92,15 +94,15 @@
 .group.textInput-container.select-role select {
   border-bottom: 1px solid gray; 
   width: 150%; 
-  margin-left: -5px; 
+  /* margin-left: -5px;  */
 }
 
 
-.form-group.row {
+/* .form-group.row {
   display: flex;
   justify-content: space-between;
   height: 40px;
-}
+} */
 
 .inputboxselect {
   position: relative;
@@ -135,7 +137,7 @@
 }
 
 .form {
-  /* flex: 1; */
+  flex: 1;
   /* margin-right: 10px;  */
 }
 
