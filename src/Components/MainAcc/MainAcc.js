@@ -3,6 +3,8 @@ import "./MainAcc.css";
 import { useNavigate } from "react-router-dom";
 const logo = require("./Logo.png");
 
+import { firebase, firestore } from "../../firebase/firebase.config";
+
 function MainAcc() {
   const navigate = useNavigate();
   const [name, setName] = useState("");
@@ -11,29 +13,66 @@ function MainAcc() {
   const [gender, setGender] = useState("");
   const [email, setEmail] = useState("");
   const [location, setLocation] = useState("");
+  const user = firebase.auth().currentUser;
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Check if any of the fields are empty
     if (!name || !surname || !phone || !gender || !email || !location) {
       alert("Please fill in all fields before continuing.");
       return;
     }
 
-    // Handle form submission logic here
-    console.log("Form submitted:", {
-      name,
-      surname,
-      phone,
-      gender,
-      email,
-      location,
-    });
+    localStorage.setItem("user", user.uid);
 
-    navigate("/alt");
+    try {
+      const userRef = firestore.collection("Users").doc(user.uid);
+
+      await userRef.set({
+        name,
+        surname,
+        phone,
+        gender,
+        email,
+        location,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+        uid: user.uid,
+      });
+
+      console.log(
+        "User information submitted to Users collection in Firestore."
+      );
+
+      navigate("/contact");
+    } catch (error) {
+      console.error("Error submitting user information:", error.message);
+      alert("Error submitting user information. Please try again.");
+    }
   };
 
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  };
+
+  const handleSurnameChange = (e) => {
+    setSurname(e.target.value);
+  };
+
+  const handlePhoneChange = (e) => {
+    setPhone(e.target.value);
+  };
+
+  const handleGenderChange = (e) => {
+    setGender(e.target.value);
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleLocationChange = (e) => {
+    setLocation(e.target.value);
+  };
   return (
     <div className="background-container">
       <div style={{ height: "100%", width: "70%" }}></div>
