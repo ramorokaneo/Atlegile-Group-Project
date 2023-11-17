@@ -29,11 +29,11 @@ function Footer() {
             <a href="/order-history">
               <h4>ORDER HISTORY</h4>
             </a>
-            <a href="#">
+            <a href="#/">
               <h4>TERMS & CONDITIONS</h4>
             </a>
 
-            <a href="#">
+            <a href="#/">
               <h4>PRIVACY POLICY</h4>
             </a>
           </div>

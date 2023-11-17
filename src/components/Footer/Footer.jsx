@@ -121,8 +121,8 @@ function Footer() {
           </div>
           <div className="atlegile-footer-links">
             <a href="/order-history">ORDER HISTORY</a>
-            <a href="#">TERMS & CONDITIONS</a>
-            <a href="#">PRIVACY POLICY</a>
+            <a href="#/">TERMS & CONDITIONS</a>
+            <a href="#/">PRIVACY POLICY</a>
           </div>
         </div>
 

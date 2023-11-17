@@ -88,7 +88,7 @@ const PaymentInfo = () => {
             height={50}
             style={{
               justifyContent: "center",
-              paddingTop: 120,
+              marginTop: 120,
             }}
             alt="Logo"
           />
