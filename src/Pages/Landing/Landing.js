@@ -1,4 +1,3 @@
-// Footer.js
 import React from "react";
 import Footer from "../../components/Footer/Footer";
 import FollowUs from "../../components/FollowUs/FollowUs";
@@ -11,7 +10,7 @@ import SecureTech from "../../components/SecureTech/SecureTech";
 import LearnZa from "../../components/LearnZa/LearnZa";
 import TechWise from "../../components/TechWise/TechWise";
 import MindMatters from "../../components/MindMatters/MindMatters";
-// import AboutUs from "../../components/AboutUs/AboutUs";
+import AboutUs from "../../components/AboutUs/AboutUs";
 import { useFetchProducts } from "../../hooks/useFetchProducts";
 
 function Landing() {
