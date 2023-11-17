@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./MainAcc.css";
 import { useNavigate } from "react-router-dom";
-const logo = require("./Logo.png");
 
 import { firebase, firestore } from "../../firebase/firebase.config";
+const logo = require("./Logo.png");
 
 function MainAcc() {
   const navigate = useNavigate();
