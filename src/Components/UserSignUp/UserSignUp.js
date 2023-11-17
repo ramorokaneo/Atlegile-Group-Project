@@ -3,38 +3,53 @@ import "./SignUp.css";
 import { useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa6";
-import logo from "./Logo.png";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './SignUp.css'; // Create a separate CSS file for styling
+
+import { firebase, firestore } from "../../firebase/firebase.config";
+const logo = require("./Logo.png");
 
 function UserSignUp() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Check if email and password are not empty
     if (email.trim() === "" || password.trim() === "") {
       alert("Please fill in all fields before signing in.");
       return;
     }
 
-    // Handle form submission logic here
-    console.log("Form submitted:", { email, password });
+    try {
+      const userCredential = await firebase
+        .auth()
+        .createUserWithEmailAndPassword(email, password);
 
-    // Navigate to the /mainacc route programmatically
-    navigate("/mainacc");
+      if (userCredential.user) {
+        console.log("User signed up:", userCredential.user);
+        // const userObject = { name: "John", age: 30 };
+        // localStorage.setItem("user", (userObject));
+
+        // Create a user document with the UID in the Users collection
+        await firestore.collection("Users").doc(userCredential.user.uid).set({
+          email: email,
+        });
+
+        // Navigate to "/mainacc" after successful sign-up
+        navigate("/main");
+      }
+    } catch (error) {
+      console.error("Error signing up:", error.message);
+      alert("Error signing up. Please try again.");
+    }
   };
+
   const handleShop = () => {
-    // Navigate to the /landingscreen route programmatically
-    navigate("/");
+    navigate("/landingscreen");
   };
 
   const handleBusinessSignUp = () => {
-    // Navigate to the /businesssignup route programmatically
-    navigate("/register");
+    navigate("/businesssignup");
   };
 
   return (
