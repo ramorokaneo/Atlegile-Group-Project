@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import "./AltContact.css";
 import { useNavigate } from "react-router-dom";
-const logo = require("./Logo.png");
-
 import {
   getFirestore,
   doc,
@@ -11,8 +9,9 @@ import {
   updateDoc,
 } from "firebase/firestore";
 import { firebase, firestore } from "../../firebase/firebase.config";
-import { useFetchProfileData } from "../../hooks/useFetchUsers";
+import { useFetchProfileData } from "../../hooks/useAuth";
 
+const logo = require("./Logo.png");
 function AltContact() {
   const user = firebase.auth().currentUser;
 
