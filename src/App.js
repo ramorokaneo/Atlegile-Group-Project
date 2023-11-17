@@ -9,6 +9,7 @@ import AddPhoto from "./Components/BusinessRegistration/AddPhoto";
 import MarketingSupport from "./Components/BusinessRegistration/MarketingSupport";
 import PaymentInfo from "./Components/BusinessRegistration/PaymentInfo";
 import Register from "./Components/BusinessRegistration/Register";
+import AltContact from "./Components/AltContact/AltContact"
 import SalesGrowth from "./Components/BusinessRegistration/SalesGrowth";
 // import ProdServices from "./Components/ProductsServices/ProdServices";
 // import BusinessAccount from "./pages/BusinessAccount/businessAccount"
@@ -33,7 +34,7 @@ function App() {
         {/* <Route path='/marketing' element={<MarketingSupport />} /> */}
         <Route path='/paymentinfo' element={<PaymentInfo />} />
         <Route path='/register' element={<Register />} />
-        {/* <Route path='/salesgrowth' element={<SalesGrowth />} /> */}
+        <Route path='/salesgrowth' element={<SalesGrowth />} />
         {/* <Route path='/productservices' element={<ProdServices />} /> */}
         {/* <Route path='busaccount' element={<BusinessAccount />} /> */}
         {/* <Route path='/delivery' element={<DeliveryDone />} /> */}

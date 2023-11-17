@@ -3,7 +3,7 @@ import "./AltContact.css";
 import { useNavigate } from "react-router-dom";
 const logo = require("./Logo.png");
 
-function UserSignUp() {
+function AltContact() {
   const navigate = useNavigate();
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
