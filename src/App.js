@@ -11,7 +11,7 @@ import PaymentInfo from "./Components/BusinessRegistration/PaymentInfo";
 import Register from "./Components/BusinessRegistration/Register";
 import SalesGrowth from "./Components/BusinessRegistration/SalesGrowth";
 // import ProdServices from "./Components/ProductsServices/ProdServices";
-import BusinessAccount from "./Components/BusinessAccount/businessAccount"
+// import BusinessAccount from "./pages/BusinessAccount/businessAccount"
 // import DeliveryDone from "./pages/Delivery_Done/DeliveryDone";
 // import Messages from "./pages/Message/Messages";
 // import OrderHistory from "./pages/Order_History/OrderHistory";
@@ -36,7 +36,7 @@ function App() {
         <Route path='/register' element={<Register />} />
         {/* <Route path='/salesgrowth' element={<SalesGrowth />} /> */}
         {/* <Route path='/productservices' element={<ProdServices />} /> */}
-        <Route path='busaccount' element={<BusinessAccount />} />
+        {/* <Route path='busaccount' element={<BusinessAccount />} /> */}
         {/* <Route path='/delivery' element={<DeliveryDone />} /> */}
         {/* <Route path='/messages' element={<Messages/>}/> */}
         {/* <Route path='/order' element={<OrderHistory/>}/> */}
