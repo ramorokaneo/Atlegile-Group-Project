@@ -3,13 +3,9 @@ import "./SignUp.css";
 import { useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa6";
-<<<<<<< HEAD
 import logo from "./Logo.png";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './SignUp.css'; // Create a separate CSS file for styling
-=======
-const logo = require("./Logo.png");
->>>>>>> 1669cffafd760f347c9d0dad678c9d9f6edd748f
 
 function UserSignUp() {
   const navigate = useNavigate();

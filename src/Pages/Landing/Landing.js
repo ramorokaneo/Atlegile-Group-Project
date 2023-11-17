@@ -1,5 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
 import Footer from "../../components/Footer/Footer";
 import FollowUs from "../../components/FollowUs/FollowUs";
 import SaveBigHeader from "../../components/SaveBigHeader/SaveBigHeader";
@@ -12,20 +11,6 @@ import LearnZa from "../../components/LearnZa/LearnZa";
 import TechWise from "../../components/TechWise/TechWise";
 import MindMatters from "../../components/MindMatters/MindMatters";
 import AboutUs from "../../components/AboutUs/AboutUs";
-=======
-import Footer from "../../Components/Footer/Footer";
-import FollowUs from "../../Components/FollowUs/FollowUs";
-import SaveBigHeader from "../../Components/SaveBigHeader/SaveBigHeader";
-import AfricaBusines from "../../Components/AfricaBusiness/AfricaBusines";
-import Navbar from "../../Components/NavBar/NavBar";
-import SearchBar from "../../Components/SearchBar/SearchBar";
-import Explore from "../../Components/Explore/Explore";
-import SecureTech from "../../Components/SecureTech/SecureTech";
-import LearnZa from "../../Components/LearnZa/LearnZa";
-import TechWise from "../../Components/TechWise/TechWise";
-import MindMatters from "../../Components/MindMatters/MindMatters";
-// import AboutUs from "../../components/AboutUs/AboutUs";
->>>>>>> 1669cffafd760f347c9d0dad678c9d9f6edd748f
 import { useFetchProducts } from "../../hooks/useFetchProducts";
 function Landing() {
   const { firebaseProducts } = useFetchProducts();
