@@ -187,7 +187,7 @@ const Register = () => {
             height={50}
             style={{
               justifyContent: "center",
-              marginTop: 90,
+              marginTop: 70,
             }}
             alt="Logo"
           />
@@ -334,7 +334,7 @@ const Register = () => {
               />
               <label>Bio</label>
             </div>
-            <button type="submit" className="btn-continue" style={{marginBottom:20}}>
+            <button type="submit" className="btn-continue" style={{marginBottom:70}}>
               Continue
             </button>
           </form>

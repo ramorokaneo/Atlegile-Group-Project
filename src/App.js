@@ -28,11 +28,12 @@ function App() {
         <Route path='/mainacc' element={<MainAcc />} />
         <Route path='/altcontact' element={<UserSignUp />} />
         <Route path='/signinscreen' element={<Signinscreen />} />
+        <Route path='/altcontact' element={<AltContact />} />
         <Route path='/addphoto' element={<AddPhoto />} />
-        <Route path='/marketing' element={<MarketingSupport />} />
+        {/* <Route path='/marketing' element={<MarketingSupport />} /> */}
         <Route path='/paymentinfo' element={<PaymentInfo />} />
         <Route path='/register' element={<Register />} />
-        <Route path='/salesgrowth' element={<SalesGrowth />} />
+        {/* <Route path='/salesgrowth' element={<SalesGrowth />} /> */}
         {/* <Route path='/productservices' element={<ProdServices />} /> */}
         {/* <Route path='busaccount' element={<BusinessAccount />} /> */}
         {/* <Route path='/delivery' element={<DeliveryDone />} /> */}
